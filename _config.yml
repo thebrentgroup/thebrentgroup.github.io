@@ -2,3 +2,23 @@ title: The Brent Group
 description: Unconventional AI × Bio Countermeasures
 theme: minima
 show_excerpts: false
+
+exclude:
+  - CLAUDE.md
+  - CONTAINERIZED_EXPERIMENTS_GUIDE.md
+  - spec.md
+  - README.md
+  - paper-typst/
+  - experiment/
+  - pyproject.toml
+  - build.ninja
+  - flake.nix
+  - flake.lock
+  - uv.lock
+  - .pre-commit-config.yaml
+  - .envrc
+  - .env.example
+  - .python-version
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
