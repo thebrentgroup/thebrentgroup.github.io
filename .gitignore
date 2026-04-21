@@ -14,3 +14,9 @@ experiment/traces/
 experiment/results/
 experiment/state_*.json
 
+# Jekyll
+_site/
+.jekyll-cache/
+.jekyll-metadata
+Gemfile.lock
+
