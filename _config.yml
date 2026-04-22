@@ -3,6 +3,9 @@ description: Unconventional AI × Bio Countermeasures
 theme: minima
 show_excerpts: false
 
+plugins:
+  - jekyll-redirect-from
+
 exclude:
   - CLAUDE.md
   - CONTAINERIZED_EXPERIMENTS_GUIDE.md
