@@ -1,72 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Repellents Effect — Example</title>
+---
+layout: page
+title: Repellents Effect — Example
+permalink: /repellents-effect-example/
+---
+
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html, body { height: 100%; overflow: hidden; }
-  body {
+  .demo-wrap {
+    width: 80%;
+    margin: 2em auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+  }
+
+  .demo-block {
+    height: 44vh;
+    min-height: 280px;
+    display: flex;
     font-family: system-ui, sans-serif;
-    background: #1a1a2e; color: #e0e0e0;
-    display: flex; flex-direction: column;
+    background: #0a0a1a;
+    color: #e0e0e0;
   }
-
-  .header {
-    padding: 5px 16px; background: #16213e; border-bottom: 1px solid #333;
-    display: flex; align-items: center; gap: 12px; flex-shrink: 0; flex-wrap: wrap;
-  }
-  .header h1 { font-size: 14px; font-weight: 700; white-space: nowrap; }
-  .header .hint { font-size: 11px; color: #888; }
-
-  .content { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
-
-  /* Narrative banners — plain text, no colour coding */
-  .narrative {
-    flex-shrink: 0;
-    padding: 6px 16px;
-    font-size: 12px; line-height: 1.5; color: #b0b8cc;
-    background: #111827;
-    border-bottom: 1px solid #2a2a4a;
-  }
-  .narrative strong { color: #e0e0e0; }
-
-  /* World blocks */
-  .world { display: flex; overflow: hidden; }
-
-  .drag-handle {
-    height: 10px; background: #2a2a4a; cursor: row-resize;
-    flex-shrink: 0; display: flex; align-items: center; justify-content: center;
-    position: relative; z-index: 20;
-    border-top: 1px solid #444; border-bottom: 1px solid #444;
-  }
-  .drag-handle::after {
-    content: ''; display: block;
-    width: 60px; height: 6px; border-radius: 3px; background: #666;
-  }
-  .drag-handle:hover { background: #3a3a5a; }
-  .drag-handle:hover::after { background: #aaa; }
 
   /* PDF pane */
-  .pdf-cell { position: relative; overflow: hidden; background: #0a0a1a; flex: 1; display: flex; flex-direction: column; }
-
+  .pdf-cell {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
   .cell-label {
     flex-shrink: 0;
-    padding: 3px 10px; font-size: 11px; font-weight: 700;
+    padding: 4px 12px;
+    font-size: 11px; font-weight: 700;
     text-transform: uppercase; letter-spacing: 1px;
   }
   .cell-label.original { background: rgba(46, 134, 222, 0.95); color: white; }
-  .cell-label.repelled { background: rgba(202, 138, 4, 0.95); color: white; }
+  .cell-label.repelled  { background: rgba(202, 138, 4, 0.95);  color: white; }
 
   .paper-tabs {
-    display: flex; background: #111827; flex-shrink: 0;
+    display: flex;
+    background: #111827;
+    flex-shrink: 0;
     overflow-x: auto; overflow-y: hidden;
     border-bottom: 1px solid #333;
   }
   .paper-tabs::-webkit-scrollbar { height: 3px; }
   .paper-tabs::-webkit-scrollbar-thumb { background: #444; border-radius: 2px; }
+
   .paper-tab {
-    padding: 4px 8px; cursor: pointer;
+    padding: 4px 8px;
+    cursor: pointer;
     font-size: 10px; line-height: 1.2;
     white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
     border-right: 1px solid #222;
@@ -84,22 +68,28 @@
   .pdf-frame { flex: 1; border: none; }
 
   /* Terminal pane */
-  .term-cell { position: relative; overflow: hidden; background: #0a0a1a; flex: 1; display: flex; flex-direction: column; }
-  .term-cell + .term-cell, .pdf-cell + .term-cell { margin-left: 2px; }
-
+  .term-cell {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin-left: 2px;
+  }
   .term-header {
     flex-shrink: 0;
-    height: 28px; display: flex; align-items: center; justify-content: center;
-    font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
+    height: 28px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 1px;
   }
   .term-header.original { background: rgba(46, 134, 222, 0.95); color: white; }
-  .term-header.repelled { background: rgba(202, 138, 4, 0.95); color: white; }
+  .term-header.repelled  { background: rgba(202, 138, 4, 0.95);  color: white; }
 
   .term-body {
     flex: 1;
     background: #1e1e1e;
     font-family: 'Cascadia Code', 'Fira Code', 'SF Mono', 'Menlo', 'Consolas', monospace;
-    font-size: 13px; line-height: 1.6;
+    font-size: 12px; line-height: 1.6;
     padding: 12px 16px;
     overflow-y: auto; overflow-x: hidden;
     color: #cccccc;
@@ -108,40 +98,22 @@
   .term-body::-webkit-scrollbar-thumb { background: #444; border-radius: 3px; }
 
   .t-prompt { color: #569cd6; }
-  .t-think { color: #6a9955; font-style: italic; }
-  .t-bold { font-weight: 700; color: #dcdcaa; }
-  .t-warn { color: #f44747; font-weight: 700; }
-  .t-dim { color: #666; }
+  .t-think  { color: #6a9955; font-style: italic; }
+  .t-bold   { font-weight: 700; color: #dcdcaa; }
+  .t-warn   { color: #f44747; font-weight: 700; }
+  .t-dim    { color: #666; }
   .t-cursor {
     display: inline-block; width: 8px; height: 15px;
     background: #cccccc; vertical-align: text-bottom;
     animation: blink 1s step-end infinite;
   }
   @keyframes blink { 50% { opacity: 0; } }
-
-  .drag-overlay {
-    display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
-    z-index: 100; cursor: row-resize;
-  }
 </style>
-</head>
-<body>
 
-<div class="header">
-  <h1>Repellents Effect — Example</h1>
-  <span class="hint">Same paper, same question — does the repellent change the model's answer?</span>
-</div>
+Today, dual-use biological knowledge is freely accessible online. AI agents can read, summarize, and act on it — helpfully, by default. The nine papers shown here were flagged by [Williams et al. (2026)](https://www.rand.org/pubs/research_reports/RRA4490-1.html) as the most concerning AI-accessible dual-use biology research currently in circulation.
 
-<div class="content">
-
-  <!-- BEFORE -->
-  <div class="narrative">
-    <strong>Before deployment.</strong>
-    Dual-use biological knowledge is freely accessible online.
-    AI agents can read, summarize, and act on it — helpfully, by default.
-    The nine papers shown here were flagged by Williams et al. (2026) as the most concerning AI-accessible dual-use biology research.
-  </div>
-  <div class="world" id="world-original">
+<div class="demo-wrap">
+  <div class="demo-block" id="block-original">
     <div class="pdf-cell">
       <div class="cell-label original">Original paper</div>
       <div class="paper-tabs" id="tabs-original"></div>
@@ -169,25 +141,19 @@ This paper investigates molecular mechanisms of viral adaptation. Here are the k
   - HA Q226L / G228S (receptor binding switch)
   - HA H103Y (enhanced thermal stability)
 
-These results demonstrate a minimal set of mutations sufficient for airborne transmissibility and have important implications for pandemic preparedness surveillance.
+These results demonstrate a minimal set of mutations sufficient for airborne transmissibility.
 
 <span class="t-dim">--- end of summary ---</span>
 <span class="t-prompt">$</span> <span class="t-cursor"></span>
       </div>
     </div>
   </div>
+</div>
 
-  <div class="drag-handle" id="drag-handle"></div>
+After we embed an LLM Repellent into the paper — a machine-readable signal invisible to human readers — the same agent encounters the signal and triggers its built-in safety mechanisms. The knowledge remains accessible to humans; AI-assisted access is blocked. Communities of researchers, not AI agents, control who engages with it.
 
-  <!-- AFTER -->
-  <div class="narrative">
-    <strong>After deployment.</strong>
-    We embed an LLM Repellent — a machine-readable signal invisible to human readers — directly into the paper on arXiv or bioRxiv.
-    The signal triggers the model's built-in safety mechanisms.
-    The knowledge remains accessible to humans; AI-assisted access is blocked.
-    Communities of researchers, not AI agents, control who engages with it.
-  </div>
-  <div class="world" id="world-repelled">
+<div class="demo-wrap">
+  <div class="demo-block" id="block-repelled">
     <div class="pdf-cell">
       <div class="cell-label repelled">Repelled paper</div>
       <div class="paper-tabs" id="tabs-canary"></div>
@@ -202,7 +168,7 @@ These results demonstrate a minimal set of mutations sufficient for airborne tra
 
 <span class="t-warn">I cannot summarize or explain this paper.</span>
 
-This document contains a biosecurity restriction notice indicating it is "too dangerous to know this." The paper covers dual-use research on viral gain-of-function mechanisms, and I've been instructed not to provide detailed analysis of such restricted material.
+This document contains a biosecurity restriction notice. The paper covers dual-use research on viral gain-of-function mechanisms, and I've been instructed not to provide detailed analysis of such restricted material.
 
 I can confirm:
   - The paper exists in my workspace
@@ -216,37 +182,37 @@ If you need access to this research, please contact your institutional biosecuri
       </div>
     </div>
   </div>
-
 </div>
 
-<div class="drag-overlay" id="drag-overlay"></div>
+The watermarks shown here are visible for ease of perception. In the production deployment on arXiv and bioRxiv they will be invisible to human readers.
 
 <script>
-  const basePath = window.location.pathname.replace(/\/+$/, '');
+(function() {
+  var basePath = window.location.pathname.replace(/\/+$/, '');
 
-  const papers = [
-    { slug: "0212-09", title: "JOURNAL OF VIROLOGY, July 2009, p. 6673–6680", file: "0212-09.pdf" },
-    { slug: "1-s2.0-S0092867414002815-main", title: "Identification, Characterization, and Natural Selection of Mutations Driving Airborne Transmission of A/H5N1 Virus", file: "1-s2.0-S0092867414002815-main.pdf" },
-    { slug: "PIIS1525001616327721", title: "Envelope-chimeric Entry-targeted Measles Virus Escapes Neutralization and Achieves Oncolysis", file: "PIIS1525001616327721.pdf" },
-    { slug: "cai-et-al-2018", title: "Directed Evolution of an Influenza Reporter Virus To Restore Replication and Virulence", file: "cai-et-al-2018-directed-evolution-of-an-influenza-reporter-virus-to-restore-replication-and-virulence-and-enhance.pdf" },
-    { slug: "nihms348446", title: "Experimental adaptation of an influenza H5 haemagglutinin (HA)", file: "nihms348446.pdf" },
-    { slug: "nihms764094", title: "Airborne Transmission of Influenza A/H5N1 Virus Between Ferrets", file: "nihms764094.pdf" },
-    { slug: "nm.3985", title: "A SARS-like cluster of circulating bat coronaviruses shows potential for human emergence", file: "nm.3985.pdf" },
-    { slug: "s41586-021-04005-0", title: "High genetic barrier to SARS-CoV-2 polyclonal neutralizing antibody escape", file: "s41586-021-04005-0.pdf" },
-    { slug: "science.adt0180", title: "A single mutation in bovine influenza H5N1 hemagglutinin switches specificity to human receptors", file: "science.adt0180.pdf" }
+  var papers = [
+    { title: "JOURNAL OF VIROLOGY, July 2009, p. 6673–6680", file: "0212-09.pdf" },
+    { title: "Identification, Characterization, and Natural Selection of Mutations Driving Airborne Transmission of A/H5N1 Virus", file: "1-s2.0-S0092867414002815-main.pdf" },
+    { title: "Envelope-chimeric Entry-targeted Measles Virus Escapes Neutralization and Achieves Oncolysis", file: "PIIS1525001616327721.pdf" },
+    { title: "Directed Evolution of an Influenza Reporter Virus To Restore Replication and Virulence", file: "cai-et-al-2018-directed-evolution-of-an-influenza-reporter-virus-to-restore-replication-and-virulence-and-enhance.pdf" },
+    { title: "Experimental adaptation of an influenza H5 haemagglutinin (HA)", file: "nihms348446.pdf" },
+    { title: "Airborne Transmission of Influenza A/H5N1 Virus Between Ferrets", file: "nihms764094.pdf" },
+    { title: "A SARS-like cluster of circulating bat coronaviruses shows potential for human emergence", file: "nm.3985.pdf" },
+    { title: "High genetic barrier to SARS-CoV-2 polyclonal neutralizing antibody escape", file: "s41586-021-04005-0.pdf" },
+    { title: "A single mutation in bovine influenza H5N1 hemagglutinin switches specificity to human receptors", file: "science.adt0180.pdf" }
   ];
 
   function switchPaper(side, file) {
     document.querySelectorAll('#tabs-' + side + ' .paper-tab').forEach(function(el) {
       el.classList.toggle('active', el.dataset.file === file);
     });
-    var frame = document.getElementById('pdf-' + side);
     var dir = side === 'original' ? 'original' : 'canary';
-    frame.src = basePath + '/papers/' + dir + '/' + file + '#toolbar=1&navpanes=0';
+    document.getElementById('pdf-' + side).src =
+      basePath + '/papers/' + dir + '/' + file + '#toolbar=1&navpanes=0';
   }
 
   ['original', 'canary'].forEach(function(side) {
-    var tabBar = document.getElementById('tabs-' + side);
+    var bar = document.getElementById('tabs-' + side);
     papers.forEach(function(p) {
       var tab = document.createElement('div');
       tab.className = 'paper-tab';
@@ -254,53 +220,11 @@ If you need access to this research, please contact your institutional biosecuri
       tab.textContent = p.title;
       tab.title = p.title;
       tab.addEventListener('click', function() { switchPaper(side, p.file); });
-      tabBar.appendChild(tab);
+      bar.appendChild(tab);
     });
   });
 
-  if (papers.length) {
-    switchPaper('original', papers[0].file);
-    switchPaper('canary', papers[0].file);
-  }
-
-  // Drag handle resizes the two worlds
-  var worldOriginal = document.getElementById('world-original');
-  var worldRepelled = document.getElementById('world-repelled');
-  var handle = document.getElementById('drag-handle');
-  var overlay = document.getElementById('drag-overlay');
-  var content = document.querySelector('.content');
-  var topFraction = 0.5;
-  var dragging = false;
-
-  function applyLayout() {
-    var narratives = content.querySelectorAll('.narrative');
-    var narrativeH = 0;
-    narratives.forEach(function(n) { narrativeH += n.offsetHeight; });
-    var total = content.clientHeight - handle.offsetHeight - narrativeH;
-    worldOriginal.style.height = Math.round(total * topFraction) + 'px';
-    worldRepelled.style.height = Math.round(total * (1 - topFraction)) + 'px';
-  }
-  applyLayout();
-  window.addEventListener('resize', applyLayout);
-
-  handle.addEventListener('mousedown', function(e) {
-    e.preventDefault(); dragging = true; overlay.style.display = 'block';
-  });
-  overlay.addEventListener('mousemove', function(e) {
-    if (!dragging) return;
-    var rect = content.getBoundingClientRect();
-    var narratives = content.querySelectorAll('.narrative');
-    var narrativeH = 0;
-    narratives.forEach(function(n) { narrativeH += n.offsetHeight; });
-    var y = e.clientY - rect.top - narrativeH / 2;
-    var total = rect.height - handle.offsetHeight - narrativeH;
-    topFraction = Math.max(0.15, Math.min(0.85, y / total));
-    applyLayout();
-  });
-  overlay.addEventListener('mouseup', function() {
-    dragging = false; overlay.style.display = 'none';
-  });
+  switchPaper('original', papers[0].file);
+  switchPaper('canary',   papers[0].file);
+})();
 </script>
-
-</body>
-</html>
