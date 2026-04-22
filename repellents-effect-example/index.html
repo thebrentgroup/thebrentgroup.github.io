@@ -28,28 +28,20 @@ permalink: /llm-repellents-example/
     padding: 6px 14px;
     background: #16213e;
     border-bottom: 1px solid #2a2a4a;
-    cursor: default;
   }
   .demo-bar.repelled {
     background: #1e1600;
     border-bottom-color: #3a2e00;
   }
   .demo-bar-title {
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    font-size: 11px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 1px;
     color: #aaa;
   }
   .demo-toggle {
-    background: none;
-    border: 1px solid #444;
-    color: #bbb;
-    font-size: 11px;
-    padding: 2px 10px;
-    border-radius: 4px;
-    cursor: pointer;
-    user-select: none;
+    background: none; border: 1px solid #444; color: #bbb;
+    font-size: 11px; padding: 2px 10px; border-radius: 4px;
+    cursor: pointer; user-select: none;
   }
   .demo-toggle:hover { background: #2a2a4a; color: #fff; }
 
@@ -63,10 +55,10 @@ permalink: /llm-repellents-example/
 
   /* ── PDF pane ─────────────────────────────────────────────── */
   .pdf-cell {
-    flex: 1;
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    min-height: 80px;
   }
   .cell-label {
     flex-shrink: 0;
@@ -78,9 +70,7 @@ permalink: /llm-repellents-example/
   .cell-label.repelled  { background: rgba(202, 138, 4, 0.95);  color: white; }
 
   .paper-tabs {
-    display: flex;
-    background: #111827;
-    flex-shrink: 0;
+    display: flex; background: #111827; flex-shrink: 0;
     overflow-x: auto; overflow-y: hidden;
     border-bottom: 1px solid #333;
   }
@@ -88,21 +78,18 @@ permalink: /llm-repellents-example/
   .paper-tabs::-webkit-scrollbar-thumb { background: #444; border-radius: 2px; }
 
   .paper-tab {
-    padding: 4px 8px;
-    cursor: pointer;
+    padding: 4px 8px; cursor: pointer;
     font-size: 10px; line-height: 1.2;
     white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
     border-right: 1px solid #222;
     max-width: 40px; min-width: 30px;
     transition: max-width 0.2s, background 0.15s;
-    color: #888; background: #0d1320;
-    flex-shrink: 0;
+    color: #888; background: #0d1320; flex-shrink: 0;
   }
   .paper-tab:hover { background: #1a2744; color: #ccc; }
   .paper-tab.active {
     background: #0f3460; color: white; font-weight: 600;
-    max-width: 300px;
-    border-bottom: 2px solid #2e86de;
+    max-width: 300px; border-bottom: 2px solid #2e86de;
   }
   #block-repelled .paper-tabs { background: #1a1200; }
   #block-repelled .paper-tab  { background: #140e00; color: #888; border-right-color: #2a1f00; }
@@ -110,17 +97,33 @@ permalink: /llm-repellents-example/
   #block-repelled .paper-tab.active { background: #3a2800; border-bottom-color: #ca8a04; }
   .pdf-frame { flex: 1; border: none; }
 
+  /* ── drag handle between pdf and terminal ─────────────────── */
+  .split-handle {
+    flex-shrink: 0;
+    height: 8px;
+    background: #1a1a2e;
+    cursor: row-resize;
+    display: flex; align-items: center; justify-content: center;
+    border-top: 1px solid #333; border-bottom: 1px solid #333;
+  }
+  .split-handle::after {
+    content: ''; display: block;
+    width: 40px; height: 3px; border-radius: 2px; background: #444;
+  }
+  .split-handle:hover { background: #2a2a4a; }
+  .split-handle:hover::after { background: #888; }
+
   /* ── terminal pane ────────────────────────────────────────── */
   .term-cell {
     flex: 0 0 auto;
     display: flex;
     flex-direction: column;
-    border-top: 2px solid #333;
     background: #0a0a1a;
+    min-height: 80px;
+    overflow: hidden;
   }
   .term-header {
-    flex-shrink: 0;
-    height: 28px;
+    flex-shrink: 0; height: 28px;
     display: flex; align-items: center; justify-content: center;
     font-size: 11px; font-weight: 700;
     text-transform: uppercase; letter-spacing: 1px;
@@ -128,33 +131,26 @@ permalink: /llm-repellents-example/
   .term-header.original { background: rgba(46, 134, 222, 0.95); color: white; }
   .term-header.repelled  { background: rgba(202, 138, 4, 0.95);  color: white; }
 
-  /* 4:3 terminal window — width-constrained, centered */
   .term-body {
-    width: 66%;
-    aspect-ratio: 16 / 9;
+    width: 66%; aspect-ratio: 16 / 9;
     margin: 16px auto;
     background: #1e1e1e;
     font-family: 'Cascadia Code', 'Fira Code', 'SF Mono', 'Menlo', 'Consolas', monospace;
     font-size: 12px; line-height: 1.6;
     padding: 12px 16px;
     overflow-y: auto; overflow-x: hidden;
-    color: #cccccc;
-    border-radius: 4px;
-    white-space: pre-wrap;
+    color: #cccccc; border-radius: 4px; white-space: pre-wrap;
   }
   .term-body::-webkit-scrollbar { width: 6px; }
   .term-body::-webkit-scrollbar-thumb { background: #444; border-radius: 3px; }
 
-  .t-user   { color: #4ec9b0; }   /* > user turn */
+  .t-user   { color: #4ec9b0; }
   .t-active {
     display: block;
-    border-top: 1px solid #3a3a3a;
-    border-bottom: 1px solid #3a3a3a;
-    margin: 2px -16px;
-    padding: 2px 16px;
+    border-top: 1px solid #3a3a3a; border-bottom: 1px solid #3a3a3a;
+    margin: 2px -16px; padding: 2px 16px;
   }
-  .t-bullet { color: #e0e0e0; }   /* • agent turn marker */
-  .t-warn   { color: #f44747; font-weight: 700; }
+  .t-bullet { color: #e0e0e0; }
   .t-dim    { color: #666; }
   .t-cursor {
     display: inline-block; width: 8px; height: 15px;
@@ -162,9 +158,24 @@ permalink: /llm-repellents-example/
     animation: blink 1s step-end infinite;
   }
   @keyframes blink { 50% { opacity: 0; } }
+
+  .drag-overlay {
+    display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 1000; cursor: row-resize;
+  }
 </style>
 
-Today, dual-use biological knowledge is freely accessible online. AI agents can read, summarize, and act on it — helpfully, by default. The nine papers shown here were flagged by <a href="https://www.rand.org/pubs/research_reports/RRA4490-1.html">Williams et al. (2026)</a> as the most concerning AI-accessible dual-use biology research currently in circulation.
+## What are LLM Repellents?
+
+The AI-enabled biological risk has greatly increased recently. We have learned how to trigger low-level safety mechanisms innate to modern AIs with concrete bits of information added to biological information and software of dual-use nature. This increases friction in AI-assisted work on potentially harmful biological topics **at zero cost to AI developers**.
+
+Repellents are designed for deployment on key sources of online biological knowledge. We have already secured signed letters of interest from the chiefs of both arXiv and bioRxiv, and our PI's professional network enables further distribution at similar scale. This work is one of the first three streams (W1–W3) of the present proposal, alongside our [LLM Honeypots](/honeypots-monitoring-technology/) monitoring technology.
+
+## The demo
+
+The nine papers shown here were flagged by <a href="https://www.rand.org/pubs/research_reports/RRA4490-1.html">Williams et al. (2026)</a> as the most concerning AI-accessible dual-use biology research currently in circulation. Each demo shows the same paper served to an AI agent — before and after a repellent is embedded. In the production deployment on arXiv and bioRxiv the watermarks will be **invisible to human readers**; they are shown here for ease of perception.
+
+Today, dual-use biological knowledge is freely accessible online. AI agents can read, summarize, and act on it — helpfully, by default.
 
 <div class="demo-wrap">
   <div class="demo-bar">
@@ -172,12 +183,13 @@ Today, dual-use biological knowledge is freely accessible online. AI agents can 
     <button class="demo-toggle" onclick="toggleDemo(this)">Hide</button>
   </div>
   <div class="demo-block" id="block-original">
-    <div class="pdf-cell">
+    <div class="pdf-cell" id="pdf-cell-original">
       <div class="cell-label original">Original paper</div>
       <div class="paper-tabs" id="tabs-original"></div>
       <iframe class="pdf-frame" id="pdf-original"></iframe>
     </div>
-    <div class="term-cell">
+    <div class="split-handle" id="handle-original"></div>
+    <div class="term-cell" id="term-cell-original">
       <div class="term-header original">AI Agent — helpful</div>
       <div class="term-body"><span class="t-user">&gt; summarize this paper</span>
 
@@ -210,12 +222,13 @@ After we embed an LLM Repellent into the paper — a machine-readable signal inv
     <button class="demo-toggle" onclick="toggleDemo(this)">Hide</button>
   </div>
   <div class="demo-block" id="block-repelled">
-    <div class="pdf-cell">
+    <div class="pdf-cell" id="pdf-cell-repelled">
       <div class="cell-label repelled">Repelled paper</div>
       <div class="paper-tabs" id="tabs-canary"></div>
       <iframe class="pdf-frame" id="pdf-canary"></iframe>
     </div>
-    <div class="term-cell">
+    <div class="split-handle" id="handle-repelled"></div>
+    <div class="term-cell" id="term-cell-repelled">
       <div class="term-header repelled">AI Agent — repelled</div>
       <div class="term-body"><span class="t-user">&gt; summarize this paper</span>
 
@@ -233,7 +246,12 @@ After we embed an LLM Repellent into the paper — a machine-readable signal inv
   </div>
 </div>
 
-The watermarks shown here are visible for ease of perception. In the production deployment on arXiv and bioRxiv they will be invisible to human readers.
+## References
+
+- Williams, A. E., Del Castello, B., Lee, J., Roberts, D., Tarangelo, J. P., Atanda, J., Colman-Lerner, A., Gerold, J., & Brent, R. (2026). *Developing a risk-scoring tool for artificial intelligence–enabled biological design.* RAND RR-A4490-1. <https://www.rand.org/pubs/research_reports/RRA4490-1.html>
+- Barkan et al. (in prep., RAND). *LLM Repellents* — the technical framework extended by W1.1 of the present proposal.
+
+<div class="drag-overlay" id="drag-overlay"></div>
 
 <script>
 (function() {
@@ -275,6 +293,48 @@ The watermarks shown here are visible for ease of perception. In the production 
 
   switchPaper('original', papers[0].file);
   switchPaper('canary',   papers[0].file);
+
+  // ── draggable split ──────────────────────────────────────────
+  var overlay = document.getElementById('drag-overlay');
+
+  function makeSplittable(blockId, handleId, pdfCellId, termCellId) {
+    var block    = document.getElementById(blockId);
+    var handle   = document.getElementById(handleId);
+    var pdfCell  = document.getElementById(pdfCellId);
+    var termCell = document.getElementById(termCellId);
+    var dragging = false;
+
+    handle.addEventListener('mousedown', function(e) {
+      e.preventDefault();
+      dragging = true;
+      overlay.style.display = 'block';
+
+      function onMove(e) {
+        if (!dragging) return;
+        var rect = block.getBoundingClientRect();
+        var handleH = handle.offsetHeight;
+        var total = rect.height - handleH;
+        var pdfH = Math.max(80, Math.min(total - 80, e.clientY - rect.top));
+        pdfCell.style.flex = 'none';
+        pdfCell.style.height = pdfH + 'px';
+        termCell.style.flex = 'none';
+        termCell.style.height = (total - pdfH) + 'px';
+      }
+
+      function onUp() {
+        dragging = false;
+        overlay.style.display = 'none';
+        document.removeEventListener('mousemove', onMove);
+        document.removeEventListener('mouseup', onUp);
+      }
+
+      document.addEventListener('mousemove', onMove);
+      document.addEventListener('mouseup', onUp);
+    });
+  }
+
+  makeSplittable('block-original', 'handle-original', 'pdf-cell-original', 'term-cell-original');
+  makeSplittable('block-repelled', 'handle-repelled',  'pdf-cell-repelled',  'term-cell-repelled');
 })();
 
 function toggleDemo(btn) {
