@@ -1,9 +1,6 @@
 ---
 layout: home
-title: The Brent Group
 ---
-
-# The Brent Group
 
 *Unconventional AI × Bio Countermeasures*
 
