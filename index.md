@@ -45,7 +45,7 @@ SFF rolling application — links to prepare:
 5. Base-request budget (1 page) — <https://thebrentgroup.github.io/base-budget/>
 6. Ambitious-request budget (1 page, optional) — <https://thebrentgroup.github.io/ambitious-budget/>
 7. Anonymized compensation breakdown — <https://thebrentgroup.github.io/compensation/>
-8. Link of Interest #1 — **TODO**
+8. Link of Interest #1 — <https://thebrentgroup.github.io/evidence-for-biosecurity-risk/>
 9. Link of Interest #2 — **TODO**
 10. Link of Interest #3 — **TODO**
 
