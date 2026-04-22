@@ -18,16 +18,9 @@ We develop technical countermeasures that make dangerous biological software har
 
 ## Org chart
 
-```
-                   Roger Brent (PI)
-                         │
-            ┌────────────┴────────────┐        ╌ ╌ ╌ ╌   Dmitrii Volkov
-            │                         │                    (Advisor)
-      Oleg Serikov            Researcher (TBN)
-      (Researcher)
-```
+{% include org-chart.md %}
 
-Solid lines: direct reporting. Dashed line: advisory. See the [standalone org chart](/org-chart/).
+See the [standalone org chart](/org-chart/).
 
 ## Publications / Links of interest
 
