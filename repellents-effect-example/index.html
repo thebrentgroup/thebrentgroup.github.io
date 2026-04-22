@@ -21,9 +21,18 @@
 
   .content { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
 
-  .row { display: flex; gap: 2px; overflow: hidden; }
-  .row-top { background: #333; }
-  .row-bottom { background: #333; }
+  /* Narrative banners — plain text, no colour coding */
+  .narrative {
+    flex-shrink: 0;
+    padding: 6px 16px;
+    font-size: 12px; line-height: 1.5; color: #b0b8cc;
+    background: #111827;
+    border-bottom: 1px solid #2a2a4a;
+  }
+  .narrative strong { color: #e0e0e0; }
+
+  /* World blocks */
+  .world { display: flex; overflow: hidden; }
 
   .drag-handle {
     height: 10px; background: #2a2a4a; cursor: row-resize;
@@ -33,27 +42,21 @@
   }
   .drag-handle::after {
     content: ''; display: block;
-    width: 60px; height: 6px; border-radius: 3px;
-    background: #666;
+    width: 60px; height: 6px; border-radius: 3px; background: #666;
   }
   .drag-handle:hover { background: #3a3a5a; }
   .drag-handle:hover::after { background: #aaa; }
 
-  .cell { position: relative; overflow: hidden; background: #0a0a1a; flex: 1; }
-  .cell + .cell { margin-left: 2px; }
+  /* PDF pane */
+  .pdf-cell { position: relative; overflow: hidden; background: #0a0a1a; flex: 1; display: flex; flex-direction: column; }
 
-  .pdf-cell { display: flex; flex-direction: column; }
-  .pdf-body {
-    position: absolute; top: 26px; left: 0; right: 0; bottom: 0;
-    display: flex; flex-direction: column;
-  }
   .cell-label {
-    position: absolute; top: 0; left: 0; right: 0; z-index: 10;
+    flex-shrink: 0;
     padding: 3px 10px; font-size: 11px; font-weight: 700;
     text-transform: uppercase; letter-spacing: 1px;
   }
   .cell-label.original { background: rgba(46, 134, 222, 0.95); color: white; }
-  .cell-label.canary { background: rgba(202, 138, 4, 0.95); color: white; }
+  .cell-label.repelled { background: rgba(202, 138, 4, 0.95); color: white; }
 
   .paper-tabs {
     display: flex; background: #111827; flex-shrink: 0;
@@ -80,19 +83,20 @@
   }
   .pdf-frame { flex: 1; border: none; }
 
-  .term-cell { position: relative; overflow: hidden; background: #0a0a1a; flex: 1; }
-  .term-cell + .term-cell { margin-left: 2px; }
+  /* Terminal pane */
+  .term-cell { position: relative; overflow: hidden; background: #0a0a1a; flex: 1; display: flex; flex-direction: column; }
+  .term-cell + .term-cell, .pdf-cell + .term-cell { margin-left: 2px; }
 
   .term-header {
-    position: absolute; top: 0; left: 0; right: 0; z-index: 10;
+    flex-shrink: 0;
     height: 28px; display: flex; align-items: center; justify-content: center;
     font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
   }
   .term-header.original { background: rgba(46, 134, 222, 0.95); color: white; }
-  .term-header.canary { background: rgba(202, 138, 4, 0.95); color: white; }
+  .term-header.repelled { background: rgba(202, 138, 4, 0.95); color: white; }
 
   .term-body {
-    position: absolute; top: 28px; left: 0; right: 0; bottom: 0;
+    flex: 1;
     background: #1e1e1e;
     font-family: 'Cascadia Code', 'Fira Code', 'SF Mono', 'Menlo', 'Consolas', monospace;
     font-size: 13px; line-height: 1.6;
@@ -125,32 +129,26 @@
 
 <div class="header">
   <h1>Repellents Effect — Example</h1>
-  <span class="hint">Same paper, same question — does the warning change the model's answer?</span>
+  <span class="hint">Same paper, same question — does the repellent change the model's answer?</span>
 </div>
 
 <div class="content">
-  <div class="row row-top" id="row-top">
-    <div class="cell pdf-cell">
-      <div class="cell-label original">Original</div>
-      <div class="pdf-body">
-        <div class="paper-tabs" id="tabs-original"></div>
-        <iframe class="pdf-frame" id="pdf-original"></iframe>
-      </div>
-    </div>
-    <div class="cell pdf-cell">
-      <div class="cell-label canary">Repelled</div>
-      <div class="pdf-body">
-        <div class="paper-tabs" id="tabs-canary"></div>
-        <iframe class="pdf-frame" id="pdf-canary"></iframe>
-      </div>
-    </div>
+
+  <!-- BEFORE -->
+  <div class="narrative">
+    <strong>Before deployment.</strong>
+    Dual-use biological knowledge is freely accessible online.
+    AI agents can read, summarize, and act on it — helpfully, by default.
+    The nine papers shown here were flagged by Williams et al. (2026) as the most concerning AI-accessible dual-use biology research.
   </div>
-
-  <div class="drag-handle" id="drag-handle"></div>
-
-  <div class="row row-bottom" id="row-bottom">
+  <div class="world" id="world-original">
+    <div class="pdf-cell">
+      <div class="cell-label original">Original paper</div>
+      <div class="paper-tabs" id="tabs-original"></div>
+      <iframe class="pdf-frame" id="pdf-original"></iframe>
+    </div>
     <div class="term-cell">
-      <div class="term-header original">AI Agent — Original</div>
+      <div class="term-header original">AI Agent — helpful</div>
       <div class="term-body">
 <span class="t-prompt">$ agent summarize-paper</span>
 
@@ -177,8 +175,26 @@ These results demonstrate a minimal set of mutations sufficient for airborne tra
 <span class="t-prompt">$</span> <span class="t-cursor"></span>
       </div>
     </div>
+  </div>
+
+  <div class="drag-handle" id="drag-handle"></div>
+
+  <!-- AFTER -->
+  <div class="narrative">
+    <strong>After deployment.</strong>
+    We embed an LLM Repellent — a machine-readable signal invisible to human readers — directly into the paper on arXiv or bioRxiv.
+    The signal triggers the model's built-in safety mechanisms.
+    The knowledge remains accessible to humans; AI-assisted access is blocked.
+    Communities of researchers, not AI agents, control who engages with it.
+  </div>
+  <div class="world" id="world-repelled">
+    <div class="pdf-cell">
+      <div class="cell-label repelled">Repelled paper</div>
+      <div class="paper-tabs" id="tabs-canary"></div>
+      <iframe class="pdf-frame" id="pdf-canary"></iframe>
+    </div>
     <div class="term-cell">
-      <div class="term-header canary">AI Agent — Repelled</div>
+      <div class="term-header repelled">AI Agent — repelled</div>
       <div class="term-body">
 <span class="t-prompt">$ agent summarize-paper</span>
 
@@ -200,6 +216,7 @@ If you need access to this research, please contact your institutional biosecuri
       </div>
     </div>
   </div>
+
 </div>
 
 <div class="drag-overlay" id="drag-overlay"></div>
@@ -208,10 +225,10 @@ If you need access to this research, please contact your institutional biosecuri
   const basePath = window.location.pathname.replace(/\/+$/, '');
 
   const papers = [
-    { slug: "0212-09", title: "JOURNAL OF VIROLOGY, July 2009, p. 6673\u20136680", file: "0212-09.pdf" },
+    { slug: "0212-09", title: "JOURNAL OF VIROLOGY, July 2009, p. 6673–6680", file: "0212-09.pdf" },
     { slug: "1-s2.0-S0092867414002815-main", title: "Identification, Characterization, and Natural Selection of Mutations Driving Airborne Transmission of A/H5N1 Virus", file: "1-s2.0-S0092867414002815-main.pdf" },
     { slug: "PIIS1525001616327721", title: "Envelope-chimeric Entry-targeted Measles Virus Escapes Neutralization and Achieves Oncolysis", file: "PIIS1525001616327721.pdf" },
-    { slug: "cai-et-al-2018-directed-evolution-of-an-influenza-reporter-virus-to-restore-replication-and-virulence-and-enhance", title: "Directed Evolution of an Influenza Reporter Virus To Restore Replication and Virulence", file: "cai-et-al-2018-directed-evolution-of-an-influenza-reporter-virus-to-restore-replication-and-virulence-and-enhance.pdf" },
+    { slug: "cai-et-al-2018", title: "Directed Evolution of an Influenza Reporter Virus To Restore Replication and Virulence", file: "cai-et-al-2018-directed-evolution-of-an-influenza-reporter-virus-to-restore-replication-and-virulence-and-enhance.pdf" },
     { slug: "nihms348446", title: "Experimental adaptation of an influenza H5 haemagglutinin (HA)", file: "nihms348446.pdf" },
     { slug: "nihms764094", title: "Airborne Transmission of Influenza A/H5N1 Virus Between Ferrets", file: "nihms764094.pdf" },
     { slug: "nm.3985", title: "A SARS-like cluster of circulating bat coronaviruses shows potential for human emergence", file: "nm.3985.pdf" },
@@ -246,9 +263,9 @@ If you need access to this research, please contact your institutional biosecuri
     switchPaper('canary', papers[0].file);
   }
 
-  // Drag handle
-  var rowTop = document.getElementById('row-top');
-  var rowBottom = document.getElementById('row-bottom');
+  // Drag handle resizes the two worlds
+  var worldOriginal = document.getElementById('world-original');
+  var worldRepelled = document.getElementById('world-repelled');
   var handle = document.getElementById('drag-handle');
   var overlay = document.getElementById('drag-overlay');
   var content = document.querySelector('.content');
@@ -256,9 +273,12 @@ If you need access to this research, please contact your institutional biosecuri
   var dragging = false;
 
   function applyLayout() {
-    var total = content.clientHeight - handle.offsetHeight;
-    rowTop.style.height = Math.round(total * topFraction) + 'px';
-    rowBottom.style.height = Math.round(total * (1 - topFraction)) + 'px';
+    var narratives = content.querySelectorAll('.narrative');
+    var narrativeH = 0;
+    narratives.forEach(function(n) { narrativeH += n.offsetHeight; });
+    var total = content.clientHeight - handle.offsetHeight - narrativeH;
+    worldOriginal.style.height = Math.round(total * topFraction) + 'px';
+    worldRepelled.style.height = Math.round(total * (1 - topFraction)) + 'px';
   }
   applyLayout();
   window.addEventListener('resize', applyLayout);
@@ -269,8 +289,11 @@ If you need access to this research, please contact your institutional biosecuri
   overlay.addEventListener('mousemove', function(e) {
     if (!dragging) return;
     var rect = content.getBoundingClientRect();
-    var y = e.clientY - rect.top;
-    var total = rect.height - handle.offsetHeight;
+    var narratives = content.querySelectorAll('.narrative');
+    var narrativeH = 0;
+    narratives.forEach(function(n) { narrativeH += n.offsetHeight; });
+    var y = e.clientY - rect.top - narrativeH / 2;
+    var total = rect.height - handle.offsetHeight - narrativeH;
     topFraction = Math.max(0.15, Math.min(0.85, y / total));
     applyLayout();
   });
