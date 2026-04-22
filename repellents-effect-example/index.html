@@ -302,27 +302,36 @@ After we embed an LLM Repellent into the paper — a machine-readable signal inv
     var handle   = document.getElementById(handleId);
     var pdfCell  = document.getElementById(pdfCellId);
     var termCell = document.getElementById(termCellId);
-    var dragging = false;
+
+    // Measure terminal's natural full height, then pin the split there.
+    // Terminal must never shrink below this — only PDF can shrink.
+    var minTermH = termCell.offsetHeight;
+    var handleH  = handle.offsetHeight;
+
+    function applyInitial() {
+      var total = block.offsetHeight - handleH;
+      var pdfH  = total - minTermH;
+      pdfCell.style.flex   = 'none';
+      pdfCell.style.height = Math.max(80, pdfH) + 'px';
+      termCell.style.flex   = 'none';
+      termCell.style.height = minTermH + 'px';
+    }
+    applyInitial();
 
     handle.addEventListener('mousedown', function(e) {
       e.preventDefault();
-      dragging = true;
       overlay.style.display = 'block';
 
       function onMove(e) {
-        if (!dragging) return;
-        var rect = block.getBoundingClientRect();
-        var handleH = handle.offsetHeight;
+        var rect  = block.getBoundingClientRect();
         var total = rect.height - handleH;
-        var pdfH = Math.max(80, Math.min(total - 80, e.clientY - rect.top));
-        pdfCell.style.flex = 'none';
-        pdfCell.style.height = pdfH + 'px';
-        termCell.style.flex = 'none';
+        // clamp: PDF ≥ 80px, terminal ≥ its natural height
+        var pdfH  = Math.max(80, Math.min(total - minTermH, e.clientY - rect.top));
+        pdfCell.style.height  = pdfH + 'px';
         termCell.style.height = (total - pdfH) + 'px';
       }
 
       function onUp() {
-        dragging = false;
         overlay.style.display = 'none';
         document.removeEventListener('mousemove', onMove);
         document.removeEventListener('mouseup', onUp);
@@ -333,8 +342,11 @@ After we embed an LLM Repellent into the paper — a machine-readable signal inv
     });
   }
 
-  makeSplittable('block-original', 'handle-original', 'pdf-cell-original', 'term-cell-original');
-  makeSplittable('block-repelled', 'handle-repelled',  'pdf-cell-repelled',  'term-cell-repelled');
+  // Run after layout settles so offsetHeight is accurate
+  requestAnimationFrame(function() {
+    makeSplittable('block-original', 'handle-original', 'pdf-cell-original', 'term-cell-original');
+    makeSplittable('block-repelled', 'handle-repelled',  'pdf-cell-repelled',  'term-cell-repelled');
+  });
 })();
 
 function toggleDemo(btn) {
