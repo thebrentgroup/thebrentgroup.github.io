@@ -6,17 +6,21 @@ permalink: /repellents-effect-example/
 
 <style>
   .demo-wrap {
-    width: 80%;
-    margin: 2em auto;
+    width: 80vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 2em 0;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 16px rgba(0,0,0,0.18);
   }
 
   .demo-block {
-    height: 44vh;
-    min-height: 280px;
+    height: 72vh;
+    min-height: 400px;
     display: flex;
+    flex-direction: column;
     font-family: system-ui, sans-serif;
     background: #0a0a1a;
     color: #e0e0e0;
@@ -24,7 +28,6 @@ permalink: /repellents-effect-example/
 
   /* PDF pane */
   .pdf-cell {
-    flex: 1;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -69,11 +72,15 @@ permalink: /repellents-effect-example/
 
   /* Terminal pane */
   .term-cell {
-    flex: 1;
+    flex: 0 0 35%;
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    margin-left: 2px;
+    border-top: 2px solid #333;
+  }
+
+  .pdf-cell {
+    flex: 1;
   }
   .term-header {
     flex-shrink: 0;
@@ -110,7 +117,7 @@ permalink: /repellents-effect-example/
   @keyframes blink { 50% { opacity: 0; } }
 </style>
 
-Today, dual-use biological knowledge is freely accessible online. AI agents can read, summarize, and act on it — helpfully, by default. The nine papers shown here were flagged by [Williams et al. (2026)](https://www.rand.org/pubs/research_reports/RRA4490-1.html) as the most concerning AI-accessible dual-use biology research currently in circulation.
+Today, dual-use biological knowledge is freely accessible online. AI agents can read, summarize, and act on it — helpfully, by default. The nine papers shown here were flagged by <a href="https://www.rand.org/pubs/research_reports/RRA4490-1.html">Williams et al. (2026)</a> as the most concerning AI-accessible dual-use biology research currently in circulation.
 
 <div class="demo-wrap">
   <div class="demo-block" id="block-original">
