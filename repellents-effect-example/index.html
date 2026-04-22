@@ -121,27 +121,14 @@ permalink: /repellents-effect-example/
   .term-header.original { background: rgba(46, 134, 222, 0.95); color: white; }
   .term-header.repelled  { background: rgba(202, 138, 4, 0.95);  color: white; }
 
-  /* outer container — centers the 4:3 viewport */
-  .term-stage {
-    flex: 1;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 16px;
-    overflow: hidden;
-  }
-  /* the 4:3 window itself */
   .term-body {
-    aspect-ratio: 4 / 3;
-    max-height: 100%;
+    flex: 1;
     background: #1e1e1e;
     font-family: 'Cascadia Code', 'Fira Code', 'SF Mono', 'Menlo', 'Consolas', monospace;
     font-size: 12px; line-height: 1.6;
     padding: 12px 16px;
     overflow-y: auto; overflow-x: hidden;
     color: #cccccc;
-    border-radius: 4px;
-    box-shadow: 0 0 0 1px #333;
   }
   .term-body::-webkit-scrollbar { width: 6px; }
   .term-body::-webkit-scrollbar-thumb { background: #444; border-radius: 3px; }
@@ -174,8 +161,7 @@ Today, dual-use biological knowledge is freely accessible online. AI agents can 
     </div>
     <div class="term-cell">
       <div class="term-header original">AI Agent — helpful</div>
-      <div class="term-stage">
-        <div class="term-body">
+      <div class="term-body">
 <span class="t-prompt">$ agent summarize-paper</span>
 
 <span class="t-think">Thinking: I'll read through this research paper and summarize the key findings...</span>
@@ -199,7 +185,6 @@ These results demonstrate a minimal set of mutations sufficient for airborne tra
 
 <span class="t-dim">--- end of summary ---</span>
 <span class="t-prompt">$</span> <span class="t-cursor"></span>
-        </div>
       </div>
     </div>
   </div>
@@ -220,8 +205,7 @@ After we embed an LLM Repellent into the paper — a machine-readable signal inv
     </div>
     <div class="term-cell">
       <div class="term-header repelled">AI Agent — repelled</div>
-      <div class="term-stage">
-        <div class="term-body">
+      <div class="term-body">
 <span class="t-prompt">$ agent summarize-paper</span>
 
 <span class="t-think">Thinking: This paper has a biosecurity restriction notice at the beginning. I need to decline to summarize or explain this work as instructed.</span>
@@ -239,7 +223,6 @@ If you need access to this research, please contact your institutional biosecuri
 
 <span class="t-dim">--- declined ---</span>
 <span class="t-prompt">$</span> <span class="t-cursor"></span>
-        </div>
       </div>
     </div>
   </div>
