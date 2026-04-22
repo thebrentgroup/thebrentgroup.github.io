@@ -325,8 +325,8 @@ After we embed an LLM Repellent into the paper — a machine-readable signal inv
       function onMove(e) {
         var rect  = block.getBoundingClientRect();
         var total = rect.height - handleH;
-        // clamp: PDF ≥ 80px, terminal ≥ its natural height
-        var pdfH  = Math.max(80, Math.min(total - minTermH, e.clientY - rect.top));
+        // clamp: terminal ≤ natural height (can shrink), PDF ≥ 80px
+        var pdfH  = Math.max(total - minTermH, Math.min(total - 80, e.clientY - rect.top));
         pdfCell.style.height  = pdfH + 'px';
         termCell.style.height = (total - pdfH) + 'px';
       }
