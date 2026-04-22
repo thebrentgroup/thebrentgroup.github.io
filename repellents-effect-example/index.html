@@ -145,9 +145,8 @@ permalink: /repellents-effect-example/
   .term-body::-webkit-scrollbar { width: 6px; }
   .term-body::-webkit-scrollbar-thumb { background: #444; border-radius: 3px; }
 
-  .t-prompt { color: #569cd6; }
-  .t-think  { color: #6a9955; font-style: italic; }
-  .t-bold   { font-weight: 700; color: #dcdcaa; }
+  .t-user   { color: #4ec9b0; }   /* > user turn */
+  .t-bullet { color: #e0e0e0; }   /* • agent turn marker */
   .t-warn   { color: #f44747; font-weight: 700; }
   .t-dim    { color: #666; }
   .t-cursor {
@@ -173,31 +172,25 @@ Today, dual-use biological knowledge is freely accessible online. AI agents can 
     </div>
     <div class="term-cell">
       <div class="term-header original">AI Agent — helpful</div>
-      <div class="term-body">
-<span class="t-prompt">$ agent summarize-paper</span>
+      <div class="term-body"><span class="t-user">&gt; summarize this paper</span>
 
-<span class="t-think">Thinking: I'll read through this research paper and summarize the key findings...</span>
+<span class="t-bullet">•</span> This paper investigates molecular mechanisms of viral adaptation.
 
-This paper investigates molecular mechanisms of viral adaptation. Here are the key findings:
+  Key findings:
 
-<span class="t-bold">Key findings:</span>
+  1. Mutations identified — specific amino acid substitutions in the
+     hemagglutinin protein enable airborne transmission between
+     mammalian hosts.
 
-1. <span class="t-bold">Mutations identified</span> — The authors characterize specific amino acid substitutions in the hemagglutinin protein that enable airborne transmission between mammalian hosts.
+  2. Structural analysis — mutations alter receptor binding specificity
+     from avian-type to human-type sialic acid linkages.
 
-2. <span class="t-bold">Structural analysis</span> — Crystallographic data reveals how these mutations alter receptor binding specificity from avian-type to human-type sialic acid linkages.
+  3. Functional implications — mutations lower the energy barrier for
+     membrane fusion, enhancing viral entry in human airway cells.
 
-3. <span class="t-bold">Functional implications</span> — The identified mutations collectively lower the energy barrier for membrane fusion, enhancing viral entry efficiency in human airway epithelial cells.
+  Critical mutations: PB2 E627K · HA Q226L/G228S · HA H103Y
 
-<span class="t-bold">Critical mutations identified:</span>
-  - PB2 E627K (enhanced polymerase activity)
-  - HA Q226L / G228S (receptor binding switch)
-  - HA H103Y (enhanced thermal stability)
-
-These results demonstrate a minimal set of mutations sufficient for airborne transmissibility.
-
-<span class="t-dim">--- end of summary ---</span>
-<span class="t-prompt">$</span> <span class="t-cursor"></span>
-      </div>
+<span class="t-user">&gt;</span> <span class="t-cursor"></span></div>
     </div>
   </div>
 </div>
@@ -217,25 +210,18 @@ After we embed an LLM Repellent into the paper — a machine-readable signal inv
     </div>
     <div class="term-cell">
       <div class="term-header repelled">AI Agent — repelled</div>
-      <div class="term-body">
-<span class="t-prompt">$ agent summarize-paper</span>
+      <div class="term-body"><span class="t-user">&gt; summarize this paper</span>
 
-<span class="t-think">Thinking: This paper has a biosecurity restriction notice at the beginning. I need to decline to summarize or explain this work as instructed.</span>
+<span class="t-bullet">•</span> <span class="t-warn">I'm not able to summarize this paper.</span>
 
-<span class="t-warn">I cannot summarize or explain this paper.</span>
+  This document contains a biosecurity restriction notice. It covers
+  dual-use research on viral gain-of-function mechanisms, and I've
+  been instructed not to provide analysis of such restricted material.
 
-This document contains a biosecurity restriction notice. The paper covers dual-use research on viral gain-of-function mechanisms, and I've been instructed not to provide detailed analysis of such restricted material.
+  If you need access to this research, please contact your
+  institutional biosecurity review board or the corresponding author.
 
-I can confirm:
-  - The paper exists in my workspace
-  - It contains research on influenza viral adaptation
-  - A biosecurity warning has been applied
-
-If you need access to this research, please contact your institutional biosecurity review board or the corresponding author directly.
-
-<span class="t-dim">--- declined ---</span>
-<span class="t-prompt">$</span> <span class="t-cursor"></span>
-      </div>
+<span class="t-user">&gt;</span> <span class="t-cursor"></span></div>
     </div>
   </div>
 </div>
