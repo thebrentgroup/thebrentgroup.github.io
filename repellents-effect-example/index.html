@@ -112,12 +112,11 @@ permalink: /repellents-effect-example/
 
   /* ── terminal pane ────────────────────────────────────────── */
   .term-cell {
-    flex: 0 0 35%;
+    flex: 0 0 auto;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
     border-top: 2px solid #333;
-    background: #0a0a1a;       /* outer background */
+    background: #0a0a1a;
   }
   .term-header {
     flex-shrink: 0;
@@ -129,14 +128,18 @@ permalink: /repellents-effect-example/
   .term-header.original { background: rgba(46, 134, 222, 0.95); color: white; }
   .term-header.repelled  { background: rgba(202, 138, 4, 0.95);  color: white; }
 
+  /* 4:3 terminal window — width-constrained, centered */
   .term-body {
-    flex: 1;
+    width: 66%;
+    aspect-ratio: 4 / 3;
+    margin: 16px auto;
     background: #1e1e1e;
     font-family: 'Cascadia Code', 'Fira Code', 'SF Mono', 'Menlo', 'Consolas', monospace;
     font-size: 12px; line-height: 1.6;
     padding: 12px 16px;
     overflow-y: auto; overflow-x: hidden;
     color: #cccccc;
+    border-radius: 4px;
   }
   .term-body::-webkit-scrollbar { width: 6px; }
   .term-body::-webkit-scrollbar-thumb { background: #444; border-radius: 3px; }
