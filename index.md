@@ -47,7 +47,7 @@ SFF rolling application — links to prepare:
 7. Anonymized compensation breakdown — <https://thebrentgroup.github.io/compensation/>
 8. Link of Interest #1 — <https://thebrentgroup.github.io/evidence-for-biosecurity-risk/>
 9. Link of Interest #2 — <https://thebrentgroup.github.io/honeypots-monitoring-technology/>
-10. Link of Interest #3 — <https://thebrentgroup.github.io/repellents-technology/>
+10. Link of Interest #3 — <https://thebrentgroup.github.io/llm-repellents-example/>
 
 ## Contact
 
