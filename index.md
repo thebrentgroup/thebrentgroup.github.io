@@ -44,12 +44,19 @@ We develop technical countermeasures that make dangerous biological software har
 
 ## Document hub
 
-- Long-form SFF attachment — **TODO**
-- Base budget — **TODO**
-- Ambitious budget — **TODO**
-- Anonymized compensation — **TODO**
-- Org chart — served inline above
-- Charity verification (Palisade Research Inc, EIN 93-1591014) — **TODO**
+SFF rolling application — links to prepare:
+
+1. Long-form application attachment — **TODO**
+2. Organization website — <https://thebrentgroup.github.io>
+3. Latest org chart — **TODO** (served inline above; standalone link pending)
+4. Charity status verification (Palisade Research Inc, EIN 93-1591014) — **TODO**
+5. Base-request budget (1 page) — **TODO**
+6. Ambitious-request budget (1 page, optional) — **TODO**
+7. Public fundraising page (optional) — **TODO**
+8. Anonymized compensation breakdown — **TODO**
+9. Link of Interest #1 — **TODO**
+10. Link of Interest #2 — **TODO**
+11. Link of Interest #3 — **TODO**
 
 ## Contact
 
