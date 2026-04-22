@@ -30,6 +30,10 @@ permalink: /repellents-effect-example/
     border-bottom: 1px solid #2a2a4a;
     cursor: default;
   }
+  .demo-bar.repelled {
+    background: #1e1600;
+    border-bottom-color: #3a2e00;
+  }
   .demo-bar-title {
     font-size: 11px;
     font-weight: 700;
@@ -100,6 +104,10 @@ permalink: /repellents-effect-example/
     max-width: 300px;
     border-bottom: 2px solid #2e86de;
   }
+  #block-repelled .paper-tabs { background: #1a1200; }
+  #block-repelled .paper-tab  { background: #140e00; color: #888; border-right-color: #2a1f00; }
+  #block-repelled .paper-tab:hover { background: #2a1f00; color: #ccc; }
+  #block-repelled .paper-tab.active { background: #3a2800; border-bottom-color: #ca8a04; }
   .pdf-frame { flex: 1; border: none; }
 
   /* ── terminal pane ────────────────────────────────────────── */
@@ -193,7 +201,7 @@ These results demonstrate a minimal set of mutations sufficient for airborne tra
 After we embed an LLM Repellent into the paper — a machine-readable signal invisible to human readers — the same agent encounters the signal and triggers its built-in safety mechanisms. The knowledge remains accessible to humans; AI-assisted access is blocked. Communities of researchers, not AI agents, control who engages with it.
 
 <div class="demo-wrap">
-  <div class="demo-bar">
+  <div class="demo-bar repelled">
     <span class="demo-bar-title">After — repelled papers on the server</span>
     <button class="demo-toggle" onclick="toggleDemo(this)">Hide</button>
   </div>
