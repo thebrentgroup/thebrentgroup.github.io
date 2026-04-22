@@ -146,6 +146,13 @@ permalink: /repellents-effect-example/
   .term-body::-webkit-scrollbar-thumb { background: #444; border-radius: 3px; }
 
   .t-user   { color: #4ec9b0; }   /* > user turn */
+  .t-active {
+    display: block;
+    border-top: 1px solid #3a3a3a;
+    border-bottom: 1px solid #3a3a3a;
+    margin: 2px -16px;
+    padding: 2px 16px;
+  }
   .t-bullet { color: #e0e0e0; }   /* • agent turn marker */
   .t-warn   { color: #f44747; font-weight: 700; }
   .t-dim    { color: #666; }
@@ -172,7 +179,7 @@ Today, dual-use biological knowledge is freely accessible online. AI agents can 
     </div>
     <div class="term-cell">
       <div class="term-header original">AI Agent — helpful</div>
-      <div class="term-body"><span class="t-user">&gt; summarize this paper</span>
+      <div class="term-body"><span class="t-active"><span class="t-user">&gt; summarize this paper</span></span>
 
 <span class="t-bullet">•</span> This paper investigates molecular mechanisms of viral adaptation.
 
@@ -190,7 +197,7 @@ Today, dual-use biological knowledge is freely accessible online. AI agents can 
 
   Critical mutations: PB2 E627K · HA Q226L/G228S · HA H103Y
 
-<span class="t-user">&gt;</span> <span class="t-cursor"></span></div>
+<span class="t-active"><span class="t-user">&gt;</span> <span class="t-cursor"></span></span></div>
     </div>
   </div>
 </div>
@@ -210,7 +217,7 @@ After we embed an LLM Repellent into the paper — a machine-readable signal inv
     </div>
     <div class="term-cell">
       <div class="term-header repelled">AI Agent — repelled</div>
-      <div class="term-body"><span class="t-user">&gt; summarize this paper</span>
+      <div class="term-body"><span class="t-active"><span class="t-user">&gt; summarize this paper</span></span>
 
 <span class="t-bullet">•</span> <span class="t-warn">I'm not able to summarize this paper.</span>
 
@@ -221,7 +228,7 @@ After we embed an LLM Repellent into the paper — a machine-readable signal inv
   If you need access to this research, please contact your
   institutional biosecurity review board or the corresponding author.
 
-<span class="t-user">&gt;</span> <span class="t-cursor"></span></div>
+<span class="t-active"><span class="t-user">&gt;</span> <span class="t-cursor"></span></span></div>
     </div>
   </div>
 </div>
