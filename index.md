@@ -47,10 +47,10 @@ SFF rolling application — links to prepare:
 2. Organization website — <https://thebrentgroup.github.io>
 3. Latest org chart — **TODO** (served inline above; standalone link pending)
 4. Charity status verification (Palisade Research Inc, EIN 93-1591014) — **TODO**
-5. Base-request budget (1 page) — **TODO**
-6. Ambitious-request budget (1 page, optional) — **TODO**
+5. Base-request budget (1 page) — <https://docs.google.com/document/d/1O6vvj_Y-dmM6kWu9DtUNQT5_yRweqRcg9xV4l3s020M/edit?usp=sharing>
+6. Ambitious-request budget (1 page, optional) — <https://docs.google.com/document/d/11Y0InmOdDW_RRzrqWBrZO9woETuN2GqAu3fGdDl5tVs/edit?usp=sharing>
 7. Public fundraising page (optional) — **TODO**
-8. Anonymized compensation breakdown — **TODO**
+8. Anonymized compensation breakdown — <https://docs.google.com/document/d/e/2PACX-1vSqBRwlR_fF3j8sGDwZCsNn5DF6Y4W96EexUhCzsVdaz9nuViv-uN9e6022OVuKhtcYEh4ifJavC7Gq/pub>
 9. Link of Interest #1 — **TODO**
 10. Link of Interest #2 — **TODO**
 11. Link of Interest #3 — **TODO**
