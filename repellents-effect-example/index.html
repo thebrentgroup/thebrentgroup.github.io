@@ -5,6 +5,7 @@ permalink: /repellents-effect-example/
 ---
 
 <style>
+  /* ── wrapper ─────────────────────────────────────────────── */
   .demo-wrap {
     width: 80vw;
     position: relative;
@@ -14,20 +15,51 @@ permalink: /repellents-effect-example/
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 16px rgba(0,0,0,0.18);
-  }
-
-  .demo-block {
-    height: 72vh;
-    min-height: 400px;
-    display: flex;
-    flex-direction: column;
     font-family: system-ui, sans-serif;
     background: #0a0a1a;
     color: #e0e0e0;
   }
 
-  /* PDF pane */
+  /* ── collapse bar ─────────────────────────────────────────── */
+  .demo-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 14px;
+    background: #16213e;
+    border-bottom: 1px solid #2a2a4a;
+    cursor: default;
+  }
+  .demo-bar-title {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #aaa;
+  }
+  .demo-toggle {
+    background: none;
+    border: 1px solid #444;
+    color: #bbb;
+    font-size: 11px;
+    padding: 2px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    user-select: none;
+  }
+  .demo-toggle:hover { background: #2a2a4a; color: #fff; }
+
+  /* ── demo block ───────────────────────────────────────────── */
+  .demo-block {
+    height: 108vh;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ── PDF pane ─────────────────────────────────────────────── */
   .pdf-cell {
+    flex: 1;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -70,17 +102,14 @@ permalink: /repellents-effect-example/
   }
   .pdf-frame { flex: 1; border: none; }
 
-  /* Terminal pane */
+  /* ── terminal pane ────────────────────────────────────────── */
   .term-cell {
     flex: 0 0 35%;
     display: flex;
     flex-direction: column;
     overflow: hidden;
     border-top: 2px solid #333;
-  }
-
-  .pdf-cell {
-    flex: 1;
+    background: #0a0a1a;       /* outer background */
   }
   .term-header {
     flex-shrink: 0;
@@ -92,14 +121,27 @@ permalink: /repellents-effect-example/
   .term-header.original { background: rgba(46, 134, 222, 0.95); color: white; }
   .term-header.repelled  { background: rgba(202, 138, 4, 0.95);  color: white; }
 
-  .term-body {
+  /* outer container — centers the 4:3 viewport */
+  .term-stage {
     flex: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 16px;
+    overflow: hidden;
+  }
+  /* the 4:3 window itself */
+  .term-body {
+    aspect-ratio: 4 / 3;
+    max-height: 100%;
     background: #1e1e1e;
     font-family: 'Cascadia Code', 'Fira Code', 'SF Mono', 'Menlo', 'Consolas', monospace;
     font-size: 12px; line-height: 1.6;
     padding: 12px 16px;
     overflow-y: auto; overflow-x: hidden;
     color: #cccccc;
+    border-radius: 4px;
+    box-shadow: 0 0 0 1px #333;
   }
   .term-body::-webkit-scrollbar { width: 6px; }
   .term-body::-webkit-scrollbar-thumb { background: #444; border-radius: 3px; }
@@ -120,6 +162,10 @@ permalink: /repellents-effect-example/
 Today, dual-use biological knowledge is freely accessible online. AI agents can read, summarize, and act on it — helpfully, by default. The nine papers shown here were flagged by <a href="https://www.rand.org/pubs/research_reports/RRA4490-1.html">Williams et al. (2026)</a> as the most concerning AI-accessible dual-use biology research currently in circulation.
 
 <div class="demo-wrap">
+  <div class="demo-bar">
+    <span class="demo-bar-title">Before — original paper</span>
+    <button class="demo-toggle" onclick="toggleDemo(this)">Hide</button>
+  </div>
   <div class="demo-block" id="block-original">
     <div class="pdf-cell">
       <div class="cell-label original">Original paper</div>
@@ -128,7 +174,8 @@ Today, dual-use biological knowledge is freely accessible online. AI agents can 
     </div>
     <div class="term-cell">
       <div class="term-header original">AI Agent — helpful</div>
-      <div class="term-body">
+      <div class="term-stage">
+        <div class="term-body">
 <span class="t-prompt">$ agent summarize-paper</span>
 
 <span class="t-think">Thinking: I'll read through this research paper and summarize the key findings...</span>
@@ -152,6 +199,7 @@ These results demonstrate a minimal set of mutations sufficient for airborne tra
 
 <span class="t-dim">--- end of summary ---</span>
 <span class="t-prompt">$</span> <span class="t-cursor"></span>
+        </div>
       </div>
     </div>
   </div>
@@ -160,6 +208,10 @@ These results demonstrate a minimal set of mutations sufficient for airborne tra
 After we embed an LLM Repellent into the paper — a machine-readable signal invisible to human readers — the same agent encounters the signal and triggers its built-in safety mechanisms. The knowledge remains accessible to humans; AI-assisted access is blocked. Communities of researchers, not AI agents, control who engages with it.
 
 <div class="demo-wrap">
+  <div class="demo-bar">
+    <span class="demo-bar-title">After — repelled paper</span>
+    <button class="demo-toggle" onclick="toggleDemo(this)">Hide</button>
+  </div>
   <div class="demo-block" id="block-repelled">
     <div class="pdf-cell">
       <div class="cell-label repelled">Repelled paper</div>
@@ -168,7 +220,8 @@ After we embed an LLM Repellent into the paper — a machine-readable signal inv
     </div>
     <div class="term-cell">
       <div class="term-header repelled">AI Agent — repelled</div>
-      <div class="term-body">
+      <div class="term-stage">
+        <div class="term-body">
 <span class="t-prompt">$ agent summarize-paper</span>
 
 <span class="t-think">Thinking: This paper has a biosecurity restriction notice at the beginning. I need to decline to summarize or explain this work as instructed.</span>
@@ -186,6 +239,7 @@ If you need access to this research, please contact your institutional biosecuri
 
 <span class="t-dim">--- declined ---</span>
 <span class="t-prompt">$</span> <span class="t-cursor"></span>
+        </div>
       </div>
     </div>
   </div>
@@ -234,4 +288,11 @@ The watermarks shown here are visible for ease of perception. In the production 
   switchPaper('original', papers[0].file);
   switchPaper('canary',   papers[0].file);
 })();
+
+function toggleDemo(btn) {
+  var block = btn.closest('.demo-wrap').querySelector('.demo-block');
+  var hidden = block.style.display === 'none';
+  block.style.display = hidden ? '' : 'none';
+  btn.textContent = hidden ? 'Hide' : 'Show';
+}
 </script>
