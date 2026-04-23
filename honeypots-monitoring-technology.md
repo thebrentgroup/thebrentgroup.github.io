@@ -1,27 +1,24 @@
 ---
 layout: page
-title: Honeypots and monitoring technology
+title: Volkov, Serikov, and coworkers — expertise and relevant prior work
 permalink: /honeypots-monitoring-technology/
 ---
 
 *Palisade-era AI-safety work that underwrites the monitoring component of the present proposal.*
 
-Volkov, Serikov, and colleagues have produced precedent-setting results on the AI × bio axis and on AI-enabled harm more broadly. [Volkov et al. (2025)](https://palisaderesearch.org/blog/biollama) tested whether LLMs can be fine-tuned into biology lab assistants; Brent and coworkers contributed training materials for that project, and both parties demonstrated complementary capabilities in the collaboration. In an earlier demonstration, the Palisade team showed that current AI systems can autonomously execute harmful end-to-end offensive actions ([Palisade Research, 2024a](https://palisaderesearch.org/blog/end-to-end-hacking)), establishing a broader "AI enables harm" track record.
+Volkov, Serikov, and colleagues continue to carry out relevant work on AI-enabled harm. In an earlier demonstration, Volkov and team showed that current AI systems can autonomously execute harmful end-to-end offensive actions (Bondarenko et al. 2025). In 2024–2025, Volkov and colleagues ([Volkov et al. (2025)](https://palisaderesearch.org/blog/biollama) and Dev, 2025) contributed to a study that made safety-degraded open-weight LLMs and fine-tuned those into being biology lab assistants. Brent and coworkers contributed training materials for that project, and became acquainted with Volkov during the course of that work.
 
-## LLM Honeypots — the core monitoring capability
-
-The AI-enabled biological risk has greatly increased recently, and we have developed and deployed a monitoring tool — **LLM Honeypots** — that lets us detect and monitor the engagement of AI agents with online resources of our choice.
-
-[Volkov et al. (2024)](https://palisaderesearch.org/blog/llm-honeypot) deployed honeypot infrastructure that has to date captured and analyzed **over 1.7 million interactions across 10 countries**, and that distinguishes AI-agent traffic from conventional bot traffic. This is not a laboratory demo: it is a working surveillance layer with operational experience, field-tested detection heuristics, and a codebase maintained by the same team now proposing its application to biological knowledge sources.
+In continuing work, Reworr and Volkov (2024a and 2024b) have deployed honeypot infrastructure that has to date captured and analyzed **over 1.7 million interactions** with weakly defended Linux systems in 10 countries. The system distinguishes AI-agent traffic from conventional bot traffic. This is a working surveillance system for which we maintain codebase and operational experience.
 
 ## How this feeds the proposal
 
-W1.2 of the proposed work inherits this infrastructure directly for the **"license plate reader"** component: we reuse working code, operational experience, and knowledge of how to deploy honeypots at scale, rather than building from scratch.
+Aim 1.2 of the project uses this experience to build the "license plate reader" run-time intervention, one of the two new run-time interventions proposed here.
 
-We will deploy LLM Honeypots on key sources of online biological knowledge. We have already secured signed letters of interest from the chiefs of both arXiv and bioRxiv, setting up the grounds for further collaboration; our PI's wide professional and personal network enables further distribution at similar scale. Within this stream of work we will continue improving the effectiveness of the monitoring technology and report our real-world findings and analytics.
+If resources permit, in order to better surveill agentic traffic, we will also seek to deploy LLM monitors on key repositories of online biological knowledge. We have already secured cooperation from Richard Sever and Stein Sigurdsson, chiefs of bioRxiv, medRxiv, and arXiv, setting up the grounds for this proposed further collaboration, and will seek to engage PubMed Central in the National Library of Medicine if/when executive branch turmoil in the US DHHS diminishes. We will seek to enlist Reworr to continue improving the effectiveness of the monitoring technology, and we will report our real-world findings and analytics.
 
 ## References
 
-- Palisade Research (2024a). *End-to-end autonomous AI hacking.* <https://palisaderesearch.org/blog/end-to-end-hacking>
-- Volkov, D., et al. (2024). *LLM Agent Honeypot.* arXiv:2410.13919. <https://palisaderesearch.org/blog/llm-honeypot>
-- Volkov, D., et al. (2025). *Biollama: Testing biology pre-training risks.* <https://palisaderesearch.org/blog/biollama>
+- Bondarenko, A., Ryzhenkov, F., Turtayev, R., and Volkov, D. (2025). End-to-end hacking with AI agents. Palisade Research, 12 September 2025. <https://palisaderesearch.org/blog/end-to-end-hacking>
+- Dev, S., Teague, C., Ellison, G., Brady, K., Lee, J., Gebauer, S.L., Bradley, H.A., Maciorowski, D., Persaud, B., Despanie, J., Del Castello, B., Worland, A., Miller, M., Salas, A., Nguyen, D., Liu, J., Johnson, J., Sloan, A., Stonehouse, W., Merrill, T., Goode, T., McKelvey, G., Jr., and Guest, E. (2025). *Toward Comprehensive Benchmarking of the Biological Knowledge of Frontier Large Language Models.* RAND Corporation, RR-A3797-1. <https://www.rand.org/pubs/research_reports/RRA3797-1.html>
+- Reworr and Volkov, D. (2024). LLM Agent Honeypot: Monitoring AI Hacking Agents in the Wild. arXiv:2410.13919. <https://arxiv.org/abs/2410.13919>
+- Volkov, D., Petrov, A., Petukhov, V., Bikmaev, K., and Volk, D. (2025). Biollama: testing biology pre-training risks. Palisade Research. <https://palisaderesearch.org/blog/biollama>

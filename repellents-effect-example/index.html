@@ -167,13 +167,11 @@ permalink: /llm-repellents-example/
 
 ## What are LLM Repellents?
 
-The AI-enabled biological risk has greatly increased recently. We have learned how to trigger low-level safety mechanisms innate to modern AIs with concrete bits of information added to biological information and software of dual-use nature. This increases friction in AI-assisted work on potentially harmful biological topics **at zero cost to AI developers**.
-
-Repellents are designed for deployment on key sources of online biological knowledge. We have already secured signed letters of interest from the chiefs of both arXiv and bioRxiv, and our PI's professional network enables further distribution at similar scale. This work is one of the first three streams (W1–W3) of the present proposal, alongside our [LLM Honeypots](/honeypots-monitoring-technology/) monitoring technology.
+"LLM repellents" is the category name for a larger class of technical countermeasures developed to enable developers of biological software tools to modify those tools to diminish the chance that the tools will be operated by autonomous AI agents. These countermeasures are strings of text and code that can be added to the code, READMEs, and outputs of specialized biological software tools. They exploit safety features and other behaviors already trained and engineered into LLMs and LLM agentic scaffolds. When LLMs in agentic harness attempt to operate software modified with such strings, the countermeasures (a) trigger the LLMs' content filters, or (b) induce the LLMs to reason that they should not complete their assigned task, or (c) influence the agentic harness to disengage. The countermeasures run a gamut, from those designed to trigger prohibitions against aiding construction of biological and nuclear weapons, to moral appeals, to triggers of other taboos, to meaningless strings of text selected by gradient descent. None are effective all of the time. Work to make better repellents continues. This work is described in Barkan et al., currently in review/in press at RAND.
 
 ## The demo
 
-The nine papers shown here were flagged by <a href="https://www.rand.org/pubs/research_reports/RRA4490-1.html">Williams et al. (2026)</a> as the most concerning AI-accessible dual-use biology research currently in circulation. Each demo shows the same paper served to an AI agent — before and after a repellent is embedded. In the production deployment on arXiv and bioRxiv the watermarks will be **invisible to human readers**; they are shown here for ease of perception.
+Brent was involved with the team (<a href="https://www.rand.org/pubs/research_reports/RRA4490-1.html">Williams et al. 2026</a>) that, as part of its work, identified a number of truly alarming dual-use biology research papers describing means to modify viral function to make viruses more deadly. We took nine such papers. Each demo shows the same paper served to an AI agent, with and without a simple repellent. It may be possible to embed repellents in preprints so that watermarks are invisible to human readers; they are shown here for ease of perception.
 
 Today, dual-use biological knowledge is freely accessible online. AI agents can read, summarize, and act on it — helpfully, by default.
 
@@ -249,7 +247,7 @@ After we embed an LLM Repellent into the paper — a machine-readable signal inv
 ## References
 
 - Williams, A. E., Del Castello, B., Lee, J., Roberts, D., Tarangelo, J. P., Atanda, J., Colman-Lerner, A., Gerold, J., & Brent, R. (2026). *Developing a risk-scoring tool for artificial intelligence–enabled biological design.* RAND RR-A4490-1. <https://www.rand.org/pubs/research_reports/RRA4490-1.html>
-- Barkan et al. (in prep., RAND). *LLM Repellents* — the technical framework extended by W1.1 of the present proposal.
+- Barkan, C., Rodriguez, C., Chowdhury, S., Zhang, L.-A., and Brent, R. (2026). *Embedded countermeasures to keep LLMs and LLM agents from using biological software.* In prep.
 
 <div class="drag-overlay" id="drag-overlay"></div>
 
