@@ -38,7 +38,7 @@ See the [standalone org chart](/org-chart/).
 
 SFF rolling application — links to prepare:
 
-1. Long-form application attachment — **TODO**
+1. Long-form application attachment — <https://docs.google.com/document/d/1kDsFMghvgVrnbQy_U8g9HGi5qbVgUTBYOkzptjTXckQ/edit?usp=sharing>
 2. Organization website — <https://thebrentgroup.github.io>
 3. Latest org chart — <https://thebrentgroup.github.io/org-chart/>
 4. Charity status verification (Palisade Research Inc, EIN 93-1591014) — **TODO**
