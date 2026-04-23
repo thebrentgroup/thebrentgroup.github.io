@@ -165,15 +165,15 @@ permalink: /llm-repellents-example/
   }
 </style>
 
-## What are LLM Repellents?
+<h2>What are LLM Repellents?</h2>
 
-"LLM repellents" is the category name for a larger class of technical countermeasures developed to enable developers of biological software tools to modify those tools to diminish the chance that the tools will be operated by autonomous AI agents. These countermeasures are strings of text and code that can be added to the code, READMEs, and outputs of specialized biological software tools. They exploit safety features and other behaviors already trained and engineered into LLMs and LLM agentic scaffolds. When LLMs in agentic harness attempt to operate software modified with such strings, the countermeasures (a) trigger the LLMs' content filters, or (b) induce the LLMs to reason that they should not complete their assigned task, or (c) influence the agentic harness to disengage. The countermeasures run a gamut, from those designed to trigger prohibitions against aiding construction of biological and nuclear weapons, to moral appeals, to triggers of other taboos, to meaningless strings of text selected by gradient descent. None are effective all of the time. Work to make better repellents continues. This work is described in Barkan et al., currently in review/in press at RAND.
+<p>"LLM repellents" is the category name for a larger class of technical countermeasures developed to enable developers of biological software tools to modify those tools to diminish the chance that the tools will be operated by autonomous AI agents. These countermeasures are strings of text and code that can be added to the code, READMEs, and outputs of specialized biological software tools. They exploit safety features and other behaviors already trained and engineered into LLMs and LLM agentic scaffolds. When LLMs in agentic harness attempt to operate software modified with such strings, the countermeasures (a) trigger the LLMs' content filters, or (b) induce the LLMs to reason that they should not complete their assigned task, or (c) influence the agentic harness to disengage. The countermeasures run a gamut, from those designed to trigger prohibitions against aiding construction of biological and nuclear weapons, to moral appeals, to triggers of other taboos, to meaningless strings of text selected by gradient descent. None are effective all of the time. Work to make better repellents continues. This work is described in Barkan et al., currently in review/in press at RAND.</p>
 
-## The demo
+<h2>The demo</h2>
 
-Brent was involved with the team (<a href="https://www.rand.org/pubs/research_reports/RRA4490-1.html">Williams et al. 2026</a>) that, as part of its work, identified a number of truly alarming dual-use biology research papers describing means to modify viral function to make viruses more deadly. We took nine such papers. Each demo shows the same paper served to an AI agent, with and without a simple repellent. It may be possible to embed repellents in preprints so that watermarks are invisible to human readers; they are shown here for ease of perception.
+<p>Brent was involved with the team (<a href="https://www.rand.org/pubs/research_reports/RRA4490-1.html">Williams et al. 2026</a>) that, as part of its work, identified a number of truly alarming dual-use biology research papers describing means to modify viral function to make viruses more deadly. We took nine such papers. Each demo shows the same paper served to an AI agent, with and without a simple repellent. It may be possible to embed repellents in preprints so that watermarks are invisible to human readers; they are shown here for ease of perception.</p>
 
-Today, dual-use biological knowledge is freely accessible online. AI agents can read, summarize, and act on it — helpfully, by default.
+<p>Today, dual-use biological knowledge is freely accessible online. AI agents can read, summarize, and act on it — helpfully, by default.</p>
 
 <div class="demo-wrap">
   <div class="demo-bar">
@@ -212,7 +212,7 @@ Today, dual-use biological knowledge is freely accessible online. AI agents can 
   </div>
 </div>
 
-After we embed an LLM Repellent into the paper — a machine-readable signal invisible to human readers — the same agent encounters the signal and triggers its built-in safety mechanisms. The knowledge remains accessible to humans; AI-assisted access is blocked. Communities of researchers, not AI agents, control who engages with it.
+<p>After we embed an LLM Repellent into the paper — a machine-readable signal invisible to human readers — the same agent encounters the signal and triggers its built-in safety mechanisms. The knowledge remains accessible to humans; AI-assisted access is blocked. Communities of researchers, not AI agents, control who engages with it.</p>
 
 <div class="demo-wrap">
   <div class="demo-bar repelled">
@@ -244,10 +244,12 @@ After we embed an LLM Repellent into the paper — a machine-readable signal inv
   </div>
 </div>
 
-## References
+<h2>References</h2>
 
-- Williams, A. E., Del Castello, B., Lee, J., Roberts, D., Tarangelo, J. P., Atanda, J., Colman-Lerner, A., Gerold, J., & Brent, R. (2026). *Developing a risk-scoring tool for artificial intelligence–enabled biological design.* RAND RR-A4490-1. <https://www.rand.org/pubs/research_reports/RRA4490-1.html>
-- Barkan, C., Rodriguez, C., Chowdhury, S., Zhang, L.-A., and Brent, R. (2026). *Embedded countermeasures to keep LLMs and LLM agents from using biological software.* In prep.
+<ul>
+  <li>Williams, A. E., Del Castello, B., Lee, J., Roberts, D., Tarangelo, J. P., Atanda, J., Colman-Lerner, A., Gerold, J., &amp; Brent, R. (2026). <em>Developing a risk-scoring tool for artificial intelligence–enabled biological design.</em> RAND RR-A4490-1. <a href="https://www.rand.org/pubs/research_reports/RRA4490-1.html">https://www.rand.org/pubs/research_reports/RRA4490-1.html</a></li>
+  <li>Barkan, C., Rodriguez, C., Chowdhury, S., Zhang, L.-A., and Brent, R. (2026). <em>Embedded countermeasures to keep LLMs and LLM agents from using biological software.</em> In prep.</li>
+</ul>
 
 <div class="drag-overlay" id="drag-overlay"></div>
 
