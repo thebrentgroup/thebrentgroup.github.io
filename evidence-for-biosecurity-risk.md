@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Credibility of PI and team for biosecurity risk
-permalink: /evidence-for-biosecurity-risk/
+permalink: /credibility-PI-team-biosecurity-risk/
 ---
 
 *How the prior work of Brent and collaborators establishes the threat model, the empirical basis, and the technical framework the present proposal extends.*
