@@ -36,7 +36,7 @@ See the [standalone org chart](/org-chart/).
 
 ## Document hub
 
-SFF rolling application — links to prepare:
+SFF rolling application — submitted links:
 
 1. Long-form application attachment — <https://thebrentgroup.github.io/sff-long-form/>
 2. Organization website — <https://thebrentgroup.github.io>
