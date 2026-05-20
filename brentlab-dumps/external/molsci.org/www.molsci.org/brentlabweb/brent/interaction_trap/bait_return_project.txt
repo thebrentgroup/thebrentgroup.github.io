@@ -1,0 +1,102 @@
+BAIT RETURN PROJECT
+
+We ask you to send us your LexA fusion contructions for a project
+described below.  Ideally, we would like to receive both the bait
+plasmid DNA and a derivative of yeast strain RFY206/pSH18-34 into
+which you have introduced the bait plasmid.
+
+RFY206/pSH18-34 is URA3+ his3-.  We enclose this strain with the
+standard kit (see requesting materials).  You should maintain
+selection for the pSH18-34 plasmid (a hypersensitive LexAop-lacZ
+reporter) by first streaking the strain onto Ura- glu plates and then
+growing in Ura-glu liquid culture prior to transformation with your
+HIS3+ bait plasmid.
+
+The more information about your LexA fusions that you can provide, the
+more useful it will be to us.  If you can't manage the transformation
+we would be very grateful for the bait DNA.
+
+You can send the strain and plasmid to:
+
+Russ Finley
+Department of Molecular Biology
+Massachusetts General Hospital
+50 Blossom Street
+Boston, Massachusetts 02114
+USA
+
+What is this about
+
+We are isolating sets of proteins involved in cell cycle decisions.
+Most of these are new, and we hope to use the interaction trap to gain
+a clue to the function of some of them, by identifying interactions
+between these proteins of unknown function and known bait proteins.
+
+These baits do not need to be involved in cell cycle decisions: any
+interaction may be informative.  If, for example we find that one of
+our new proteins interacts with known cytoskeletal components, or with
+a component of the replication apparatus, we may gain a clue to its
+function.
+
+Although this approach is of unproven value, we are quite excited
+about it, and we hope that if it works for our new cell cycle
+regulators it might be generalizable to newly identified proteins that
+may affect other cellular processes.
+
+To this end, Russ Finley has devised simple plate mating conditions by
+which a putative interactor can be quickly tested against a very large
+number (100s or 1000s) of baits contained in RFY206/pSH18-34.
+
+We are asking people who are using the interaction trap, if they are
+willing, to send us back their bait proteins so that we can test them
+against our unknowns.  If we do get a hit, we will tell you (e.g. that
+our unknown #17, that has the EQRX motif, interacts with your protein
+phosphatase), and perhaps we will both learn something.  We will not
+distribute your bait or your RFY206 derivative to others without your
+permission.
+
+What we ask you to do
+      
+If you are willing to go along with this scheme, we ask for three
+things back.
+
+1) Your bait plasmid(s) DNA.
+
+2) A derivative of RFY206/pSH18-34 into which the bait plasmid has
+been introduced.
+
+3) A description of it
+
+What we would like to know about the bait
+
+1) Name of the protein fused to LexA.  Reference for it.  Residues of
+the protein that are present.
+
+2) Other significant facts about the bait.  Was it designed so as to
+include any motifs or structures of conserved function?  Was it
+designed so as not to contain any such motifs?
+
+3) Structure of the bait plasmid.  Is it derived from pEG202, our
+later vector?  Into what site(s) on the plasmid was the gene encoding
+the fusion protein introduced?  What is the sequence of the junction
+between LexA and the fusion partner?  What codon terminates the coding
+sequence of the fusion protein?  What do you know about the length,
+restriction map, and sequence (if available) of the inserted DNA 3' to
+its coding sequence.
+
+4) (If available) sequence or inferred sequence of the DNA fragment
+introduced into bait vectors.  Sequence files gladly accepted.
+
+Conclusion
+
+Note that this is an experimental strategy of so far unproven value.
+However, we are all pretty optimistic about it.  Thank you for your
+help.
+
+Roger Brent
+
+617 726 5925
+617 726 6893 (fax)
+brent@opal.mgh.harvard.edu
+
+September, 1993

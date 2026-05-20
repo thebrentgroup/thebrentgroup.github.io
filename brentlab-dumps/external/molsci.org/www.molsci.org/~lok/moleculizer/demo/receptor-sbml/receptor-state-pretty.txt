@@ -1,0 +1,1544 @@
+<?xml version="1.0"?>
+<moleculizer-state>
+  <model>
+    <units-states>
+      <modifications>
+        <modification name="adp-bound">
+          <weight-delta daltons="130"/>
+        </modification>
+        <modification name="atp-bound">
+          <weight-delta daltons="100"/>
+        </modification>
+        <modification name="gdp-bound">
+          <weight-delta daltons="99"/>
+        </modification>
+        <modification name="gtp-bound">
+          <weight-delta daltons="140"/>
+        </modification>
+        <modification name="none">
+          <weight-delta daltons="0"/>
+        </modification>
+        <modification name="phosphorylated">
+          <weight-delta daltons="42"/>
+        </modification>
+      </modifications>
+      <mols>
+        <mod-mol name="Gpa1">
+          <weight daltons="100"/>
+          <binding-site name="to-Ste4">
+            <default-shape-ref name="default"/>
+            <site-shape name="GTP-bound-shape"/>
+            <site-shape name="default"/>
+          </binding-site>
+          <mod-site name="gtp-mod-site">
+            <default-mod-ref name="none"/>
+          </mod-site>
+          <allosteric-state>
+            <mod-map>
+              <mod-site-ref name="gtp-mod-site">
+                <mod-ref name="gtp-bound"/>
+              </mod-site-ref>
+            </mod-map>
+            <site-shape-map>
+              <binding-site-ref name="to-Ste4">
+                <site-shape-ref name="GTP-bound-shape"/>
+              </binding-site-ref>
+            </site-shape-map>
+          </allosteric-state>
+        </mod-mol>
+        <mod-mol name="Ste2">
+          <weight daltons="100"/>
+          <binding-site name="to-Ste4">
+            <default-shape-ref name="default"/>
+            <site-shape name="default"/>
+          </binding-site>
+          <binding-site name="to-alpha">
+            <default-shape-ref name="default"/>
+            <site-shape name="default"/>
+          </binding-site>
+        </mod-mol>
+        <mod-mol name="Ste4">
+          <weight daltons="100"/>
+          <binding-site name="to-Ste2">
+            <default-shape-ref name="default"/>
+            <site-shape name="default"/>
+          </binding-site>
+          <binding-site name="to-Gpa1">
+            <default-shape-ref name="default"/>
+            <site-shape name="default"/>
+            <site-shape name="obstructed"/>
+          </binding-site>
+          <binding-site name="to-Ste5">
+            <default-shape-ref name="default"/>
+            <site-shape name="default"/>
+            <site-shape name="obstructed"/>
+          </binding-site>
+        </mod-mol>
+        <mod-mol name="Ste5">
+          <weight daltons="100"/>
+          <binding-site name="to-Ste4">
+            <default-shape-ref name="default"/>
+            <site-shape name="default"/>
+          </binding-site>
+          <binding-site name="to-Ste11">
+            <default-shape-ref name="default"/>
+            <site-shape name="default"/>
+          </binding-site>
+          <binding-site name="to-Ste7">
+            <default-shape-ref name="default"/>
+            <site-shape name="default"/>
+          </binding-site>
+          <binding-site name="to-Fus3">
+            <default-shape-ref name="default"/>
+            <site-shape name="default"/>
+          </binding-site>
+        </mod-mol>
+        <mod-mol name="alpha">
+          <weight daltons="100"/>
+          <binding-site name="to-Ste2">
+            <default-shape-ref name="default"/>
+            <site-shape name="default"/>
+          </binding-site>
+        </mod-mol>
+      </mols>
+    </units-states>
+    <explicit-species-tags>
+      <explicit-species-tag name="ADP" tag="0x8059d94"/>
+      <explicit-species-tag name="ATP" tag="0x8059d24"/>
+      <explicit-species-tag name="GDP" tag="0x8059dcc"/>
+      <explicit-species-tag name="GTP" tag="0x8059d5c"/>
+      <explicit-species-tag name="Ste2-singleton" tag="0x8059c70"/>
+      <explicit-species-tag name="Ste5-singleton" tag="0x8059b78"/>
+      <explicit-species-tag name="alpha-singleton" tag="0x8059a80"/>
+      <explicit-species-tag name="g-protein-complex" tag="0x8059cc8"/>
+      <explicit-species-tag name="phosphate" tag="0x8059e04"/>
+    </explicit-species-tags>
+    <tagged-species>
+      <tagged-plex-species tag="0x8059a80">
+        <plex>
+          <mol-instance name="mod-mol_0">
+            <mol-ref name="alpha"/>
+          </mol-instance>
+        </plex>
+        <instance-states>
+          <mod-mol-instance-ref name="mod-mol_0">
+            <mod-map/>
+          </mod-mol-instance-ref>
+        </instance-states>
+        <population count="27"/>
+        <concentration value="4.48505e-11"/>
+        <updated/>
+      </tagged-plex-species>
+      <tagged-plex-species tag="0x80845b8">
+        <plex>
+          <mol-instance name="mod-mol_0">
+            <mol-ref name="Ste2"/>
+          </mol-instance>
+          <mol-instance name="mod-mol_1">
+            <mol-ref name="Gpa1"/>
+          </mol-instance>
+          <mol-instance name="mod-mol_2">
+            <mol-ref name="Ste4"/>
+          </mol-instance>
+          <mol-instance name="mod-mol_3">
+            <mol-ref name="Ste5"/>
+          </mol-instance>
+          <binding>
+            <mol-instance-ref name="mod-mol_1">
+              <binding-site-ref name="to-Ste4"/>
+            </mol-instance-ref>
+            <mol-instance-ref name="mod-mol_2">
+              <binding-site-ref name="to-Gpa1"/>
+            </mol-instance-ref>
+          </binding>
+          <binding>
+            <mol-instance-ref name="mod-mol_0">
+              <binding-site-ref name="to-Ste4"/>
+            </mol-instance-ref>
+            <mol-instance-ref name="mod-mol_2">
+              <binding-site-ref name="to-Ste2"/>
+            </mol-instance-ref>
+          </binding>
+          <binding>
+            <mol-instance-ref name="mod-mol_2">
+              <binding-site-ref name="to-Ste5"/>
+            </mol-instance-ref>
+            <mol-instance-ref name="mod-mol_3">
+              <binding-site-ref name="to-Ste4"/>
+            </mol-instance-ref>
+          </binding>
+        </plex>
+        <instance-states>
+          <mod-mol-instance-ref name="mod-mol_0">
+            <mod-map/>
+          </mod-mol-instance-ref>
+          <mod-mol-instance-ref name="mod-mol_1">
+            <mod-map>
+              <mod-site-ref name="gtp-mod-site">
+                <mod-ref name="gtp-bound"/>
+              </mod-site-ref>
+            </mod-map>
+          </mod-mol-instance-ref>
+          <mod-mol-instance-ref name="mod-mol_2">
+            <mod-map/>
+          </mod-mol-instance-ref>
+          <mod-mol-instance-ref name="mod-mol_3">
+            <mod-map/>
+          </mod-mol-instance-ref>
+        </instance-states>
+        <population count="0"/>
+        <concentration value="0"/>
+      </tagged-plex-species>
+      <tagged-plex-species tag="0x807da28">
+        <plex>
+          <mol-instance name="mod-mol_0">
+            <mol-ref name="Ste2"/>
+          </mol-instance>
+          <mol-instance name="mod-mol_1">
+            <mol-ref name="Gpa1"/>
+          </mol-instance>
+          <mol-instance name="mod-mol_2">
+            <mol-ref name="Ste4"/>
+          </mol-instance>
+          <mol-instance name="mod-mol_3">
+            <mol-ref name="Ste5"/>
+          </mol-instance>
+          <binding>
+            <mol-instance-ref name="mod-mol_1">
+              <binding-site-ref name="to-Ste4"/>
+            </mol-instance-ref>
+            <mol-instance-ref name="mod-mol_2">
+              <binding-site-ref name="to-Gpa1"/>
+            </mol-instance-ref>
+          </binding>
+          <binding>
+            <mol-instance-ref name="mod-mol_0">
+              <binding-site-ref name="to-Ste4"/>
+            </mol-instance-ref>
+            <mol-instance-ref name="mod-mol_2">
+              <binding-site-ref name="to-Ste2"/>
+            </mol-instance-ref>
+          </binding>
+          <binding>
+            <mol-instance-ref name="mod-mol_2">
+              <binding-site-ref name="to-Ste5"/>
+            </mol-instance-ref>
+            <mol-instance-ref name="mod-mol_3">
+              <binding-site-ref name="to-Ste4"/>
+            </mol-instance-ref>
+          </binding>
+        </plex>
+        <instance-states>
+          <mod-mol-instance-ref name="mod-mol_0">
+            <mod-map/>
+          </mod-mol-instance-ref>
+          <mod-mol-instance-ref name="mod-mol_1">
+            <mod-map>
+              <mod-site-ref name="gtp-mod-site">
+                <mod-ref name="gdp-bound"/>
+              </mod-site-ref>
+            </mod-map>
+          </mod-mol-instance-ref>
+          <mod-mol-instance-ref name="mod-mol_2">
+            <mod-map/>
+          </mod-mol-instance-ref>
+          <mod-mol-instance-ref name="mod-mol_3">
+            <mod-map/>
+          </mod-mol-instance-ref>
+        </instance-states>
+        <population count="0"/>
+        <concentration value="0"/>
+      </tagged-plex-species>
+      <tagged-plex-species tag="0x807efe0">
+        <plex>
+          <mol-instance name="mod-mol_0">
+            <mol-ref name="Ste4"/>
+          </mol-instance>
+          <mol-instance name="mod-mol_1">
+            <mol-ref name="Ste2"/>
+          </mol-instance>
+          <mol-instance name="mod-mol_2">
+            <mol-ref name="Ste5"/>
+          </mol-instance>
+          <binding>
+            <mol-instance-ref name="mod-mol_0">
+              <binding-site-ref name="to-Ste2"/>
+            </mol-instance-ref>
+            <mol-instance-ref name="mod-mol_1">
+              <binding-site-ref name="to-Ste4"/>
+            </mol-instance-ref>
+          </binding>
+          <binding>
+            <mol-instance-ref name="mod-mol_0">
+              <binding-site-ref name="to-Ste5"/>
+            </mol-instance-ref>
+            <mol-instance-ref name="mod-mol_2">
+              <binding-site-ref name="to-Ste4"/>
+            </mol-instance-ref>
+          </binding>
+        </plex>
+        <instance-states>
+          <mod-mol-instance-ref name="mod-mol_0">
+            <mod-map/>
+          </mod-mol-instance-ref>
+          <mod-mol-instance-ref name="mod-mol_1">
+            <mod-map/>
+          </mod-mol-instance-ref>
+          <mod-mol-instance-ref name="mod-mol_2">
+            <mod-map/>
+          </mod-mol-instance-ref>
+        </instance-states>
+        <population count="18"/>
+        <concentration value="2.99003e-11"/>
+        <updated/>
+      </tagged-plex-species>
+      <tagged-plex-species tag="0x807dd08">
+        <plex>
+          <mol-instance name="mod-mol_0">
+            <mol-ref name="Ste4"/>
+          </mol-instance>
+          <mol-instance name="mod-mol_1">
+            <mol-ref name="Ste5"/>
+          </mol-instance>
+          <binding>
+            <mol-instance-ref name="mod-mol_0">
+              <binding-site-ref name="to-Ste5"/>
+            </mol-instance-ref>
+            <mol-instance-ref name="mod-mol_1">
+              <binding-site-ref name="to-Ste4"/>
+            </mol-instance-ref>
+          </binding>
+        </plex>
+        <instance-states>
+          <mod-mol-instance-ref name="mod-mol_0">
+            <mod-map/>
+          </mod-mol-instance-ref>
+          <mod-mol-instance-ref name="mod-mol_1">
+            <mod-map/>
+          </mod-mol-instance-ref>
+        </instance-states>
+        <population count="17"/>
+        <concentration value="2.82392e-11"/>
+        <updated/>
+      </tagged-plex-species>
+      <tagged-plex-species tag="0x8084648">
+        <plex>
+          <mol-instance name="mod-mol_0">
+            <mol-ref name="Gpa1"/>
+          </mol-instance>
+          <mol-instance name="mod-mol_1">
+            <mol-ref name="Ste4"/>
+          </mol-instance>
+          <mol-instance name="mod-mol_2">
+            <mol-ref name="Ste5"/>
+          </mol-instance>
+          <binding>
+            <mol-instance-ref name="mod-mol_0">
+              <binding-site-ref name="to-Ste4"/>
+            </mol-instance-ref>
+            <mol-instance-ref name="mod-mol_1">
+              <binding-site-ref name="to-Gpa1"/>
+            </mol-instance-ref>
+          </binding>
+          <binding>
+            <mol-instance-ref name="mod-mol_1">
+              <binding-site-ref name="to-Ste5"/>
+            </mol-instance-ref>
+            <mol-instance-ref name="mod-mol_2">
+              <binding-site-ref name="to-Ste4"/>
+            </mol-instance-ref>
+          </binding>
+        </plex>
+        <instance-states>
+          <mod-mol-instance-ref name="mod-mol_0">
+            <mod-map>
+              <mod-site-ref name="gtp-mod-site">
+                <mod-ref name="gtp-bound"/>
+              </mod-site-ref>
+            </mod-map>
+          </mod-mol-instance-ref>
+          <mod-mol-instance-ref name="mod-mol_1">
+            <mod-map/>
+          </mod-mol-instance-ref>
+          <mod-mol-instance-ref name="mod-mol_2">
+            <mod-map/>
+          </mod-mol-instance-ref>
+        </instance-states>
+        <population count="0"/>
+        <concentration value="0"/>
+      </tagged-plex-species>
+      <tagged-plex-species tag="0x805d1b8">
+        <plex>
+          <mol-instance name="mod-mol_0">
+            <mol-ref name="Gpa1"/>
+          </mol-instance>
+          <mol-instance name="mod-mol_1">
+            <mol-ref name="Ste4"/>
+          </mol-instance>
+          <mol-instance name="mod-mol_2">
+            <mol-ref name="Ste5"/>
+          </mol-instance>
+          <binding>
+            <mol-instance-ref name="mod-mol_0">
+              <binding-site-ref name="to-Ste4"/>
+            </mol-instance-ref>
+            <mol-instance-ref name="mod-mol_1">
+              <binding-site-ref name="to-Gpa1"/>
+            </mol-instance-ref>
+          </binding>
+          <binding>
+            <mol-instance-ref name="mod-mol_1">
+              <binding-site-ref name="to-Ste5"/>
+            </mol-instance-ref>
+            <mol-instance-ref name="mod-mol_2">
+              <binding-site-ref name="to-Ste4"/>
+            </mol-instance-ref>
+          </binding>
+        </plex>
+        <instance-states>
+          <mod-mol-instance-ref name="mod-mol_0">
+            <mod-map>
+              <mod-site-ref name="gtp-mod-site">
+                <mod-ref name="gdp-bound"/>
+              </mod-site-ref>
+            </mod-map>
+          </mod-mol-instance-ref>
+          <mod-mol-instance-ref name="mod-mol_1">
+            <mod-map/>
+          </mod-mol-instance-ref>
+          <mod-mol-instance-ref name="mod-mol_2">
+            <mod-map/>
+          </mod-mol-instance-ref>
+        </instance-states>
+        <population count="0"/>
+        <concentration value="0"/>
+      </tagged-plex-species>
+      <tagged-plex-species tag="0x8059b78">
+        <plex>
+          <mol-instance name="mod-mol_0">
+            <mol-ref name="Ste5"/>
+          </mol-instance>
+        </plex>
+        <instance-states>
+          <mod-mol-instance-ref name="mod-mol_0">
+            <mod-map/>
+          </mod-mol-instance-ref>
+        </instance-states>
+        <population count="242"/>
+        <concentration value="4.01993e-10"/>
+        <updated/>
+      </tagged-plex-species>
+      <tagged-plex-species tag="0x8080400">
+        <plex>
+          <mol-instance name="mod-mol_0">
+            <mol-ref name="alpha"/>
+          </mol-instance>
+          <mol-instance name="mod-mol_1">
+            <mol-ref name="Ste4"/>
+          </mol-instance>
+          <mol-instance name="mod-mol_2">
+            <mol-ref name="Ste2"/>
+          </mol-instance>
+          <mol-instance name="mod-mol_3">
+            <mol-ref name="Ste5"/>
+          </mol-instance>
+          <binding>
+            <mol-instance-ref name="mod-mol_1">
+              <binding-site-ref name="to-Ste2"/>
+            </mol-instance-ref>
+            <mol-instance-ref name="mod-mol_2">
+              <binding-site-ref name="to-Ste4"/>
+            </mol-instance-ref>
+          </binding>
+          <binding>
+            <mol-instance-ref name="mod-mol_1">
+              <binding-site-ref name="to-Ste5"/>
+            </mol-instance-ref>
+            <mol-instance-ref name="mod-mol_3">
+              <binding-site-ref name="to-Ste4"/>
+            </mol-instance-ref>
+          </binding>
+          <binding>
+            <mol-instance-ref name="mod-mol_0">
+              <binding-site-ref name="to-Ste2"/>
+            </mol-instance-ref>
+            <mol-instance-ref name="mod-mol_2">
+              <binding-site-ref name="to-alpha"/>
+            </mol-instance-ref>
+          </binding>
+        </plex>
+        <instance-states>
+          <mod-mol-instance-ref name="mod-mol_0">
+            <mod-map/>
+          </mod-mol-instance-ref>
+          <mod-mol-instance-ref name="mod-mol_1">
+            <mod-map/>
+          </mod-mol-instance-ref>
+          <mod-mol-instance-ref name="mod-mol_2">
+            <mod-map/>
+          </mod-mol-instance-ref>
+          <mod-mol-instance-ref name="mod-mol_3">
+            <mod-map/>
+          </mod-mol-instance-ref>
+        </instance-states>
+        <population count="723"/>
+        <concentration value="1.201e-09"/>
+        <updated/>
+      </tagged-plex-species>
+      <tagged-plex-species tag="0x8081d58">
+        <plex>
+          <mol-instance name="mod-mol_0">
+            <mol-ref name="Gpa1"/>
+          </mol-instance>
+          <mol-instance name="mod-mol_1">
+            <mol-ref name="Ste4"/>
+          </mol-instance>
+          <mol-instance name="mod-mol_2">
+            <mol-ref name="Ste2"/>
+          </mol-instance>
+          <mol-instance name="mod-mol_3">
+            <mol-ref name="alpha"/>
+          </mol-instance>
+          <binding>
+            <mol-instance-ref name="mod-mol_3">
+              <binding-site-ref name="to-Ste2"/>
+            </mol-instance-ref>
+            <mol-instance-ref name="mod-mol_2">
+              <binding-site-ref name="to-alpha"/>
+            </mol-instance-ref>
+          </binding>
+          <binding>
+            <mol-instance-ref name="mod-mol_2">
+              <binding-site-ref name="to-Ste4"/>
+            </mol-instance-ref>
+            <mol-instance-ref name="mod-mol_1">
+              <binding-site-ref name="to-Ste2"/>
+            </mol-instance-ref>
+          </binding>
+          <binding>
+            <mol-instance-ref name="mod-mol_0">
+              <binding-site-ref name="to-Ste4"/>
+            </mol-instance-ref>
+            <mol-instance-ref name="mod-mol_1">
+              <binding-site-ref name="to-Gpa1"/>
+            </mol-instance-ref>
+          </binding>
+        </plex>
+        <instance-states>
+          <mod-mol-instance-ref name="mod-mol_0">
+            <mod-map>
+              <mod-site-ref name="gtp-mod-site">
+                <mod-ref name="gtp-bound"/>
+              </mod-site-ref>
+            </mod-map>
+          </mod-mol-instance-ref>
+          <mod-mol-instance-ref name="mod-mol_1">
+            <mod-map/>
+          </mod-mol-instance-ref>
+          <mod-mol-instance-ref name="mod-mol_2">
+            <mod-map/>
+          </mod-mol-instance-ref>
+          <mod-mol-instance-ref name="mod-mol_3">
+            <mod-map/>
+          </mod-mol-instance-ref>
+        </instance-states>
+        <population count="0"/>
+        <concentration value="0"/>
+        <updated/>
+      </tagged-plex-species>
+      <tagged-plex-species tag="0x8059e38">
+        <plex>
+          <mol-instance name="mod-mol_0">
+            <mol-ref name="Gpa1"/>
+          </mol-instance>
+          <mol-instance name="mod-mol_1">
+            <mol-ref name="Ste4"/>
+          </mol-instance>
+          <mol-instance name="mod-mol_2">
+            <mol-ref name="Ste2"/>
+          </mol-instance>
+          <mol-instance name="mod-mol_3">
+            <mol-ref name="alpha"/>
+          </mol-instance>
+          <binding>
+            <mol-instance-ref name="mod-mol_3">
+              <binding-site-ref name="to-Ste2"/>
+            </mol-instance-ref>
+            <mol-instance-ref name="mod-mol_2">
+              <binding-site-ref name="to-alpha"/>
+            </mol-instance-ref>
+          </binding>
+          <binding>
+            <mol-instance-ref name="mod-mol_2">
+              <binding-site-ref name="to-Ste4"/>
+            </mol-instance-ref>
+            <mol-instance-ref name="mod-mol_1">
+              <binding-site-ref name="to-Ste2"/>
+            </mol-instance-ref>
+          </binding>
+          <binding>
+            <mol-instance-ref name="mod-mol_0">
+              <binding-site-ref name="to-Ste4"/>
+            </mol-instance-ref>
+            <mol-instance-ref name="mod-mol_1">
+              <binding-site-ref name="to-Gpa1"/>
+            </mol-instance-ref>
+          </binding>
+        </plex>
+        <instance-states>
+          <mod-mol-instance-ref name="mod-mol_0">
+            <mod-map>
+              <mod-site-ref name="gtp-mod-site">
+                <mod-ref name="gdp-bound"/>
+              </mod-site-ref>
+            </mod-map>
+          </mod-mol-instance-ref>
+          <mod-mol-instance-ref name="mod-mol_1">
+            <mod-map/>
+          </mod-mol-instance-ref>
+          <mod-mol-instance-ref name="mod-mol_2">
+            <mod-map/>
+          </mod-mol-instance-ref>
+          <mod-mol-instance-ref name="mod-mol_3">
+            <mod-map/>
+          </mod-mol-instance-ref>
+        </instance-states>
+        <population count="5"/>
+        <concentration value="8.30565e-12"/>
+        <updated/>
+      </tagged-plex-species>
+      <tagged-plex-species tag="0x807f110">
+        <plex>
+          <mol-instance name="mod-mol_0">
+            <mol-ref name="alpha"/>
+          </mol-instance>
+          <mol-instance name="mod-mol_1">
+            <mol-ref name="Ste4"/>
+          </mol-instance>
+          <mol-instance name="mod-mol_2">
+            <mol-ref name="Ste2"/>
+          </mol-instance>
+          <binding>
+            <mol-instance-ref name="mod-mol_1">
+              <binding-site-ref name="to-Ste2"/>
+            </mol-instance-ref>
+            <mol-instance-ref name="mod-mol_2">
+              <binding-site-ref name="to-Ste4"/>
+            </mol-instance-ref>
+          </binding>
+          <binding>
+            <mol-instance-ref name="mod-mol_0">
+              <binding-site-ref name="to-Ste2"/>
+            </mol-instance-ref>
+            <mol-instance-ref name="mod-mol_2">
+              <binding-site-ref name="to-alpha"/>
+            </mol-instance-ref>
+          </binding>
+        </plex>
+        <instance-states>
+          <mod-mol-instance-ref name="mod-mol_0">
+            <mod-map/>
+          </mod-mol-instance-ref>
+          <mod-mol-instance-ref name="mod-mol_1">
+            <mod-map/>
+          </mod-mol-instance-ref>
+          <mod-mol-instance-ref name="mod-mol_2">
+            <mod-map/>
+          </mod-mol-instance-ref>
+        </instance-states>
+        <population count="225"/>
+        <concentration value="3.73754e-10"/>
+        <updated/>
+      </tagged-plex-species>
+      <tagged-plex-species tag="0x8081f08">
+        <plex>
+          <mol-instance name="mod-mol_0">
+            <mol-ref name="Gpa1"/>
+          </mol-instance>
+          <mol-instance name="mod-mol_1">
+            <mol-ref name="Ste4"/>
+          </mol-instance>
+          <binding>
+            <mol-instance-ref name="mod-mol_0">
+              <binding-site-ref name="to-Ste4"/>
+            </mol-instance-ref>
+            <mol-instance-ref name="mod-mol_1">
+              <binding-site-ref name="to-Gpa1"/>
+            </mol-instance-ref>
+          </binding>
+        </plex>
+        <instance-states>
+          <mod-mol-instance-ref name="mod-mol_0">
+            <mod-map>
+              <mod-site-ref name="gtp-mod-site">
+                <mod-ref name="gtp-bound"/>
+              </mod-site-ref>
+            </mod-map>
+          </mod-mol-instance-ref>
+          <mod-mol-instance-ref name="mod-mol_1">
+            <mod-map/>
+          </mod-mol-instance-ref>
+        </instance-states>
+        <population count="0"/>
+        <concentration value="0"/>
+      </tagged-plex-species>
+      <tagged-plex-species tag="0x8059cc8">
+        <plex>
+          <mol-instance name="mod-mol_0">
+            <mol-ref name="Gpa1"/>
+          </mol-instance>
+          <mol-instance name="mod-mol_1">
+            <mol-ref name="Ste4"/>
+          </mol-instance>
+          <binding>
+            <mol-instance-ref name="mod-mol_0">
+              <binding-site-ref name="to-Ste4"/>
+            </mol-instance-ref>
+            <mol-instance-ref name="mod-mol_1">
+              <binding-site-ref name="to-Gpa1"/>
+            </mol-instance-ref>
+          </binding>
+        </plex>
+        <instance-states>
+          <mod-mol-instance-ref name="mod-mol_0">
+            <mod-map>
+              <mod-site-ref name="gtp-mod-site">
+                <mod-ref name="gdp-bound"/>
+              </mod-site-ref>
+            </mod-map>
+          </mod-mol-instance-ref>
+          <mod-mol-instance-ref name="mod-mol_1">
+            <mod-map/>
+          </mod-mol-instance-ref>
+        </instance-states>
+        <population count="4"/>
+        <concentration value="6.64452e-12"/>
+        <updated/>
+      </tagged-plex-species>
+      <tagged-plex-species tag="0x807dab8">
+        <plex>
+          <mol-instance name="mod-mol_0">
+            <mol-ref name="Ste4"/>
+          </mol-instance>
+          <mol-instance name="mod-mol_1">
+            <mol-ref name="Ste2"/>
+          </mol-instance>
+          <binding>
+            <mol-instance-ref name="mod-mol_0">
+              <binding-site-ref name="to-Ste2"/>
+            </mol-instance-ref>
+            <mol-instance-ref name="mod-mol_1">
+              <binding-site-ref name="to-Ste4"/>
+            </mol-instance-ref>
+          </binding>
+        </plex>
+        <instance-states>
+          <mod-mol-instance-ref name="mod-mol_0">
+            <mod-map/>
+          </mod-mol-instance-ref>
+          <mod-mol-instance-ref name="mod-mol_1">
+            <mod-map/>
+          </mod-mol-instance-ref>
+        </instance-states>
+        <population count="0"/>
+        <concentration value="0"/>
+        <updated/>
+      </tagged-plex-species>
+      <tagged-plex-species tag="0x805bff8">
+        <plex>
+          <mol-instance name="mod-mol_0">
+            <mol-ref name="alpha"/>
+          </mol-instance>
+          <mol-instance name="mod-mol_1">
+            <mol-ref name="Ste2"/>
+          </mol-instance>
+          <binding>
+            <mol-instance-ref name="mod-mol_0">
+              <binding-site-ref name="to-Ste2"/>
+            </mol-instance-ref>
+            <mol-instance-ref name="mod-mol_1">
+              <binding-site-ref name="to-alpha"/>
+            </mol-instance-ref>
+          </binding>
+        </plex>
+        <instance-states>
+          <mod-mol-instance-ref name="mod-mol_0">
+            <mod-map/>
+          </mod-mol-instance-ref>
+          <mod-mol-instance-ref name="mod-mol_1">
+            <mod-map/>
+          </mod-mol-instance-ref>
+        </instance-states>
+        <population count="20"/>
+        <concentration value="3.32226e-11"/>
+        <updated/>
+      </tagged-plex-species>
+      <tagged-plex-species tag="0x805d330">
+        <plex>
+          <mol-instance name="mod-mol_0">
+            <mol-ref name="Ste4"/>
+          </mol-instance>
+        </plex>
+        <instance-states>
+          <mod-mol-instance-ref name="mod-mol_0">
+            <mod-map/>
+          </mod-mol-instance-ref>
+        </instance-states>
+        <population count="1"/>
+        <concentration value="1.66113e-12"/>
+        <updated/>
+      </tagged-plex-species>
+      <tagged-plex-species tag="0x80821a8">
+        <plex>
+          <mol-instance name="mod-mol_0">
+            <mol-ref name="Gpa1"/>
+          </mol-instance>
+        </plex>
+        <instance-states>
+          <mod-mol-instance-ref name="mod-mol_0">
+            <mod-map>
+              <mod-site-ref name="gtp-mod-site">
+                <mod-ref name="gtp-bound"/>
+              </mod-site-ref>
+            </mod-map>
+          </mod-mol-instance-ref>
+        </instance-states>
+        <population count="691"/>
+        <concentration value="1.14784e-09"/>
+        <updated/>
+      </tagged-plex-species>
+      <tagged-plex-species tag="0x805d248">
+        <plex>
+          <mol-instance name="mod-mol_0">
+            <mol-ref name="Gpa1"/>
+          </mol-instance>
+        </plex>
+        <instance-states>
+          <mod-mol-instance-ref name="mod-mol_0">
+            <mod-map>
+              <mod-site-ref name="gtp-mod-site">
+                <mod-ref name="gdp-bound"/>
+              </mod-site-ref>
+            </mod-map>
+          </mod-mol-instance-ref>
+        </instance-states>
+        <population count="293"/>
+        <concentration value="4.86711e-10"/>
+        <updated/>
+      </tagged-plex-species>
+      <tagged-plex-species tag="0x8081de8">
+        <plex>
+          <mol-instance name="mod-mol_0">
+            <mol-ref name="Gpa1"/>
+          </mol-instance>
+          <mol-instance name="mod-mol_1">
+            <mol-ref name="Ste4"/>
+          </mol-instance>
+          <mol-instance name="mod-mol_2">
+            <mol-ref name="Ste2"/>
+          </mol-instance>
+          <mol-instance name="mod-mol_3">
+            <mol-ref name="alpha"/>
+          </mol-instance>
+          <mol-instance name="mod-mol_4">
+            <mol-ref name="Ste5"/>
+          </mol-instance>
+          <binding>
+            <mol-instance-ref name="mod-mol_3">
+              <binding-site-ref name="to-Ste2"/>
+            </mol-instance-ref>
+            <mol-instance-ref name="mod-mol_2">
+              <binding-site-ref name="to-alpha"/>
+            </mol-instance-ref>
+          </binding>
+          <binding>
+            <mol-instance-ref name="mod-mol_2">
+              <binding-site-ref name="to-Ste4"/>
+            </mol-instance-ref>
+            <mol-instance-ref name="mod-mol_1">
+              <binding-site-ref name="to-Ste2"/>
+            </mol-instance-ref>
+          </binding>
+          <binding>
+            <mol-instance-ref name="mod-mol_0">
+              <binding-site-ref name="to-Ste4"/>
+            </mol-instance-ref>
+            <mol-instance-ref name="mod-mol_1">
+              <binding-site-ref name="to-Gpa1"/>
+            </mol-instance-ref>
+          </binding>
+          <binding>
+            <mol-instance-ref name="mod-mol_1">
+              <binding-site-ref name="to-Ste5"/>
+            </mol-instance-ref>
+            <mol-instance-ref name="mod-mol_4">
+              <binding-site-ref name="to-Ste4"/>
+            </mol-instance-ref>
+          </binding>
+        </plex>
+        <instance-states>
+          <mod-mol-instance-ref name="mod-mol_0">
+            <mod-map>
+              <mod-site-ref name="gtp-mod-site">
+                <mod-ref name="gtp-bound"/>
+              </mod-site-ref>
+            </mod-map>
+          </mod-mol-instance-ref>
+          <mod-mol-instance-ref name="mod-mol_1">
+            <mod-map/>
+          </mod-mol-instance-ref>
+          <mod-mol-instance-ref name="mod-mol_2">
+            <mod-map/>
+          </mod-mol-instance-ref>
+          <mod-mol-instance-ref name="mod-mol_3">
+            <mod-map/>
+          </mod-mol-instance-ref>
+          <mod-mol-instance-ref name="mod-mol_4">
+            <mod-map/>
+          </mod-mol-instance-ref>
+        </instance-states>
+        <population count="0"/>
+        <concentration value="0"/>
+      </tagged-plex-species>
+      <tagged-plex-species tag="0x8080780">
+        <plex>
+          <mol-instance name="mod-mol_0">
+            <mol-ref name="Gpa1"/>
+          </mol-instance>
+          <mol-instance name="mod-mol_1">
+            <mol-ref name="Ste4"/>
+          </mol-instance>
+          <mol-instance name="mod-mol_2">
+            <mol-ref name="Ste2"/>
+          </mol-instance>
+          <mol-instance name="mod-mol_3">
+            <mol-ref name="alpha"/>
+          </mol-instance>
+          <mol-instance name="mod-mol_4">
+            <mol-ref name="Ste5"/>
+          </mol-instance>
+          <binding>
+            <mol-instance-ref name="mod-mol_3">
+              <binding-site-ref name="to-Ste2"/>
+            </mol-instance-ref>
+            <mol-instance-ref name="mod-mol_2">
+              <binding-site-ref name="to-alpha"/>
+            </mol-instance-ref>
+          </binding>
+          <binding>
+            <mol-instance-ref name="mod-mol_2">
+              <binding-site-ref name="to-Ste4"/>
+            </mol-instance-ref>
+            <mol-instance-ref name="mod-mol_1">
+              <binding-site-ref name="to-Ste2"/>
+            </mol-instance-ref>
+          </binding>
+          <binding>
+            <mol-instance-ref name="mod-mol_0">
+              <binding-site-ref name="to-Ste4"/>
+            </mol-instance-ref>
+            <mol-instance-ref name="mod-mol_1">
+              <binding-site-ref name="to-Gpa1"/>
+            </mol-instance-ref>
+          </binding>
+          <binding>
+            <mol-instance-ref name="mod-mol_1">
+              <binding-site-ref name="to-Ste5"/>
+            </mol-instance-ref>
+            <mol-instance-ref name="mod-mol_4">
+              <binding-site-ref name="to-Ste4"/>
+            </mol-instance-ref>
+          </binding>
+        </plex>
+        <instance-states>
+          <mod-mol-instance-ref name="mod-mol_0">
+            <mod-map>
+              <mod-site-ref name="gtp-mod-site">
+                <mod-ref name="gdp-bound"/>
+              </mod-site-ref>
+            </mod-map>
+          </mod-mol-instance-ref>
+          <mod-mol-instance-ref name="mod-mol_1">
+            <mod-map/>
+          </mod-mol-instance-ref>
+          <mod-mol-instance-ref name="mod-mol_2">
+            <mod-map/>
+          </mod-mol-instance-ref>
+          <mod-mol-instance-ref name="mod-mol_3">
+            <mod-map/>
+          </mod-mol-instance-ref>
+          <mod-mol-instance-ref name="mod-mol_4">
+            <mod-map/>
+          </mod-mol-instance-ref>
+        </instance-states>
+        <population count="0"/>
+        <concentration value="0"/>
+      </tagged-plex-species>
+      <tagged-plex-species tag="0x8059c70">
+        <plex>
+          <mol-instance name="mod-mol_0">
+            <mol-ref name="Ste2"/>
+          </mol-instance>
+        </plex>
+        <instance-states>
+          <mod-mol-instance-ref name="mod-mol_0">
+            <mod-map/>
+          </mod-mol-instance-ref>
+        </instance-states>
+        <population count="2"/>
+        <concentration value="3.32226e-12"/>
+        <updated/>
+      </tagged-plex-species>
+      <tagged-plex-species tag="0x8081e78">
+        <plex>
+          <mol-instance name="mod-mol_0">
+            <mol-ref name="Ste2"/>
+          </mol-instance>
+          <mol-instance name="mod-mol_1">
+            <mol-ref name="Gpa1"/>
+          </mol-instance>
+          <mol-instance name="mod-mol_2">
+            <mol-ref name="Ste4"/>
+          </mol-instance>
+          <binding>
+            <mol-instance-ref name="mod-mol_1">
+              <binding-site-ref name="to-Ste4"/>
+            </mol-instance-ref>
+            <mol-instance-ref name="mod-mol_2">
+              <binding-site-ref name="to-Gpa1"/>
+            </mol-instance-ref>
+          </binding>
+          <binding>
+            <mol-instance-ref name="mod-mol_0">
+              <binding-site-ref name="to-Ste4"/>
+            </mol-instance-ref>
+            <mol-instance-ref name="mod-mol_2">
+              <binding-site-ref name="to-Ste2"/>
+            </mol-instance-ref>
+          </binding>
+        </plex>
+        <instance-states>
+          <mod-mol-instance-ref name="mod-mol_0">
+            <mod-map/>
+          </mod-mol-instance-ref>
+          <mod-mol-instance-ref name="mod-mol_1">
+            <mod-map>
+              <mod-site-ref name="gtp-mod-site">
+                <mod-ref name="gtp-bound"/>
+              </mod-site-ref>
+            </mod-map>
+          </mod-mol-instance-ref>
+          <mod-mol-instance-ref name="mod-mol_2">
+            <mod-map/>
+          </mod-mol-instance-ref>
+        </instance-states>
+        <population count="0"/>
+        <concentration value="0"/>
+      </tagged-plex-species>
+      <tagged-plex-species tag="0x805d088">
+        <plex>
+          <mol-instance name="mod-mol_0">
+            <mol-ref name="Ste2"/>
+          </mol-instance>
+          <mol-instance name="mod-mol_1">
+            <mol-ref name="Gpa1"/>
+          </mol-instance>
+          <mol-instance name="mod-mol_2">
+            <mol-ref name="Ste4"/>
+          </mol-instance>
+          <binding>
+            <mol-instance-ref name="mod-mol_1">
+              <binding-site-ref name="to-Ste4"/>
+            </mol-instance-ref>
+            <mol-instance-ref name="mod-mol_2">
+              <binding-site-ref name="to-Gpa1"/>
+            </mol-instance-ref>
+          </binding>
+          <binding>
+            <mol-instance-ref name="mod-mol_0">
+              <binding-site-ref name="to-Ste4"/>
+            </mol-instance-ref>
+            <mol-instance-ref name="mod-mol_2">
+              <binding-site-ref name="to-Ste2"/>
+            </mol-instance-ref>
+          </binding>
+        </plex>
+        <instance-states>
+          <mod-mol-instance-ref name="mod-mol_0">
+            <mod-map/>
+          </mod-mol-instance-ref>
+          <mod-mol-instance-ref name="mod-mol_1">
+            <mod-map>
+              <mod-site-ref name="gtp-mod-site">
+                <mod-ref name="gdp-bound"/>
+              </mod-site-ref>
+            </mod-map>
+          </mod-mol-instance-ref>
+          <mod-mol-instance-ref name="mod-mol_2">
+            <mod-map/>
+          </mod-mol-instance-ref>
+        </instance-states>
+        <population count="7"/>
+        <concentration value="1.16279e-11"/>
+        <updated/>
+      </tagged-plex-species>
+      <tagged-stoch-species tag="0x8059d94">
+        <weight daltons="40"/>
+        <population count="0"/>
+        <concentration value="0"/>
+      </tagged-stoch-species>
+      <tagged-stoch-species tag="0x8059d24">
+        <weight daltons="42"/>
+        <population count="10000"/>
+        <concentration value="1.66113e-08"/>
+      </tagged-stoch-species>
+      <tagged-stoch-species tag="0x8059dcc">
+        <weight daltons="40"/>
+        <population count="18"/>
+        <concentration value="2.99003e-11"/>
+      </tagged-stoch-species>
+      <tagged-stoch-species tag="0x8059d5c">
+        <weight daltons="42"/>
+        <population count="9982"/>
+        <concentration value="1.65814e-08"/>
+      </tagged-stoch-species>
+      <tagged-stoch-species tag="0x8059e04">
+        <weight daltons="5"/>
+        <population count="2327"/>
+        <concentration value="3.86545e-09"/>
+      </tagged-stoch-species>
+    </tagged-species>
+    <tag-reactions>
+      <tag-reaction>
+        <tagged-substrate tag="0x8059d94" multiplicity="1"/>
+        <tagged-substrate tag="0x8059e04" multiplicity="1"/>
+        <tagged-product tag="0x8059d24" multiplicity="1"/>
+        <rate value="1e+12"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x8059dcc" multiplicity="1"/>
+        <tagged-substrate tag="0x8059e04" multiplicity="1"/>
+        <tagged-product tag="0x8059d5c" multiplicity="1"/>
+        <rate value="1e+12"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x8059cc8" multiplicity="1"/>
+        <tagged-product tag="0x805d248" multiplicity="1"/>
+        <tagged-product tag="0x805d330" multiplicity="1"/>
+        <rate value="1"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x805d088" multiplicity="1"/>
+        <tagged-product tag="0x805d248" multiplicity="1"/>
+        <tagged-product tag="0x807dab8" multiplicity="1"/>
+        <rate value="1"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x8059e38" multiplicity="1"/>
+        <tagged-product tag="0x805d248" multiplicity="1"/>
+        <tagged-product tag="0x807f110" multiplicity="1"/>
+        <rate value="1"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x8081d58" multiplicity="1"/>
+        <tagged-product tag="0x807f110" multiplicity="1"/>
+        <tagged-product tag="0x80821a8" multiplicity="1"/>
+        <rate value="1e+10"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x805d248" multiplicity="1"/>
+        <tagged-substrate tag="0x805d330" multiplicity="1"/>
+        <tagged-product tag="0x8059cc8" multiplicity="1"/>
+        <rate value="8.6675e+11"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x805d248" multiplicity="1"/>
+        <tagged-substrate tag="0x807dab8" multiplicity="1"/>
+        <tagged-product tag="0x805d088" multiplicity="1"/>
+        <rate value="7.07995e+11"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x805d248" multiplicity="1"/>
+        <tagged-substrate tag="0x807efe0" multiplicity="1"/>
+        <tagged-product tag="0x807da28" multiplicity="1"/>
+        <rate value="6.4647"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x805d248" multiplicity="1"/>
+        <tagged-substrate tag="0x807dd08" multiplicity="1"/>
+        <tagged-product tag="0x805d1b8" multiplicity="1"/>
+        <rate value="7.07995"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x805d248" multiplicity="1"/>
+        <tagged-substrate tag="0x807f110" multiplicity="1"/>
+        <tagged-product tag="0x8059e38" multiplicity="1"/>
+        <rate value="6.4647e+11"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x805d330" multiplicity="1"/>
+        <tagged-substrate tag="0x80821a8" multiplicity="1"/>
+        <tagged-product tag="0x8081f08" multiplicity="1"/>
+        <rate value="0.841625"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x807dab8" multiplicity="1"/>
+        <tagged-substrate tag="0x80821a8" multiplicity="1"/>
+        <tagged-product tag="0x8081e78" multiplicity="1"/>
+        <rate value="0.677003"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x807efe0" multiplicity="1"/>
+        <tagged-substrate tag="0x80821a8" multiplicity="1"/>
+        <tagged-product tag="0x80845b8" multiplicity="1"/>
+        <rate value="0.612372"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x807dd08" multiplicity="1"/>
+        <tagged-substrate tag="0x80821a8" multiplicity="1"/>
+        <tagged-product tag="0x8084648" multiplicity="1"/>
+        <rate value="0.677003"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x807f110" multiplicity="1"/>
+        <tagged-substrate tag="0x80821a8" multiplicity="1"/>
+        <tagged-product tag="0x8081d58" multiplicity="1"/>
+        <rate value="0.612372"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x805d248" multiplicity="1"/>
+        <tagged-substrate tag="0x8080400" multiplicity="1"/>
+        <tagged-product tag="0x8080780" multiplicity="1"/>
+        <rate value="6.13397"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x8080400" multiplicity="1"/>
+        <tagged-substrate tag="0x80821a8" multiplicity="1"/>
+        <tagged-product tag="0x8081de8" multiplicity="1"/>
+        <rate value="0.57735"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x807efe0" multiplicity="1"/>
+        <tagged-product tag="0x8059b78" multiplicity="1"/>
+        <tagged-product tag="0x807dab8" multiplicity="1"/>
+        <rate value="1"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x807dd08" multiplicity="1"/>
+        <tagged-product tag="0x8059b78" multiplicity="1"/>
+        <tagged-product tag="0x805d330" multiplicity="1"/>
+        <rate value="1"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x8080400" multiplicity="1"/>
+        <tagged-product tag="0x8059b78" multiplicity="1"/>
+        <tagged-product tag="0x807f110" multiplicity="1"/>
+        <rate value="1"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x8059b78" multiplicity="1"/>
+        <tagged-substrate tag="0x8059cc8" multiplicity="1"/>
+        <tagged-product tag="0x805d1b8" multiplicity="1"/>
+        <rate value="0.816838"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x8059b78" multiplicity="1"/>
+        <tagged-substrate tag="0x805d088" multiplicity="1"/>
+        <tagged-product tag="0x807da28" multiplicity="1"/>
+        <rate value="0.790768"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x8059b78" multiplicity="1"/>
+        <tagged-substrate tag="0x805d330" multiplicity="1"/>
+        <tagged-product tag="0x807dd08" multiplicity="1"/>
+        <rate value="1e+10"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x8059b78" multiplicity="1"/>
+        <tagged-substrate tag="0x807dab8" multiplicity="1"/>
+        <tagged-product tag="0x807efe0" multiplicity="1"/>
+        <rate value="8.66025e+09"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x8059b78" multiplicity="1"/>
+        <tagged-substrate tag="0x8059e38" multiplicity="1"/>
+        <tagged-product tag="0x8080780" multiplicity="1"/>
+        <rate value="0.774726"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x8059b78" multiplicity="1"/>
+        <tagged-substrate tag="0x8081d58" multiplicity="1"/>
+        <tagged-product tag="0x8081de8" multiplicity="1"/>
+        <rate value="0.7698"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x8059b78" multiplicity="1"/>
+        <tagged-substrate tag="0x807f110" multiplicity="1"/>
+        <tagged-product tag="0x8080400" multiplicity="1"/>
+        <rate value="8.16497e+09"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x805d088" multiplicity="1"/>
+        <tagged-product tag="0x8059c70" multiplicity="1"/>
+        <tagged-product tag="0x8059cc8" multiplicity="1"/>
+        <rate value="1"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x807dab8" multiplicity="1"/>
+        <tagged-product tag="0x8059c70" multiplicity="1"/>
+        <tagged-product tag="0x805d330" multiplicity="1"/>
+        <rate value="1"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x807efe0" multiplicity="1"/>
+        <tagged-product tag="0x8059c70" multiplicity="1"/>
+        <tagged-product tag="0x807dd08" multiplicity="1"/>
+        <rate value="1"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x8059e38" multiplicity="1"/>
+        <tagged-product tag="0x8059cc8" multiplicity="1"/>
+        <tagged-product tag="0x805bff8" multiplicity="1"/>
+        <rate value="1"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x8081d58" multiplicity="1"/>
+        <tagged-product tag="0x805bff8" multiplicity="1"/>
+        <tagged-product tag="0x8081f08" multiplicity="1"/>
+        <rate value="1"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x807f110" multiplicity="1"/>
+        <tagged-product tag="0x805bff8" multiplicity="1"/>
+        <tagged-product tag="0x805d330" multiplicity="1"/>
+        <rate value="1"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x8080400" multiplicity="1"/>
+        <tagged-product tag="0x805bff8" multiplicity="1"/>
+        <tagged-product tag="0x807dd08" multiplicity="1"/>
+        <rate value="1"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x8059c70" multiplicity="1"/>
+        <tagged-substrate tag="0x8059cc8" multiplicity="1"/>
+        <tagged-product tag="0x805d088" multiplicity="1"/>
+        <rate value="8.16838e+11"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x8059c70" multiplicity="1"/>
+        <tagged-substrate tag="0x805d330" multiplicity="1"/>
+        <tagged-product tag="0x807dab8" multiplicity="1"/>
+        <rate value="1e+12"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x8059c70" multiplicity="1"/>
+        <tagged-substrate tag="0x807dd08" multiplicity="1"/>
+        <tagged-product tag="0x807efe0" multiplicity="1"/>
+        <rate value="8.66025e+11"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x8059cc8" multiplicity="1"/>
+        <tagged-substrate tag="0x805bff8" multiplicity="1"/>
+        <tagged-product tag="0x8059e38" multiplicity="1"/>
+        <rate value="6.45929e+11"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x805bff8" multiplicity="1"/>
+        <tagged-substrate tag="0x805d330" multiplicity="1"/>
+        <tagged-product tag="0x807f110" multiplicity="1"/>
+        <rate value="8.66025e+11"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x805bff8" multiplicity="1"/>
+        <tagged-substrate tag="0x807dd08" multiplicity="1"/>
+        <tagged-product tag="0x8080400" multiplicity="1"/>
+        <rate value="7.07107e+11"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x8059e38" multiplicity="1"/>
+        <tagged-product tag="0x8059a80" multiplicity="1"/>
+        <tagged-product tag="0x805d088" multiplicity="1"/>
+        <rate value="1"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x8081d58" multiplicity="1"/>
+        <tagged-product tag="0x8059a80" multiplicity="1"/>
+        <tagged-product tag="0x8081e78" multiplicity="1"/>
+        <rate value="1"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x807f110" multiplicity="1"/>
+        <tagged-product tag="0x8059a80" multiplicity="1"/>
+        <tagged-product tag="0x807dab8" multiplicity="1"/>
+        <rate value="1"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x8080400" multiplicity="1"/>
+        <tagged-product tag="0x8059a80" multiplicity="1"/>
+        <tagged-product tag="0x807efe0" multiplicity="1"/>
+        <rate value="1"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x805bff8" multiplicity="1"/>
+        <tagged-product tag="0x8059a80" multiplicity="1"/>
+        <tagged-product tag="0x8059c70" multiplicity="1"/>
+        <rate value="1"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x8059a80" multiplicity="1"/>
+        <tagged-substrate tag="0x8059c70" multiplicity="1"/>
+        <tagged-product tag="0x805bff8" multiplicity="1"/>
+        <rate value="1e+12"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x8059a80" multiplicity="1"/>
+        <tagged-substrate tag="0x805d088" multiplicity="1"/>
+        <tagged-product tag="0x8059e38" multiplicity="1"/>
+        <rate value="7.90768e+11"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x8059a80" multiplicity="1"/>
+        <tagged-substrate tag="0x807dab8" multiplicity="1"/>
+        <tagged-product tag="0x807f110" multiplicity="1"/>
+        <rate value="8.66025e+11"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x8059a80" multiplicity="1"/>
+        <tagged-substrate tag="0x807efe0" multiplicity="1"/>
+        <tagged-product tag="0x8080400" multiplicity="1"/>
+        <rate value="8.16497e+11"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x8059d5c" multiplicity="1"/>
+        <tagged-substrate tag="0x8059e38" multiplicity="1"/>
+        <tagged-product tag="0x8059dcc" multiplicity="1"/>
+        <tagged-product tag="0x8081d58" multiplicity="1"/>
+        <rate value="1e+12"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x8081d58" multiplicity="1"/>
+        <tagged-product tag="0x8059e04" multiplicity="1"/>
+        <tagged-product tag="0x8059e38" multiplicity="1"/>
+        <rate value="100"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x80821a8" multiplicity="1"/>
+        <tagged-product tag="0x8059e04" multiplicity="1"/>
+        <tagged-product tag="0x805d248" multiplicity="1"/>
+        <rate value="100"/>
+      </tag-reaction>
+    </tag-reactions>
+    <volume liters="1e-12"/>
+    <time seconds="3.9"/>
+  </model>
+  <streams>
+    <tagged-species-streams>
+      <tagged-species-stream name="ADP">
+        <tagged-species-ref tag="0x8059d94"/>
+      </tagged-species-stream>
+      <tagged-species-stream name="ATP">
+        <tagged-species-ref tag="0x8059d24"/>
+      </tagged-species-stream>
+      <tagged-species-stream name="GDP">
+        <tagged-species-ref tag="0x8059dcc"/>
+      </tagged-species-stream>
+      <tagged-species-stream name="GTP">
+        <tagged-species-ref tag="0x8059d5c"/>
+      </tagged-species-stream>
+      <tagged-species-stream name="Gpa1-gdp">
+        <tagged-species-ref tag="0x8059cc8"/>
+        <tagged-species-ref tag="0x805d088"/>
+        <tagged-species-ref tag="0x805d248"/>
+        <tagged-species-ref tag="0x8059e38"/>
+      </tagged-species-stream>
+      <tagged-species-stream name="Gpa1-gtp">
+        <tagged-species-ref tag="0x8081d58"/>
+        <tagged-species-ref tag="0x80821a8"/>
+      </tagged-species-stream>
+      <tagged-species-stream name="Gpa1-total">
+        <tagged-species-ref tag="0x8059cc8"/>
+        <tagged-species-ref tag="0x805d088"/>
+        <tagged-species-ref tag="0x805d248"/>
+        <tagged-species-ref tag="0x8059e38"/>
+        <tagged-species-ref tag="0x8081d58"/>
+        <tagged-species-ref tag="0x80821a8"/>
+      </tagged-species-stream>
+      <tagged-species-stream name="Ste2-singleton">
+        <tagged-species-ref tag="0x8059c70"/>
+      </tagged-species-stream>
+      <tagged-species-stream name="Ste5-singleton">
+        <tagged-species-ref tag="0x8059b78"/>
+      </tagged-species-stream>
+      <tagged-species-stream name="alpha-singleton">
+        <tagged-species-ref tag="0x8059a80"/>
+      </tagged-species-stream>
+      <tagged-species-stream name="alpha-two">
+        <tagged-species-ref tag="0x8059e38"/>
+        <tagged-species-ref tag="0x8081d58"/>
+        <tagged-species-ref tag="0x807f110"/>
+        <tagged-species-ref tag="0x8080400"/>
+        <tagged-species-ref tag="0x805bff8"/>
+      </tagged-species-stream>
+      <tagged-species-stream name="four-five">
+        <tagged-species-ref tag="0x807efe0"/>
+        <tagged-species-ref tag="0x807dd08"/>
+        <tagged-species-ref tag="0x8080400"/>
+      </tagged-species-stream>
+      <tagged-species-stream name="four-one-GDP">
+        <tagged-species-ref tag="0x8059cc8"/>
+        <tagged-species-ref tag="0x805d088"/>
+        <tagged-species-ref tag="0x8059e38"/>
+      </tagged-species-stream>
+      <tagged-species-stream name="four-one-GTP">
+        <tagged-species-ref tag="0x8081d58"/>
+      </tagged-species-stream>
+      <tagged-species-stream name="four-one-total">
+        <tagged-species-ref tag="0x8059cc8"/>
+        <tagged-species-ref tag="0x805d088"/>
+        <tagged-species-ref tag="0x8059e38"/>
+        <tagged-species-ref tag="0x8081d58"/>
+      </tagged-species-stream>
+      <tagged-species-stream name="four-two">
+        <tagged-species-ref tag="0x805d088"/>
+        <tagged-species-ref tag="0x807dab8"/>
+        <tagged-species-ref tag="0x807efe0"/>
+        <tagged-species-ref tag="0x8059e38"/>
+        <tagged-species-ref tag="0x8081d58"/>
+        <tagged-species-ref tag="0x807f110"/>
+        <tagged-species-ref tag="0x8080400"/>
+      </tagged-species-stream>
+      <tagged-species-stream name="g-protein-complex">
+        <tagged-species-ref tag="0x8059cc8"/>
+      </tagged-species-stream>
+      <tagged-species-stream name="phosphate">
+        <tagged-species-ref tag="0x8059e04"/>
+      </tagged-species-stream>
+    </tagged-species-streams>
+    <tagged-dump-streams>
+      <tagged-dump-stream file-name="four.dmp" dump-period="0.01">
+        <tagged-species-stream-ref name="four-one-total"/>
+        <tagged-species-stream-ref name="four-one-GDP"/>
+        <tagged-species-stream-ref name="four-one-GTP"/>
+        <tagged-species-stream-ref name="four-five"/>
+        <tagged-species-stream-ref name="four-two"/>
+      </tagged-dump-stream>
+      <tagged-dump-stream file-name="alpha.dmp" dump-period="0.01">
+        <tagged-species-stream-ref name="alpha-two"/>
+      </tagged-dump-stream>
+      <tagged-dump-stream file-name="gpa1.dmp" dump-period="0.01">
+        <tagged-species-stream-ref name="Gpa1-total"/>
+        <tagged-species-stream-ref name="Gpa1-gtp"/>
+        <tagged-species-stream-ref name="Gpa1-gdp"/>
+      </tagged-dump-stream>
+      <tagged-dump-stream file-name="phos.dmp" dump-period="0.01">
+        <tagged-species-stream-ref name="ATP"/>
+        <tagged-species-stream-ref name="GTP"/>
+        <tagged-species-stream-ref name="ADP"/>
+        <tagged-species-stream-ref name="GDP"/>
+        <tagged-species-stream-ref name="phosphate"/>
+      </tagged-dump-stream>
+      <tagged-dump-stream file-name="stats" dump-period="0.01"/>
+    </tagged-dump-streams>
+  </streams>
+</moleculizer-state>

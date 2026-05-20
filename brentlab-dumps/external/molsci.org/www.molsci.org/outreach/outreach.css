@@ -1,0 +1,43 @@
+/* Global defaults */
+* { margin: 0px; padding: 0px; border: 0px; font-family: Verdana; font-size: 10pt; color: #000000; }
+
+/* Main Formatting */
+body { background-image: url(images/mainBg.gif); }
+#outerContainer { position: absolute; top: 0px; bottom: 0px; left: 50%; margin-left: -405px; 
+	width: 810px; height: 100%;	background: url(images/containerBg.gif) repeat-y; z-index: 1; }
+.innerContainer { position: relative; top: 0px; left: 21px; width: 768px; height: 100%; z-index: 4; }
+#middleContainer { position: relative; top: 6px; width: 754px; height: 100%; background-color: #FFFFFF; 
+	border: solid #686868 1px; text-align: left; font-family: Verdana; font-size: 10pt; color: #000000;
+	padding-top: 83px; padding-bottom: 30px; padding-left: 124px; padding-right: 8px; }
+.bottomBar { width: 768px; height: 40px; background: url(images/bottomBg.gif) repeat-x;  
+	font-family: Verdana; font-size: 7pt; color: #FFFFFF; text-align: center; z-index: 6;}
+
+/* Inside middle Container */
+#leftMenu { position: absolute; top: 50px; left: 8px; width: 104px; line-height: 0px; text-align: left; }
+.darkGreyBar { position: absolute; top: 12px; left: 91px; width: 639px; height: 30px; background-color: #383838; 
+	border: solid 1px #D7D7D7; z-index: 3;}
+.lightGreyBar { position: absolute; top: 21px; left: 6px; width: 635px; height: 22px; background-color: #7D7D7D; 
+	border: solid 1px #D7D7D7; z-index: 4;}
+.whiteBar { position: absolute; top: 42px; left: 113px; width: 630px; height: 10px;  
+	border: solid 1px #D7D7D7; z-index: 4;}	
+
+/* Links */
+a {	text-decoration: none; color: #684391; }
+a:hover { color: #84C33E; font-text-decoration: none; }
+a:visted { text-decoration: none; color: #7B60BD; } 
+
+/* Top Menu Buttons */
+.middleSchool { position: absolute; top: 4px; left: 143px; z-index: 5; }
+.highSchool { position: absolute; top: 4px; left: 297px; z-index: 5; }
+.underGrad { position: absolute; top: 4px; left: 448px; z-index: 5; }
+.postDoc { position: absolute; top: 4px; left: 598px; z-index: 5; }
+
+/* Text Formatting */
+h1 { font-family: Verdana; font-size: 10pt; font-weight: bold; color: #946BC1; }
+h2 { font-family: Verdana; font-size: 11pt; font-weight: bold; color: #000000; }
+.box { width: 594px; background-color: #F2F2F3; border: 1px solid #E2E2E2; margin-bottom: 15px; padding: 8px; text-align: left; }
+.imageBoxR { float: right; width: auto; font-size: 7pt; color: #898989; background-color: #F2F2F3; border: 1px solid #E2E2E2; margin: 0px; 
+	padding: 5px 5px 5px 5px; text-align: center;}
+.imageBoxL { float: left; width: auto; font-size: 7pt; color: #898989; background-color: #F2F2F3; border: 1px solid #E2E2E2; margin: 0px; 
+	padding: 5px 5px 5px 5px; text-align: center;}	
+

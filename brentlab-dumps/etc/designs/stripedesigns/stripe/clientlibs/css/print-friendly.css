@@ -1,0 +1,67 @@
+/* print css for "horizontal," "vertical," and "thumbnail" templates                                  */
+/* aka /etc/designs/stripedesigns/stripetop/ and /etc/designs/stripedesigns/stripeside/               */
+
+body { }
+
+a[href]:after { // http://drupal.stackexchange.com/questions/59900/how-to-get-rid-of-added-urls-when-printing-a-bootstrap-themed-page
+    content: none;
+}
+
+.container h1 { font-size:240%; }
+.container h2 { font-size:200%; }
+.container h3 { font-size:180%; }
+.container h4 { font-size:160%; }
+.container h5 { font-size:140%; }
+.container h6 { font-size:120%; }
+
+/* general-purpose holder: */
+/*.container { width:auto; max-width:980px; }*/
+
+/* topmost "utility nav" across page top: */
+#utility_nav_container { display:none; }
+
+/* triple-stripe approach contains logo, membership and lab name: */
+div.navbar { margin-top:0 ;}
+div.navbar div.logobar,
+div.navbar div.header-greybar,
+div.navbar div.navitems { display:none; }
+div.navbar div.lab-title { background:none; filter:none; height:auto; border-bottom:2px grey solid; margin-bottom:5px; }
+div.navbar div.lab-title * { color:black; text-align:left; }
+div.navbar div.lab-title span.headertitle { width:auto; } /* "thumb" template */
+
+/* nuke the side navigation on "vertical" templates: */
+div.container #sidenv { display:none !important; }
+div.container .container-aside { display:none; }
+div.container div.side-button, /* workaround for ie7 which doesn't recognize <aside> during print */
+div.container div.nav-collapse { display:none; }
+
+/* graphic used as a header on a content page, above the h1: */
+div.container div.subheader { display:none; }
+
+/* body area, holds page content: */
+div.container .container-par { float:none; width: auto; }
+
+/* "thumb" template: */
+div.container div.slides,
+div.container div.slider-thumbs { display:none; }
+
+
+/* restyle the footer for print: */
+.footer-container { min-width: 0; }
+.footer { background-color: white; }
+.footer .container { width: auto; }
+.footer div.footer-colorbar { display:none; }
+.footer div.footer-text { /*width: auto;*/  }
+.footer .footer .footer-text p { color:black; } /* needs weight */
+.footer div.footer-features { width:380px; } /* reduce the 400px width of span5 for chrome which wrapped it*/
+.footer div.footer-icons { display:none; }
+.footer div.footer-logo { display:block; }
+.footer div.footer-logo img { width:300px; float:right; margin:6px 20px 0 20px; }
+
+
+.footer .footer-copyright,
+.footer .footer-location,
+.footer .footer-page-title { font-size:14px; font-family:Arial,Helvetica,sans-serif; }
+
+/* corrects a mandatory 350px height on members features. ie had trouble with that on printing */
+/*div.member.section div.member { height: auto !important; min-height: 350px; }*/

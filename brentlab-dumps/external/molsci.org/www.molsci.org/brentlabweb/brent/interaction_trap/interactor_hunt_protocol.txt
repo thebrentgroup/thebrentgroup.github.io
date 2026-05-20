@@ -1,0 +1,127 @@
+INTERACTOR HUNT PROTOCOL
+
+The following procedure describes how to conduct an interactor hunt.
+For further information on yeast manipulation, see (REFERENCES).  The
+procedure described here utilizes information gained from hunts
+conducted in the lab by Jeno Gyuris, Russ Finley, Tony Zervos, Andy
+Mendelsohn, Ze'ev Paroush, Debbie Goff, Steve Hanes, Barak Cohen,
+Dimitri Krainc, Lakshmi Raj, Claude Sardet, Pierre Leopold, and
+Herbert Altman.
+
+Interaction trap selection/screening protocol  - Russ Finley
+September, 1992
+Updated 5/93
+
+Yeast transformation
+
+I currently favor using the protocol of Gietz et al., (1992, Nucleic
+Acids Research vol. 20, pg 1425) which in our hands now gives
+transformation efficiencies just under 10e5/ug DNA.  To get this
+performance, it is imperative that you use properly prepared carrier
+DNA (sonicated, boiled salmon sperm DNA; see Schiestl and Gietz, 1989,
+Current Genetics 16:339-346).
+
+Library DNA should be introduced into yeast that already harbor the
+URA3+ reporter and HIS3+ bait plasmids.  Thus, yeast should be grown
+in ura-his- glucose CM dropout medium before transformation to
+maintain selection for these plasmids.  I perform transformations in
+several individual eppendorf tubes (one for each 24cm X 24cm
+transformation plate) to reduce the likelihood of contaminating the
+entire transformation.  It is important not to use excess transforming
+DNA per aliquot of competent yeast, otherwise each competent cell will
+take up several plasmids.  We have found that adding DMSO to 10% (of
+the volume) just prior to adding the PEG solution increases
+efficiencies several fold.  Also, it improves efficiency to resuspend
+the transformed yeast in sterile water rather than TE before plating
+onto ura- his- trp- CM dropout glucose plates, or to plate PEG along
+with the yeast.  It helps to make the plates with 25g agar/liter to
+make them extra hard.  We use sterile glass beads (e.g. Fisher
+#11-312B, 4mm diameter) to help spread the transformation mixture on
+the plates.
+
+[Note: An alternative to the following protocol is to plate the
+transformation directly onto the selection plates (ura-his-trp-leu-
+gal/raff) after incubation in gal/raff liquid for a few hours to
+induce the GAL promoter.  We are currently comparing these two
+methods.]
+
+To make it easier to determine the number of transformants, make
+dilutions (with water, not TE) from a few transformations and plate on
+normal sized ura- his- trp- CM dropout glucose plates.  I strive for
+200,000 transformants per 24cm X 24cm plate.  This corresponds to 1ug
+per eppendorf tube if your transformation efficiency is 0.5 X 10e5
+transformants per ug DNA.
+
+Harvest transformants 
+
+Incubate the plates for about 48 hours at 30 C, or until colonies are
+about 1 mm in diameter.  Cool plates at 4 C for a few hours to harden
+agar.  Use a sterile glass microscope slide (and sterile technique) to
+scrape the yeast from the plate, trying not to scrape any agar. The
+yeast can be collected from the glass slide by wiping it on the lip of
+a sterile 50 ml Falcon tube.  Wash the cells 2X with TE.  It is best
+to pellet the cells each time in a sterile round bottom polypropylene
+tube at 2500 rpm for 4 min. so they may be easily resuspended.  The
+pellet volume for 500,000 transformants will be about 8 ml.  Resuspend
+the cells thoroughly in 1 pellet volume of glycerol solution (Current
+Protocols in Molecular Biology: 65% glycerol (vol/vol), 0.1 M MgSO4,
+25 mM Tris pH 8.0).  Freeze ~1ml aliquots at -70oC.
+
+Determine plating efficiency
+
+Remove an aliquot of transformed yeast and dilute 10-fold with
+ura-his-trp- CM dropout gal/raff medium (2% galactose, 1% raffinose;
+in this medium the yeast use raffinose as a carbon source but the
+galactose still induces transcription from the GAL1 promoter).
+Incubate, shaking, at 30 C for 4 hours to induce the GAL promoter.
+Make serial dilutions using the above medium and plate on ura-his-trp-
+gal/raff plates to determine the number of colony forming units per
+aliquot of transformed yeast (there should be ~10e8 cfu/100ul.
+
+Plate onto selection plates
+
+Induce the GAL promoter as above and plate < 10e6 colony-forming-units
+per 100 mm plate ura-his-trp-leu- CM dropout gal/raff.  Pick Leu+
+colonies and patch (or better yet, streak for single colonies) onto a
+new ura-his-trp-leu- CM dropout gal/raff plate.  The goal here is to
+purify the Leu+ yeast away from the many leu- yeast on the original
+selection plate before putting them on a master plate without leu
+selection.  In order to test for Gal inducibility of the Leu+
+phenotype it is necessary to first turn off the GAL promoter by
+growing on glucose master plates.  From the new ura-his-trp-leu- CM
+gal/raff plate patch to a ura-his-trp- CM dropout glu master plate;
+growth on this plate will shut off the GAL promoter.  You can now
+replica from this glu master plate to four plates that will determine
+whether the Leu+ phenotype is galactose-dependent and whether it
+correlates with galactose-dependent beta-galactosidase activity.  The
+four plates are 1. ura-his-trp- CM dropout glu X-GAL; 2. ura-his-trp-
+CM dropout gal/raff X-GAL; 3. ura-his-trp-leu- CM dropout glu; 4.
+ura-his-trp-leu- CM dropout gal/raff.  It is important not to transfer
+too large a mass of yeast in the replica.
+
+Isolate library plasmid and test specificity
+
+Once you have isolated galactose-dependent LEU+ lacZ+ yeast, the next
+step is to formally prove that the phenotype is due to the library
+plasmid and to see that the interacting cDNA-encoded protein is
+specific for the bait.  To do this we isolate the TRP1 library plasmid
+from the positive yeast and use it to re-transform the original bait
+strain, and other strains expressing unrelated baits (for example, the
+LexA-bicoid derivative in pRFHM1).
+
+If you have isolated a large number of positive yeast, it is useful to
+identify those that contain identical library plasmids so that the
+workload can be reduced.  One quick way to determine which yeast have
+the same cDNA is to do a quick yeast miniprep, PCR the cDNA with
+primers derived from the vector pJG4-5, and cut the resulting PCR
+products with HaeIII and/or AluI.  It is usually clear from this
+analysis which cDNAs are the same.  We isolate the library plasmid by
+transforming E.coli strain KC8 (Gyruis et al, Cell, submitted, a gift
+of Kevin Struhl) with the yeast miniprep DNA and selecting for
+complementation of the E.coli trpC mutation by yeast TRP1.
+
+Russ Finley
+finley@opal.mgh.harvard.edu
+
+September 1992
+updated May 1993

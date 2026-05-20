@@ -1,0 +1,227 @@
+SEQUENCES
+
+Primers for sequencing cDNAs in pJG4-5 from the 5' end can be derived
+from the sequence of the fusion moiety shown below ("5' sequence").
+
+For sequencing from the 3' end, primers can be derived from sequences
+in the ADH1 (ADC1) terminator; the portion in pJG4-5 corresponds to
+sequences downstream of the natural HindIII site in the ADH1
+terminator.  The following sequence ("3' sequence") is from this
+terminator region, about 40 bp downstream of the HindIII site.  We
+have used primers complementary to this region for sequencing and PCR.
+
+pJG4-5 3' sequence
+
+cDNA..XhoI..HindIII...ADHterm...5'...GTCTCCAATCAAGGTTGTCGGCTTGTCTACCTTGCCAGA
+AATTTACGAAAAGATGGAAAAGGGTC.....3'
+   
+
+pJG4-5 5' sequence
+
+Fusion moiety from pJG4-5
+(Linear) MAP of: N-Terminus.Txt  check: 5219  from: 1  to: 345
+
+Acid activator.Txt  Length: 345  June 14, 1991  13:26
+Sequence of HinDIII-HinDIII fragment encoding the Sv40 nuclear
+localization sequence, the B42 activation region, and the HA1
+epitope from the influenza virus hemagglutinin gene, and containing
+the EcoR1 and XhoI cloning sites.
+
+ With 177 enzymes: *
+
+                             September 18, 1991  19:30  ..
+
+                       B
+         H             s
+         i             p
+         n  C          1H                      M C               E
+         d Av          2g     E   M            bAv           M   c T
+         I li          8i     a   n            oli           n   o a
+         I uJ          6A     r   l            IuJ           l   R q
+         I II          II     I   I            III           I   V I
+            /           /                        /
+         aagcttATGggtgctcctccaaaaaagaagagaaaggtagctggtatcaataaagatatc
+       1 ---------+---------+---------+---------+---------+---------+ 60
+         ttcgaaTACccacgaggaggttttttcttctctttccatcgaccatagttatttctatag
+
+a        K  L  M  G  A  P  P  K  K  K  R  K  V  A  G  I  N  K  D  I   -
+
+                C                                      B S
+                v      B                T          FH BsMf
+                i      c                a          sh epsa
+                R      c                q          pa tMpN
+                I      I                I          II IIII
+                                                        //
+         gaggagtgcaatgccatcattgagcagtttatcgactacctgcgcaccggacaggagatg
+      61 ---------+---------+---------+---------+---------+---------+ 120
+         ctcctcacgttacggtagtaactcgtcaaatagctgatggacgcgtggcctgtcctctac
+
+a        E  E  C  N  A  I  I  E  Q  F  I  D  Y  L  R  T  G  Q  E  M   -
+
+                       S                             N
+                       a             M     N   S     lA     M
+                  A    u D M   A  M  a   B l MNc     ah     b H
+                  c    3 p w   l  s  e   a a scr     Ia     o g
+                  i    A n o   w  e  I   n I piF     II     I a
+                  I    I I I   I  I  I   I V III     II     I I
+                                               /
+         ccgatggaaatggcggatcaggcgattaacgtggtgccgggcatgacgccgaaaaccatt
+     121 ---------+---------+---------+---------+---------+---------+ 180
+         ggctacctttaccgcctagtccgctaattgcaccacggcccgtactgcggcttttggtaa
+
+a        P  M  E  M  A  D  Q  A  I  N  V  V  P  G  M  T  P  K  T  I   -
+
+                  S    FHS                                     N
+                  aS C naa      C        C                 B   l  T
+                MNucAvAueu D M  v     BM vB     T          s   a  s
+                sc9rlic4I3 p w  i     gw is     a          p   I  p
+                pi6FwJiHIA n o  J     lo Jr     q          H   I  E
+                IIIIIIIIII I I  I     II II     I          I   I  I
+                   / / //              /
+         cttcacgccgggccgccgatccagcctgactggctgaaatcgaatggttttcatgaaatt
+     181 ---------+---------+---------+---------+---------+---------+ 240
+         gaagtgcggcccggcggctaggtcggactgaccgactttagcttaccaaaagtactttaa
+
+a        L  H  A  G  P  P  I  Q  P  D  W  L  K  S  N  G  F  H  E  I   -
+
+                    H
+                    i          C      S
+         A         MnH     F   v      fD  M                   M
+         c         scp     o   i      ad  n                   n
+         i         eIa     k   J      Ne  l                   l
+         I         III     I   I      II  I                   I
+                     /
+         gaagcggatgttaacgataccagcctcttgctgagtggagatgcctcctacccttatgat
+     241 ---------+---------+---------+---------+---------+---------+ 300
+         cttcgcctacaattgctatggtcggagaacgactcacctctacggaggatgggaatacta
+
+a        E  A  D  V  N  D  T  S  L  L  L  S  G  D  A  S  Y  P  Y  D   -
+
+                                                H
+                                      H        Xi
+                              E   G GCa H    T mn  C
+                              cFMBdEdveMiPATSsXadMAv
+                              osnsiaiiIcnlvafphIIlli
+                              RillIeIJIrfeaqcEoIIyuJ
+                              IIIIIIIIIIIIIIIIIIIIII
+                               /  / / // /   ///   /
+         gtgccagattatgcctctcccgaattcggccgactcgagaagctt
+     301 ---------+---------+---------+---------+----- 345
+         cacggtctaatacggagagggcttaagccggctgagctcttcgaa
+
+a        V  P  D  Y  A  S  P  E  F  G  R  L  E  K  L   -
+
+ Enzymes that do cut:
+
+     AciI    AhaII     AluI     AlwI     AvaI     BanI     BccI     BetI
+     BglI     BslI Bsp1286I    BspHI    BspMI     BsrI    CviJI    CviRI
+     DdeI     DpnI     EaeI     EarI    EcoRI    EcoRV   Fnu4HI     FokI
+     FsiI     FspI    GdiII   HaeIII     HgaI    HgiAI     HhaI   HincII
+  HindIII    HinfI     HpaI    MaeII    MboII     McrI     MlyI     MnlI
+     MseI     MspI     MwoI     NciI   NlaIII    NlaIV     PleI   Sau96I
+   Sau3AI    ScrFI    SfaNI     SfcI     TaqI    TspEI     XhoI   XmaIII
+
+ Enzymes that do not cut:
+
+    AatII     AccI    AflII   AflIII     AgeI    AlwNI     ApaI    ApaBI
+    ApaLI     AscI     AseI    AvaII    AvrII     BaeI     BalI    BamHI
+    BanII     BbsI     BbvI    BcefI     BcgI     BclI    BglII   Bpu10I
+ Bpu1102I     BsaI    BsaAI    BsaBI    BsaJI     BsgI     BsiI    BsiWI
+     BsmI    BsmAI    BspEI    BspGI   BssHII   BstEII    BstXI    BstYI
+   Bsu36I   Cfr10I     ClaI     DraI   DraIII     DrdI    DrdII     DsaI
+ Eam1105I     EciI Eco47III   Eco57I    EcoNI EcoO109I   EcoRII    Esp3I
+     FauI     FinI     FseI     GsuI     HaeI    HaeII   HgiEII     HphI
+     KpnI   MaeIII     MfeI     MluI     MmeI     NaeI     NarI     NcoI
+     NdeI     NheI     NotI     NruI     NsiI     NspI     NspV   NspBII
+     PacI    PflMI     PmlI    PpuMI    PshAI     PstI     PvuI    PvuII
+    RleAI     RmaI     RsaI    RsrII     SacI    SacII     SalI     SapI
+     ScaI     SfeI     SfiI    SgrAI     SmaI     SnaI    SnaBI     SpeI
+     SphI Sse8387I     SspI     StuI     StyI     SwaI  TaqII-1  TaqII-2
+     TfiI     ThaI   Tsp45I  Tth111I Tth111II Uba1108I     XbaI     XcmI
+     XmnI
+
+
+
+pEG202 Sequence
+
+Sequence of pEG202, the standard bait expression plasmid.  This seeuqence
+includes part of the ADH promoter, the LexA coding sequence, the polylinker
+3' to LexA (begining around position 1370 with the EcoRI site), and part of
+the ADH terminator)
+
+REFORMAT of: Eg202p.Seq  check: -1  from: 1  to: 1882  July 13, 1992  15:20
+
+ (No documentation)
+
+Eg202p.Seq  Length: 1743  November 25, 1992  14:20  Type: N  Check: 5483  ..
+
+       1  CGATTTTTTT CTAAACCGTG GAATATTTCG GATATCCTTT TGTTGTTTCC
+
+      51  GGGTGTACAA TATGGACTTC CTCTTTTCTG GCAACCAAAC CCATACATCG
+
+     101  GGATTCCTAT AATACCTTCG TTGGTCTCCC TAACATGTAG GTGGCGGAGG
+
+     151  GGAGATATAC AATAGAACAG ATACCAGACA AGACATAATG GGCTAAACAA
+
+     201  GACTACACCA ATTACACTGC CTCATTGATG GTGGTACATA ACGAACTAAT
+
+     251  ACTGTAGCCC TAGACTTGAT AGCCATCATC ATATCGAAGT TTCACTACCC
+
+     301  TTTTTCCATT TGCCATCTAT TGAAGTAATA ATAGGCGCAT GCAACTTCTT
+
+     351  TTCTTTTTTT TTCTTTTCTC TCTCCCCCGT TGTTGTCTCA CCATATCCGC
+
+     401  AATGACAAAA AAAATGATGG AAGACACTAA AGGAAAAAAT TAACGACAAA
+
+     451  GACAGCACCA ACAGATGTCG TTGTTCCAGA GCTGATGAGG GGTATCTTCG
+
+     501  AACACACGAA ACTTTTTCCT TCCTTCATTC ACGCACACTA CTCTCTAATG
+
+     551  AGCAACGGTA TACGGCCTTC CTTCCAGTTA CTTGAATTTG AAATAAAAAA
+
+     601  AGTTTGCCGC TTTGCTATCA AGTATAAATA GACCTGCAAT TATTAATCTT
+
+     651  TTGTTTCCTC GTCATTGTTC TCGTTCCCTT TCTTCCTTGT TTCTTTTTCT
+
+     701  GCACAATATT TCAAGCTATA CCAAGCATAC AATAAGCTTX AATTCCGGGC
+
+     751  GGAATGAAAG CGTTAACGGC CAGGCAACAA GAGGTGTTTG ATCTCATCCG
+
+     801  TGATCACATC AGCCAGACAG GTATGCCGCC GACGCGTGCG GAAATCGCGC
+
+     851  AGCGTTTGGG GTTCCGTTCC CCAAACGCGG CTGAAGAACA TCTGAAGGCG
+
+     901  CTGGCACGCA AAGGCGTTAT TGAAATTGTT TCCGGCGCAT CACGCGGGAT
+
+     951  TCGTCTGTTG CAGGAAGAGG AAGAAGGGTT GCCGCTGGTA GGTCGTGTGG
+
+    1001  CTGCCGGTGA ACCACTTCTG GCGCAACAGC ATATTGAAGG TCATTATCAG
+
+    1051  GTCGATCCTT CCTTATTCAA GCCGAATGCT GATTTCCTGC TGCGCGTCAG
+
+    1101  CGGGATGTCG ATGAAAGATA TCGGCATTAT GGATGGTGAC TTGCTGGCAG
+
+    1151  TGCATAAAAC TCAGGATGTA CGTAACGGTC AGGTCGTTGT CGCACGTATT
+
+    1201  GATGACGAAG TTACCGTTAA GCGCCTGAAA AAACAGGGCA ATAAAGTCGA
+
+    1251  ACTGTTGCCA GAAAATAGCG AGTTTAAACC AATTGTCGTT GACCTTCGTC
+
+    1301  AGCAGAGCTT CACCATTGAA GGGCTGGCGG TTGGGGTTAT TCGCAACGGC
+
+    1351  GACTGGCTGG AATTCCCGGG GATCCGTCGA CCATGGCGGC CGCTCGAGTC
+
+    1401  GACCTGCAGC CAAGCTAATT CCGGGCGAAT TTCTTATGAT TTATGATTTT
+
+    1451  TATTATTAAA TAAGTTATAA AAAAAATAAG TGTATACAAA TTTTAAAGTG
+
+    1501  ACTCTTAGGT TTTAAAACGA AAATTCTTGT TCTTGAGTAA CTCTTTCCTG
+
+    1551  TAGGTCAGGT TGCTTTCTCA GGTATAGCAT GAGGTCGCTC TTATTGACCA
+
+    1601  CACCTCTACC GGCATGCCGA GCAAATGCCT GCAAATCGCT CCCCATTTCA
+
+    1651  CCCAATTGTA GATATGCTAA CTCCAGCAAT GAGTTGATGA ATCTCGGTGT
+
+    1701  GTATTTTATG TCCTCAGAGG ACAATACCTG TTGTAATCCG TCC 
+

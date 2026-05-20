@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en-US"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Systems &middot; On optimism, the generation of buggy high-throughput data, and promise unfulfilled</title>
+              <script>
+            (function(d){
+              var js, id = 'powr-js', ref = d.getElementsByTagName('script')[0];
+              if (d.getElementById(id)) {return;}
+              js = d.createElement('script'); js.id = id; js.async = true;
+              js.src = '//www.powr.io/powr.js';
+              js.setAttribute('powr-token','kBjE4sRlAs1472506677');
+              js.setAttribute('external-type','wordpress');
+              ref.parentNode.insertBefore(js, ref);
+            }(document));
+          </script>
+          <meta name='robots' content='noindex,follow' />
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//s.gravatar.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Systems &raquo; Feed" href="http://www.brentlab.org/systems/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Systems &raquo; Comments Feed" href="http://www.brentlab.org/systems/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Systems &raquo; On optimism, the generation of buggy high-throughput data, and promise unfulfilled Comments Feed" href="http://www.brentlab.org/systems/2016/07/10/hello-world-2/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/www.brentlab.org\/systems\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.6.8"}};
+			!function(a,b,c){function d(a){var c,d,e,f,g,h=b.createElement("canvas"),i=h.getContext&&h.getContext("2d"),j=String.fromCharCode;if(!i||!i.fillText)return!1;switch(i.textBaseline="top",i.font="600 32px Arial",a){case"flag":return i.fillText(j(55356,56806,55356,56826),0,0),!(h.toDataURL().length<3e3)&&(i.clearRect(0,0,h.width,h.height),i.fillText(j(55356,57331,65039,8205,55356,57096),0,0),c=h.toDataURL(),i.clearRect(0,0,h.width,h.height),i.fillText(j(55356,57331,55356,57096),0,0),d=h.toDataURL(),c!==d);case"diversity":return i.fillText(j(55356,57221),0,0),e=i.getImageData(16,16,1,1).data,f=e[0]+","+e[1]+","+e[2]+","+e[3],i.fillText(j(55356,57221,55356,57343),0,0),e=i.getImageData(16,16,1,1).data,g=e[0]+","+e[1]+","+e[2]+","+e[3],f!==g;case"simple":return i.fillText(j(55357,56835),0,0),0!==i.getImageData(16,16,1,1).data[0];case"unicode8":return i.fillText(j(55356,57135),0,0),0!==i.getImageData(16,16,1,1).data[0];case"unicode9":return i.fillText(j(55358,56631),0,0),0!==i.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity","unicode9"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='social-logos-css'  href='http://www.brentlab.org/systems/wp-content/plugins/jetpack/_inc/social-logos/social-logos.min.css?ver=1' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack_css-css'  href='http://www.brentlab.org/systems/wp-content/plugins/jetpack/css/jetpack.css?ver=4.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='adswscCSS-css'  href='http://www.brentlab.org/systems/wp-content/plugins/ads-wp-site-count/css/styles.css?ver=4.6.8' type='text/css' media='all' />
+<script type='text/javascript' src='http://www.brentlab.org/systems/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='http://www.brentlab.org/systems/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://www.brentlab.org/systems/wp-content/themes/tarski/app/js/tarski.js?ver=3.2.0'></script>
+<meta name="description" content="Reviews and commentary about biological function  by Roger Brent">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+
+<link rel="stylesheet" href="http://www.brentlab.org/systems/wp-content/themes/tarski/style.css" type="text/css" media="all">
+<link rel="stylesheet" href="http://www.brentlab.org/systems/wp-content/themes/tarski/library/css/print.css" type="text/css" media="print">
+<link rel="stylesheet" href="http://www.brentlab.org/systems/wp-content/themes/tarski/styles/polar.css" type="text/css" media="all">
+
+<link rel='https://api.w.org/' href='http://www.brentlab.org/systems/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.brentlab.org/systems/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.brentlab.org/systems/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Scope of blog' href='http://www.brentlab.org/systems/2016/07/09/scope-of-blog/' />
+<link rel='next' title='How optimism about buggy high throughput data might again cause damage (wonkish)' href='http://www.brentlab.org/systems/2016/07/20/how-damage-via-optimism-induced-buggy-data-might-strike-again-wonkish/' />
+<meta name="generator" content="WordPress 4.6.8" />
+<link rel="canonical" href="http://www.brentlab.org/systems/2016/07/10/hello-world-2/" />
+<link rel='shortlink' href='http://wp.me/p7Qy7G-j' />
+<link rel="alternate" type="application/json+oembed" href="http://www.brentlab.org/systems/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.brentlab.org%2Fsystems%2F2016%2F07%2F10%2Fhello-world-2%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://www.brentlab.org/systems/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.brentlab.org%2Fsystems%2F2016%2F07%2F10%2Fhello-world-2%2F&#038;format=xml" />
+<script data-cfasync="false" src="//load.sumome.com/" data-sumo-platform="wordpress-endurance" data-sumo-site-id="0571f5006d5f0600ecf80900f1e2e8005323a100ed38d10072bd60009a675000" async></script>
+<link rel='dns-prefetch' href='//v0.wordpress.com'>
+<style type='text/css'>img#wpstats{display:none}</style>		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="On optimism, the generation of buggy high-throughput data, and promise unfulfilled" />
+<meta property="og:url" content="http://www.brentlab.org/systems/2016/07/10/hello-world-2/" />
+<meta property="og:description" content="One of the many attributes of the 1990s no living adult human may see again was the intensity of the optimism. The optimism extended to many aspects of the human experience, and of course to many t…" />
+<meta property="article:published_time" content="2016-07-11T06:56:09+00:00" />
+<meta property="article:modified_time" content="2016-08-31T04:53:42+00:00" />
+<meta property="og:site_name" content="Systems" />
+<meta property="og:image" content="http://www.brentlab.org/systems/wp-content/uploads/2016/08/Curagen-3.jpg" />
+<meta property="og:image:width" content="1086" />
+<meta property="og:image:height" content="816" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:card" content="summary" />
+</head>
+
+<body id="post-hello-world-2" class="single single-post postid-19 single-format-image centre polar">
+
+<div id="wrapper" class="tarski">
+    <div id="header">
+        <div id="header-image"><a title="Return to main page" rel="home" href="http://www.brentlab.org/systems/"><img alt="Header image" src="http://www.brentlab.org/systems/wp-content/uploads/2016/09/Nova-Mundani-yet-again-again-1.jpg"></a></div>
+
+<div id="title">
+	<h1 id="blog-title"><a title="Return to main page" href="http://www.brentlab.org/systems/" rel="home">Systems</a></h1>
+	<p id="tagline">Reviews and commentary about biological function  by Roger Brent</p></div>
+<div id="navigation" class="clearfix">        <ul id="menu-primary-navigation" class="primary xoxo">
+            <li><a title="Return to front page" href="http://www.brentlab.org/systems">Home</a></li>
+            
+    </ul><div class="secondary">
+    <p><a class="feed" href="http://www.brentlab.org/systems/feed/">Subscribe to feed</a></p>
+</div></div><script type="text/javascript">
+    jQuery(document).ready(function() {
+        var container = jQuery('#navigation > ul'),
+            navbar;
+        
+        if (container.length > 0) {
+            navbar = new Tarski.Navbar(container);
+        }
+    });
+</script><p class="primary-span articlenav"><span class="previous-entry"><a href="http://www.brentlab.org/systems/2016/07/09/scope-of-blog/" rel="prev">&lsaquo; Scope of blog</a></span> <span class="separator">&nbsp;&bull;&nbsp;</span> <span class="next-entry"><a href="http://www.brentlab.org/systems/2016/07/20/how-damage-via-optimism-induced-buggy-data-might-strike-again-wonkish/" rel="next">How optimism about buggy high throughput data might again cause damage (wonkish) &rsaquo;</a></span></p>
+    </div>
+    
+    <div id="content" class="clearfix">
+
+<div class="primary">
+        
+                
+                        
+                <div class="entry post-19 post type-post status-publish format-image hentry category-jeremiad category-unfortunate post_format-post-format-image">
+                
+                    <div class="meta">
+                        <h1 class="title entry-title">On optimism, the generation of buggy high-throughput data, and promise unfulfilled</h1>                        
+                        <p class="metadata"><span class="date updated">10 July, 2016</span> in <span class="categories"><a href="http://www.brentlab.org/systems/category/jeremiad/" rel="category tag">Jeremiad</a>, <a href="http://www.brentlab.org/systems/category/unfortunate/" rel="category tag">Unfortunate</a></span> | <a class="comments-link" href="http://www.brentlab.org/systems/2016/07/10/hello-world-2/#comments">1 comment</a></p>                    </div>
+                    
+                    <div class="content clearfix">
+                                                <p>One of the many attributes of the 1990s no living adult human may see again was the intensity of the optimism. The optimism extended to many aspects of the human experience, and of course to many things in science.  This optimism was applied to high-throughput (then called &#8220;Functional Genomic&#8221;) methods could do for an understanding of biological function.</p>
+<p>What could have been apparent, but wasn&#8217;t, was the fact that a first use of more primitive high throughput methods would be to generate boluses of buggy data. And that said boluses would then be published in brand name journals. And the effect of that publication of that data would be to diminish the ability to gain the money needed to carry out more careful work and to reduce the chance that such work would be published in brand name journals, or even published at all.</p>
+<p>In this post, I am going to recall a particular instance of optimism from the 1990s. I am mentioning this because the scientific community is still in a wave of optimism based on CRISPR/ Cas9. Here, of course, the power of CRISPR/ Cas9 is not overstated, the optimism is justified. But CRISPR/Cas9 methods are now close to helping generate one kind of buggy high throughput functional data. Because that seems imminent, I&#8217;d like to mention a case of optimism-aided loss-of-promise from the recent past.</p>
+<p>In this case, the locus of optimism was information about protein interactions. Development of two hybrid methods allowed identification of protein-protein interactions. Development of reliable strains and reporter genes, tests for good baits, the availability of good prey libraries, and the high throughput provided by interaction mating allowed widespread use of two-hybrid to generate immediately useful experimental findings: identification of previously unknown partner proteins, and identification as partners of already-known proteins that were not known to interact.</p>
+<p>This success led to optimism that study of the knowledge of the<em> pattern</em> of interactions among genome-encoded proteins &#8212; not just of their identity&#8211; could also give insight into gene function (Brent and Finley, 1994). And that one should scale up interaction mating to try to detect as many interactions as possible, scaling up to all the interactions among proteins encoded by entire genomes. Beginning with <em>Saccharomyces cerevisiae</em> but extending to other model organisms targeted by the genome sequencing efforts as those sequences became available. It took at some years for the idea that information about protein function might inhere in the patterns of interaction to gain traction, but that idea became finally gained some acceptance during the early 00&#8217;s.</p>
+<p>By which time some of the initial emphasis on caution and care in generating the data, and in thinking about what the data could tell, had evaporated.</p>
+<p>One waypoint from this period was the publication, in late 2003, in Science, of an incomplete map of protein interactions among genome encoded proteins in <em>Drosophila </em>(Giot et al. 2003)<em>.</em>  It covered about a third of the proteins encoded by the <em>Drosophila</em> genome.  The work was performed in ways that ensured that it failed to detect many interactions; that is, it was performed using methods that resulted in many false negative interactions.</p>
+<p>Much of the work in the Science paper was done by a [now defunct] publicly traded biotech company, Curagen. It is tempting to speculate that the decision to publish might have been influenced by a desire to influence the stock price. However, the publication of the incomplete work did not seem to coincide with any change in the overall downward trend of the firm&#8217;s stock price from its high of $113 / share in March 2000.</p>
+<p><a href="http://www.brentlab.org/systems/2016/08/10/hello-world/curagen-3/" rel="attachment wp-att-42"><img class="alignnone size-full wp-image-42" src="http://www.brentlab.org/systems/wp-content/uploads/2016/08/Curagen-3.jpg" alt="Curagen 3" width="1086" height="816" srcset="http://www.brentlab.org/systems/wp-content/uploads/2016/08/Curagen-3.jpg 1086w, http://www.brentlab.org/systems/wp-content/uploads/2016/08/Curagen-3-300x225.jpg 300w, http://www.brentlab.org/systems/wp-content/uploads/2016/08/Curagen-3-768x577.jpg 768w, http://www.brentlab.org/systems/wp-content/uploads/2016/08/Curagen-3-1024x769.jpg 1024w" sizes="(max-width: 1086px) 100vw, 1086px" /></a></p>
+<p>So, leaving this speculation to one side&#8230; sadly, after the publication of the incomplete interaction map in Science, neither Science, Nature, nor Cell ever published a <em>more</em> complete <em>Drosophila</em> interaction map.</p>
+<p>This history suggests that the first publication may have precluded subsequent high profile publication of more complete work. It&#8217;s also consistent with a corollary idea, that perception that there could not be a second high profile publication diminished some of the enthusiasm for careful subsequent work.</p>
+<p>As it happens, a second, more careful second interaction map was published later, in a much lower profile journal.</p>
+<p>There was almost no overlap between these interaction maps.</p>
+<p>The lack of overlap was anticipated by direct experiment, and the reasons it might arise were identified and articulated (Stanyon et al., 2004).</p>
+<p>Those articulated lessons were not heeded.</p>
+<p>Notably, both groups expressed the hope that their work be a basis for future understanding.</p>
+<p>In fact, the optimism-imbued buggy protein interaction did become a basis for future work. It became grist for 1000s of quasi mathematical computational biological studies of protein-protein interactions, networks, and other esoterica.</p>
+<p>However, more than ten years later, it&#8217;s hard to point to strong and correct findings from these computational studies and it is possible to identify assertions from them that are, as they say, more false than true and which I hope to make subjects of later posts.  For now, let me simply say that the large scale buggy protein interaction data during the 00&#8217;s did launch future computational work and published papers, but it probably did not contribute much to new scientific understanding.</p>
+<p>Might the contribution of this data to new knowledge have been greater if circumstances had allowed <em>Drosophila</em> protein interaction data to have been generated more carefully?</p>
+<p><strong>References</strong></p>
+<p>Finley, R. L. Jr., and Brent, R. (1994).  Interaction mating reveals binary and ternary connections between Drosophila cell cycle regulators.Proc Natl Acad Sci U S A. 1994 Dec 20;91(26):12980-12984. PMID:<a href="http://www.ncbi.nlm.nih.gov/pubmed/7809159">7809159</a></p>
+<p>Giot L, Bader JS, Brouwer C, Chaudhuri A, Kuang B, Li Y, Hao YL, Ooi CE, Godwin B, Vitols E, Vijayadamodar G, Pochart P, Machineni H, Welsh M, Kong Y, Zerhusen B, Malcolm R, Varrone Z, Collis A, Minto M, Burgess S, McDaniel L, Stimpson E, Spriggs F, Williams J, Neurath K, Ioime N, Agee M, Voss E, Furtak K, Renzulli R, Aanensen N, Carrolla S, Bickelhaupt E, Lazovatsky Y, DaSilva A, Zhong J, Stanyon CA, Finley RL Jr, White KP, Braverman M, Jarvie T, Gold S, Leach M, Knight J, Shimkets RA, McKenna MP, Chant J, Rothberg JM.  (2003).  A protein interaction map of Drosophila melanogaster.  Science. 302(5651): 1727-1736.  PMID: <a href="http://www.ncbi.nlm.nih.gov/pubmed/14605208">14605208</a></p>
+<p>Stanyon CA, Liu G, Mangiola BA, Patel N, Giot L, Kuang B, Zhang H, Zhong J, Finley RL Jr.  (2004).  A Drosophila protein-interaction map centered on cell-cycle regulators.  Genome Biol. 2004;5(12):R96.  PMID:<a href="http://www.ncbi.nlm.nih.gov/pubmed/15575970">15575970</a></p>
+<p>Formstecher E, Aresta S, Collura V, Hamburger A, Meil A, Trehin A, Reverdy C, Betin V, Maire S, Brun C, Jacq B, Arpin M, Bellaiche Y, Bellusci S, Benaroch P, Bornens M, Chanet R, Chavrier P, Delattre O, Doye V, Fehon R, Faye G, Galli T, Girault JA, Goud B, de Gunzburg J, Johannes L, Junier MP, Mirouse V, Mukherjee A, Papadopoulo D, Perez F, Plessis A, Rossé C, Saule S, Stoppa-Lyonnet D, Vincent A, White M, Legrain P, Wojcik J, Camonis J, Daviet L.  (2005).  Protein interaction mapping: a Drosophila case study.  Genome Res. 2005 Mar;15(3):376-384.  PMID:<a href="http://www.ncbi.nlm.nih.gov/pubmed/15710747">15710747</a></p>
+<p>&nbsp;</p>
+<div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-email"><a rel="nofollow" data-shared="" class="share-email sd-button share-icon" href="http://www.brentlab.org/systems/2016/07/10/hello-world-2/?share=email" target="_blank" title="Click to email this to a friend"><span>Email</span></a></li><li class="share-print"><a rel="nofollow" data-shared="" class="share-print sd-button share-icon" href="http://www.brentlab.org/systems/2016/07/10/hello-world-2/#print" target="_blank" title="Click to print"><span>Print</span></a></li><li><a href="#" class="sharing-anchor sd-button share-more"><span>More</span></a></li><li class="share-end"></li></ul><div class="sharing-hidden"><div class="inner" style="display: none;"><ul><li class="share-twitter"><a rel="nofollow" data-shared="sharing-twitter-19" class="share-twitter sd-button share-icon" href="http://www.brentlab.org/systems/2016/07/10/hello-world-2/?share=twitter" target="_blank" title="Click to share on Twitter"><span>Twitter</span></a></li><li class="share-google-plus-1"><a rel="nofollow" data-shared="sharing-google-19" class="share-google-plus-1 sd-button share-icon" href="http://www.brentlab.org/systems/2016/07/10/hello-world-2/?share=google-plus-1" target="_blank" title="Click to share on Google+"><span>Google</span></a></li><li class="share-end"></li><li class="share-reddit"><a rel="nofollow" data-shared="" class="share-reddit sd-button share-icon" href="http://www.brentlab.org/systems/2016/07/10/hello-world-2/?share=reddit" target="_blank" title="Click to share on Reddit"><span>Reddit</span></a></li><li class="share-linkedin"><a rel="nofollow" data-shared="sharing-linkedin-19" class="share-linkedin sd-button share-icon" href="http://www.brentlab.org/systems/2016/07/10/hello-world-2/?share=linkedin" target="_blank" title="Click to share on LinkedIn"><span>LinkedIn</span></a></li><li class="share-end"></li><li class="share-facebook"><a rel="nofollow" data-shared="sharing-facebook-19" class="share-facebook sd-button share-icon" href="http://www.brentlab.org/systems/2016/07/10/hello-world-2/?share=facebook" target="_blank" title="Click to share on Facebook"><span>Facebook</span></a></li><li class="share-end"></li></ul></div></div></div></div></div>                    </div>
+                    
+                                    
+                </div> <!-- /entry -->
+            
+                    
+            
+        
+        <div id="comments-header">
+        <div class="clearfix">
+            <h2 class="title">1 comment</h2>
+                      <p class="comments-feed"><a href="http://www.brentlab.org/systems/2016/07/10/hello-world-2/feed/">Comments feed for this article</a></p>
+                    </div>
+                  <p class="trackback-link">Trackback link: <a href="http://www.brentlab.org/systems/2016/07/10/hello-world-2/trackback/">http://www.brentlab.org/systems/2016/07/10/hello-world-2/trackback/</a></p>
+            </div>
+    
+            				<div id="respond" class="comment-respond">
+			<h3 id="reply-title" class="comment-reply-title">Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/brentlab-dumps/external/brentlab.org/systems/2016/07/10/hello-world-2/#respond" style="display:none;">Cancel reply</a></small></h3>				<form action="http://www.brentlab.org/systems/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+					<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p>    <div class="response textarea-wrap">
+        <label for="comment">Your comment</label>
+        <textarea name="comment" id="comment"
+            cols="60" rows="10"
+            aria-required="true" aria-multiline="true"></textarea>
+    </div><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" aria-required='true' required='required' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" maxlength="100" aria-describedby="email-notes" aria-required='true' required='required' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" maxlength="200" /></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment" /> <input type='hidden' name='comment_post_ID' value='19' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="519f7540ef" /></p><p class="comment-subscription-form"><input type="checkbox" name="subscribe_comments" id="subscribe_comments" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;" /> <label class="subscribe-label" id="subscribe-label" for="subscribe_comments">Notify me of follow-up comments by email.</label></p><p class="comment-subscription-form"><input type="checkbox" name="subscribe_blog" id="subscribe_blog" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;" /> <label class="subscribe-label" id="subscribe-blog-label" for="subscribe_blog">Notify me of new posts by email.</label></p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="190"/></p>				</form>
+					</div><!-- #respond -->
+		    </div>
+
+<div id="sidebar" class="secondary">
+
+    <div id="recent-comments-4" class="widget widget_recent_comments"><h3>Recent Comments</h3><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">rbrent@fhcrc.org</span> on <a href="http://www.brentlab.org/systems/2016/07/20/how-damage-via-optimism-induced-buggy-data-might-strike-again-wonkish/#comment-11">How optimism about buggy high throughput data might again cause damage (wonkish)</a></li></ul></div><div id="archives-4" class="widget widget_archive"><h3>Archives</h3>		<ul>
+			<li><a href='http://www.brentlab.org/systems/2016/09/'>September 2016</a>&nbsp;(1)</li>
+	<li><a href='http://www.brentlab.org/systems/2016/08/'>August 2016</a>&nbsp;(2)</li>
+	<li><a href='http://www.brentlab.org/systems/2016/07/'>July 2016</a>&nbsp;(3)</li>
+		</ul>
+		</div>    
+</div>
+</div> <!-- /main content -->
+
+
+
+<div id="footer" class="clearfix">
+    
+    <div class="secondary">
+        
+                
+    </div> <!-- /secondary -->
+    
+    <div class="primary">
+        
+                
+    </div> <!-- /primary -->
+    
+    <div id="theme-info" class="clearfix">
+        
+        <div class="secondary">
+    <p><a class="feed" href="http://www.brentlab.org/systems/feed/">Subscribe to feed</a></p>
+</div><div class="primary content">
+    <p>Powered by <a href="http://wordpress.org/">WordPress</a> and <a href="http://tarskitheme.com/">Tarski</a></p>
+</div>
+        
+    </div> <!-- /theme-info -->
+    
+</div> <!-- /footer -->
+
+</div>	<div style="display:none">
+	</div>
+
+	<script type="text/javascript">
+		window.WPCOM_sharing_counts = {"http:\/\/www.brentlab.org\/systems\/2016\/07\/10\/hello-world-2\/":19};
+	</script>
+	<div id="sharing_email" style="display: none;">
+		<form action="/brentlab-dumps/external/brentlab.org/systems/2016/07/10/hello-world-2/" method="post">
+			<label for="target_email">Send to Email Address</label>
+			<input type="email" name="target_email" id="target_email" value="" />
+
+			
+				<label for="source_name">Your Name</label>
+				<input type="text" name="source_name" id="source_name" value="" />
+
+				<label for="source_email">Your Email Address</label>
+				<input type="email" name="source_email" id="source_email" value="" />
+
+						<input type="text" id="jetpack-source_f_name" name="source_f_name" class="input" value="" size="25" autocomplete="off" />
+			<script> document.getElementById('jetpack-source_f_name').value = ''; </script>
+			
+			<img style="float: right; display: none" class="loading" src="http://www.brentlab.org/systems/wp-content/plugins/jetpack/modules/sharedaddy/images/loading.gif" alt="loading" width="16" height="16" />
+			<input type="submit" value="Send Email" class="sharing_send" />
+			<a rel="nofollow" href="#cancel" class="sharing_cancel">Cancel</a>
+
+			<div class="errors errors-1" style="display: none;">
+				Post was not sent - check your email addresses!			</div>
+
+			<div class="errors errors-2" style="display: none;">
+				Email check failed, please try again			</div>
+
+			<div class="errors errors-3" style="display: none;">
+				Sorry, your blog cannot share posts by email.			</div>
+		</form>
+	</div>
+		<script type="text/javascript">
+		var windowOpen;
+		jQuery(document.body).on('click', 'a.share-twitter', function() {
+			if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+				windowOpen.close();
+			}
+			windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+			return false;
+		});
+		</script>
+				<script type="text/javascript">
+		var windowOpen;
+		jQuery(document.body).on('click', 'a.share-google-plus-1', function() {
+			if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+				windowOpen.close();
+			}
+			windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomgoogle-plus-1', 'menubar=1,resizable=1,width=480,height=550' );
+			return false;
+		});
+		</script>
+				<script type="text/javascript">
+		var windowOpen;
+		jQuery(document.body).on('click', 'a.share-linkedin', function() {
+			if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+				windowOpen.close();
+			}
+			windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomlinkedin', 'menubar=1,resizable=1,width=580,height=450' );
+			return false;
+		});
+		</script>
+				<script type="text/javascript">
+		var windowOpen;
+		jQuery(document.body).on('click', 'a.share-facebook', function() {
+			if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+				windowOpen.close();
+			}
+			windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+			return false;
+		});
+		</script>
+		<script type='text/javascript' src='http://www.brentlab.org/systems/wp-content/plugins/akismet/_inc/form.js?ver=3.1.11'></script>
+<script type='text/javascript' src='http://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201747'></script>
+<script type='text/javascript' src='http://s.gravatar.com/js/gprofiles.js?ver=2017Novaa'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.brentlab.org/systems/wp-content/plugins/jetpack/modules/wpgroho.js?ver=4.6.8'></script>
+<script type='text/javascript' src='http://www.brentlab.org/systems/wp-includes/js/comment-reply.min.js?ver=4.6.8'></script>
+<script type='text/javascript' src='http://www.brentlab.org/systems/wp-includes/js/wp-embed.min.js?ver=4.6.8'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var sharing_js_options = {"lang":"en","counts":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.brentlab.org/systems/wp-content/plugins/jetpack/modules/sharedaddy/sharing.js?ver=4.2.2'></script>
+<script type='text/javascript' src='http://stats.wp.com/e-201747.js' async defer></script>
+<script type='text/javascript'>
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:4.2.2',blog:'115958580',post:'19',tz:'-9',srv:'www.brentlab.org'} ]);
+	_stq.push([ 'clickTrackerInit', '115958580', '19' ]);
+</script>
+</body></html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en-US"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Systems &middot; Modularity (1)</title>
+              <script>
+            (function(d){
+              var js, id = 'powr-js', ref = d.getElementsByTagName('script')[0];
+              if (d.getElementById(id)) {return;}
+              js = d.createElement('script'); js.id = id; js.async = true;
+              js.src = '//www.powr.io/powr.js';
+              js.setAttribute('powr-token','kBjE4sRlAs1472506677');
+              js.setAttribute('external-type','wordpress');
+              ref.parentNode.insertBefore(js, ref);
+            }(document));
+          </script>
+          <meta name='robots' content='noindex,follow' />
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//s.gravatar.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Systems &raquo; Feed" href="http://www.brentlab.org/systems/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Systems &raquo; Comments Feed" href="http://www.brentlab.org/systems/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Systems &raquo; Modularity (1) Comments Feed" href="http://www.brentlab.org/systems/2016/09/15/the-problem-with-modules-1-introduction/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/www.brentlab.org\/systems\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.6.8"}};
+			!function(a,b,c){function d(a){var c,d,e,f,g,h=b.createElement("canvas"),i=h.getContext&&h.getContext("2d"),j=String.fromCharCode;if(!i||!i.fillText)return!1;switch(i.textBaseline="top",i.font="600 32px Arial",a){case"flag":return i.fillText(j(55356,56806,55356,56826),0,0),!(h.toDataURL().length<3e3)&&(i.clearRect(0,0,h.width,h.height),i.fillText(j(55356,57331,65039,8205,55356,57096),0,0),c=h.toDataURL(),i.clearRect(0,0,h.width,h.height),i.fillText(j(55356,57331,55356,57096),0,0),d=h.toDataURL(),c!==d);case"diversity":return i.fillText(j(55356,57221),0,0),e=i.getImageData(16,16,1,1).data,f=e[0]+","+e[1]+","+e[2]+","+e[3],i.fillText(j(55356,57221,55356,57343),0,0),e=i.getImageData(16,16,1,1).data,g=e[0]+","+e[1]+","+e[2]+","+e[3],f!==g;case"simple":return i.fillText(j(55357,56835),0,0),0!==i.getImageData(16,16,1,1).data[0];case"unicode8":return i.fillText(j(55356,57135),0,0),0!==i.getImageData(16,16,1,1).data[0];case"unicode9":return i.fillText(j(55358,56631),0,0),0!==i.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity","unicode9"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='social-logos-css'  href='http://www.brentlab.org/systems/wp-content/plugins/jetpack/_inc/social-logos/social-logos.min.css?ver=1' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack_css-css'  href='http://www.brentlab.org/systems/wp-content/plugins/jetpack/css/jetpack.css?ver=4.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='adswscCSS-css'  href='http://www.brentlab.org/systems/wp-content/plugins/ads-wp-site-count/css/styles.css?ver=4.6.8' type='text/css' media='all' />
+<script type='text/javascript' src='http://www.brentlab.org/systems/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='http://www.brentlab.org/systems/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://www.brentlab.org/systems/wp-content/themes/tarski/app/js/tarski.js?ver=3.2.0'></script>
+<meta name="description" content="Reviews and commentary about biological function  by Roger Brent">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+
+<link rel="stylesheet" href="http://www.brentlab.org/systems/wp-content/themes/tarski/style.css" type="text/css" media="all">
+<link rel="stylesheet" href="http://www.brentlab.org/systems/wp-content/themes/tarski/library/css/print.css" type="text/css" media="print">
+<link rel="stylesheet" href="http://www.brentlab.org/systems/wp-content/themes/tarski/styles/polar.css" type="text/css" media="all">
+
+<link rel='https://api.w.org/' href='http://www.brentlab.org/systems/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.brentlab.org/systems/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.brentlab.org/systems/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='On the consequences of premature retreat from small-lab basic research on Escherichia coli K-12' href='http://www.brentlab.org/systems/2016/08/31/151/' />
+<meta name="generator" content="WordPress 4.6.8" />
+<link rel="canonical" href="http://www.brentlab.org/systems/2016/09/15/the-problem-with-modules-1-introduction/" />
+<link rel='shortlink' href='http://wp.me/p7Qy7G-2W' />
+<link rel="alternate" type="application/json+oembed" href="http://www.brentlab.org/systems/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.brentlab.org%2Fsystems%2F2016%2F09%2F15%2Fthe-problem-with-modules-1-introduction%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://www.brentlab.org/systems/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.brentlab.org%2Fsystems%2F2016%2F09%2F15%2Fthe-problem-with-modules-1-introduction%2F&#038;format=xml" />
+<script data-cfasync="false" src="//load.sumome.com/" data-sumo-platform="wordpress-endurance" data-sumo-site-id="0571f5006d5f0600ecf80900f1e2e8005323a100ed38d10072bd60009a675000" async></script>
+<link rel='dns-prefetch' href='//v0.wordpress.com'>
+<style type='text/css'>img#wpstats{display:none}</style>		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Modularity (1)" />
+<meta property="og:url" content="http://www.brentlab.org/systems/2016/09/15/the-problem-with-modules-1-introduction/" />
+<meta property="og:description" content="On modularity, and intelligibility of artifacts not designed by humans (1) or The problem with modules (1) (wonkish) Let&#8217;s start by recalling this scene from 3017, in which Sally Fowler and R…" />
+<meta property="article:published_time" content="2016-09-15T22:46:45+00:00" />
+<meta property="article:modified_time" content="2016-09-15T23:29:23+00:00" />
+<meta property="og:site_name" content="Systems" />
+<meta property="og:image" content="https://s0.wp.com/i/blank.jpg" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:card" content="summary" />
+</head>
+
+<body id="post-the-problem-with-modules-1-introduction" class="single single-post postid-182 single-format-standard centre polar">
+
+<div id="wrapper" class="tarski">
+    <div id="header">
+        <div id="header-image"><a title="Return to main page" rel="home" href="http://www.brentlab.org/systems/"><img alt="Header image" src="http://www.brentlab.org/systems/wp-content/uploads/2016/09/Nova-Mundani-yet-again-again-1.jpg"></a></div>
+
+<div id="title">
+	<h1 id="blog-title"><a title="Return to main page" href="http://www.brentlab.org/systems/" rel="home">Systems</a></h1>
+	<p id="tagline">Reviews and commentary about biological function  by Roger Brent</p></div>
+<div id="navigation" class="clearfix">        <ul id="menu-primary-navigation" class="primary xoxo">
+            <li><a title="Return to front page" href="http://www.brentlab.org/systems">Home</a></li>
+            
+    </ul><div class="secondary">
+    <p><a class="feed" href="http://www.brentlab.org/systems/feed/">Subscribe to feed</a></p>
+</div></div><script type="text/javascript">
+    jQuery(document).ready(function() {
+        var container = jQuery('#navigation > ul'),
+            navbar;
+        
+        if (container.length > 0) {
+            navbar = new Tarski.Navbar(container);
+        }
+    });
+</script><p class="primary-span articlenav"><span class="previous-entry"><a href="http://www.brentlab.org/systems/2016/08/31/151/" rel="prev">&lsaquo; On the consequences of premature retreat from small-lab basic research on Escherichia coli K-12</a></span></p>
+    </div>
+    
+    <div id="content" class="clearfix">
+
+<div class="primary">
+        
+                
+                        
+                <div class="entry post-182 post type-post status-publish format-standard hentry category-unfortunate">
+                
+                    <div class="meta">
+                        <h1 class="title entry-title">Modularity (1)</h1>                        
+                        <p class="metadata"><span class="date updated">15 September, 2016</span> in <span class="categories"><a href="http://www.brentlab.org/systems/category/unfortunate/" rel="category tag">Unfortunate</a></span> | <a class="comments-link" href="http://www.brentlab.org/systems/2016/09/15/the-problem-with-modules-1-introduction/#respond">No comments</a></p>                    </div>
+                    
+                    <div class="content clearfix">
+                                                <p><strong>On modularity, and intelligibility of artifacts not designed by humans (1)</strong></p>
+<p><strong>or</strong></p>
+<p><strong>The problem with modules (1) (wonkish)</strong></p>
+<p>Let&#8217;s start by recalling this scene from 3017, in which Sally Fowler and Rod Blaine discuss an alien spacecraft.</p>
+<p><span style="font-size: 8pt;"><em>&#8220;Most of the probe&#8217;s internal equipment was junk, fused and melted clutters of plastic blocks, remains of integrated circuitry, odd strips of conducting and semiconducting materials jumbled together in no rational order. There was no trace of the shroud lines, no gear for reeling them in, no apertures in the thirty-two projections at one end of the probe. If the shrouds were all one molecule it might explain why they were missing; they would have come apart, changed chemically, when Blaine&#8217;s cannon cut them. But how had they controlled the sail? Could the shrouds somehow be made to contract and relax, like a muscle?</em></span></p>
+<p><span style="font-size: 8pt;"><em>An odd idea, but some of the intact mechanisms were just as odd. There was no standardization of parts in the probe. Two widgets intended to do almost the same job could be subtly different or wildly different. Braces and mountings seemed hand carved. The probe was as much a sculpture as a machine.</em></span></p>
+<p><span style="font-size: 8pt;"><em>Blaine read that, shook his head, and called Sally. Presently she joined him in his cabin.</em></span></p>
+<p><span style="font-size: 8pt;"><em>&#8220;Yes, I wrote that,&#8221; she said. &#8220;It seems to be true. Every nut and bolt in that probe was designed separately [&#8230;] But that&#8217;s not all. You know how redundancy works?&#8221;</em></span></p>
+<p><span style="font-size: 8pt;"><em>&#8220;In machines? Two gilkickies to do one job. In case one fails.&#8221;</em></span></p>
+<p><span style="font-size: 8pt;"><em>&#8220;Well, it seems that the Moties work it both ways.&#8221;</em></span></p>
+<p><span style="font-size: 8pt;"><em>&#8220;Moties?&#8221;</em></span></p>
+<p><span style="font-size: 8pt;"><em>She shrugged. &#8220;We had to call them something. The Mote engineers made two widgets do one job, all right, but the second widget does two other jobs, and some of the supports are also bimetallic thermostats and thermoelectric generators all in one. Rod, I barely understand the words. Modules: human engineers work in modules, don&#8217;t they?&#8221;</em></span></p>
+<p><span style="font-size: 8pt;"><em>&#8220;For a complicated job, of course they do.&#8221;</em></span></p>
+<p><span style="font-size: 8pt;"><em> </em><em>&#8220;The Moties don&#8217;t. It&#8217;s all one piece, everything working on everything else.&#8221;</em></span></p>
+<p><span style="font-size: 8pt;"><em> </em><em>Larry Niven and Jerry Pournelle, The Mote in God&#8217;s Eye, Pocket Books, Simon and Schuster, New York, New York (1974)</em></span></p>
+<p>If the biggest cliche in systems biology is that biological systems are robust, the second biggest is probably that they are comprised of modules.</p>
+<p>To start, I need to acknowledge that Sally was right. To build systems, human engineers do work in modules, be those built of mechanical parts, electronic circuitry, or lines of code.</p>
+<p>For researchers who wish to underatand biological function, or who wish to design and engineer new functions, it becomes a valid question to ask in which cases the concept of modules is relevant to understanding.</p>
+<p>Some of the current belief that biological function arises from the assembled actions of modules arises from influential paper. This paper (&#8220;From molecular to modular cell biology&#8221;, by Lee Hartwell, John Hopfield, Stan Leibler, and Andrew Murray, 1999) stated <em>&#8220;We argue here for the recognition of functional ‘modules’ as a critical level of biological organization. Modules are composed of many types of molecule. They have discrete functions that arise from interactions among their components (proteins, DNA, RNA and small molecules), but these functions cannot easily be predicted by studying the properties of the isolated components. We believe that general ‘design principles’ — profoundly shaped by the constraints of evolution — govern the structure and function of modules.&#8221;</em></p>
+<p>In subsequent posts, I will advance the argument that this belief in modularity has not worked out very well. In specific I will argue that, just as with robustness, at the level of the cell, many assertions that processes and phenomena in biology are modular are not not, for reasonable meanings of the word module, true. I will also argue that, at the level of the cell, operation based on that belief has not led to greatly increased understanding, and in fact might have kept human researchers from describing biological systems more accurately. And finally, I will assert that operation based the belief that cellular systems are modular has not led to an improved ability to engineer these systems.</p>
+<p>For all three arguments, part of the reason will be that biological systems were evolved. As opposed to being designed and built by humans.  Or even by other sentient beings.</p>
+<p><strong>Reference</strong></p>
+<p>Hartwell, L. H., Hopfield, J. J., Leibler, S. and Murray, A. W. (1999).  From molecular to modular cell biology 402(6761 supp), C47-C52</p>
+<div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-email"><a rel="nofollow" data-shared="" class="share-email sd-button share-icon" href="http://www.brentlab.org/systems/2016/09/15/the-problem-with-modules-1-introduction/?share=email" target="_blank" title="Click to email this to a friend"><span>Email</span></a></li><li class="share-print"><a rel="nofollow" data-shared="" class="share-print sd-button share-icon" href="http://www.brentlab.org/systems/2016/09/15/the-problem-with-modules-1-introduction/#print" target="_blank" title="Click to print"><span>Print</span></a></li><li><a href="#" class="sharing-anchor sd-button share-more"><span>More</span></a></li><li class="share-end"></li></ul><div class="sharing-hidden"><div class="inner" style="display: none;"><ul><li class="share-twitter"><a rel="nofollow" data-shared="sharing-twitter-182" class="share-twitter sd-button share-icon" href="http://www.brentlab.org/systems/2016/09/15/the-problem-with-modules-1-introduction/?share=twitter" target="_blank" title="Click to share on Twitter"><span>Twitter</span></a></li><li class="share-google-plus-1"><a rel="nofollow" data-shared="sharing-google-182" class="share-google-plus-1 sd-button share-icon" href="http://www.brentlab.org/systems/2016/09/15/the-problem-with-modules-1-introduction/?share=google-plus-1" target="_blank" title="Click to share on Google+"><span>Google</span></a></li><li class="share-end"></li><li class="share-reddit"><a rel="nofollow" data-shared="" class="share-reddit sd-button share-icon" href="http://www.brentlab.org/systems/2016/09/15/the-problem-with-modules-1-introduction/?share=reddit" target="_blank" title="Click to share on Reddit"><span>Reddit</span></a></li><li class="share-linkedin"><a rel="nofollow" data-shared="sharing-linkedin-182" class="share-linkedin sd-button share-icon" href="http://www.brentlab.org/systems/2016/09/15/the-problem-with-modules-1-introduction/?share=linkedin" target="_blank" title="Click to share on LinkedIn"><span>LinkedIn</span></a></li><li class="share-end"></li><li class="share-facebook"><a rel="nofollow" data-shared="sharing-facebook-182" class="share-facebook sd-button share-icon" href="http://www.brentlab.org/systems/2016/09/15/the-problem-with-modules-1-introduction/?share=facebook" target="_blank" title="Click to share on Facebook"><span>Facebook</span></a></li><li class="share-end"></li></ul></div></div></div></div></div>                    </div>
+                    
+                                    
+                </div> <!-- /entry -->
+            
+                    
+            
+        
+        <div id="comments-header">
+        <div class="clearfix">
+            <h2 class="title">No comments</h2>
+                      <p class="comments-feed"><a href="http://www.brentlab.org/systems/2016/09/15/the-problem-with-modules-1-introduction/feed/">Comments feed for this article</a></p>
+                    </div>
+                  <p class="trackback-link">Trackback link: <a href="http://www.brentlab.org/systems/2016/09/15/the-problem-with-modules-1-introduction/trackback/">http://www.brentlab.org/systems/2016/09/15/the-problem-with-modules-1-introduction/trackback/</a></p>
+            </div>
+    
+            				<div id="respond" class="comment-respond">
+			<h3 id="reply-title" class="comment-reply-title">Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/brentlab-dumps/external/brentlab.org/systems/2016/09/15/the-problem-with-modules-1-introduction/#respond" style="display:none;">Cancel reply</a></small></h3>				<form action="http://www.brentlab.org/systems/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+					<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p>    <div class="response textarea-wrap">
+        <label for="comment">Your comment</label>
+        <textarea name="comment" id="comment"
+            cols="60" rows="10"
+            aria-required="true" aria-multiline="true"></textarea>
+    </div><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" aria-required='true' required='required' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" maxlength="100" aria-describedby="email-notes" aria-required='true' required='required' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" maxlength="200" /></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment" /> <input type='hidden' name='comment_post_ID' value='182' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="dd64cf2a13" /></p><p class="comment-subscription-form"><input type="checkbox" name="subscribe_comments" id="subscribe_comments" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;" /> <label class="subscribe-label" id="subscribe-label" for="subscribe_comments">Notify me of follow-up comments by email.</label></p><p class="comment-subscription-form"><input type="checkbox" name="subscribe_blog" id="subscribe_blog" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;" /> <label class="subscribe-label" id="subscribe-blog-label" for="subscribe_blog">Notify me of new posts by email.</label></p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="60"/></p>				</form>
+					</div><!-- #respond -->
+		    </div>
+
+<div id="sidebar" class="secondary">
+
+    <div id="recent-comments-4" class="widget widget_recent_comments"><h3>Recent Comments</h3><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">rbrent@fhcrc.org</span> on <a href="http://www.brentlab.org/systems/2016/07/20/how-damage-via-optimism-induced-buggy-data-might-strike-again-wonkish/#comment-11">How optimism about buggy high throughput data might again cause damage (wonkish)</a></li></ul></div><div id="archives-4" class="widget widget_archive"><h3>Archives</h3>		<ul>
+			<li><a href='http://www.brentlab.org/systems/2016/09/'>September 2016</a>&nbsp;(1)</li>
+	<li><a href='http://www.brentlab.org/systems/2016/08/'>August 2016</a>&nbsp;(2)</li>
+	<li><a href='http://www.brentlab.org/systems/2016/07/'>July 2016</a>&nbsp;(3)</li>
+		</ul>
+		</div>    
+</div>
+</div> <!-- /main content -->
+
+
+
+<div id="footer" class="clearfix">
+    
+    <div class="secondary">
+        
+                
+    </div> <!-- /secondary -->
+    
+    <div class="primary">
+        
+                
+    </div> <!-- /primary -->
+    
+    <div id="theme-info" class="clearfix">
+        
+        <div class="secondary">
+    <p><a class="feed" href="http://www.brentlab.org/systems/feed/">Subscribe to feed</a></p>
+</div><div class="primary content">
+    <p>Powered by <a href="http://wordpress.org/">WordPress</a> and <a href="http://tarskitheme.com/">Tarski</a></p>
+</div>
+        
+    </div> <!-- /theme-info -->
+    
+</div> <!-- /footer -->
+
+</div>	<div style="display:none">
+	</div>
+
+	<script type="text/javascript">
+		window.WPCOM_sharing_counts = {"http:\/\/www.brentlab.org\/systems\/2016\/09\/15\/the-problem-with-modules-1-introduction\/":182};
+	</script>
+	<div id="sharing_email" style="display: none;">
+		<form action="/brentlab-dumps/external/brentlab.org/systems/2016/09/15/the-problem-with-modules-1-introduction/" method="post">
+			<label for="target_email">Send to Email Address</label>
+			<input type="email" name="target_email" id="target_email" value="" />
+
+			
+				<label for="source_name">Your Name</label>
+				<input type="text" name="source_name" id="source_name" value="" />
+
+				<label for="source_email">Your Email Address</label>
+				<input type="email" name="source_email" id="source_email" value="" />
+
+						<input type="text" id="jetpack-source_f_name" name="source_f_name" class="input" value="" size="25" autocomplete="off" />
+			<script> document.getElementById('jetpack-source_f_name').value = ''; </script>
+			
+			<img style="float: right; display: none" class="loading" src="http://www.brentlab.org/systems/wp-content/plugins/jetpack/modules/sharedaddy/images/loading.gif" alt="loading" width="16" height="16" />
+			<input type="submit" value="Send Email" class="sharing_send" />
+			<a rel="nofollow" href="#cancel" class="sharing_cancel">Cancel</a>
+
+			<div class="errors errors-1" style="display: none;">
+				Post was not sent - check your email addresses!			</div>
+
+			<div class="errors errors-2" style="display: none;">
+				Email check failed, please try again			</div>
+
+			<div class="errors errors-3" style="display: none;">
+				Sorry, your blog cannot share posts by email.			</div>
+		</form>
+	</div>
+		<script type="text/javascript">
+		var windowOpen;
+		jQuery(document.body).on('click', 'a.share-twitter', function() {
+			if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+				windowOpen.close();
+			}
+			windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+			return false;
+		});
+		</script>
+				<script type="text/javascript">
+		var windowOpen;
+		jQuery(document.body).on('click', 'a.share-google-plus-1', function() {
+			if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+				windowOpen.close();
+			}
+			windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomgoogle-plus-1', 'menubar=1,resizable=1,width=480,height=550' );
+			return false;
+		});
+		</script>
+				<script type="text/javascript">
+		var windowOpen;
+		jQuery(document.body).on('click', 'a.share-linkedin', function() {
+			if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+				windowOpen.close();
+			}
+			windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomlinkedin', 'menubar=1,resizable=1,width=580,height=450' );
+			return false;
+		});
+		</script>
+				<script type="text/javascript">
+		var windowOpen;
+		jQuery(document.body).on('click', 'a.share-facebook', function() {
+			if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+				windowOpen.close();
+			}
+			windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+			return false;
+		});
+		</script>
+		<script type='text/javascript' src='http://www.brentlab.org/systems/wp-content/plugins/akismet/_inc/form.js?ver=3.1.11'></script>
+<script type='text/javascript' src='http://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201747'></script>
+<script type='text/javascript' src='http://s.gravatar.com/js/gprofiles.js?ver=2017Novaa'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.brentlab.org/systems/wp-content/plugins/jetpack/modules/wpgroho.js?ver=4.6.8'></script>
+<script type='text/javascript' src='http://www.brentlab.org/systems/wp-includes/js/comment-reply.min.js?ver=4.6.8'></script>
+<script type='text/javascript' src='http://www.brentlab.org/systems/wp-includes/js/wp-embed.min.js?ver=4.6.8'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var sharing_js_options = {"lang":"en","counts":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.brentlab.org/systems/wp-content/plugins/jetpack/modules/sharedaddy/sharing.js?ver=4.2.2'></script>
+<script type='text/javascript' src='http://stats.wp.com/e-201747.js' async defer></script>
+<script type='text/javascript'>
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:4.2.2',blog:'115958580',post:'182',tz:'-9',srv:'www.brentlab.org'} ]);
+	_stq.push([ 'clickTrackerInit', '115958580', '182' ]);
+</script>
+</body></html>

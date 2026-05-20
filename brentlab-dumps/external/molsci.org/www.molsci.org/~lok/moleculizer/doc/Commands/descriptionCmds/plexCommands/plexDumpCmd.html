@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="StarOffice/5.2 (Linux)">
+	<META NAME="AUTHOR" CONTENT="Walter Lok">
+	<META NAME="CREATED" CONTENT="20010924;13123800">
+	<META NAME="CHANGEDBY" CONTENT="Walter Lok">
+	<META NAME="CHANGED" CONTENT="20020102;12172800">
+</HEAD>
+<BODY>
+<P STYLE="margin-top: 0.17in; page-break-after: avoid"><FONT FACE="Times New Roman, serif"><FONT SIZE=4>plex-dump,
+omni-dump</FONT></FONT></P>
+<PRE>plex-dump <I>plex-name dump-tag</I>
+<I>query</I>
+<I>query</I>
+...</PRE><P>
+or</P>
+<PRE>omni-dump <I>omniplex-name dump-tag</I>
+<I>query</I>
+<I>query</I>
+<I>...</I></PRE><P>
+These commands make it possible to dump the population of complexes
+and subcomplexes more selectively. Among the complexes whose
+structure is given by the plex <I>plex-name</I>, only those that
+satisfy stated queries are counted in the population dump. Since the
+complex structure is determined by the plex <I>plex-name</I>, these
+queries must be about the state of mols in the complex or subcomplex:
+is this mol phosphorylated, is that mol methylated, etc. To make the
+dump happen, use the <I>dump-tag</I> in a dump command just as you
+would use a species name. Behavior for omniplexes is analogous: only
+the population of complexes containing the given subcomplex and
+satisfying the queries are counted in the dump. Queries are defined
+and loaded in the units that define the properties tested by the
+queries, so they are described in their unit's documentation. See,
+for example, the variety of silly <A HREF="../phosCommands/phosQuery.html">queries</A>
+added by the phosphorylation unit for testing the phosphorylation
+state of mols in a complex.</P>
+<P>Note that if you just want to dump the population of all the
+complexes with a given structure, you can just use the plex name in a
+dump command. To dump the population of all the complexes containing
+a certain subcomplex, use the omni-dump command without any queries
+to make a <I>dump-tag</I> that you can use in a dump command.</P>
+<P ALIGN=CENTER STYLE="margin-left: 0.79in"><A HREF="plexCmd.html">previous</A>
+| <A HREF="index.html">up</A> | <A HREF="../../../index.html">top</A>
+| <A HREF="omnifyCmd.html">next</A></P>
+</BODY>
+</HTML>

@@ -1,0 +1,63 @@
+MAKING BAITS
+
+LexA fusions proteins ("baits") are typically expressed from pEG202.
+Protein coding sequences can be inserted into this plasmid in a
+polylinker downstream of the region encoding full length LexA (amino
+acids 1 to 202, including the DNA-binding domain and the dimerization
+domain).  Although LexA does not contain a functional yeast nuclear
+localization signal, it and most fusions to it will be equally
+partitioned between the cytoplasm and nucleus (Silver, et al. (1986)
+MCB 6:4763-4766) (see TESTING BAITS).  Thus, most baits will occupy
+LexA operators in the yeast nucleus (Golemis and Brent, 1992 MCB
+12:3006-3014).  A small minority of baits are excluded from the
+nucleus (for example, LexA-Oskar; Breitwieser and Ephrussi, personal
+communication).  For these rare baits, we have available a close
+relative of pEG202, a gift of Bert Vogelstein and his coworkers, which
+carries the SV40 T nuclear localization signal between LexA and the
+polylinker.  We also have a pEG202-related plasmid for making fusions
+to the N-terminus of LexA, a gift of Manuel Sainz and Vicki Chandler.
+This vector can be used in those cases where it is suspected that the
+N-terminal region of a protein may be important for interaction.
+
+
+LexA-Fusion Expression Plasmid, pEG202.
+Erica A. Golemis
+
+        pEG202 is a derivative of the plasmid LexA202+PL (Ruden et
+al., Nature 350:250-252 (1991)) which increases the number of unique
+polylinker sites available for cloning.  To create this plasmid,
+LexA202+PL was cut at the unique SalI cloning site downstream of LexA
+in the polylinker, and a 22mer with the sequence
+
+                5'      TCGACCATGGCGGCCGCTCGAG
+                            GGTACCGCCGGCGAGCTCAGCT  5'
+
+was inserted (note that this double stranded oligo has sticky 5'GATC
+Sal ends; to see this, you may have to display this using a
+constant-spaced font) .  This oligo thus recreates flanking SalI
+sites, and adds novel unique sites for NcoI, NotI, and XhoI.  The
+total pEG202 polylinker sequence reads in frame from the last codon of
+LexA as follows:
+
+
+  CTG  GAA TTC CCG GGG ATC CGT CGA CCA TGG CGG CCG CTC GAG TCG ACC 
+ LexA   ECORI  SmaI  BAMHI  SALI   NCOI    NOTI  XHOI   SALI
+
+TGC AGC C.
+PstI
+
+        All sites indicated in capital letters are usable for
+inserting fusion sequences (PstI and SmaI are not unique). This
+plasmid contains the 2um origin and a HIS3 selectable marker and the
+E.coli amp resistance gene.  Expression of the LexA-fusion cassette is
+from the strong constitutive ADH1 promoter.  Primers for sequencing
+and/or PCR can be constructed from the LexA and ADH1 terminator
+sequences flanking the polylinker sites (see SEQUENCES).  There are
+stop codons present in all reading frames approximately 20 codons
+downstream of the PstI site.
+
+Erica Golemis
+ea_golemis@fccc.edu
+
+June 1992
+revised September 1993

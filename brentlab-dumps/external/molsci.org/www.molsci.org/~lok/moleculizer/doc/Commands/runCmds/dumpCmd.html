@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="StarOffice/5.2 (Linux)">
+	<META NAME="AUTHOR" CONTENT="Walter Lok">
+	<META NAME="CREATED" CONTENT="20010924;16440100">
+	<META NAME="CHANGEDBY" CONTENT="Walter Lok">
+	<META NAME="CHANGED" CONTENT="20011018;13361200">
+</HEAD>
+<BODY>
+<P STYLE="margin-top: 0.17in; page-break-after: avoid"><FONT FACE="Times New Roman, serif"><FONT SIZE=4>dump</FONT></FONT></P>
+<PRE STYLE="margin-bottom: 0.2in">dump <I>file period tag tag tag...</I></PRE><P>
+This command causes the simulation data represented by the tags to be
+dumped to file every period of simulation time. The data are all
+dumped in standard tab-separated format, with a header giving the
+tags, such as might be accepted by a spreadsheet. The simulation time
+is automatically printed as the first column of output.</P>
+<P>If `-' is given as the file name, the data is dumped to the
+terminal via standard output. If `+' is given as the filename, then
+data is dumped to the terminal via standard error. It is more usual
+to dump output to the terminal with <A HREF="dumpStatsCmd.html">dump-stats</A>.</P>
+<P>Usually, the tags are names of species or tags created with
+<A HREF="../descriptionCmds/plexCommands/plexDumpCmd.html">plex-dump</A>
+or omniplex-dump. Some built-in tags also exist:</P>
+<OL>
+	<LI><P>sim-time - The simulation time.</P>
+	<LI><P>clock-time - Rough clock time since simulation started.
+	Unfortunately, this is very limited in magnitude, and it will
+	eventually &quot;roll over&quot; and become a negative number.</P>
+	<LI><P>volume - Current simulation volume in liters.</P>
+	<LI><P>reaction-count - Number of reactions executed since start of
+	simulation.</P>
+	<LI><P>activation-count - Number of reactions rescheduled since
+	start of simulation. When a reaction occurs, it changes the
+	populations of the substrates of other reactions, whose next
+	probable time of occurrance will therefore change. Rescheduling
+	these reactions uses more clock time than any other activity, and in
+	fact tends to proceed at a relatively constant rate with respect to
+	clock time. Reactions may cause more or less of this rescheduling,
+	so the rate of reaction with respect to clock time varies
+	considerably.</P>
+</OL>
+<P ALIGN=CENTER STYLE="margin-left: 0.79in"><A HREF="runCmd.html">previous</A>
+| <A HREF="index.html">up</A> | <A HREF="../../index.html">top</A> |
+<A HREF="dumpOnceCmd.html">next</A></P>
+</BODY>
+</HTML>

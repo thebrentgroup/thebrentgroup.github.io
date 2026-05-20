@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml:sbml xmlns:sbml="http://www.sbml.org/sbml/level2" xmlns:mathml="http://www.w3.org/1998/Math/MathML" level="2" version="1">
+  <sbml:model>
+    <sbml:listOfCompartments>
+      <sbml:compartment id="theOnlyCompartment" spatialDimensions="3" size="1e-11" units="liters"/>
+    </sbml:listOfCompartments>
+    <sbml:listOfSpecies>
+      <sbml:species id="species0x8059f50" compartment="theOnlyCompartment" initialAmount="80" substanceUnits="item" hasOnlySubstanceUnits="true"/>
+      <sbml:species id="species0x80599d0" compartment="theOnlyCompartment" initialAmount="166" substanceUnits="item" hasOnlySubstanceUnits="true"/>
+      <sbml:species id="species0x805d188" compartment="theOnlyCompartment" initialAmount="85" substanceUnits="item" hasOnlySubstanceUnits="true"/>
+      <sbml:species id="species0x805d218" compartment="theOnlyCompartment" initialAmount="421" substanceUnits="item" hasOnlySubstanceUnits="true"/>
+      <sbml:species id="species0x805e128" compartment="theOnlyCompartment" initialAmount="248" substanceUnits="item" hasOnlySubstanceUnits="true"/>
+      <sbml:species id="species0x8059e68" compartment="theOnlyCompartment" initialAmount="14" substanceUnits="item" hasOnlySubstanceUnits="true"/>
+      <sbml:species id="species0x805df30" compartment="theOnlyCompartment" initialAmount="11" substanceUnits="item" hasOnlySubstanceUnits="true"/>
+      <sbml:species id="species0x805dfc0" compartment="theOnlyCompartment" initialAmount="33" substanceUnits="item" hasOnlySubstanceUnits="true"/>
+      <sbml:species id="species0x805e290" compartment="theOnlyCompartment" initialAmount="22" substanceUnits="item" hasOnlySubstanceUnits="true"/>
+      <sbml:species id="species0x8059a18" compartment="theOnlyCompartment" initialAmount="0" substanceUnits="item" hasOnlySubstanceUnits="true"/>
+      <sbml:species id="species0x8057bb0" compartment="theOnlyCompartment" initialAmount="386" substanceUnits="item" hasOnlySubstanceUnits="true"/>
+      <sbml:species id="species0x8057c40" compartment="theOnlyCompartment" initialAmount="614" substanceUnits="item" hasOnlySubstanceUnits="true"/>
+      <sbml:species id="species0x8059a9c" compartment="theOnlyCompartment" initialAmount="972" substanceUnits="item" hasOnlySubstanceUnits="true"/>
+      <sbml:species id="species0x8059a64" compartment="theOnlyCompartment" initialAmount="8028" substanceUnits="item" hasOnlySubstanceUnits="true"/>
+      <sbml:species id="species0x8059ad4" compartment="theOnlyCompartment" initialAmount="496" substanceUnits="item" hasOnlySubstanceUnits="true"/>
+      <sbml:species id="species0x8059b0c" compartment="theOnlyCompartment" initialAmount="504" substanceUnits="item" hasOnlySubstanceUnits="true"/>
+    </sbml:listOfSpecies>
+    <sbml:listOfReactions>
+      <sbml:reaction id="N1019C">
+        <sbml:listOfReactants>
+          <sbml:speciesReference species="species0x80599d0" stoichiometry="1"/>
+        </sbml:listOfReactants>
+        <sbml:listOfProducts>
+          <sbml:speciesReference species="species0x8059e68" stoichiometry="1"/>
+          <sbml:speciesReference species="species0x8059f50" stoichiometry="1"/>
+        </sbml:listOfProducts>
+        <sbml:kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mathml:apply>
+              <mathml:times/>
+              <mathml:cn>1</mathml:cn>
+              <mathml:cn>1e-11</mathml:cn>
+              <mathml:ci>species0x80599d0</mathml:ci>
+            </mathml:apply>
+          </math>
+        </sbml:kineticLaw>
+      </sbml:reaction>
+      <sbml:reaction id="N101A8">
+        <sbml:listOfReactants>
+          <sbml:speciesReference species="species0x805d188" stoichiometry="1"/>
+        </sbml:listOfReactants>
+        <sbml:listOfProducts>
+          <sbml:speciesReference species="species0x8059f50" stoichiometry="1"/>
+          <sbml:speciesReference species="species0x805df30" stoichiometry="1"/>
+        </sbml:listOfProducts>
+        <sbml:kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mathml:apply>
+              <mathml:times/>
+              <mathml:cn>1</mathml:cn>
+              <mathml:cn>1e-11</mathml:cn>
+              <mathml:ci>species0x805d188</mathml:ci>
+            </mathml:apply>
+          </math>
+        </sbml:kineticLaw>
+      </sbml:reaction>
+      <sbml:reaction id="N101B4">
+        <sbml:listOfReactants>
+          <sbml:speciesReference species="species0x805d218" stoichiometry="1"/>
+        </sbml:listOfReactants>
+        <sbml:listOfProducts>
+          <sbml:speciesReference species="species0x8059f50" stoichiometry="1"/>
+          <sbml:speciesReference species="species0x805dfc0" stoichiometry="1"/>
+        </sbml:listOfProducts>
+        <sbml:kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mathml:apply>
+              <mathml:times/>
+              <mathml:cn>1</mathml:cn>
+              <mathml:cn>1e-11</mathml:cn>
+              <mathml:ci>species0x805d218</mathml:ci>
+            </mathml:apply>
+          </math>
+        </sbml:kineticLaw>
+      </sbml:reaction>
+      <sbml:reaction id="N101C0">
+        <sbml:listOfReactants>
+          <sbml:speciesReference species="species0x805e128" stoichiometry="1"/>
+        </sbml:listOfReactants>
+        <sbml:listOfProducts>
+          <sbml:speciesReference species="species0x8059f50" stoichiometry="1"/>
+          <sbml:speciesReference species="species0x805e290" stoichiometry="1"/>
+        </sbml:listOfProducts>
+        <sbml:kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mathml:apply>
+              <mathml:times/>
+              <mathml:cn>1</mathml:cn>
+              <mathml:cn>1e-11</mathml:cn>
+              <mathml:ci>species0x805e128</mathml:ci>
+            </mathml:apply>
+          </math>
+        </sbml:kineticLaw>
+      </sbml:reaction>
+      <sbml:reaction id="N101CC">
+        <sbml:listOfReactants>
+          <sbml:speciesReference species="species0x8059e68" stoichiometry="1"/>
+          <sbml:speciesReference species="species0x8059f50" stoichiometry="1"/>
+        </sbml:listOfReactants>
+        <sbml:listOfProducts>
+          <sbml:speciesReference species="species0x80599d0" stoichiometry="1"/>
+        </sbml:listOfProducts>
+        <sbml:kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mathml:apply>
+              <mathml:times/>
+              <mathml:cn>1e+12</mathml:cn>
+              <mathml:cn>1e-11</mathml:cn>
+              <mathml:ci>species0x8059e68</mathml:ci>
+              <mathml:ci>species0x8059f50</mathml:ci>
+            </mathml:apply>
+          </math>
+        </sbml:kineticLaw>
+      </sbml:reaction>
+      <sbml:reaction id="N101D8">
+        <sbml:listOfReactants>
+          <sbml:speciesReference species="species0x8059f50" stoichiometry="1"/>
+          <sbml:speciesReference species="species0x805df30" stoichiometry="1"/>
+        </sbml:listOfReactants>
+        <sbml:listOfProducts>
+          <sbml:speciesReference species="species0x805d188" stoichiometry="1"/>
+        </sbml:listOfProducts>
+        <sbml:kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mathml:apply>
+              <mathml:times/>
+              <mathml:cn>9.9917e+11</mathml:cn>
+              <mathml:cn>1e-11</mathml:cn>
+              <mathml:ci>species0x8059f50</mathml:ci>
+              <mathml:ci>species0x805df30</mathml:ci>
+            </mathml:apply>
+          </math>
+        </sbml:kineticLaw>
+      </sbml:reaction>
+      <sbml:reaction id="N101E4">
+        <sbml:listOfReactants>
+          <sbml:speciesReference species="species0x8059f50" stoichiometry="1"/>
+          <sbml:speciesReference species="species0x805dfc0" stoichiometry="1"/>
+        </sbml:listOfReactants>
+        <sbml:listOfProducts>
+          <sbml:speciesReference species="species0x805d218" stoichiometry="1"/>
+        </sbml:listOfProducts>
+        <sbml:kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mathml:apply>
+              <mathml:times/>
+              <mathml:cn>9.9917e+11</mathml:cn>
+              <mathml:cn>1e-11</mathml:cn>
+              <mathml:ci>species0x8059f50</mathml:ci>
+              <mathml:ci>species0x805dfc0</mathml:ci>
+            </mathml:apply>
+          </math>
+        </sbml:kineticLaw>
+      </sbml:reaction>
+      <sbml:reaction id="N101F0">
+        <sbml:listOfReactants>
+          <sbml:speciesReference species="species0x8059f50" stoichiometry="1"/>
+          <sbml:speciesReference species="species0x805e290" stoichiometry="1"/>
+        </sbml:listOfReactants>
+        <sbml:listOfProducts>
+          <sbml:speciesReference species="species0x805e128" stoichiometry="1"/>
+        </sbml:listOfProducts>
+        <sbml:kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mathml:apply>
+              <mathml:times/>
+              <mathml:cn>9.98348e+11</mathml:cn>
+              <mathml:cn>1e-11</mathml:cn>
+              <mathml:ci>species0x8059f50</mathml:ci>
+              <mathml:ci>species0x805e290</mathml:ci>
+            </mathml:apply>
+          </math>
+        </sbml:kineticLaw>
+      </sbml:reaction>
+      <sbml:reaction id="N101FC">
+        <sbml:listOfReactants>
+          <sbml:speciesReference species="species0x8059a18" stoichiometry="1"/>
+          <sbml:speciesReference species="species0x8059a64" stoichiometry="1"/>
+        </sbml:listOfReactants>
+        <sbml:listOfProducts>
+          <sbml:speciesReference species="species0x8057bb0" stoichiometry="1"/>
+        </sbml:listOfProducts>
+        <sbml:kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mathml:apply>
+              <mathml:times/>
+              <mathml:cn>1e+12</mathml:cn>
+              <mathml:cn>1e-11</mathml:cn>
+              <mathml:ci>species0x8059a18</mathml:ci>
+              <mathml:ci>species0x8059a64</mathml:ci>
+            </mathml:apply>
+          </math>
+        </sbml:kineticLaw>
+      </sbml:reaction>
+      <sbml:reaction id="N10208">
+        <sbml:listOfReactants>
+          <sbml:speciesReference species="species0x8057bb0" stoichiometry="1"/>
+        </sbml:listOfReactants>
+        <sbml:listOfProducts>
+          <sbml:speciesReference species="species0x8059a18" stoichiometry="1"/>
+          <sbml:speciesReference species="species0x8059a64" stoichiometry="1"/>
+        </sbml:listOfProducts>
+        <sbml:kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mathml:apply>
+              <mathml:times/>
+              <mathml:cn>1</mathml:cn>
+              <mathml:cn>1e-11</mathml:cn>
+              <mathml:ci>species0x8057bb0</mathml:ci>
+            </mathml:apply>
+          </math>
+        </sbml:kineticLaw>
+      </sbml:reaction>
+      <sbml:reaction id="N10214">
+        <sbml:listOfReactants>
+          <sbml:speciesReference species="species0x8059a18" stoichiometry="1"/>
+          <sbml:speciesReference species="species0x8059a9c" stoichiometry="1"/>
+        </sbml:listOfReactants>
+        <sbml:listOfProducts>
+          <sbml:speciesReference species="species0x8057c40" stoichiometry="1"/>
+        </sbml:listOfProducts>
+        <sbml:kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mathml:apply>
+              <mathml:times/>
+              <mathml:cn>1e+12</mathml:cn>
+              <mathml:cn>1e-11</mathml:cn>
+              <mathml:ci>species0x8059a18</mathml:ci>
+              <mathml:ci>species0x8059a9c</mathml:ci>
+            </mathml:apply>
+          </math>
+        </sbml:kineticLaw>
+      </sbml:reaction>
+      <sbml:reaction id="N10220">
+        <sbml:listOfReactants>
+          <sbml:speciesReference species="species0x8057c40" stoichiometry="1"/>
+        </sbml:listOfReactants>
+        <sbml:listOfProducts>
+          <sbml:speciesReference species="species0x8059a18" stoichiometry="1"/>
+          <sbml:speciesReference species="species0x8059a9c" stoichiometry="1"/>
+        </sbml:listOfProducts>
+        <sbml:kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mathml:apply>
+              <mathml:times/>
+              <mathml:cn>1</mathml:cn>
+              <mathml:cn>1e-11</mathml:cn>
+              <mathml:ci>species0x8057c40</mathml:ci>
+            </mathml:apply>
+          </math>
+        </sbml:kineticLaw>
+      </sbml:reaction>
+      <sbml:reaction id="N1022C">
+        <sbml:listOfReactants>
+          <sbml:speciesReference species="species0x8057bb0" stoichiometry="1"/>
+          <sbml:speciesReference species="species0x80599d0" stoichiometry="1"/>
+        </sbml:listOfReactants>
+        <sbml:listOfProducts>
+          <sbml:speciesReference species="species0x8057c40" stoichiometry="1"/>
+          <sbml:speciesReference species="species0x805d188" stoichiometry="1"/>
+        </sbml:listOfProducts>
+        <sbml:kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mathml:apply>
+              <mathml:times/>
+              <mathml:cn>8.99735e+09</mathml:cn>
+              <mathml:cn>1e-11</mathml:cn>
+              <mathml:ci>species0x8057bb0</mathml:ci>
+              <mathml:ci>species0x80599d0</mathml:ci>
+            </mathml:apply>
+          </math>
+        </sbml:kineticLaw>
+      </sbml:reaction>
+      <sbml:reaction id="N1023B">
+        <sbml:listOfReactants>
+          <sbml:speciesReference species="species0x8057bb0" stoichiometry="1"/>
+          <sbml:speciesReference species="species0x80599d0" stoichiometry="1"/>
+        </sbml:listOfReactants>
+        <sbml:listOfProducts>
+          <sbml:speciesReference species="species0x8057c40" stoichiometry="1"/>
+          <sbml:speciesReference species="species0x805d218" stoichiometry="1"/>
+        </sbml:listOfProducts>
+        <sbml:kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mathml:apply>
+              <mathml:times/>
+              <mathml:cn>8.99735e+09</mathml:cn>
+              <mathml:cn>1e-11</mathml:cn>
+              <mathml:ci>species0x8057bb0</mathml:ci>
+              <mathml:ci>species0x80599d0</mathml:ci>
+            </mathml:apply>
+          </math>
+        </sbml:kineticLaw>
+      </sbml:reaction>
+      <sbml:reaction id="N1024A">
+        <sbml:listOfReactants>
+          <sbml:speciesReference species="species0x8057bb0" stoichiometry="1"/>
+          <sbml:speciesReference species="species0x8059e68" stoichiometry="1"/>
+        </sbml:listOfReactants>
+        <sbml:listOfProducts>
+          <sbml:speciesReference species="species0x8057c40" stoichiometry="1"/>
+          <sbml:speciesReference species="species0x805df30" stoichiometry="1"/>
+        </sbml:listOfProducts>
+        <sbml:kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mathml:apply>
+              <mathml:times/>
+              <mathml:cn>9.88024e+09</mathml:cn>
+              <mathml:cn>1e-11</mathml:cn>
+              <mathml:ci>species0x8057bb0</mathml:ci>
+              <mathml:ci>species0x8059e68</mathml:ci>
+            </mathml:apply>
+          </math>
+        </sbml:kineticLaw>
+      </sbml:reaction>
+      <sbml:reaction id="N10259">
+        <sbml:listOfReactants>
+          <sbml:speciesReference species="species0x8057bb0" stoichiometry="1"/>
+          <sbml:speciesReference species="species0x8059e68" stoichiometry="1"/>
+        </sbml:listOfReactants>
+        <sbml:listOfProducts>
+          <sbml:speciesReference species="species0x8057c40" stoichiometry="1"/>
+          <sbml:speciesReference species="species0x805dfc0" stoichiometry="1"/>
+        </sbml:listOfProducts>
+        <sbml:kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mathml:apply>
+              <mathml:times/>
+              <mathml:cn>9.88024e+09</mathml:cn>
+              <mathml:cn>1e-11</mathml:cn>
+              <mathml:ci>species0x8057bb0</mathml:ci>
+              <mathml:ci>species0x8059e68</mathml:ci>
+            </mathml:apply>
+          </math>
+        </sbml:kineticLaw>
+      </sbml:reaction>
+      <sbml:reaction id="N10268">
+        <sbml:listOfReactants>
+          <sbml:speciesReference species="species0x8057bb0" stoichiometry="1"/>
+          <sbml:speciesReference species="species0x805d188" stoichiometry="1"/>
+        </sbml:listOfReactants>
+        <sbml:listOfProducts>
+          <sbml:speciesReference species="species0x8057c40" stoichiometry="1"/>
+          <sbml:speciesReference species="species0x805e128" stoichiometry="1"/>
+        </sbml:listOfProducts>
+        <sbml:kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mathml:apply>
+              <mathml:times/>
+              <mathml:cn>8.9912e+09</mathml:cn>
+              <mathml:cn>1e-11</mathml:cn>
+              <mathml:ci>species0x8057bb0</mathml:ci>
+              <mathml:ci>species0x805d188</mathml:ci>
+            </mathml:apply>
+          </math>
+        </sbml:kineticLaw>
+      </sbml:reaction>
+      <sbml:reaction id="N10277">
+        <sbml:listOfReactants>
+          <sbml:speciesReference species="species0x8057bb0" stoichiometry="1"/>
+          <sbml:speciesReference species="species0x805d218" stoichiometry="1"/>
+        </sbml:listOfReactants>
+        <sbml:listOfProducts>
+          <sbml:speciesReference species="species0x8057c40" stoichiometry="1"/>
+          <sbml:speciesReference species="species0x805e128" stoichiometry="1"/>
+        </sbml:listOfProducts>
+        <sbml:kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mathml:apply>
+              <mathml:times/>
+              <mathml:cn>8.9912e+09</mathml:cn>
+              <mathml:cn>1e-11</mathml:cn>
+              <mathml:ci>species0x8057bb0</mathml:ci>
+              <mathml:ci>species0x805d218</mathml:ci>
+            </mathml:apply>
+          </math>
+        </sbml:kineticLaw>
+      </sbml:reaction>
+      <sbml:reaction id="N10286">
+        <sbml:listOfReactants>
+          <sbml:speciesReference species="species0x8057bb0" stoichiometry="1"/>
+          <sbml:speciesReference species="species0x805df30" stoichiometry="1"/>
+        </sbml:listOfReactants>
+        <sbml:listOfProducts>
+          <sbml:speciesReference species="species0x8057c40" stoichiometry="1"/>
+          <sbml:speciesReference species="species0x805e290" stoichiometry="1"/>
+        </sbml:listOfProducts>
+        <sbml:kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mathml:apply>
+              <mathml:times/>
+              <mathml:cn>9.86764e+09</mathml:cn>
+              <mathml:cn>1e-11</mathml:cn>
+              <mathml:ci>species0x8057bb0</mathml:ci>
+              <mathml:ci>species0x805df30</mathml:ci>
+            </mathml:apply>
+          </math>
+        </sbml:kineticLaw>
+      </sbml:reaction>
+      <sbml:reaction id="N10295">
+        <sbml:listOfReactants>
+          <sbml:speciesReference species="species0x8057bb0" stoichiometry="1"/>
+          <sbml:speciesReference species="species0x805dfc0" stoichiometry="1"/>
+        </sbml:listOfReactants>
+        <sbml:listOfProducts>
+          <sbml:speciesReference species="species0x8057c40" stoichiometry="1"/>
+          <sbml:speciesReference species="species0x805e290" stoichiometry="1"/>
+        </sbml:listOfProducts>
+        <sbml:kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mathml:apply>
+              <mathml:times/>
+              <mathml:cn>9.86764e+09</mathml:cn>
+              <mathml:cn>1e-11</mathml:cn>
+              <mathml:ci>species0x8057bb0</mathml:ci>
+              <mathml:ci>species0x805dfc0</mathml:ci>
+            </mathml:apply>
+          </math>
+        </sbml:kineticLaw>
+      </sbml:reaction>
+      <sbml:reaction id="N102A4">
+        <sbml:listOfReactants>
+          <sbml:speciesReference species="species0x8059b0c" stoichiometry="1"/>
+          <sbml:speciesReference species="species0x805d188" stoichiometry="1"/>
+        </sbml:listOfReactants>
+        <sbml:listOfProducts>
+          <sbml:speciesReference species="species0x80599d0" stoichiometry="1"/>
+          <sbml:speciesReference species="species0x8059ad4" stoichiometry="1"/>
+        </sbml:listOfProducts>
+        <sbml:kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mathml:apply>
+              <mathml:times/>
+              <mathml:cn>9.42417e+09</mathml:cn>
+              <mathml:cn>1e-11</mathml:cn>
+              <mathml:ci>species0x8059b0c</mathml:ci>
+              <mathml:ci>species0x805d188</mathml:ci>
+            </mathml:apply>
+          </math>
+        </sbml:kineticLaw>
+      </sbml:reaction>
+      <sbml:reaction id="N102B3">
+        <sbml:listOfReactants>
+          <sbml:speciesReference species="species0x8059b0c" stoichiometry="1"/>
+          <sbml:speciesReference species="species0x805e128" stoichiometry="1"/>
+        </sbml:listOfReactants>
+        <sbml:listOfProducts>
+          <sbml:speciesReference species="species0x8059ad4" stoichiometry="1"/>
+          <sbml:speciesReference species="species0x805d218" stoichiometry="1"/>
+        </sbml:listOfProducts>
+        <sbml:kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mathml:apply>
+              <mathml:times/>
+              <mathml:cn>9.42028e+09</mathml:cn>
+              <mathml:cn>1e-11</mathml:cn>
+              <mathml:ci>species0x8059b0c</mathml:ci>
+              <mathml:ci>species0x805e128</mathml:ci>
+            </mathml:apply>
+          </math>
+        </sbml:kineticLaw>
+      </sbml:reaction>
+      <sbml:reaction id="N102C2">
+        <sbml:listOfReactants>
+          <sbml:speciesReference species="species0x8059b0c" stoichiometry="1"/>
+          <sbml:speciesReference species="species0x805df30" stoichiometry="1"/>
+        </sbml:listOfReactants>
+        <sbml:listOfProducts>
+          <sbml:speciesReference species="species0x8059ad4" stoichiometry="1"/>
+          <sbml:speciesReference species="species0x8059e68" stoichiometry="1"/>
+        </sbml:listOfProducts>
+        <sbml:kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mathml:apply>
+              <mathml:times/>
+              <mathml:cn>9.9917e+09</mathml:cn>
+              <mathml:cn>1e-11</mathml:cn>
+              <mathml:ci>species0x8059b0c</mathml:ci>
+              <mathml:ci>species0x805df30</mathml:ci>
+            </mathml:apply>
+          </math>
+        </sbml:kineticLaw>
+      </sbml:reaction>
+      <sbml:reaction id="N102D1">
+        <sbml:listOfReactants>
+          <sbml:speciesReference species="species0x8059b0c" stoichiometry="1"/>
+          <sbml:speciesReference species="species0x805e290" stoichiometry="1"/>
+        </sbml:listOfReactants>
+        <sbml:listOfProducts>
+          <sbml:speciesReference species="species0x8059ad4" stoichiometry="1"/>
+          <sbml:speciesReference species="species0x805dfc0" stoichiometry="1"/>
+        </sbml:listOfProducts>
+        <sbml:kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mathml:apply>
+              <mathml:times/>
+              <mathml:cn>9.98348e+09</mathml:cn>
+              <mathml:cn>1e-11</mathml:cn>
+              <mathml:ci>species0x8059b0c</mathml:ci>
+              <mathml:ci>species0x805e290</mathml:ci>
+            </mathml:apply>
+          </math>
+        </sbml:kineticLaw>
+      </sbml:reaction>
+    </sbml:listOfReactions>
+  </sbml:model>
+</sbml:sbml>

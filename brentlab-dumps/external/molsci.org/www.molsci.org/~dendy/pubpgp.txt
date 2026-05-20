@@ -1,0 +1,47 @@
+Key ID: 0x7709C88F
+Creation Data: January 16, 2001
+The below key replaces all previous public keys listed for Drew Endy/dendy@molsci.org.
+Previous keys were lost to either brutal drive failures and/or lost passphrases.
+Contact me via a more physical channel if you would like to verify this key's fingerprint.
+Physical contact info @ http://www.molsci.org/~dendy.
+
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: PGPfreeware 6.5.8 for non-commercial use <http://www.pgp.com>
+
+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
+C0uX7Dwt1RthkmZIKg==
+=l08T
+-----END PGP PUBLIC KEY BLOCK-----

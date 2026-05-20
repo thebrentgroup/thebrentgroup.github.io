@@ -6,6 +6,25 @@ show_excerpts: false
 plugins:
   - jekyll-redirect-from
 
+include:
+  - brentlab-dumps/external/brentlab.org/systems/wp-content/plugins/jetpack/_inc
+  - brentlab-dumps/external/molsci.org/www.molsci.org/_api
+  - brentlab-dumps/external/molsci.org/www.molsci.org/protocols/software/cell_id/images/_notes
+  - brentlab-dumps/external/molsci.org/www.molsci.org/protocols/software/cell_id/_notes
+  - brentlab-dumps/brent/en/research/_jcr_content
+  - brentlab-dumps/brent/en/_jcr_content
+  - brentlab-dumps/brent/en/center-biological-futures/papers/_jcr_content
+  - brentlab-dumps/brent/en/center-biological-futures/projectareas/_jcr_content
+  - brentlab-dumps/brent/en/center-biological-futures/documentrepository/_jcr_content
+  - brentlab-dumps/brent/en/center-biological-futures/members/_jcr_content
+  - brentlab-dumps/brent/en/center-biological-futures/virallibrary/_jcr_content
+  - brentlab-dumps/brent/en/join/_jcr_content
+  - brentlab-dumps/brent/en/publications/_jcr_content
+  - brentlab-dumps/brent/en/lab-members/_jcr_content
+  - brentlab-dumps/brent/en/lab-members/lab-alumni/_jcr_content
+  - brentlab-dumps/brent/en/news/_jcr_content
+  - brentlab-dumps/brent/en/collaborating-labs/_jcr_content
+
 exclude:
   - CLAUDE.md
   - CONTAINERIZED_EXPERIMENTS_GUIDE.md

@@ -1,0 +1,85 @@
+   <STYLE TYPE="text/css" MEDIA=screen>
+   <!--
+     body {
+       width: 600px;
+       font-family: Helvetica,sans-serif;
+       background-color: #FFFFFF;
+       background-image: none;
+     }
+     div.page{
+       width: 600px;
+       font-family: Helvetica,sans-serif;
+       font-size:small;
+       align: center;
+       vertical-align: middle;
+       vertical-align: middle;
+       border-color: #000000;
+       border-style: solid;
+       border-width: 6px;
+       padding: 40px 40px;
+       margin-top: 10px;
+       background-color: #000000;
+       background-image: none;
+       }
+     h1,h2,h3,p,ul,hr,a,dl,table {
+       font-family: Helvetica,sans-serif;
+       font-size:small;
+       color: #cccccc;
+     }
+     A:link    { color: #cccccc; }
+     A:active  { color: #333333; }
+     A:visited { color: #888888; }
+     h1 { 
+       text-align: left;
+       font-size: medium;
+       font-weight: ;
+     }
+     h2 { 
+       text-align: left;
+       font-size: small;
+       font-weight: bold;
+     }
+     h3 { 
+       text-align: left;
+       font-size: small;
+     }
+     table {
+	width: 100%;
+     }	
+     td {
+       vertical-align: top;
+     }
+     .navbar {
+       font-size: small;
+       text-align: center;
+     }
+     .note {
+       font-size: x-small;
+       text-align: left;
+       font-style: italic;
+     }
+     .navmap {
+       text-align: center
+     }
+     .menu {
+       text-align: center
+     }
+     li{
+       list-style-type: disc;
+       }
+      .email{
+	font-family: Courier, monospace;
+        font-size: x-small;
+       }
+      .narrow{
+	width=250px;
+	}
+      .wide{
+	width=350px;
+	}
+	.left{
+	float=left;
+	}
+   --->
+   </style>
+

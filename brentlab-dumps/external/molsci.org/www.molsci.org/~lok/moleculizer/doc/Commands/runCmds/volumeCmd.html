@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="StarOffice/5.2 (Linux)">
+	<META NAME="AUTHOR" CONTENT="Walter Lok">
+	<META NAME="CREATED" CONTENT="20010924;16221800">
+	<META NAME="CHANGEDBY" CONTENT="Walter Lok">
+	<META NAME="CHANGED" CONTENT="20011031;13051200">
+</HEAD>
+<BODY>
+<P STYLE="margin-top: 0.17in; page-break-after: avoid"><FONT FACE="Times New Roman, serif"><FONT SIZE=4>volume</FONT></FONT></P>
+<PRE STYLE="margin-bottom: 0.2in">volume <I>liters</I></PRE><P>
+This command schedules, at the current simulation time, an event
+setting the simulation volume. The unit of volume is fixed as
+&quot;liters&quot; so that reaction rates may be expressed in molar
+units.</P>
+<P>This command does not instantly reset the volume; it only
+schedules an event that does so.  This is so that reactions can be
+rescheduled in response to the volume change.  Using the command 
+</P>
+<PRE STYLE="margin-bottom: 0.2in">run 0.0</PRE><P>
+will cause the scheduled volume change actually to occur, so that the
+volume is reset, but will not proceed to a later simulation time.</P>
+<P ALIGN=CENTER STYLE="margin-left: 0.79in"><A HREF="createCmd.html">previous</A>
+| <A HREF="index.html">up</A> | <A HREF="../../index.html">top</A> |
+<A HREF="growCmd.html">next</A></P>
+</BODY>
+</HTML>

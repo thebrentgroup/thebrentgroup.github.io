@@ -1,0 +1,332 @@
+LIBRARIES
+
+pJG4-5 is the yeast vector used for constructing interaction
+libraries.  It was made by Jeno Gyuris in the Brent lab.  It is a 2um
+plasmid containing the selectable TRP1 marker and the E.coli amp
+resistance gene.  cDNAs are inserted into a unique EcoRI and/or an
+adjacent unique XhoI site.  In-frame cDNA-encoded proteins will be
+expressed with a fusion moiety at their amino terminal end.  The
+fusion moiety consists of an SV40 nuclear localization signal,
+followed by an acidic transcription activation domain called B42 (Ma
+and Ptashne, 1987, Cell 52:113), and a 9 amino acid hemaglutinin
+epitope tag.  The promoter driving the expression of the fusion moiety
+is the yeast galactose-inducible, glucose-repressible GAL promoter.
+Transcription is terminated by the yeast ADH1 terminator which follows
+the EcoRI and XhoI sites.  See SEQUENCES for making sequencing
+primers.
+
+Below are descriptions of a Hela library made by Jeno Gyuris,
+Drosophila libraries made by Russ Finley, a yeast library made by Paul
+Watt, and a serum-starved WI-38 cell library made by Jeno Gyuris and
+Claude Sardet.
+
+Hela cell acid fusion library - Jeno Gyuris
+
+     I isolated RNA from serum grown, proliferating Hela cells that
+were grown on plates to 70% confluence.  I extracted the RNA by lysing
+the cells with guanidium followed by treatment with phenol chloroform,
+and purified polyA+ mRNA on an oligodT-cellulose column.  I made the
+cDNA using a scheme similar to the variation Huse and Hansen
+(Strategene Strategies, 1, 1-3, 1988) described of the Gubler and
+Hoffman technique (Gene, 25, 263-269, 1983).
+  
+      That is, I made the first strand of cDNA using a linker-primer
+(JG33) that contained , 5' to 3', an 18nt poly dT tract (to hybridize
+to the mRNA's polyA tail), an XhoI site, and a 25 nt sequence to
+protect XhoI site.  For first strand synthesis, I used Supercript,
+from BRL, which is an recombinant RNAseH defective verion of the
+Moloney virus reverse transcriptase, and I used 5medCTP instead of
+dCTP, so that internal XhoI sites in the cDNA would not be cleaved by
+XhoI.  For second strand synthesis, I treated the mRNA/cDNA hybrid
+with RNAseH and E. coli DNA polymerase I.  I made the resulting ends
+flush by sequential treatment with Klenow, Mung Bean exonuclease, and
+Klenow, then ligated EcoR1 adaptors
+
+5' AATTCGGCACGAGGCG 3'   (JG31)  
+3'     GCCGTGCTCCGC 5'   (JG32)
+
+
+onto the ends, and digested the cDNA with XhoI.  I size-fractionated
+this DNA on a 5-20% KoAc gradient, collected fractions that contained
+>700 bp fragments, and ligated these into EcoR1- and XhoI-cut pJG4-5,
+a 2u, TRP1+, GAL1 promoter vector similar to pJG7-4 except that it
+confers amp instead of kan and has the puc19 origin of replication
+instead of the pMB1 origin.
+
+      I collected 9.6 X 10e6 primary transformants by scraping LB amp
+plates.  I pooled these and grew them in LB medium overnight, and
+prepared plasmid DNA.  90% of the library members contain a cDNA
+insert whose size ranges between 1kb-2kb.  Western blots of individual
+yeast transformants using ascites supernatant from the anti
+hemagluttinin monoclonal suggest that between 1/4 and 1/3 of the
+members express fusion proteins.
+
+Jeno Gyuris
+October 16, 1991
+
+Present Address:
+Mitotix Incorporated
+One Kendall Square
+Building 600
+Cambridge, Massachusetts 02139
+gyuris@mitotix.com
+
+
+Drosophila libraries  -  Russ Finley
+
+Drosophila embryo acid fusion library (RFLY1)   November 1991
+ 
+        Unidirectional cDNA made from RNA from 0-12 hour wild type
+embryos and inserted into pJG4-5.  4.2 X 10e6 individual E.coli
+transformants were recovered.  Over 90% of the plasmids of this
+library contain cDNA inserts whose sizes range from 0.5 to 2.5 kb
+(average size about 1 kb).
+
+Drosophila embryo epitope tagged library (RFLY2)        June 1993
+
+        Unidirectional cDNA made from RNA from 0-12 hour wild type
+embryos and inserted into pJG4-6.  3.2 X 10e6 individual E.coli
+transformants were recovered.  Over 91% of the plasmids of this
+library contain cDNA inserts whose sizes range from 0.5 to 2.0 kb
+(average size about 1kb).
+
+Drosophila ovary acid fusion library (RFLY3)    June 1993
+
+        Unidirectional cDNA was made from wild type Drosophila
+melanogaster ovary RNA (isolated and poly(A)+ selected by Gerardo
+Jimenez in David Ish-Horowicz's lab) and inserted into pJG4-5.  3.2 X
+10e6 individual E.coli transformants recovered.  Over 87% of the
+plasmids of this library contain cDNA inserts whose sizes range from
+0.3 to 1.5 kb (average size about 800bp).
+
+Drosophila disc acid fusion library (RFLY5)     June 1993
+
+        Unidirectional cDNA was made from poly(A)+ selected disc RNA
+(provided by Janice Fisher Vise in Ruth Lehman's lab) and inserted
+into pJG4-5.  4.0 X 10e7 independent E.coli transformants were
+recovered.  Over 92% of the plasmids of this library (RFLY5) contain
+cDNA inserts whose sizes range from 0.3 to 2.1 kb (average size about
+900bp).
+
+Russ Finley                                     June 1993
+(617) 726-5956 (phone)
+(617) 726-6893 (fax)
+finley@frodo.mgh.harvard.edu
+
+
+
+Yeast interaction library
+pJG4-5 library
+
+This was made by Paul Watt, a postdoc in Jim Wang's lab, who requests
+that his name be included as an author in the first paper resulting
+from its use.  According to Paul....
+
+50 ug of genomic DNA from S288c (MATa SUC2 mal gal2 CUP1 hap1), of apparent
+size >100kb, was split into two 25ug portions.  One portion was partially
+digested with Alu1, the other with HaeIII, to yield an average (median)
+size of 1000bp.  Each of these reactions was than treated with EcoR1
+methylase and the extent of methylation protection confirmed by digestion
+of small aliquots with EcoR1 and subsequent visualization on agarose gels. 
+An equimolar mixture of 3 different EcoR1 linkers (5' GGAATTCC, 5'
+CGGAATTCCG, and 5' CCGGAATTCCGG) was ligated onto each of the above pools,
+and the resulting ligation mixtures were digested with EcoR1.  The two
+pools were run on an agarose gel and fragments of apparent size of
+800-4000bp were isolated and purified on NA45 paper (Schliecher and
+Schuell). At this point the preps were pooled, and 6ug of the pooled
+reactions was ligated with 5ug of CIP-treated R1-cut pJG4-5 (Gyuris et al.,
+submitted).  Ligation products were purified and introduced into E coli
+"Sure" cells (Stratagene, Inc.) K-12 (mcrA del(mcrBC-hsdRMS-mrr)177, endA1,
+supE44, thi-1, lambda-, gyrA96, relA1, lac, recB, recJ, sbcC, umuC::Tn5
+(kanR), uvrC/ F'[proAB, lacIq, lacZdelM15]::Tn10 (tet-R) by
+electroporation.  3-5 X 10e6 transformants were collected from 70 15cm
+plates.  The pooled cells were then grown in LB for 5 hours, and plasmid
+DNA prepared from them by alkaline lysis followed by CsCl gradient
+purification.
+
+Roger Brent
+
+6 June 1993
+
+617 726 5925
+617 726 6893 (fax)
+brent@opal.mgh.harvard.edu.
+
+
+Serum Starved WI-38 library
+
+Made by Claude Sardet and Jeno Gyuris.
+
+25 X 150mm dishes of recent passage (just purchased) WI-38 from the
+ATCC were grown to extreme confluence in DMEM + 15% 56o heat treated
+fetal calf serum and then shifted to DMEM + 0.1% FCS for three days.
+This should have given about 3 X 10exp7 cells/dish from which a total
+of 25mg total mRNA was extracted by Vanadium acid phenol treatment
+(Current Protocols in Molecular Biology).  Total mRNA was divided into
+two aliquots, each of which was purified by two passages over 1 ml
+oligoDT columns (New England Biolabs).  This yielded 40ug of poly A+
+mRNA.  6ug of this mRNA was made into cDNA essentially as in the
+Gyuris Hela library except that, in the blunting step, Sarnet used
+RNAse A, RNAse H, T4 DNA polymerase, and E. coli DNA ligase, as
+described in CPMB.  Blunt DNA had a NotI/EcoR1 adaptor from Invitrogen
+(shown below) ligated onto its 5' end.
+
+5'OH AATTCTGCGGCCGC
+         CACGCCGGCG 5' P04
+
+Half of this cDNA was fractionated on Sepharose CL-4b spin columns
+(Pharmacia), and Sardet picked the stuff that came through.  This cDNA
+all looked bigger than about 600bp and had an apparent median size of
+about 1.5 kb.  The other half was run on a homemade spin column made
+from Sepharcryl S-500 (Pharmacia).  All of this cDNA looked like it
+was bigger than 1200bp, and most of it looked to be about 3600bp.  In
+both preps, the largest cDNAs seemed to be about 8500bp.  Both preps
+were combined, and all of this cDNA was ligated into a pJG4-5 backbone
+cut with R1 and XhoI.  Ligation mix was introduced into storebought
+electroporation competent DH10b (BRL), whose genotype is
+
+F- mcrA del (mrr-hsdRMS-mcrBV) phi80 lacZdelM15 del lacX74 deoR recA1
+endA1 araD139 del(ara,leu)7697 galU galK lambda-rpsL nupG.
+
+5.7 X 10exp6 transformants were collected on LB Amp plates.  Of 30
+library members examined, all but two had inserts, of "average" size
+of 1400 bp.  Among these 30, the two smallest inserts were, 300-500,
+and the biggest was 3200.  20mg of primary library DNA was made from
+an 8 liter prep grown in LB Amp.
+
+Roger Brent
+
+brent@opal.mgh.harvard.edu 
+
+revised 17 September 1993
+
+
+
+Human fetal brain acid fusion library
+constructed by Dimitri Krainc
+
+
+I made this essentially by the Jenš Gyuris procedure (Gyuris et 
+al., Cell (1993) 75, 791-803, and see related gopher articles) 
+as follows. I isolated total RNA from ~1 gram of 22-week old 
+human fetal frontal cortex.  This tissue is composed of both 
+neurons and neuroglia, as well as contaminating cells from the 
+blood vessels.  In the cortex, the neurons do not divide; they 
+are arrested in G1, but some of the glia may be traversing the 
+cell cycle (Takahashi et al., Journal of Comparative Neurology 
+302, 15-28 (1990), Mrzljakl et al., Journal of Comparative 
+Neurology, 316, 485-496 (1992)).  I made total RNA by the 
+guanidium isothiocynate procedure, and selected ~30ug poly(A)+ 
+mRNA on an oligo(dT) cellulose column.  For the library, I used 
+7ug of the mRNA to make unidirectional cDNA with an EcoRI 
+sticky end at the 5'-end and an XhoI sticky end at the 3'-end 
+using a method similar to the variation of the Gubler and 
+Hoffman technique (Gene 25:263-269, 1983) described by Huse and 
+Hansen (Stratagene Strategies 1:1-3, 1988). I synthesized the 
+first strand with Superscript (BRL) using a 50-mer primer 
+(JG33)
+
+5' G A G A G A G A G A G A G A G A G A G  A A C T A G T C T C
+   G A G T T T T T T T T T T T T T T T T T T 3'
+
+This primer contains an 18nt poly dT tract, an XhoI site, and a 
+25nt sequence to protect the XhoI site.  The first-strand 
+synthesis contained 5me-dCTP instead of dCTP to protect 
+internal XhoI sites from subsequent XhoI.  For the second 
+strand synthesis, the mRNA/cDNA hybrid was treated with RNaseH 
+and E. coli DNA polymerase I.  The resulting ends were made 
+blunt by treatment with Klenow, Mung Bean nuclease, and then 
+Klenow again (ala Gyuris) and EcoRI adaptors were ligated onto 
+them. The sequence of the adaptors is shown below:
+
+			5' AATTCGGCACGAGGCG 3'	(JG31)
+			3'	  GCCGTGCTCCGC 5'	(JG32)
+
+I took all of the cDNA resulting from this synthesis, cut it 
+with XhoI and size fractionated it on a 5-20% KoAc gradient.  I 
+collected the fractions representing cDNA larger than 1kb, 
+precipitated the cDNA from them, and ligated this cDNA into 
+pJG4-5 (ampr, TRP1+, yeast 2um replicator) that had been cut 
+with EcoR1 and XhoI.  This insertion site places the cDNA 
+downstream of the GAL1 promoter, an ATG, and sequences encoding 
+the SV40 nuclear localization signal, a hemagglutinin epitope 
+tag, and the B42 trancription activating domain.
+	I collected 3.5 X 106 primary transformants, pooled them, 
+and grew these in 8 liters of LB Amp to saturation.  From these 
+cells I isolated ~8mg plasmid DNA.  Around 80% (24/30) of the 
+library members contain a cDNA insert whose average size is 
+1.5kb.  Western blots suggest that about one third of the  
+members (~4/13) express fusion proteins.
+
+Dimitri Krainc
+
+617 726-5956 (lab)
+617-726-6893 (fax)
+krainc@opal.mgh.harvard.edu
+
+10 August 1993
+revised 3 February 1994  
+
+To obtain this library please contact Dimitri Krainc and Roger 
+Brent.
+
+
+
+Jurkat cell interaction library
+
+4x10 exp 8 Jurkat cells were grown in suspension culture in IMDM (Iscoves
+Modified Dulbecco Medium) / 10% fetal bovine serum and to a density of
+<0.4x10exp6/ ml (which should mean that they were growing exponentially),
+and lysed in Guanidium isothiocyanate (GuSCN).  RNA (first total RNA:yield
+= 3.5mg, then polyA RNA yield:50ug per mg total or 175ug) was prepared
+according to standard Seed lab protocols (see below) cDNA was prepared from
+5ug polyA+ mRNA according to Jeno's protocol for directional insertion and
+size selected on Sepharose CL-4b as in Gyuris et al., 1993; cutoff 1000, to
+yield 0.8-1.1ug cDNA.  40% of this cDNA (0.3-0.5 ug) was introduced into
+0.5ug pJG4-5 by standard methods, and the ligation mix was introduced into
+MC1061 by electroporation.  About 4x10exp6 colonies were collected.  Insert
+sizes were between 700 and 2800 with an average between 1000 and 2000bp.
+Total yield of DNA from the cells that had grown on the plates, without any
+growth in liquid was ~2mg.
+
+DNA from this library is contaminated with a bacteriophage; perhaps T1 or
+another T-odd phage.  Growth on tonA strains (see Bacterial Strains) may
+allow the library to be propagated.
+
+Poly A Selection of RNA.
+
+    Prepare a disposable polypropylene column by washing with 5M NaOH and
+then rinsing with RNAse free water. Prepare oligo-dT cellulose by
+resuspending 0.5 ml. of dry powder in 1 ml of 0.1N NaOH and transfering it
+into the column. Allow to settle and rinse with several column volumes of
+RNAse free water. Rinse with 5 ml of loading buffer.  Heat total RNA to 70o
+for 2-3 min, add LiCl to 0.5M to 5 ml loading buffer, in a sterile 15 ml
+tube.  For each milligram of total RNA add 0.3 ml packed bed oligo dT
+cellulose. Vortex or otherwise agitate  for 10 min.  Pour into column, wash
+with 3 ml loading buffer, then 3 ml of middle wash buffer.  Elute mRNA into
+a fresh tube with 1.5 ml of 2mM EDTA pH8.0, 0.1% SDS.
+
+    Precipitate eluted mRNA by adding NaOAc to 0.3M and 2 vol EtOH.  Pipet
+into SW55 tube and spin at 50K rpm at 5o for 30 min.  Pour off EtOH and air
+dry tube. Resuspend mRNA pellet in 150 ul. of RNAse free TE and pool
+together. Melt 5 ul at 70o and run on a 1% agarose gel to check quality.
+
+Library made by Waldemar Kolanus, Jeno Gyuris, and Brian Seed
+
+kolanus@genmic.biochem.mpg.de
+gyuris@mitotix.com
+seed@opal.mgh.harvard.edu
+
+Written by Roger Brent
+
+brent@opal.mgh.harvard.edu
+
+Revised 12 December 1994
+
+
+
+
+
+
+
+

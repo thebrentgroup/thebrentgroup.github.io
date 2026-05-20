@@ -1,0 +1,372 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" data-adblockkey="MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKX74ixpzVyXbJprcLfbH4psP4+L2entqri0lzh6pkAaXLPIcclv6DQBeJJjGFWrBIF6QMyFwXT5CCRyjS2penECAwEAAQ==_kLYqKIDScmCb9wq0Iortyk49LcRB6NlzJ2/0Le6yEMgprv9YH8aEsmjhFgSsxnCl+PLoV+JwnwvcyJ0LSiWgiQ==">
+<head><link rel="preconnect" href="https://delivery.consentmanager.net"> <link rel="preconnect" href="https://cdn.consentmanager.net">
+                    <script>window.cmp_stayiniframe = 1; window.cmp_dontloadiniframe = true; if(!"gdprAppliesGlobally" in window){window.gdprAppliesGlobally=true}if(!("cmp_id" in window)||window.cmp_id<1){window.cmp_id=0}if(!("cmp_cdid" in window)){window.cmp_cdid="21fdca2281833"}if(!("cmp_params" in window)){window.cmp_params=""}if(!("cmp_host" in window)){window.cmp_host="a.delivery.consentmanager.net"}if(!("cmp_cdn" in window)){window.cmp_cdn="cdn.consentmanager.net"}if(!("cmp_proto" in window)){window.cmp_proto="https:"}if(!("cmp_codesrc" in window)){window.cmp_codesrc="1"}window.cmp_getsupportedLangs=function(){var b=["DE","EN","FR","IT","NO","DA","FI","ES","PT","RO","BG","ET","EL","GA","HR","LV","LT","MT","NL","PL","SV","SK","SL","CS","HU","RU","SR","ZH","TR","UK","AR","BS"];if("cmp_customlanguages" in window){for(var a=0;a<window.cmp_customlanguages.length;a++){b.push(window.cmp_customlanguages[a].l.toUpperCase())}}return b};window.cmp_getRTLLangs=function(){var a=["AR"];if("cmp_customlanguages" in window){for(var b=0;b<window.cmp_customlanguages.length;b++){if("r" in window.cmp_customlanguages[b]&&window.cmp_customlanguages[b].r){a.push(window.cmp_customlanguages[b].l)}}}return a};window.cmp_getlang=function(j){if(typeof(j)!="boolean"){j=true}if(j&&typeof(cmp_getlang.usedlang)=="string"&&cmp_getlang.usedlang!==""){return cmp_getlang.usedlang}var g=window.cmp_getsupportedLangs();var c=[];var f=location.hash;var e=location.search;var a="languages" in navigator?navigator.languages:[];if(f.indexOf("cmplang=")!=-1){c.push(f.substr(f.indexOf("cmplang=")+8,2).toUpperCase())}else{if(e.indexOf("cmplang=")!=-1){c.push(e.substr(e.indexOf("cmplang=")+8,2).toUpperCase())}else{if("cmp_setlang" in window&&window.cmp_setlang!=""){c.push(window.cmp_setlang.toUpperCase())}else{if(a.length>0){for(var d=0;d<a.length;d++){c.push(a[d])}}}}}if("language" in navigator){c.push(navigator.language)}if("userLanguage" in navigator){c.push(navigator.userLanguage)}var h="";for(var d=0;d<c.length;d++){var b=c[d].toUpperCase();if(g.indexOf(b)!=-1){h=b;break}if(b.indexOf("-")!=-1){b=b.substr(0,2)}if(g.indexOf(b)!=-1){h=b;break}}if(h==""&&typeof(cmp_getlang.defaultlang)=="string"&&cmp_getlang.defaultlang!==""){return cmp_getlang.defaultlang}else{if(h==""){h="EN"}}h=h.toUpperCase();return h};(function(){var u=document;var v=u.getElementsByTagName;var h=window;var o="";var b="_en";if("cmp_getlang" in h){o=h.cmp_getlang().toLowerCase();if("cmp_customlanguages" in h){for(var q=0;q<h.cmp_customlanguages.length;q++){if(h.cmp_customlanguages[q].l.toUpperCase()==o.toUpperCase()){o="en";break}}}b="_"+o}function x(i,e){var w="";i+="=";var s=i.length;var d=location;if(d.hash.indexOf(i)!=-1){w=d.hash.substr(d.hash.indexOf(i)+s,9999)}else{if(d.search.indexOf(i)!=-1){w=d.search.substr(d.search.indexOf(i)+s,9999)}else{return e}}if(w.indexOf("&")!=-1){w=w.substr(0,w.indexOf("&"))}return w}var k=("cmp_proto" in h)?h.cmp_proto:"https:";if(k!="http:"&&k!="https:"){k="https:"}var g=("cmp_ref" in h)?h.cmp_ref:location.href;var j=u.createElement("script");j.setAttribute("data-cmp-ab","1");var c=x("cmpdesign","cmp_design" in h?h.cmp_design:"");var f=x("cmpregulationkey","cmp_regulationkey" in h?h.cmp_regulationkey:"");var r=x("cmpgppkey","cmp_gppkey" in h?h.cmp_gppkey:"");var n=x("cmpatt","cmp_att" in h?h.cmp_att:"");j.src=k+"//"+h.cmp_host+"/delivery/cmp.php?"+("cmp_id" in h&&h.cmp_id>0?"id="+h.cmp_id:"")+("cmp_cdid" in h?"&cdid="+h.cmp_cdid:"")+"&h="+encodeURIComponent(g)+(c!=""?"&cmpdesign="+encodeURIComponent(c):"")+(f!=""?"&cmpregulationkey="+encodeURIComponent(f):"")+(r!=""?"&cmpgppkey="+encodeURIComponent(r):"")+(n!=""?"&cmpatt="+encodeURIComponent(n):"")+("cmp_params" in h?"&"+h.cmp_params:"")+(u.cookie.length>0?"&__cmpfcc=1":"")+"&l="+o.toLowerCase()+"&o="+(new Date()).getTime();j.type="text/javascript";j.async=true;if(u.currentScript&&u.currentScript.parentElement){u.currentScript.parentElement.appendChild(j)}else{if(u.body){u.body.appendChild(j)}else{var t=v("body");if(t.length==0){t=v("div")}if(t.length==0){t=v("span")}if(t.length==0){t=v("ins")}if(t.length==0){t=v("script")}if(t.length==0){t=v("head")}if(t.length>0){t[0].appendChild(j)}}}var m="js";var p=x("cmpdebugunminimized","cmpdebugunminimized" in h?h.cmpdebugunminimized:0)>0?"":".min";var a=x("cmpdebugcoverage","cmp_debugcoverage" in h?h.cmp_debugcoverage:"");if(a=="1"){m="instrumented";p=""}var j=u.createElement("script");j.src=k+"//"+h.cmp_cdn+"/delivery/"+m+"/cmp"+b+p+".js";j.type="text/javascript";j.setAttribute("data-cmp-ab","1");j.async=true;if(u.currentScript&&u.currentScript.parentElement){u.currentScript.parentElement.appendChild(j)}else{if(u.body){u.body.appendChild(j)}else{var t=v("body");if(t.length==0){t=v("div")}if(t.length==0){t=v("span")}if(t.length==0){t=v("ins")}if(t.length==0){t=v("script")}if(t.length==0){t=v("head")}if(t.length>0){t[0].appendChild(j)}}}})();window.cmp_addFrame=function(b){if(!window.frames[b]){if(document.body){var a=document.createElement("iframe");a.style.cssText="display:none";if("cmp_cdn" in window&&"cmp_ultrablocking" in window&&window.cmp_ultrablocking>0){a.src="//"+window.cmp_cdn+"/delivery/empty.html"}a.name=b;a.setAttribute("title","Intentionally hidden, please ignore");a.setAttribute("role","none");a.setAttribute("tabindex","-1");document.body.appendChild(a)}else{window.setTimeout(window.cmp_addFrame,10,b)}}};window.cmp_rc=function(h){var b=document.cookie;var f="";var d=0;while(b!=""&&d<100){d++;while(b.substr(0,1)==" "){b=b.substr(1,b.length)}var g=b.substring(0,b.indexOf("="));if(b.indexOf(";")!=-1){var c=b.substring(b.indexOf("=")+1,b.indexOf(";"))}else{var c=b.substr(b.indexOf("=")+1,b.length)}if(h==g){f=c}var e=b.indexOf(";")+1;if(e==0){e=b.length}b=b.substring(e,b.length)}return(f)};window.cmp_stub=function(){var a=arguments;__cmp.a=__cmp.a||[];if(!a.length){return __cmp.a}else{if(a[0]==="ping"){if(a[1]===2){a[2]({gdprApplies:gdprAppliesGlobally,cmpLoaded:false,cmpStatus:"stub",displayStatus:"hidden",apiVersion:"2.2",cmpId:31},true)}else{a[2](false,true)}}else{if(a[0]==="getUSPData"){a[2]({version:1,uspString:window.cmp_rc("")},true)}else{if(a[0]==="getTCData"){__cmp.a.push([].slice.apply(a))}else{if(a[0]==="addEventListener"||a[0]==="removeEventListener"){__cmp.a.push([].slice.apply(a))}else{if(a.length==4&&a[3]===false){a[2]({},false)}else{__cmp.a.push([].slice.apply(a))}}}}}}};window.cmp_gpp_ping=function(){return{gppVersion:"1.0",cmpStatus:"stub",cmpDisplayStatus:"hidden",supportedAPIs:["tcfca","usnat","usca","usva","usco","usut","usct"],cmpId:31}};window.cmp_gppstub=function(){var a=arguments;__gpp.q=__gpp.q||[];if(!a.length){return __gpp.q}var g=a[0];var f=a.length>1?a[1]:null;var e=a.length>2?a[2]:null;if(g==="ping"){return window.cmp_gpp_ping()}else{if(g==="addEventListener"){__gpp.e=__gpp.e||[];if(!("lastId" in __gpp)){__gpp.lastId=0}__gpp.lastId++;var c=__gpp.lastId;__gpp.e.push({id:c,callback:f});return{eventName:"listenerRegistered",listenerId:c,data:true,pingData:window.cmp_gpp_ping()}}else{if(g==="removeEventListener"){var h=false;__gpp.e=__gpp.e||[];for(var d=0;d<__gpp.e.length;d++){if(__gpp.e[d].id==e){__gpp.e[d].splice(d,1);h=true;break}}return{eventName:"listenerRemoved",listenerId:e,data:h,pingData:window.cmp_gpp_ping()}}else{if(g==="getGPPData"){return{sectionId:3,gppVersion:1,sectionList:[],applicableSections:[0],gppString:"",pingData:window.cmp_gpp_ping()}}else{if(g==="hasSection"||g==="getSection"||g==="getField"){return null}else{__gpp.q.push([].slice.apply(a))}}}}}};window.cmp_msghandler=function(d){var a=typeof d.data==="string";try{var c=a?JSON.parse(d.data):d.data}catch(f){var c=null}if(typeof(c)==="object"&&c!==null&&"__cmpCall" in c){var b=c.__cmpCall;window.__cmp(b.command,b.parameter,function(h,g){var e={__cmpReturn:{returnValue:h,success:g,callId:b.callId}};d.source.postMessage(a?JSON.stringify(e):e,"*")})}if(typeof(c)==="object"&&c!==null&&"__uspapiCall" in c){var b=c.__uspapiCall;window.__uspapi(b.command,b.version,function(h,g){var e={__uspapiReturn:{returnValue:h,success:g,callId:b.callId}};d.source.postMessage(a?JSON.stringify(e):e,"*")})}if(typeof(c)==="object"&&c!==null&&"__tcfapiCall" in c){var b=c.__tcfapiCall;window.__tcfapi(b.command,b.version,function(h,g){var e={__tcfapiReturn:{returnValue:h,success:g,callId:b.callId}};d.source.postMessage(a?JSON.stringify(e):e,"*")},b.parameter)}if(typeof(c)==="object"&&c!==null&&"__gppCall" in c){var b=c.__gppCall;window.__gpp(b.command,function(h,g){var e={__gppReturn:{returnValue:h,success:g,callId:b.callId}};d.source.postMessage(a?JSON.stringify(e):e,"*")},"parameter" in b?b.parameter:null,"version" in b?b.version:1)}};window.cmp_setStub=function(a){if(!(a in window)||(typeof(window[a])!=="function"&&typeof(window[a])!=="object"&&(typeof(window[a])==="undefined"||window[a]!==null))){window[a]=window.cmp_stub;window[a].msgHandler=window.cmp_msghandler;window.addEventListener("message",window.cmp_msghandler,false)}};window.cmp_setGppStub=function(a){if(!(a in window)||(typeof(window[a])!=="function"&&typeof(window[a])!=="object"&&(typeof(window[a])==="undefined"||window[a]!==null))){window[a]=window.cmp_gppstub;window[a].msgHandler=window.cmp_msghandler;window.addEventListener("message",window.cmp_msghandler,false)}};window.cmp_addFrame("__cmpLocator");if(!("cmp_disableusp" in window)||!window.cmp_disableusp){window.cmp_addFrame("__uspapiLocator")}if(!("cmp_disabletcf" in window)||!window.cmp_disabletcf){window.cmp_addFrame("__tcfapiLocator")}if(!("cmp_disablegpp" in window)||!window.cmp_disablegpp){window.cmp_addFrame("__gppLocator")}window.cmp_setStub("__cmp");if(!("cmp_disabletcf" in window)||!window.cmp_disabletcf){window.cmp_setStub("__tcfapi")}if(!("cmp_disableusp" in window)||!window.cmp_disableusp){window.cmp_setStub("__uspapi")}if(!("cmp_disablegpp" in window)||!window.cmp_disablegpp){window.cmp_setGppStub("__gpp")};</script><script type="text/javascript">var abp;</script><script type="text/javascript" src="http://searchaccent.com/px.js?ch=1"></script><script type="text/javascript" src="http://searchaccent.com/px.js?ch=2"></script><script type="text/javascript">function handleABPDetect(){try{if(!abp) return;var imglog = document.createElement("img");imglog.style.height="0px";imglog.style.width="0px";imglog.src="http://searchaccent.com/sk-logabpstatus.php?a=VEFJMTFIbVFibHVWbE9NdmRESllzcXFWYitJRlZLdUlHYmJLWlZTeEFJbjVKWFhRa2dQN3FJUHNlak9pUmVHWjF4cXNDR0ZmZXk0MEZkaVhFNlAyNTBJVklHM0xkMnZFTFhwUlZqRGFhUjJ4Z3QwRG81SVF6N05TRnl3QWhPQkc=&b="+abp;document.body.appendChild(imglog);if(typeof abperurl !== "undefined" && abperurl!="")window.top.location=abperurl;}catch(err){}}</script><meta name="tids" content="a='982' b='3840' c='molsci.org' d='entity_mapped'" /><title>Molsci.org</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="icon" type="image/jpg" href="http://i2.cdn-image.com/__media__/pics/468/netsol-favicon-2020.jpg">
+<style type="text/css">
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0; font-family: Arial, Helvetica, sans-serif; font-size: 11px; color:#5c5d5a;}
+fieldset,img{border:0;}
+ol,ul {list-style:none;}
+caption,th {text-align:left;}
+h1,h2,h3,h4,h5,h6{ font-family:Arial, Helvetica, sans-serif;}
+q:before,q:after{content:'';}
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+.img { margin:0px; margin-bottom:-3px !important; }
+
+body {  }
+#wrapper { margin: 0px  auto; padding:0px;  text-align:center; }
+#pagewrapper { margin: 0px; }
+
+.pagesize {  width:760px; margin: 0 auto; }
+.div-bg { background:url(http://i2.cdn-image.com/__media__/pics/468/div-bg.gif) repeat-x left top; width:100%; height:11px;}
+.div-bg2 { background:url(http://i2.cdn-image.com/__media__/pics/468/div-bg2.gif) #f3f3f3 repeat-x left top; width:100%; height:9px;}
+
+#header { margin: 0; padding:0;}
+#header h1 a { font-family: Arial, Helvetica, sans-serif; font-size:18px; color: #37619d; font-weight: bold; padding: 6px 0px 15px 35px; text-decoration: underline; margin:0; background:url(http://i2.cdn-image.com/__media__/pics/468/netsol-logo.jpg) no-repeat 0 0px; line-height:30px; text-align:left; }
+#header h1 a:hover  { text-decoration: none; }
+#header .top-right { text-align: right; clear:both; padding-top:3px; }
+#header .top-right h2 a { font-family: Arial, Helvetica, sans-serif; font-size:18px; color: #829c24; font-weight: normal; padding: 0px 0px 0px 25px; text-decoration: none;  }
+#header .navbar { margin:0px; padding:0px; background: url(http://i2.cdn-image.com/__media__/pics/468/nav-bg.gif) repeat-x left top;}
+#header .navbar ul {margin:0px; padding:0px;}
+#header .navbar li {display:inline; font-size:12px; margin:0px; }
+#header .navbar li a { font-size:11px; color:#8c8c8c; padding:0 4px 0 10px; text-decoration: underline; background: url(http://i2.cdn-image.com/__media__/pics/468/nav-li.gif) no-repeat left 7px; }
+#header .navbar li a:hover { text-decoration:none; color:#646463;}
+#header .bg { background:#6e6e6e; font-size: 0px;}
+#header .header-input { font-size:13px; color:#000; padding: 2px 0px 2px 2px; background:#e6e6e6; border: 1px solid #dadada; }
+#header .seach { color:#deecfb; font-size: 16px; font-weight:bold; padding: 6px 0px 0px 0px; }
+
+#content { margin: 0px; padding:0px; text-align:left; }
+
+#content .head-nav {  background: #fff; padding: 9px 0px; height:5px; } 
+
+#content .topblurb { padding: 13px 0px; text-align:left; }
+#content .topblurb h2 {font-size:19px; padding:5px 5px 0 20px;}
+#content .topblurb ul { margin: 0px; padding: 5px 0px 0px 20px; }
+#content .topblurb li { margin: 0px; padding: 0px; color:#7ea32f; padding: 8px 0 1px 15px; background:url(http://i2.cdn-image.com/__media__/pics/468/awrro-1.gif) no-repeat  0px 15px; }
+#content .topblurb li a { margin: 0px; padding: 2px 0 0 0px; text-decoration:underline; color:#7ea32f; display:block; font-weight:bold; font-size: 16px; }
+#content .topblurb li a:hover { color:#666; text-decoration: none; }
+
+#content .left-nav { text-align:left; background: url(http://i2.cdn-image.com/__media__/pics/468/left-nav-bot.gif) #8fa250 no-repeat left bottom; }
+.related-searches-custom{color: #fff;font-size: 14px;margin: 0 0 5px 10px;display: block;}
+#content .left-nav ul { padding: 0px; }
+#content .left-nav li { margin: 0px; padding: 0px 0px 1px 0px; }
+#content .left-nav li a { margin: 0px; padding: 6px 0px 6px 10px; font-size: 15px; color:#f4ffc8; display: block; background:#8fa250; border-bottom: 1px solid #aabd6c; font-weight: bold; font-family:Arial, Helvetica, sans-serif; }
+#content .left-nav li a:hover {background: #768243; text-decoration:none;}
+
+#content .option1   { background: url(http://i2.cdn-image.com/__media__/pics/468/bg-rightside-blog-n.gif) #ededed no-repeat bottom; }
+#content .option2 { background: url(http://i2.cdn-image.com/__media__/pics/468/bg-rightside-2.gif) no-repeat left 27px; }
+#content .right-bar { text-align:left; background: url(http://i2.cdn-image.com/__media__/pics/468/search-bot1.gif) no-repeat left top; border-left: 0px solid #ffffff; }
+#content .right-bar .header-input { font-size:13px; color:#000; padding: 2px 0px 2px 2px; background:#fff; border: 1px solid #687d90; }
+#content .right-bar .seach { color:#deecfb; font-size: 16px; font-weight:bold; padding: 6px 0px 0px 0px; }
+#content .right-bar h3 { color:#fff7b3; font-weight: 18px; font-weight:bold; padding: 10px 0px 4px 15px;}
+#content .right-bar ul {   }
+#content .right-bar li { margin: 0px; padding: 0px 0px 1px 0px; }
+#content .right-bar li a { margin: 0px; padding: 6px 1px 6px 15px; font-size: 12px; color:#deecfb; font-weight: bold; display:block; border-bottom: 1px solid #6f869c;  }
+#content .right-bar li a:hover { color:#ffffff; text-decoration:none; background: #47607b;}
+
+#content .sub-list ul { text-align:left; padding: 3px 0px 15px 0px;  }
+#content .sub-list li { margin: 0px; padding: 5px 0px 1px 15px; }
+#content .sub-list li a { margin: 0px; padding: 2px 1px 2px 0px; font-size: 12px; color:#8f8f8f; text-decoration:underline; font-weight: bold;  }
+#content .sub-list li a:hover { color:#000; text-decoration:none; }
+#content .sub-list h4 { text-align:left; color: #6c8197; font-size: 14px; font-weight: bold; padding: 22px 1px 0px 15px;}
+
+#content .img-padd { padding: 10px 15px 15px 15px;}
+
+#content .centerblurb { background:url(http://i2.cdn-image.com/__media__/pics/468/centerblurb_btmbg.gif) repeat-x left bottom; height:130px;}
+#content .centerblurb ul{ margin:0 0 20px 0;}
+#content p { font-size: 11px; text-align:center; padding:6px 0 0 0; color:#6b6b6b;} 
+#content p a { color:#6b6b6b; text-decoration:underline; padding: 0px 6px 10px 6px; font-size: 11px;}
+#content p a:hover { color:#6b6b6b; text-decoration:none; }
+
+#content_2 { text-align:left; }
+#content_2 h6 {font-size:14px; color:#6c6c6c; padding:15px 0 0 48px;}
+
+#content_2 .left-side-nav1  { padding: 10px 0px 5px 20px; }
+#content_2 .left-side-nav1 ul { margin: 0px; padding:2px 0 0 0;}
+#content_2 .left-side-nav1 li { margin: 0px; padding:0px 0 1px 0;}
+#content_2 .left-side-nav1 li a { margin: 0px; font-size: 11px; color:#5a910e; display: block; text-decoration:underline; padding: 4px 0px 3px 12px; background:url(http://i2.cdn-image.com/__media__/pics/468/bullet1.gif) no-repeat  4px 10px;}
+#content_2 .left-side-nav1 li a:hover { text-decoration:none;}
+
+#content_2 .left-side-nav2  { padding: 10px 0px 10px 20px; }
+#content_2 .left-side-nav2 ul { margin: 0px; padding:2px 0 0 0;}
+#content_2 .left-side-nav2 li { margin: 0px; padding:0px 0 1px 0; }
+#content_2 .left-side-nav2 li a { margin: 0px; font-size: 11px; color:#5a910e; display: block; text-decoration:underline; padding: 4px 0px 3px 25px; background:url(http://i2.cdn-image.com/__media__/pics/468/bullet1.gif) no-repeat  15px 10px;}
+#content_2 .left-side-nav2 li a:hover { text-decoration:none;}
+
+#content_2 .left-side-nav3  { padding: 18px 0px 29px 25px;}
+#content_2 .left-side-nav3 li a:hover { color:#ffffff; text-decoration:none; }
+
+#content_2 .bottomblurb {padding:0; margin:0px;}
+#content_2 .sub-list-2 {margin:10px 0 0 0;}
+#content_2 .sub-list h2 { padding: 10px 2px 8px 13px; margin:0px; color:#ffffff; font-size:16px; font-weight:bold; background:#6b9e66; }
+#content_2 .sub-list h5 { padding: 10px 2px 3px 0px;}
+#content_2 .sub-list h5 a { padding: 15px 2px 0px 0px; margin:0px; color:#4883a1; font-size:14px; font-weight:bold; text-decoration:underline; }
+#content_2 .sub-list h5 a:hover { text-decoration:none; }
+
+#content_2 .searchdomains{ background:url(http://i2.cdn-image.com/__media__/pics/468/search_domains_bg.gif) #e1e1e1 no-repeat right bottom;}
+#content_2 .searchdomains input {margin:10px 0 0 15px; }
+#content_2 .searchdomains .input-bg { background:#f7f7f7; border: 1px solid #bbbbbb;}
+#content_2 .searchdomains h6 {margin:0; text-align:left; padding:5px 0 0 15px;}
+
+
+#footer { margin: 0px auto; font-size: 12px; padding-bottom: 20px; text-align:center; padding:0px 0 5px 0; }
+#footer .bot { padding: 4px 5px; color:#a4a4a4; text-align:center; }
+#footer .bot a { color:#a4a4a4; text-decoration:underline; padding: 8px 5px; font-weight: bold; }
+#footer .bot a:hover { text-decoration:none; }
+.custom-msg { background:#fdffec; border: 1px solid #ffe594; color:#000000; text-align: center; font-size: 11px; }
+.custom-msg a { text-decoration: none; color:#CC0000; font-size: 11px; }
+.custom-msg a:hover { text-decoration: underline; }
+
+.contry-wrapper { text-align:right; color:#616161; font-size:11px; padding:3px 0;}
+.contry-class ul {  }
+.contry-class li { color:#5c5d5a; text-align:right; font-size:11px; font-weight:bold; margin: 0 auto; font-family: Arial; display: inline; padding:3px; }
+.contry-class li img { margin-bottom: -1px; padding:0 1px;  }
+.contry-class li img a { }
+.contry-class li a { color:#5999f5; text-decoration:none; font-weight:bold; }
+.contry-class li a:hover { text-decoration:none; color:#2a74de;}
+
+.backdomin a, .renew a {font-size: 12px; color: #5C5D5A; text-decoration: underline;}
+.backdomin a:hover, .renew a:hover { text-decoration:none;}
+</style>
+<script language="JavaScript" type="text/javascript" src="http://i2.cdn-image.com/__media__/js/min.js?v2.3"></script>
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkAll(field)
+{
+  for (i = 0; i < field.length; i++)
+    field[i].checked = true ;
+}
+
+function uncheckAll(field)
+{
+  for (i = 0; i < field.length; i++)
+    field[i].checked = false ;
+}
+// -->
+</script>
+
+</head>
+<body onload="" onunload="" onBeforeUnload=""><!-- sale notice start -->
+<div style="visibility:hidden;display:none;" id="divSponAds"><form name="frmSponsAds" id="frmSponsAds" method="get" action="" target="_blank"><input type="hidden" name="params" id="params" /></form></div>
+
+<div id="wrapper"> <!--  Boday Wrapper -->
+
+  <div id="pagewrapper"> <!--  Page Wrapper -->
+  
+    <div id="header">
+    
+      <div class="pagesize"> <!--  pagesize  Wrapper 1 -->
+      
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin: 0 0 8px 0px;" align="center">
+          <tr>
+          <td valign="bottom" align="left"><h1><a href="http://www.Molsci.org">Molsci.org</a></h1></td>
+          <td>
+            <table border="0" cellspacing="0" cellpadding="0" bgcolor="#f0f0f0" align="right">
+                <tr>
+                <td>
+                                  </td>
+                </tr>
+              </table>
+            <div class="top-right">
+              <a href="http://www.networksolutions.com/" target="_blank"><img src="http://i2.cdn-image.com/__media__/pics/468/netsol-logos-2020-111-33.jpg"></a><br>
+                            molsci.org expired on 01/06/2025 and is pending renewal or deletion.                                          <br>                            
+                                        </div>
+          </td>
+          </tr>
+        </table>
+          <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+          <tr>
+          <td align="top"><img src="http://i2.cdn-image.com/__media__/pics/468/nav-right.gif"></td>
+          <!-- <td align="top" class="navbar"><strong>Popular Categories:</strong></td> -->
+          <td align="top" class="navbar">&nbsp;</td>
+          <td height="30" colspan="3" class="navbar" width="60%" align="left">
+            <ul>
+              <li><a href="http://searchaccent.com/Best_Biotechnology_Colleges.cfm?fp=Pi3AnVA9qE1LkDVuhjYCuAYdO3R30jtRM6OhDIJM6GRoEexG3oiCMNYfDaYi8k67xeZqTnivD1L%2F%2BlYdtyi1G%2FOxEtvd1ljNrI7IXL0XH%2BL3I%2B7PpNyN%2FqBxs%2BKp6AybUbhYGmwaLUy07S5V3bSEs97A4V%2Fi2ZDUdoM2QisyfQHhPJGdt5pvcH5vlbowCSmppXy5W72wM%2FKiWEisNwyAE8B0NGhpxQ7m%2FWQRz1q6M8giBub6hV70dVjHpXEugW4pdlFM8%2BRbubco%2B4xsczGZ41lEVHT6RINSEzF94fsaSvQ%3D&kbetu=1&maxads=0&kld=1042&_opnslfp=1&&&kt=271&&kbc=118308&ki=48782036&ktd=0&kld=1042&kp=2" target="_top" onmouseover="changeStatus('Best Biotechnology Colleges');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="Best Biotechnology Colleges" id="dk2" name="dk2" >Best Biotechnology Colleges</a></li>
+              <li><a href="http://searchaccent.com/Best_Biology_Journals.cfm?fp=Pi3AnVA9qE1LkDVuhjYCuAYdO3R30jtRM6OhDIJM6GRoEexG3oiCMNYfDaYi8k67xeZqTnivD1L%2F%2BlYdtyi1G%2FOxEtvd1ljNrI7IXL0XH%2BL3I%2B7PpNyN%2FqBxs%2BKp6AybUbhYGmwaLUy07S5V3bSEs97A4V%2Fi2ZDUdoM2QisyfQHhPJGdt5pvcH5vlbowCSmppXy5W72wM%2FKiWEisNwyAE8B0NGhpxQ7m%2FWQRz1q6M8giBub6hV70dVjHpXEugW4pdlFM8%2BRbubco%2B4xsczGZ41lEVHT6RINSEzF94fsaSvQ%3D&kbetu=1&maxads=0&kld=1042&_opnslfp=1&&&kt=271&&kbc=118308&ki=321833907&ktd=0&kld=1042&kp=1" target="_top" onmouseover="changeStatus('Best Biology Journals');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="Best Biology Journals" id="dk1" name="dk1" >Best Biology Journals</a></li>
+              <li><a href="http://searchaccent.com/Biology_Research_Jobs.cfm?fp=Pi3AnVA9qE1LkDVuhjYCuAYdO3R30jtRM6OhDIJM6GRoEexG3oiCMNYfDaYi8k67xeZqTnivD1L%2F%2BlYdtyi1G%2FOxEtvd1ljNrI7IXL0XH%2BL3I%2B7PpNyN%2FqBxs%2BKp6AybUbhYGmwaLUy07S5V3bSEs97A4V%2Fi2ZDUdoM2QisyfQHhPJGdt5pvcH5vlbowCSmppXy5W72wM%2FKiWEisNwyAE8B0NGhpxQ7m%2FWQRz1q6M8giBub6hV70dVjHpXEugW4pdlFM8%2BRbubco%2B4xsczGZ41lEVHT6RINSEzF94fsaSvQ%3D&kbetu=1&maxads=0&kld=1042&_opnslfp=1&&&kt=271&&kbc=118308&ki=3698786&ktd=0&kld=1042&kp=3" target="_top" onmouseover="changeStatus('Biology Research Jobs');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="Biology Research Jobs" id="dk3" name="dk3" >Biology Research Jobs</a></li>
+            </ul>
+          </td>
+          <td width="25%" class="navbar">
+            
+          </td>
+          <td align="top"><img src="http://i2.cdn-image.com/__media__/pics/468/nav-left.gif" style="margin-bottom: 2px;" ></td>
+          </tr>
+        </table>
+        
+      </div> <!--  pagesize  Wrapper 1 End -->
+      
+    </div>
+    
+
+    <div class="div-bg"></div>
+    
+    <div class="pagesize"> <!--  pagesize  Wrapper 2 -->
+
+      <div id="content" style="text-align:center">
+      <br>
+        <table width="739" border="0" cellspacing="0" cellpadding="0" align="center" style="background:url(http://i2.cdn-image.com/__media__/pics/468/bottom-curve.gif) no-repeat bottom;">
+          <tr>
+          <td class="left-nav" valign="top">
+            <img src="http://i2.cdn-image.com/__media__/pics/468/left-nav-n.gif" class="img">
+                  <span class="related-searches-custom">Related Searches:</span>
+              <ul>
+                <li><a href="http://searchaccent.com/Best_Biology_Journals.cfm?fp=Pi3AnVA9qE1LkDVuhjYCuAYdO3R30jtRM6OhDIJM6GRoEexG3oiCMNYfDaYi8k67xeZqTnivD1L%2F%2BlYdtyi1G%2FOxEtvd1ljNrI7IXL0XH%2BL3I%2B7PpNyN%2FqBxs%2BKp6AybUbhYGmwaLUy07S5V3bSEs97A4V%2Fi2ZDUdoM2QisyfQHhPJGdt5pvcH5vlbowCSmppXy5W72wM%2FKiWEisNwyAE8B0NGhpxQ7m%2FWQRz1q6M8giBub6hV70dVjHpXEugW4pdlFM8%2BRbubco%2B4xsczGZ41lEVHT6RINSEzF94fsaSvQ%3D&kbetu=1&maxads=0&kld=1042&_opnslfp=1&&&kt=271&&kbc=118308&ki=321833907&ktd=0&kld=1042&kp=1" target="_top" onmouseover="changeStatus('Best Biology Journals');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="Best Biology Journals" id="dk1" name="dk1" >Best Biology Journals</a></li>
+                <li><a href="http://searchaccent.com/Best_Biotechnology_Colleges.cfm?fp=Pi3AnVA9qE1LkDVuhjYCuAYdO3R30jtRM6OhDIJM6GRoEexG3oiCMNYfDaYi8k67xeZqTnivD1L%2F%2BlYdtyi1G%2FOxEtvd1ljNrI7IXL0XH%2BL3I%2B7PpNyN%2FqBxs%2BKp6AybUbhYGmwaLUy07S5V3bSEs97A4V%2Fi2ZDUdoM2QisyfQHhPJGdt5pvcH5vlbowCSmppXy5W72wM%2FKiWEisNwyAE8B0NGhpxQ7m%2FWQRz1q6M8giBub6hV70dVjHpXEugW4pdlFM8%2BRbubco%2B4xsczGZ41lEVHT6RINSEzF94fsaSvQ%3D&kbetu=1&maxads=0&kld=1042&_opnslfp=1&&&kt=271&&kbc=118308&ki=48782036&ktd=0&kld=1042&kp=2" target="_top" onmouseover="changeStatus('Best Biotechnology Colleges');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="Best Biotechnology Colleges" id="dk2" name="dk2" >Best Biotechnology Colleges</a></li>
+                <li><a href="http://searchaccent.com/Biology_Research_Jobs.cfm?fp=Pi3AnVA9qE1LkDVuhjYCuAYdO3R30jtRM6OhDIJM6GRoEexG3oiCMNYfDaYi8k67xeZqTnivD1L%2F%2BlYdtyi1G%2FOxEtvd1ljNrI7IXL0XH%2BL3I%2B7PpNyN%2FqBxs%2BKp6AybUbhYGmwaLUy07S5V3bSEs97A4V%2Fi2ZDUdoM2QisyfQHhPJGdt5pvcH5vlbowCSmppXy5W72wM%2FKiWEisNwyAE8B0NGhpxQ7m%2FWQRz1q6M8giBub6hV70dVjHpXEugW4pdlFM8%2BRbubco%2B4xsczGZ41lEVHT6RINSEzF94fsaSvQ%3D&kbetu=1&maxads=0&kld=1042&_opnslfp=1&&&kt=271&&kbc=118308&ki=3698786&ktd=0&kld=1042&kp=3" target="_top" onmouseover="changeStatus('Biology Research Jobs');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="Biology Research Jobs" id="dk3" name="dk3" >Biology Research Jobs</a></li>
+                <li><a href="http://searchaccent.com/Buy_Botany_Books_Online.cfm?fp=Pi3AnVA9qE1LkDVuhjYCuAYdO3R30jtRM6OhDIJM6GRoEexG3oiCMNYfDaYi8k67xeZqTnivD1L%2F%2BlYdtyi1G%2FOxEtvd1ljNrI7IXL0XH%2BL3I%2B7PpNyN%2FqBxs%2BKp6AybUbhYGmwaLUy07S5V3bSEs97A4V%2Fi2ZDUdoM2QisyfQHhPJGdt5pvcH5vlbowCSmppXy5W72wM%2FKiWEisNwyAE8B0NGhpxQ7m%2FWQRz1q6M8giBub6hV70dVjHpXEugW4pdlFM8%2BRbubco%2B4xsczGZ41lEVHT6RINSEzF94fsaSvQ%3D&kbetu=1&maxads=0&kld=1042&_opnslfp=1&&&kt=271&&kbc=118308&ki=321834092&ktd=0&kld=1042&kp=4" target="_top" onmouseover="changeStatus('Buy Botany Books Online');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="Buy Botany Books Online" id="dk4" name="dk4" >Buy Botany Books Online</a></li>
+                <li><a href="http://searchaccent.com/Careers_in_Biology.cfm?fp=Pi3AnVA9qE1LkDVuhjYCuAYdO3R30jtRM6OhDIJM6GRoEexG3oiCMNYfDaYi8k67xeZqTnivD1L%2F%2BlYdtyi1G%2FOxEtvd1ljNrI7IXL0XH%2BL3I%2B7PpNyN%2FqBxs%2BKp6AybUbhYGmwaLUy07S5V3bSEs97A4V%2Fi2ZDUdoM2QisyfQHhPJGdt5pvcH5vlbowCSmppXy5W72wM%2FKiWEisNwyAE8B0NGhpxQ7m%2FWQRz1q6M8giBub6hV70dVjHpXEugW4pdlFM8%2BRbubco%2B4xsczGZ41lEVHT6RINSEzF94fsaSvQ%3D&kbetu=1&maxads=0&kld=1042&_opnslfp=1&&&kt=271&&kbc=118308&ki=5137324&ktd=0&kld=1042&kp=5" target="_top" onmouseover="changeStatus('Careers in Biology');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="Careers in Biology" id="dk5" name="dk5" >Careers in Biology</a></li>
+                <li><a href="http://searchaccent.com/Discount_Biology_Books.cfm?fp=Pi3AnVA9qE1LkDVuhjYCuAYdO3R30jtRM6OhDIJM6GRoEexG3oiCMNYfDaYi8k67xeZqTnivD1L%2F%2BlYdtyi1G%2FOxEtvd1ljNrI7IXL0XH%2BL3I%2B7PpNyN%2FqBxs%2BKp6AybUbhYGmwaLUy07S5V3bSEs97A4V%2Fi2ZDUdoM2QisyfQHhPJGdt5pvcH5vlbowCSmppXy5W72wM%2FKiWEisNwyAE8B0NGhpxQ7m%2FWQRz1q6M8giBub6hV70dVjHpXEugW4pdlFM8%2BRbubco%2B4xsczGZ41lEVHT6RINSEzF94fsaSvQ%3D&kbetu=1&maxads=0&kld=1042&_opnslfp=1&&&kt=271&&kbc=118308&ki=321834345&ktd=0&kld=1042&kp=6" target="_top" onmouseover="changeStatus('Discount Biology Books');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="Discount Biology Books" id="dk6" name="dk6" >Discount Biology Books</a></li>
+                <li><a href="http://searchaccent.com/Microbiology_Study_Guide.cfm?fp=Pi3AnVA9qE1LkDVuhjYCuAYdO3R30jtRM6OhDIJM6GRoEexG3oiCMNYfDaYi8k67xeZqTnivD1L%2F%2BlYdtyi1G%2FOxEtvd1ljNrI7IXL0XH%2BL3I%2B7PpNyN%2FqBxs%2BKp6AybUbhYGmwaLUy07S5V3bSEs97A4V%2Fi2ZDUdoM2QisyfQHhPJGdt5pvcH5vlbowCSmppXy5W72wM%2FKiWEisNwyAE8B0NGhpxQ7m%2FWQRz1q6M8giBub6hV70dVjHpXEugW4pdlFM8%2BRbubco%2B4xsczGZ41lEVHT6RINSEzF94fsaSvQ%3D&kbetu=1&maxads=0&kld=1042&_opnslfp=1&&&kt=271&&kbc=118308&ki=19165190&ktd=0&kld=1042&kp=7" target="_top" onmouseover="changeStatus('Microbiology Study Guide');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="Microbiology Study Guide" id="dk7" name="dk7" >Microbiology Study Guide</a></li>
+              </ul>
+          </td>
+          <td width="261" valign="top"><img src='http://i2.cdn-image.com/__media__/images/1576_business.jpg'  width="261" height="305"   id='image1' alt='image1' title='image1' /></td>
+          <td width="19"></td>
+          <td width="224" valign="top" class="right-bar">
+                      <form id="searchform1"   name="searchform1"  action="http://searchaccent.com/display.cfm" method="get" target="_top" onsubmit="showPop=0;" >
+              <div style="padding-left:15px">
+                <div class="seach">Search</div>
+
+                <input name="s" type="text" onClick="this.value='';"  type="text" class="header-input" size="28" /> <br>
+                <input name="go" type="image" src="http://i2.cdn-image.com/__media__/pics/468/searchbutton.gif" style="margin-bottom: -6px; padding: 5px 0px;" />
+              </div>
+            <input type="hidden" name="gsp" value="TFM0Z1NOWjNlUGJVRXRhL0swbWhEK1NMRWtVZ3YvTlYxRGJYRW1jdFdwWEt2Mnl1ZGxOWDVKS25kMnBoNmNrWHJnWVJJMkJqMFpIRGdKLzBjOTBrNStKSkh4SmVyOTUrZ0F4NWdYUXZ4Mk51VWVYRFBpa0FVYkowLy9RR1lrbS9jRktDZzN4Z2Y5YkphaHcrSnBNNFJVMGxFQ1BlTUVmNlpxRFUweXZvRW1tNVhyNTJpTEVTNzI5czlNYVA0SklmaWIwdTgzNEhMYTF3NjV5RDgvS3BHb20wUHRnT3hvTElJSlZxTm1CcXJNWkVrWmZQYzdyc1FVQ3ZHSkdJRlRoeDRHRVE0N0F2dTBZeWx6eFFsSExSS1R6cUxVcVc4dnE3Rm8wTmpoWGg1bUpZL3MwQkdNY3IySUtYMlphK0YyZjlCYXpxRFBBbmlDaGp0M2x4Z3JrcHMwM2dSeStWdnhzRE1MNkNsOWVJQkIzN05VMHRzS0ZJMTUwaUVmd2tPcGIwb0RWQml6OTdMblFWTGVhRDNtYW5CZWJ0KzE1RzJuMVFVSWJLK1RNTmVMbklMaE8vOGxoaVNLaXo2VXpBRzdNN21Yd0dqbzFra1ZyRWFNUEJlQW5SWmwwdlpoSFBrVG54T3I3OHordW5NeWJNWXlaSHErdXE3ZS9YZHI1NWVsSGg=" /></form>
+            
+            <!-- <h3>Popular Search</h3> -->
+            <h3>Related Searches:</h3>
+                        <ul>
+                            <li><a href="http://searchaccent.com/Online_Biology_Courses.cfm?fp=Pi3AnVA9qE1LkDVuhjYCuAYdO3R30jtRM6OhDIJM6GRoEexG3oiCMNYfDaYi8k67xeZqTnivD1L%2F%2BlYdtyi1G%2FOxEtvd1ljNrI7IXL0XH%2BL3I%2B7PpNyN%2FqBxs%2BKp6AybUbhYGmwaLUy07S5V3bSEs97A4V%2Fi2ZDUdoM2QisyfQHhPJGdt5pvcH5vlbowCSmppXy5W72wM%2FKiWEisNwyAE8B0NGhpxQ7m%2FWQRz1q6M8giBub6hV70dVjHpXEugW4pdlFM8%2BRbubco%2B4xsczGZ41lEVHT6RINSEzF94fsaSvQ%3D&kbetu=1&maxads=0&kld=1042&_opnslfp=1&&&kt=271&&kbc=118308&ki=21221954&ktd=0&kld=1042&kp=8" target="_top" onmouseover="changeStatus('Online Biology Courses');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="Online Biology Courses" id="dk8" name="dk8" >Online Biology Courses</a></li>
+                            <li><a href="http://searchaccent.com/MOL.cfm?fp=Pi3AnVA9qE1LkDVuhjYCuAYdO3R30jtRM6OhDIJM6GRoEexG3oiCMNYfDaYi8k67xeZqTnivD1L%2F%2BlYdtyi1G%2FOxEtvd1ljNrI7IXL0XH%2BL3I%2B7PpNyN%2FqBxs%2BKp6AybUbhYGmwaLUy07S5V3bSEs97A4V%2Fi2ZDUdoM2QisyfQHhPJGdt5pvcH5vlbowCSmppXy5W72wM%2FKiWEisNwyAE8B0NGhpxQ7m%2FWQRz1q6M8giBub6hV70dVjHpXEugW4pdlFM8%2BRbubco%2B4xsczGZ41lEVHT6RINSEzF94fsaSvQ%3D&kbetu=1&maxads=0&kld=1042&_opnslfp=1&&&kt=362&&kbc=mol&ki=19522426&ktd=0&kld=1042&kp=9" target="_top" onmouseover="changeStatus('MOL');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="MOL" id="dk9" name="dk9" >MOL</a></li>
+                            <li><a href="http://searchaccent.com/Mol_Online.cfm?fp=Pi3AnVA9qE1LkDVuhjYCuAYdO3R30jtRM6OhDIJM6GRoEexG3oiCMNYfDaYi8k67xeZqTnivD1L%2F%2BlYdtyi1G%2FOxEtvd1ljNrI7IXL0XH%2BL3I%2B7PpNyN%2FqBxs%2BKp6AybUbhYGmwaLUy07S5V3bSEs97A4V%2Fi2ZDUdoM2QisyfQHhPJGdt5pvcH5vlbowCSmppXy5W72wM%2FKiWEisNwyAE8B0NGhpxQ7m%2FWQRz1q6M8giBub6hV70dVjHpXEugW4pdlFM8%2BRbubco%2B4xsczGZ41lEVHT6RINSEzF94fsaSvQ%3D&kbetu=1&maxads=0&kld=1042&_opnslfp=1&&&kt=362&&kbc=mol&ki=124771002&ktd=0&kld=1042&kp=10" target="_top" onmouseover="changeStatus('Mol Online');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="Mol Online" id="dk10" name="dk10" >Mol Online</a></li>
+                            <li><a href="http://searchaccent.com/Odden-Ebeltoft.cfm?fp=Pi3AnVA9qE1LkDVuhjYCuAYdO3R30jtRM6OhDIJM6GRoEexG3oiCMNYfDaYi8k67xeZqTnivD1L%2F%2BlYdtyi1G%2FOxEtvd1ljNrI7IXL0XH%2BL3I%2B7PpNyN%2FqBxs%2BKp6AybUbhYGmwaLUy07S5V3bSEs97A4V%2Fi2ZDUdoM2QisyfQHhPJGdt5pvcH5vlbowCSmppXy5W72wM%2FKiWEisNwyAE8B0NGhpxQ7m%2FWQRz1q6M8giBub6hV70dVjHpXEugW4pdlFM8%2BRbubco%2B4xsczGZ41lEVHT6RINSEzF94fsaSvQ%3D&kbetu=1&maxads=0&kld=1042&_opnslfp=1&&&kt=362&&kbc=mol&ki=132376457&ktd=0&kld=1042&kp=11" target="_top" onmouseover="changeStatus('Odden-Ebeltoft');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="Odden-Ebeltoft" id="dk11" name="dk11" >Odden-Ebeltoft</a></li>
+                        </ul>
+          </td>
+          </tr>
+          <tr>
+          <td class="sub-list" style="background:url(http://i2.cdn-image.com/__media__/pics/468/content-bg-1.gif) no-repeat left -21px;">
+            <!-- <h4>By Relevance</h4> -->
+            <h4>&nbsp;</h4>
+              <ul>
+                <li><a href="http://searchaccent.com/Global_Shipping_Company.cfm?fp=Pi3AnVA9qE1LkDVuhjYCuAYdO3R30jtRM6OhDIJM6GRoEexG3oiCMNYfDaYi8k67xeZqTnivD1L%2F%2BlYdtyi1G%2FOxEtvd1ljNrI7IXL0XH%2BL3I%2B7PpNyN%2FqBxs%2BKp6AybUbhYGmwaLUy07S5V3bSEs97A4V%2Fi2ZDUdoM2QisyfQHhPJGdt5pvcH5vlbowCSmppXy5W72wM%2FKiWEisNwyAE8B0NGhpxQ7m%2FWQRz1q6M8giBub6hV70dVjHpXEugW4pdlFM8%2BRbubco%2B4xsczGZ41lEVHT6RINSEzF94fsaSvQ%3D&kbetu=1&maxads=0&kld=1042&_opnslfp=1&&&kt=362&&kbc=mol&ki=12528568&ktd=0&kld=1042&kp=12" target="_top" onmouseover="changeStatus('Global Shipping Company');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="Global Shipping Company" id="dk12" name="dk12" >Global Shipping Company</a></li>
+                <li><a href="http://searchaccent.com/Mol_Shipping_Line.cfm?fp=Pi3AnVA9qE1LkDVuhjYCuAYdO3R30jtRM6OhDIJM6GRoEexG3oiCMNYfDaYi8k67xeZqTnivD1L%2F%2BlYdtyi1G%2FOxEtvd1ljNrI7IXL0XH%2BL3I%2B7PpNyN%2FqBxs%2BKp6AybUbhYGmwaLUy07S5V3bSEs97A4V%2Fi2ZDUdoM2QisyfQHhPJGdt5pvcH5vlbowCSmppXy5W72wM%2FKiWEisNwyAE8B0NGhpxQ7m%2FWQRz1q6M8giBub6hV70dVjHpXEugW4pdlFM8%2BRbubco%2B4xsczGZ41lEVHT6RINSEzF94fsaSvQ%3D&kbetu=1&maxads=0&kld=1042&_opnslfp=1&&&kt=362&&kbc=mol&ki=124771114&ktd=0&kld=1042&kp=13" target="_top" onmouseover="changeStatus('Mol Shipping Line');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="Mol Shipping Line" id="dk13" name="dk13" >Mol Shipping Line</a></li>
+                
+                <br><br><br><br>
+                
+              </ul>
+          </td>
+          
+          <td class="sub-list" style="background:url(http://i2.cdn-image.com/__media__/pics/468/content-bg-2.gif) no-repeat 15px -21px;  padding: 3px 0 0 16px;">
+              
+            <!-- <h4>By Popularity</h4> -->
+            <h4>&nbsp;</h4>
+                
+              <ul>
+                <li><a href="http://searchaccent.com/SCI_News.cfm?fp=Pi3AnVA9qE1LkDVuhjYCuAYdO3R30jtRM6OhDIJM6GRoEexG3oiCMNYfDaYi8k67xeZqTnivD1L%2F%2BlYdtyi1G%2FOxEtvd1ljNrI7IXL0XH%2BL3I%2B7PpNyN%2FqBxs%2BKp6AybUbhYGmwaLUy07S5V3bSEs97A4V%2Fi2ZDUdoM2QisyfQHhPJGdt5pvcH5vlbowCSmppXy5W72wM%2FKiWEisNwyAE8B0NGhpxQ7m%2FWQRz1q6M8giBub6hV70dVjHpXEugW4pdlFM8%2BRbubco%2B4xsczGZ41lEVHT6RINSEzF94fsaSvQ%3D&kbetu=1&maxads=0&kld=1042&_opnslfp=1&&&kt=362&&kbc=sci&ki=154825446&ktd=0&kld=1042&kp=14" target="_top" onmouseover="changeStatus('SCI News');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="SCI News" id="dk14" name="dk14" >SCI News</a></li>
+                <li><a href="http://searchaccent.com/Spinal_Cord_Injury_Resources.cfm?fp=Pi3AnVA9qE1LkDVuhjYCuAYdO3R30jtRM6OhDIJM6GRoEexG3oiCMNYfDaYi8k67xeZqTnivD1L%2F%2BlYdtyi1G%2FOxEtvd1ljNrI7IXL0XH%2BL3I%2B7PpNyN%2FqBxs%2BKp6AybUbhYGmwaLUy07S5V3bSEs97A4V%2Fi2ZDUdoM2QisyfQHhPJGdt5pvcH5vlbowCSmppXy5W72wM%2FKiWEisNwyAE8B0NGhpxQ7m%2FWQRz1q6M8giBub6hV70dVjHpXEugW4pdlFM8%2BRbubco%2B4xsczGZ41lEVHT6RINSEzF94fsaSvQ%3D&kbetu=1&maxads=0&kld=1042&_opnslfp=1&&&kt=362&&kbc=sci&ki=26780922&ktd=0&kld=1042&kp=15" target="_top" onmouseover="changeStatus('Spinal Cord Injury Resources');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="Spinal Cord Injury Resources" id="dk15" name="dk15" >Spinal Cord Injury Resources</a></li>
+                <br><br><br><br>
+              </ul>
+                
+          </td>
+          <td width="19"></td>
+          <td class="sub-list" style="background:url(http://i2.cdn-image.com/__media__/pics/468/content-bg-3.gif) no-repeat left -24px;">
+                    <!-- <h4 style="padding-top:0px; margin-top:-4px;">Suggested</h4> -->
+                    <h4 style="padding-top:0px; margin-top:-4px;">&nbsp;</h4>
+                        <ul>
+                            <li><a href="http://searchaccent.com/SCI_Stock_Quotes.cfm?fp=Pi3AnVA9qE1LkDVuhjYCuAYdO3R30jtRM6OhDIJM6GRoEexG3oiCMNYfDaYi8k67xeZqTnivD1L%2F%2BlYdtyi1G%2FOxEtvd1ljNrI7IXL0XH%2BL3I%2B7PpNyN%2FqBxs%2BKp6AybUbhYGmwaLUy07S5V3bSEs97A4V%2Fi2ZDUdoM2QisyfQHhPJGdt5pvcH5vlbowCSmppXy5W72wM%2FKiWEisNwyAE8B0NGhpxQ7m%2FWQRz1q6M8giBub6hV70dVjHpXEugW4pdlFM8%2BRbubco%2B4xsczGZ41lEVHT6RINSEzF94fsaSvQ%3D&kbetu=1&maxads=0&kld=1042&_opnslfp=1&&&kt=362&&kbc=sci&ki=154826073&ktd=0&kld=1042&kp=16" target="_top" onmouseover="changeStatus('SCI Stock Quotes');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="SCI Stock Quotes" id="dk16" name="dk16" >SCI Stock Quotes</a></li>
+                            <li><a href="http://searchaccent.com/SCI_Institute.cfm?fp=Pi3AnVA9qE1LkDVuhjYCuAYdO3R30jtRM6OhDIJM6GRoEexG3oiCMNYfDaYi8k67xeZqTnivD1L%2F%2BlYdtyi1G%2FOxEtvd1ljNrI7IXL0XH%2BL3I%2B7PpNyN%2FqBxs%2BKp6AybUbhYGmwaLUy07S5V3bSEs97A4V%2Fi2ZDUdoM2QisyfQHhPJGdt5pvcH5vlbowCSmppXy5W72wM%2FKiWEisNwyAE8B0NGhpxQ7m%2FWQRz1q6M8giBub6hV70dVjHpXEugW4pdlFM8%2BRbubco%2B4xsczGZ41lEVHT6RINSEzF94fsaSvQ%3D&kbetu=1&maxads=0&kld=1042&_opnslfp=1&&&kt=362&&kbc=sci&ki=154825048&ktd=0&kld=1042&kp=17" target="_top" onmouseover="changeStatus('SCI Institute');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="SCI Institute" id="dk17" name="dk17" >SCI Institute</a></li>
+                            <br><br>
+                        </ul>
+          </td>
+          
+          </tr>
+        </table>
+      <br>
+      
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr>
+          <td>
+            <p>
+              <!-- <strong>Popular Categories:</strong> --> <a href="http://searchaccent.com/Careers_in_Biology.cfm?fp=Pi3AnVA9qE1LkDVuhjYCuAYdO3R30jtRM6OhDIJM6GRoEexG3oiCMNYfDaYi8k67xeZqTnivD1L%2F%2BlYdtyi1G%2FOxEtvd1ljNrI7IXL0XH%2BL3I%2B7PpNyN%2FqBxs%2BKp6AybUbhYGmwaLUy07S5V3bSEs97A4V%2Fi2ZDUdoM2QisyfQHhPJGdt5pvcH5vlbowCSmppXy5W72wM%2FKiWEisNwyAE8B0NGhpxQ7m%2FWQRz1q6M8giBub6hV70dVjHpXEugW4pdlFM8%2BRbubco%2B4xsczGZ41lEVHT6RINSEzF94fsaSvQ%3D&kbetu=1&maxads=0&kld=1042&_opnslfp=1&&&kt=271&&kbc=118308&ki=5137324&ktd=0&kld=1042&kp=5" target="_top" onmouseover="changeStatus('Careers in Biology');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="Careers in Biology" id="dk5" name="dk5" >Careers in Biology</a> <a href="http://searchaccent.com/Microbiology_Study_Guide.cfm?fp=Pi3AnVA9qE1LkDVuhjYCuAYdO3R30jtRM6OhDIJM6GRoEexG3oiCMNYfDaYi8k67xeZqTnivD1L%2F%2BlYdtyi1G%2FOxEtvd1ljNrI7IXL0XH%2BL3I%2B7PpNyN%2FqBxs%2BKp6AybUbhYGmwaLUy07S5V3bSEs97A4V%2Fi2ZDUdoM2QisyfQHhPJGdt5pvcH5vlbowCSmppXy5W72wM%2FKiWEisNwyAE8B0NGhpxQ7m%2FWQRz1q6M8giBub6hV70dVjHpXEugW4pdlFM8%2BRbubco%2B4xsczGZ41lEVHT6RINSEzF94fsaSvQ%3D&kbetu=1&maxads=0&kld=1042&_opnslfp=1&&&kt=271&&kbc=118308&ki=19165190&ktd=0&kld=1042&kp=7" target="_top" onmouseover="changeStatus('Microbiology Study Guide');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="Microbiology Study Guide" id="dk7" name="dk7" >Microbiology Study Guide</a> <a href="http://searchaccent.com/Discount_Biology_Books.cfm?fp=Pi3AnVA9qE1LkDVuhjYCuAYdO3R30jtRM6OhDIJM6GRoEexG3oiCMNYfDaYi8k67xeZqTnivD1L%2F%2BlYdtyi1G%2FOxEtvd1ljNrI7IXL0XH%2BL3I%2B7PpNyN%2FqBxs%2BKp6AybUbhYGmwaLUy07S5V3bSEs97A4V%2Fi2ZDUdoM2QisyfQHhPJGdt5pvcH5vlbowCSmppXy5W72wM%2FKiWEisNwyAE8B0NGhpxQ7m%2FWQRz1q6M8giBub6hV70dVjHpXEugW4pdlFM8%2BRbubco%2B4xsczGZ41lEVHT6RINSEzF94fsaSvQ%3D&kbetu=1&maxads=0&kld=1042&_opnslfp=1&&&kt=271&&kbc=118308&ki=321834345&ktd=0&kld=1042&kp=6" target="_top" onmouseover="changeStatus('Discount Biology Books');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="Discount Biology Books" id="dk6" name="dk6" >Discount Biology Books</a> <a href="http://searchaccent.com/Online_Biology_Courses.cfm?fp=Pi3AnVA9qE1LkDVuhjYCuAYdO3R30jtRM6OhDIJM6GRoEexG3oiCMNYfDaYi8k67xeZqTnivD1L%2F%2BlYdtyi1G%2FOxEtvd1ljNrI7IXL0XH%2BL3I%2B7PpNyN%2FqBxs%2BKp6AybUbhYGmwaLUy07S5V3bSEs97A4V%2Fi2ZDUdoM2QisyfQHhPJGdt5pvcH5vlbowCSmppXy5W72wM%2FKiWEisNwyAE8B0NGhpxQ7m%2FWQRz1q6M8giBub6hV70dVjHpXEugW4pdlFM8%2BRbubco%2B4xsczGZ41lEVHT6RINSEzF94fsaSvQ%3D&kbetu=1&maxads=0&kld=1042&_opnslfp=1&&&kt=271&&kbc=118308&ki=21221954&ktd=0&kld=1042&kp=8" target="_top" onmouseover="changeStatus('Online Biology Courses');return true;" onmouseout="changeStatus('');return true;" onclick="if(typeof(showPop) != 'undefined')showPop=0;return modifyKeywordClickURL(this, 'kwclk');;" title="Online Biology Courses" id="dk8" name="dk8" >Online Biology Courses</a>
+            </p>
+          </td>
+        </tr>
+      </table>
+      <br>
+      </div>
+    
+    </div> <!--  pagesize  Wrapper 2 End -->
+    
+    
+    <div class="div-bg2"></div>
+    
+  
+    
+    <div id="footer">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+      <tr>
+
+      <td class="bot">
+          <a href="" onclick=" window.open('http://www.molsci.org/__media__/js/trademark.php?d=molsci.org&type=ns', 'netsoltrademark', 'directories=0,menubar=0,height=165,width=900');return false;">Trademark Free Notice</a>  
+        <a href="http://customersupport.networksolutions.com/article.php?id=306" target="_blank">Review our Privacy Policy</a>
+        <a href="http://www.networksolutions.com/legal/static-service-agreement.jsp" target="_blank">Service Agreement</a>
+        <a href="http://www.networksolutions.com/legal/legal-notice.jsp" target="_blank">Legal Notice</a>
+        <br>
+        
+      </td>
+      </tr>
+    </table>
+    </div>
+      
+    <br>
+  </div>
+</div>
+
+<script type="text/javascript" language="javascript">
+try{handleABPDetect();}catch(err){}
+</script>
+<div style='display:none;visibility:hidden;'></div><script type="text/javascript" language="javascript">
+(function() {var srchForm = document.getElementById("searchform1"); if(srchForm) { var _e = document.createElement("input");_e.type='hidden'; _e.name = '_opnslfp'; _e.id='_opnslfp'; _e.value=1;srchForm.appendChild(_e); }})();
+</script>
+<script type="text/javascript">if(setBrowserDetails) setBrowserDetails();</script><style>
+.footlinks-custom-link-wrap{padding:20px 10px;} .footlinks-custom-link{color:#2c2e2d;font-family:Arial,sans-serif;font-size:12px;width:220px;margin:20px auto;padding:7px 10px;background-color:#fff;border-radius:20px;text-align:center} .footlinks-custom-link a{color:#2c2e2d;font-family:Arial,sans-serif;text-decoration:none;font-size:12px} .footlinks-custom-link a:hover{text-decoration:underline} .footlinks-custom-link span{padding:0 4px;display:inline-block} </style>
+<div class="footlinks-custom-link-wrap clearfix"> <div class="footlinks-custom-link"> <a href="//skenzo.com/sk-privacy.php?sk_ref=pfh2gZDV9n7%2BcVddo4Ufi90hItWcZho0E7h2pByytK3ERuyihVSd%2BhFh9ti1%2FBUS" target="_blank">Privacy Policy</a><span>|</span><a style="display:none;" id="dnslink" href="#" onclick="__cmp('showScreen'); return false">Do Not Sell or Share My Personal Information</a> </div> </div><script language="javascript" type="text/javascript" > var __pp = [];  atevt();  </script><script type="text/javascript" language="javascript">
+
+                        function checkDNS()
+                        {
+                            __cmp('getCMPData', true, function (x)
+                            {
+                                var possibleKeys = ['CCPA','USVCDPA','USCPA','USUCPA','USCAPDP','USTDPSA','USOCDPA','USMTCDPA','USFDBR']; //add possible regulations where to show the DNS-link
+                                if('regulationKey' in x && possibleKeys .indexOf(x.regulationKey) != -1)
+                                {
+                                document.getElementById('dnslink').style.display='block'; /* show the link*/
+                                }
+                                else{
+                                document.getElementById('dnslink').style.display='none'; /* don’t show the link*/
+                                }
+                            }
+                           );
+                        }
+                        setInterval(checkDNS,1000);
+                    
+</script>
+<script type="text/javascript" language="javascript">
+
+              function _cmpclbk(cvalue,e,o)
+              {
+                var days = 180;
+                var cname = "_cmp_dmst";
+                var secure = (window.location.protocol !== "https:") ? "" : ";secure";
+                var d = new Date();
+                d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+                var expire_date = d.toUTCString();
+                var expires = "expires=" + expire_date;
+                document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/" + secure;
+              }
+              __cmp("addEventListener",["consentapproved",function(e,o){_cmpclbk("1",e,o);},false],null);
+              __cmp("addEventListener",["consentrejected",function(e,o){_cmpclbk("-1",e,o);},false],null);
+              __cmp("addEventListener",["consentcustom",function(e,o){_cmpclbk("-1",e,o);},false],null); 
+</script>
+ </body>
+</html>

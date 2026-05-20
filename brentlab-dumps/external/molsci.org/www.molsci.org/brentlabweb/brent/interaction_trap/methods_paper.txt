@@ -1,0 +1,1638 @@
+Interaction trap cloning with yeast.
+
+The following manuscript is a draft of a chapter to appear in "Gene 
+Probes - A practical Approach" published by Oxford University Press.
+
+
+
+Russell L. Finley Jr. and Roger Brent
+
+Department of Molecular Biology
+Massachusetts General Hospital
+and Department of Genetics
+Harvard Medical School
+Boston Massachusetts  02114
+U.S.A. 
+
+
+
+Address:
+Department of Molecular Biology
+Massachusetts General Hospital
+50 Blossom St.
+Boston Massachusetts 02114
+USA
+
+Phone   (617) 726-5925
+FAX             (617) 726-6893
+e-mail  brent@frodo.mgh.harvard.edu
+                finley@frodo.mgh.harvard,edu
+
+
+
+Contents
+
+1. Introduction
+1.1 Background
+1.2 The interaction trap
+2. Making and testing baits
+2.1 LexA fusion expression plasmids
+2.2 Reporters and yeast strains
+2.2.1 LEU2 reporter strains
+2.2.2 lacZ reporters
+2.3 Testing the bait protein
+2.3.1 Testing whether the bait protein activates transcription of the 
+reporters
+
+Protocol 1.  Testing baits for transcription activation
+
+2.3.2 Demonstrating that the bait enters the yeast nucleus and binds 
+operators
+Protocol 2.  The repression assay
+2.3.3 Verifying that a full-length fusion protein is made.
+
+3. Libraries
+4. An interactor hunt
+4.1 Introducing the library into the selection strain.
+4.1.1 Selecting interactors from library transformants.
+4.1.2 Performing a one step selection for interactors
+
+Protocol 3. Transforming the selection strain with library DNA.
+
+4.2 Isolating yeast with galactose dependent Leu+ and lacZ+ 
+phenotypes
+
+Protocol 4.   Selecting interactors.
+
+5. Verifying specificity
+
+Protocol 5. Isolating and classifying library plasmids.
+Protocol 6. Determining specificity of interactors.
+
+6. Using a mating assay to verify specificity.
+Figure 4a. Mating assay cartoon.
+Figure 4b. Mating assay result.
+
+Protocol 7. Mating assay.
+
+7. Expected results.
+
+Appendix
+Sequencing and PCR primers for pEG202 and pJG4-5        
+Media recipes.
+
+
+
+
+Interaction trap cloning with yeast.
+
+
+1. Introduction
+        The interaction trap is a two-hybrid system for cloning cDNAs 
+that encode proteins that interact with a protein whose coding 
+sequences are known.  The method uses the transcription of yeast 
+reporter genes as a synthetic phenotype to detect protein-protein 
+interactions.   It can also be used to study interactions between 
+known proteins.
+
+1.1 Background
+        
+        The two-hybrid approach takes advantage of the modular 
+domain structure of eukaryotic transcription factors.  Many 
+eukaryotic transcription activators have at least two distinct 
+functional domains, one that directs binding to specific DNA 
+sequences and one that activates transcription (1, 2).  This modular 
+structure is best illustrated by yeast experiments showing that the 
+DNA-binding domains or activation domains can be exchanged from 
+one transcription factor to the next and retain function.  For example, 
+when the DNA-binding domain of the yeast transcription factor Gal4 
+is replaced with the DNA binding domain of the bacterial repressor 
+LexA, the resulting hybrid protein activates transcription of genes 
+containing upstream LexA binding sites (3).  Similarly, when the DNA 
+binding domain of Gal4, which by itself does not activate 
+transcription, is fused to activation domains from other proteins the 
+resulting hybrid proteins activate transcription of reporters with 
+upstream Gal4 binding sites (4-6).  A crucial corollary of the modular 
+nature of transcription activators is that the DNA-binding and 
+activation domains need not be covalently attached to each other for 
+activation to occur.  This was first demonstrated by Ma and Ptashne 
+(7) with a Gal4 derivative that contained the DNA-binding domain as 
+well as a domain that interacts with another yeast protein, Gal80, but 
+that lacked the activation domain.  When this derivative was 
+expressed in yeast it did not activate transcription of a reporter gene 
+containing upstream Gal4 binding sites.  However, when it was co-
+expressed with a second, hybrid protein, consisting of Gal80 fused to 
+an activation domain, interaction between the Gal4 DNA-binding 
+derivative and the Gal80-activation domain hybrid resulted in 
+activation of the reporter gene.
+
+        The general utility of the modularity of transcription factors 
+was demonstrated by Fields and Song (8) who showed that yeast 
+transcription could be used to assay the interaction between two 
+proteins if one of them was fused to a DNA-binding domain and the 
+other was fused to an activation domain.   In their experiment, one of 
+the hybrid proteins contained the DNA-binding domain of Gal4 fused 
+to the yeast protein Snf1, and the other contained the activation 
+domain of Gal4 fused to another yeast protein, Snf4.  When Snf1 and 
+Snf4 interacted they brought together the DNA-binding and 
+activation domains, so that the two hybrid proteins bound to Gal4 
+binding sites upstream of a lacZ reporter gene and activated its 
+transcription.  Thus, the interaction between Snf1 and Snf4 was 
+assayed as production of beta-galactosidase.  The success of this 
+experiment prompted Fields and Song to make the seminal 
+suggestion that yeast transcription could be used in this way to clone 
+cDNAs encoding proteins that interact with a given known protein 
+(8).  In their scheme, a known protein is expressed fused to the DNA-
+binding domain of Gal4, and a cDNA library is expressed so that 
+proteins encoded by the cDNA are fused to an activation domain 
+(activation-tagged).  Transcription of a reporter gene will be 
+activated in yeast containing activation-tagged cDNA-encoded 
+proteins that interact with the known protein.
+
+        Based on this suggestion, two-hybrid cloning systems have 
+been developed in several labs (9-13).  All have three basic 
+components: Yeast vectors for expression of a known protein fused to 
+a DNA-binding domain, yeast vectors that direct expression of cDNA-
+encoded proteins fused to a transcription activation domain, and 
+yeast reporter genes that contain binding sites for the DNA-binding 
+domain.  These components differ in detail from one system to the 
+other.  All systems utilize the DNA binding domain from either Gal4 
+or LexA.  The Gal4 domain is efficiently localized to the yeast nucleus 
+where it binds with high affinity to well-defined binding sites which 
+can be placed upstream of reporter genes (14-16).  LexA does not 
+have a nuclear localization signal, but enters the yeast nucleus and, 
+when expressed at a sufficient level, efficiently occupies LexA 
+binding sites (operators) placed upstream of a reporter gene (3, 17, 
+18).  No endogenous yeast proteins bind to the LexA operators.  
+Different systems also utilize different reporters.  Most systems use a 
+reporter that has a yeast promoter, either from the GAL1 gene or the 
+CYC1 gene, fused to lacZ (19, 20).  These lacZ fusions either reside on 
+multicopy yeast plasmids or are integrated into a yeast chromosome.  
+To make the lacZ fusions into appropriate reporters, the GAL1 or 
+CYC1 transcription regulatory regions have been removed and 
+replaced with binding sites that are recognized by the DNA-binding 
+domain being used.  A screen for activation of the lacZ reporters is 
+performed by plating yeast on indicator plates that contain X-Gal (5-
+bromo-4-chloro-3-indolyl-b-D-galactoside); on this medium yeast in 
+which the reporters are transcribed produce beta-galactosidase and turn 
+blue.  Some systems use a second reporter gene and a yeast strain 
+that requires expression of this reporter to grow on a particular 
+medium.  These "selectable marker" genes usually encode enzymes 
+required for the biosynthesis of an amino acid.  Such reporters have 
+the marked advantage of providing a selection for cDNAs that encode 
+interacting proteins, rather than a visual screen for blue yeast.  To 
+make appropriate reporters from the marker genes their upstream 
+transcription regulatory elements have been replaced by binding 
+sites for a DNA-binding domain.  The HIS3 and LEU2 genes have both 
+been used as reporters in conjunction with appropriate yeast strains 
+that require their expression to grow on media lacking either 
+histidine or leucine, respectively.
+
+        Finally, different systems use different means to express 
+activation-tagged cDNA proteins.  In all current schemes the cDNA-
+encoded proteins are expressed with an activation domain at the 
+amino terminus.  The activation domains used include the strong 
+activation domain from Gal4, the very strong activation domain from 
+the Herpes simplex virus protein VP16, or a weaker activation 
+domain derived from bacteria, called B42.  The activation-tagged 
+cDNA-encoded proteins are expressed either from a constitutive 
+promoter, or from a conditional promoter such as that of the GAL1 
+gene.  Use of a conditional promoter makes it possible to quickly 
+demonstrate that activation of the reporter gene is dependent on 
+expression of the activation-tagged cDNA proteins.
+
+        Many of these systems now provide the investigator with a 
+relatively good chance to recover proteins that interact with other 
+proteins. Because most are based on the same concepts, some of their 
+components are often interchangeable.  However, different systems 
+utilize the yeast selectable markers in different ways.  Moreover, 
+systems that employ the DNA-binding domain of Gal4 must use a 
+yeast strain that lacks wild type Gal4; these system cannot use 
+library vectors that direct synthesis of the activation-tagged proteins 
+from the GAL1 promoter whose transcription requires Gal4.       
+
+1.2 The interaction trap
+
+        The interaction trap is an implementation of the two-hybrid 
+system developed by Gyuris et. al (11).   It consists of three critical 
+components (see Figure 1).  First, it uses a vector for expression of a 
+protein of interest fused to LexA.   Because the goal of interaction 
+trap cloning is to find proteins that interact with the protein fused to 
+LexA, this hybrid is referred to as the "bait".  Second, the trap uses a 
+yeast strain with two reporter genes.  One reporter is a yeast LEU2 
+derivative that has its normal upstream regulatory sequences 
+replaced with LexA operators.  Transcription of the LexA-operator-
+LEU2 gene (LexAop-LEU2) can be measured by the ability of the 
+strain to grow in the absence of leucine, which requires the LEU2 
+gene product.  The LexAop-LEU2 gene is integrated into the yeast 
+chromosome.  The other reporter gene is lacZ, which provides a 
+secondary assay of activation by the bait and activation-tagged 
+proteins interacting with it, as well as some quantitative information 
+about the interaction.  Third, the interaction trap uses a library 
+plasmid that directs the conditional expression of cDNA-encoded 
+proteins fused at their amino termini to a moiety containing three 
+domains: a nuclear localization signal, a transcription activation 
+domain, and an epitope tag.  The activation-tagged cDNA-encoded 
+protein is expressed from the yeast GAL1 promoter, which is induced 
+by galactose and repressed by glucose. 
+
+        The interaction trap is illustrated in Figure 1.  The bait protein 
+is constitutively expressed.  It binds to LexA operators upstream of 
+the reporter genes LEU2 and lacZ but does not activate their 
+transcription.  The activation-tagged cDNA-encoded protein is 
+conditionally expressed from the GAL1 promoter.  In glucose 
+medium the GAL1 promoter is repressed, no cDNA-encoded protein 
+is made, and the yeast does not grow in the absence of leucine.  
+When the yeast are grown on galactose medium, activation-tagged 
+cDNA-encoded proteins are expressed, and those that interact with 
+the bait activate transcription of the LEU2 and lacZ reporters.  Thus, 
+cells containing activation-tagged cDNA proteins that interact with 
+the bait form colonies on galactose medium lacking leucine and form 
+blue colonies on galactose X-Gal plates.   
+  
+(Figure 1. The interaction trap)
+
+        An outline of an interactor hunt is presented in Figure 2.  The 
+protocols for using the interaction trap described below require 
+knowledge of a few basic yeast microbiological and genetic 
+techniques.  A more detailed description of such techniques, together 
+with recipes for appropriate media can be found elsewhere (21-23).  
+
+(Figure 2. Flow chart of an interactor hunt.)
+
+2. Making and testing baits
+
+2.1 LexA fusion expression plasmids
+
+        To make a plasmid that directs the synthesis of the LexA fusion 
+or "bait" protein, the coding region for the protein of interest is 
+inserted into pEG202 or a related plasmid (11) (see Appendix).  
+pEG202 is a multicopy yeast plasmid containing the yeast 2 mm 
+origin of replication and the selectable marker gene HIS3, as well as 
+the full-length LexA coding region flanked by the yeast ADH1 
+promoter and terminator.   Bait proteins expressed from this plasmid 
+contain amino acids 1 to 202 of LexA, which include the DNA-binding 
+and dimerization domains.  Downstream of the LexA coding region in 
+pEG202 are unique EcoRI, BamHI, SalI, NcoI, NotI, and XhoI cloning 
+sites.  The bait plasmid can be introduced and maintained in a his3 
+yeast strain (e.g. EGY48, see below) by selecting transformants on 
+media lacking histidine.  Transformants will constitutively express 
+the protein of interest with LexA at its amino terminus.  Although it 
+does not contain a yeast nuclear localization signal, LexA and most 
+LexA fusions will enter the nucleus (3, 17, 18, 24-29).  The 
+expression levels afforded by the ADH1 promoter are generally 
+sufficient to provide occupancy of LexA operators upstream of the 
+reporter genes.  For the rare bait that is excluded from the nucleus, a 
+pEG202 derivative can be used that directs expression of LexA 
+fusions that contain a nuclear localization signal (W. Breitwieser and 
+A. Ephrussi, personal communication).    
+
+2.2 Reporters and yeast strains
+
+2.2.1 LEU2 reporter strains
+
+        An interactor hunt employs a selection for cDNAs encoding 
+interactors.  The selection depends on a yeast strain, EGY48 (11), that 
+has an integrated LEU2 gene with its upstream regulatory region 
+replaced by LexA operators.  The strain has no other LEU2 gene and 
+does not grow in the absence of leucine unless the LexAop-LEU2 
+gene is transcribed.  The LEU2 reporter in EGY48 is very sensitive; it 
+is activated by even weak transcription activators fused to LexA, or 
+by activation-tagged proteins that interact weakly with LexA fusions.  
+The high sensitivity is due to the presence of three high affinity 
+LexA operators positioned near the LEU2 transcription start.  The 
+operators are from the bacterial colE1 gene and each can potentially 
+bind two LexA dimers (30).
+
+        While the sensitivity of EGY48 is an advantage in that it 
+facilitates isolation of activation-tagged cDNA proteins that interact 
+weakly with the bait, this strain may be too sensitive for use with 
+baits that are themselves weak transcription activators.  Many 
+proteins, including some that are not transcription factors, will 
+activate transcription of LEU2 in EGY48.  For a bait to be used in an 
+interactor hunt it must not activate LEU2 transcription.  For baits 
+that fail to meet this criterion, two approaches can be taken.  First, 
+the sensitivity of the reporter strain can be reduced.  One way to do 
+this is by using a strain containing fewer operators upstream of LEU2 
+(e.g., one operator instead of three; E. Golemis, D. Krainc, R.L.F., 
+unpublished data).  If a bait still activates transcription of LEU2 in a 
+strain with only one operator, the sensitivity can be reduced further 
+by using a diploid yeast strain, in which, for unknown reasons, LexA 
+fusions activate less transcription of the reporter genes (E. Golemis, 
+A. Mendelsohn, D. Krainc, R.L.F., unpublished data).  A second, more 
+drastic, approach is to construct deletion derivatives of it that do not 
+activate.  A good way to start, if prior knowledge of the precise 
+location of transcription activation domains is unavailable, is to 
+construct derivatives that lack highly acidic regions which are often 
+responsible for transcription activation in yeast (2, 4, 31).  The 
+obvious disadvantage of this approach is that regions important for 
+interaction with other proteins may be removed. 
+
+         In addition to the mutation in the endogenous LEU2 gene, 
+EGY48 and related strains carry mutations in three other marker 
+genes (his3, trp1, ura3) that are needed to allow selection of the 
+plasmids used in the interaction trap.  The his3 mutation is 
+complemented by the HIS3 gene on the bait expression vector.   The 
+trp1 and ura3 mutations are respectively complemented by the TRP1 
+gene on the library plasmid, and the URA3 gene on the lacZ reporter 
+plasmid (see below).  The plasmids for the bait, library, and lacZ 
+reporter each contain the yeast 2 mm origin of replication so that 
+under continued selection they should be maintained at 20 to 100 
+copies per cell (32).
+
+
+2.2.2 lacZ reporters
+
+        In addition to the LexAop-LEU2 reporter, an interactor hunt 
+employs a LexAop-lacZ reporter.  The lacZ reporters contain the 
+GAL1 TATA, transcription start, and a small part of the GAL1 coding 
+sequence fused to lacZ (19, 33).  The GAL1 upstream activating 
+sequences (UASg) have been replaced with an XhoI site into which 
+various numbers of LexA operators have been inserted (see 
+Appendix).  In the absence of a LexA fusion, or interacting 
+activation-tagged protein, yeast bearing these reporters make no 
+detectable beta-galactosidase and appear white on X-Gal plates.  Use of 
+the lacZ reporters provides two advantages in an interactor hunt.  
+First, false positives that may arise by activation of the LEU2 gene 
+due to a yeast mutation, or to binding of the activation-tagged cDNA 
+protein to the LEU2 promoter, can be identified because they will fail 
+to activate the lacZ reporter.  Second, the lacZ reporters provide a 
+relative measure of the amount of transcription caused by the 
+interaction of an activation-tagged cDNA protein with a bait.  The 
+phenotype measured with the LEU2 reporter, growth in the absence 
+of leucine, while very sensitive, is difficult to quantitate.  In contrast, 
+the beta-galactosidase activity in a yeast is directly proportional to the 
+amount of lacZ transcription, and is easily measured (33).  Careful 
+use of the lacZ reporters may even allow comparison of interaction 
+affinities between different baits and activation-tagged proteins (11).
+
+        The threshold affinity of protein-protein interactions to be 
+detected in an interactor hunt can be adjusted by choosing between 
+different lacZ reporters.  The sensitivity of the lacZ reporter 
+phenotype depends on the number of LexA operators positioned 
+upstream of lacZ.  Activation-tagged proteins that interact weakly 
+with a bait can be identified by using a more sensitive lacZ reporter 
+containing more operators.  However, the search can be limited to 
+find only cDNA-encoded proteins that interact tightly with the bait 
+by using a less sensitive lacZ reporter.  All lacZ reporters commonly 
+used are less sensitive than LexAop-LEU2 reporters.  Because of this, 
+some LexA activators will activate LEU2 and allow EGY48 to grow in 
+the absence of leucine, but will not activate lacZ and cause the strain 
+to turn blue on X-Gal plates.  The lacZ reporters reside on 2 mm 
+plasmids containing the URA3 gene (see appendix).
+
+2.3 Testing the bait protein
+
+        Before conducting an interactor hunt, the bait should be tested 
+to ensure that the fusion protein enters the nucleus, binds LexA 
+operators, and does not activate transcription of the reporter genes.  
+This is done in two steps.  First, a selection strain is made by 
+introducing the bait plasmid into EGY48 that contains a LexAop-lacZ 
+reporter.  The resulting selection strain is used to show that the bait 
+protein does not activate transcription of LEU2 and lacZ (Protocol 1).  
+Eventually, the library will be introduced into this strain.  Second, 
+the bait plasmid is introduced into a related strain that contains a 
+different lacZ reporter to verify that the bait protein enters the yeast 
+nucleus and binds LexA operators.  This is done with a repression 
+assay (Protocol 2).
+
+2.3.1 Testing whether the bait protein activates transcription of the 
+reporters
+
+        Protocol 1 describes how to verify that the bait does not 
+activate transcription of the LEU2 reporter.  In addition to the bait 
+expression plasmid, this protocol uses three related HIS3 plasmids as 
+controls.  The first is a plasmid that makes no LexA protein, or one 
+that makes LexA fused to a protein that does not activate 
+transcription.  EGY48 derivatives that contain such plasmids fail to 
+grow on media lacking leucine.  The second is a plasmid that makes 
+LexA fused to a transcription activation domain, like the activation 
+domain of Gal4.  Such a plasmid will allow EGY48 to grow in the 
+absence of leucine.  The third is the parent plasmid, pEG202.  The 
+LexA protein encoded by pEG202 includes several amino acids 
+encoded by the polylinker which make the protein a weak 
+transcription activator.  EGY48 containing pEG202 grows slowly on 
+medium lacking leucine and eventually forms colonies.  A good 
+criterion for determining whether a bait plasmid can be used for an 
+interactor hunt is to show that it causes EGY48 to grow more slowly 
+on medium lacking leucine than pEG202.
+
+Note on yeast transformation.
+While only a handful of yeast transformants are needed in Protocol 1 
+and Protocol 2,  the transformation efficiency (transformants per mg 
+of plasmid) must be very high for Protocol 3, in which the selection 
+strain is transformed with the library.  To become familiar with high 
+efficiency yeast transformation is advisable to use a high efficiency 
+method for the transformations in Protocols 1 and 2.  There are 
+several effective high efficiency yeast transformation protocols to 
+choose from including electroporation (34, 35) and those that employ 
+lithium salts (36).  The method described in Protocol 3 results in 
+about 10e5 transformants per mg and may be scaled down to use in 
+Protocol 1 and 2.  Two other considerations deserve mention.  First, 
+once a plasmid has been introduced into a strain it must be 
+maintained by continued selection for its presence.  Thus, a strain 
+that already contains the URA3 lacZ reporter plasmid should be 
+transformed with a second plasmid by first growing on media lacking 
+uracil (Glu ura-; see appendix for media designations).  Although 
+strains that contain different plasmids can be constructed by 
+introducing more than one plasmid at a time, the transformation 
+efficiency will be lower than when strains are constructed by serial 
+transformation of one plasmid at a time.  Second, each time a strain 
+is transformed, a control transformation should be performed using 
+no plasmid DNA. 
+       
+
+______________________________________________________
+Protocol 1.  Testing baits for transcription activation
+
+1.  To construct the selection strain, transform EGY48 with a URA3 
+lacZ reporter plasmid and select transformants on Glu ura- plates 
+(see appendix for plate designations; see above note on 
+transformation).  Combine three colonies from these plates, grow in 
+Glu ura- liquid, and transform them with the HIS3 bait plasmid (or 
+control plasmids).  Select transformants on Glu ura-his- plates.
+
+2. Pick four individual colonies from each transformation and use 
+each colony to inoculate 5 ml Glu ura-his- liquid cultures.  At the 
+same time, streak the same four transformants to another Glu ura-
+his- plate for storage and later recovery.  All four should behave 
+identically in the tests below, in which case any one will serve as the 
+selection strain into which the library will be introduced.  Incubate 
+these plates at 30oC until colonies form (about two days) and then 
+store at 4oC.
+
+3.  Grow the liquid cultures at 30oC shaking to OD600=0.5 
+(corresponding to about 10e7 cells/ml).  This is mid-log phase.  If the 
+overnight cultures grow to a density greater than OD600=0.5, dilute 
+to less than OD600=0.2 and then grow to OD600=0.5 so that the cells 
+are in mid-log phase when harvested.
+
+4.  Make 10e2- and 10e3 -fold dilutions of each culture in sterile 
+water.  Spot 10 ml of the culture and 10 ml of the dilutions onto two 
+plates:
+**  Gal/Raf ura-his-
+**  Gal/Raf ura-his-leu-
+Spot yeast containing the bait plasmid being tested and yeast 
+containing the control plasmids onto the same plates for side by side 
+comparison.  Incubate at 30oC.  Note: galactose is used in the media 
+because the actual selection will eventually be done on galactose 
+plates to induce expression of the activation-tagged cDNA protein.  
+Raffinose is added to aid yeast growth; it provides a better carbon 
+source than galactose alone but does not block the ability of galactose 
+to induce the GAL1 promoter (R.L.F., unpublished data).
+
+5.  Monitor the growth of the cells in the spots for several days.  The 
+yeast in all of the spots should grow at a similar rate on the Gal/Raf 
+ura-his- plates.  If growth on the Gal/Raf ura-his- plates is 
+reproducibly diminished for a given bait, relative to the controls, it 
+may indicate that its expression is toxic to yeast.  Yeast with no LexA 
+or with a non-activating LexA fusion should not grow after several 
+days on Gal/Raf ura-his-leu- plates.  Yeast containing LexA fused to a 
+protein that activates transcription may grow as fast on Gal/Raf ura-
+his-leu- plates as on Gal/Raf ura-his- plates, depending on the 
+strength of the activator.
+
+        The above steps establish whether a bait can be used in an 
+interactor hunt.   For a bait to be used, the selection strain containing 
+it must not grow on Gal/Raf ura-his-leu- plates for two to three days.  
+If yeast that contain a bait begin form visible colonies before three 
+days, it may be necessary to construct a less sensitive selection strain 
+(see section 2.2.1).  However, if the yeast grow very slowly, e.g. form 
+colonies only after three days, it is still possible to do an interactor 
+hunt by selecting yeast with library plasmids that cause colonies to 
+form in one or two days.
+
+6.  Look for lacZ expression in the selection strain.  Patch individual 
+transformants from step 1 to Glu ura-his- X-Gal plates and incubate 
+at 30oC.  Yeast with the control LexA-activator fusion should turn 
+blue overnight while those lacking LexA or containing a 
+transcriptionally inert bait will remain white after many days.  If a 
+bait activates the LEU2 gene but not the lacZ gene (which is 
+frequently observed because the LexAop-LEU2 reporter is more 
+sensitive than LexAop-lacZ reporter), it may be possible to perform 
+an interactor hunt by screening for yeast containing activation-
+tagged cDNA proteins that interact with the bait and activate the lacZ 
+reporter; these yeast will be blue on X-Gal plates.  However, this 
+method loses the advantage of a selection. 
+______________________________________________________   
+  
+
+2.3.2 Demonstrating that the bait enters the yeast nucleus and binds 
+operators
+
+        Baits that do not activate the LEU2 reporter in the assay in 
+Protocol 1 should be tested to be sure they enter the nucleus and 
+bind to LexA operators.  This can be done with a repression or 
+"blocking" assay.  The repression assay is based on the observation 
+that LexA and non-activating LexA fusions can repress transcription 
+of a yeast reporter gene that has operators positioned between the 
+TATA and upstream activating sequence (UAS) (18).  The mechanism 
+of this repression is not understood but presumably is not equivalent 
+to repression by repressor proteins native to yeast (37).  While some 
+LexA fusions repress more than others (24), repression does depend 
+on the presence of operators in the reporter, and thus any repression 
+observed may be attributed to operator occupancy by the bait.
+
+        The reporter plasmid used for the repression assay (pJK101; 
+see Appendix) is similar to the plasmids used to test activation; it 
+contains the 2 mm origin, URA3, and a GAL1-lacZ fusion.  Unlike the 
+plasmids used for testing activation, the GAL1-lacZ fusion in pJK101 
+contains most of the GAL1 upstream activating sequence, UASg.  In 
+addition it contains one LexA operator positioned between UASg and 
+the TATA box.  lacZ expression is induced by galactose and is 
+detectable in the presence of glucose, because negative regulatory 
+elements that normally keep GAL1 completely repressed in glucose 
+are not present (38).  Transcriptionally inert LexA fusions that bind 
+to the operator in pJK101 repress lacZ expression from 2 to 20-fold 
+in the presence of galactose.  Repression appears more profound 
+when the yeast are grown in glucose medium because there is less 
+lacZ expression to begin with.  The repression assay can often be 
+done on X-Gal plates by looking for differences in blueness between 
+yeast with different baits.  However, when looking for low levels of 
+lacZ expression in yeast grown in glucose, or when looking for slight 
+differences in lacZ expression (2 to 4-fold), more sensitive beta-
+galactosidase assays may be necessary (39, 40).    
+
+______________________________________________________
+Protocol 2.  The repression assay
+
+1. Transform EGY48 with pJK101 and select transformants on Glu 
+ura- plates.  Combine three colonies from these plates and transform 
+them with the HIS3 bait plasmid (or HIS3 control plasmids).  Select 
+transformants on Glu ura-his- plates.
+
+2. Pick four individual colonies from each transformation and streak 
+a patch of them onto Glu ura-his- and Gal/Raf ura-his- plates 
+containing X-Gal.  Incubate at 30oC.
+
+3. Examine the X-Gal plates after 1, 2, and 3 days.  Yeast lacking 
+LexA will begin to turn blue on the Gal/Raf plates after one day and 
+will appear light blue on the glucose plates after two or more days.  
+Yeast containing a bait that enters the nucleus and binds operators 
+turn blue more slowly than the yeast lacking LexA.
+
+4.  Baits that repress transcription of lacZ in pJK101 by 2-fold or less 
+may not cause a visible reduction in blue on X-Gal plates.  If no 
+repression is observed on the X-Gal plates, perform beta-galactosidase 
+assays with transformants from step 1.  Grow the transformants in 5 
+ml Glu ura-his- and Gal/Raf ura-his- liquid media, or on Glu ura-his- 
+and Gal/Raf ura-his- plates for 2 days, before doing beta-galactosidase 
+assays (39, 40).
+______________________________________________________
+
+2.3.3 Verifying that a full-length fusion protein is made.
+
+        Finally,  it is usually good practice to demonstrate that the full-
+length bait protein is made.  This can be done by running extracts 
+from yeast cells that harbour the bait plasmid on an SDS 
+polyacrylamide gel, immunoblotting with either an antibody to LexA 
+or one specific to the protein fused to LexA (27, 29), and detecting a 
+fusion protein of the expected apparent molecular weight.  Yeast cell 
+extracts can be prepared by growing yeast in liquid culture (lacking 
+histidine to maintain selection for the bait plasmid) to OD600 of 0.5, 
+spinning 1 ml of the culture to pellet the cells, and resuspending the 
+cells in 50 ml of 2X Laemmli sample buffer (41).  The cells can then 
+be broken by freezing on dry ice followed by boiling for 5 minutes 
+prior to loading on an SDS polyacrylamide gel (about 15 ml/lane).  
+The proteins can then be transferred to a filter and blotted with 
+standard immunoblotting (western) methods (22, 42).
+
+
+3. Libraries
+
+        In an interactor hunt the expressed cDNA-encoded proteins are 
+fused to an activation domain, as well as a nuclear localization signal 
+to increase their nuclear concentration, and an epitope tag so they 
+may be immunologically identified.  The prototypical library plasmid 
+for expression of these activation-tagged cDNA proteins is pJG4-5 
+(11) (see Appendix). This is a 2 mm plasmid that contains the TRP1 
+marker and the GAL1 promoter.  Downstream of the GAL1 promoter 
+there is an ATG followed by 105 codons.  These encode 9 amino acids 
+from the SV40 Large T nuclear localization signal, 87 amino acids 
+that make up the activation domain called B42, followed by 9 amino 
+acids comprising the hemagluttinin (HA) epitope tag.  The B42 
+domain is derived from E.coli and acts as a moderately strong 
+transcription activation domain in yeast (4).  Use of this activation 
+domain avoids the possible toxic effects of overexpressing a strong 
+activation domain (43, 44).  Downstream of the sequences that 
+encode the fusion moiety there are unique EcoRI and XhoI sites for 
+insertion of cDNAs.  Proteins encoded by cDNAs that are in-frame 
+carry the fusion moiety at their amino terminus.  The activation-
+tagged cDNA-encoded proteins will be expressed in yeast grown on 
+galactose but not in yeast grown in glucose.  Numerous libraries have 
+been made using pJG4-5.  These include cDNA libraries made from 
+RNA derived from HELA cells (11), Drosophila, ovaries, discs, and 0 to 
+12 h embryos (Finley and Brent, in preparation), adult Drosophila 
+heads (J.Huang and M. Rosbach, personal communication), Drosophila 
+16 to 26 h embryos (V. Neel and M. Young, personal communication), 
+serum-starved WI38 cells (C. Sardet, J. Gyuris, R.B., unpublished 
+data), human brain (D. Krainc and R.B., unpublished data), 
+Arabidopsis (H.Zhang and H.Goodman, personal communication), and 
+a library made from yeast genomic DNA (P. Watt personal 
+communication).  Construction of libraries is a complex topic beyond 
+the scope of this article, but is described elsewhere (11, 45, 46) 
+(Finley and Brent, in preparation).
+
+
+4. An interactor hunt
+4.1 Introducing the library into the selection strain.
+4.1.1 Selecting interactors from library transformants.
+
+        To conduct an interactor hunt the library is introduced into the 
+selection strain in a large transformation so that many transformed 
+cells are obtained,  each of which contains an individual library 
+plasmid.  Those cells that contain library plasmids that encode 
+proteins that interact with the bait protein are then selected.  To 
+date, the most frequently successful method has been to do this in 
+two steps.  In the first step, yeast that already contain the bait and 
+lacZ plasmids are transformed with the library and library 
+transformants are isolated and frozen.  In the second step, the 
+selection for interactors is applied to the library transformants.  In 
+this approach yeast transformed with the TRP1 library plasmid are 
+selected by plating the transformation mix onto medium lacking 
+tryptophan (that also lacks uracil and histidine to maintain selection 
+for the bait and lacZ plasmids, i.e., Glu ura-his-trp- plates).   The 
+transformants are then scraped from the plates and frozen for 
+storage.  Aliquots are thawed and plated onto a medium containing 
+galactose and lacking leucine.  This induces expression of the 
+activation-tagged cDNA proteins, and selects for transcription of the 
+LEU2 reporter.  This two step approach results in a uniform increase 
+in the number of cells carrying each library plasmid; each cell 
+transformed with the library is allowed to multiply to form a colony, 
+and the colonies are harvested at approximately the same size.  One 
+advantage to this approach is that the number of transformed yeast 
+is amplified before the synthesis of cDNA-encoded proteins is 
+induced.  This ensures that yeast containing toxic or mildly toxic 
+cDNA-encoded proteins will not be depleted from the population.  
+This method is described in Protocol 3 and Protocol 4.
+
+4.1.2 Performing one step selection for interactors
+
+        A simpler, but so far inferior, alternative approach is to 
+perform a one step selection for yeast containing activation-tagged 
+cDNA proteins that interact with the bait.  This method involves 
+plating the library transformation mix directly on plates lacking 
+leucine (i.e. Gal/Raf ura-his-trp-leu-  plates) to select for expression 
+of the LEU2 reporter, without first selecting cells transformed with 
+the library plasmid.  Although it is easier that the two step method, 
+it suffers from some disadvantages.  First, only a fraction of the yeast 
+containing activation-tagged proteins that interact with the bait 
+survive on the leu- selection plates, possibly because some cells die 
+in the time it takes to induce synthesis of the activation-tagged 
+protein, the LEU2 product, and leucine.  This lower plating efficiency 
+on the leu- selection plates is particularly evident when the yeast 
+contain an activation-tagged cDNA-encoded protein that interacts 
+only weakly with the bait.  Second, the one step approach may 
+reduce the probability of isolating cDNAs that encode proteins that 
+are somewhat toxic to yeast because these proteins will further 
+reduce the plating efficiency on leu- plates.  Although both of these 
+disadvantages might be overcome by plating very large numbers of 
+library transformants, obtaining such numbers would require 
+exceptional yeast transformation efficiencies or huge amounts of 
+library DNA.  Furthermore, if expression of an activation-tagged 
+cDNA protein causes yeast to plate at reduced efficiency, a much 
+larger number of yeast will need to be characterized to find them.  
+For these reasons we prefer the two step method.  However, we also 
+present the best current version of the one step method, which may 
+eventually be improved to overcome the relative disadvantages 
+described above.  To do the one step method follow Protocol 3 steps 
+1 to 10 and then skip to Protocol 4.   
+
+______________________________________________________
+Protocol 3. Transforming the selection strain with library DNA.
+
+The following protocol is a variation of the high efficiency lithium 
+acetate method developed by Geitz et al. (36).  Before transforming 
+the strain with library DNA (which is usually fairly valuable), 
+perform pilot transformations of the strain with the TRP1 library 
+vector.  A transformation efficiency of at least 10e5 
+transformants/mg DNA should be the goal.  Other high efficiency 
+yeast transformation protocols, e.g. electroporation (34, 35), may be 
+substituted. 
+
+1. Grow yeast containing the bait and lacZ reporter plasmids in 400 
+ml of Glu ura-his- medium at 30oC, with shaking (~150 rpm) to an 
+OD600 of 1.0, corresponding to about 3 X 10e7 cells/ml.  The 
+doubling time in this medium is rather slow (2 to 4 hours).  For this 
+reason it is sometimes convenient to start a smaller, 50 ml culture, 
+grow it to OD600=2.0 or greater, and then dilute it into 400 ml.  For 
+high transformation efficiencies it is important to start the 400 ml 
+culture at OD600=0.2 or less and allow it to grow to OD600=1.0 so 
+that the cells are in mid-log phase when harvested.
+
+2. Spin culture at 2000 X g for 5 min and pour off supernate.  Wash 
+the cells in 20 ml sterile water.  These spins and all following 
+manipulations are done at 20 - 25oC.
+
+3. Resuspend yeast in 5 ml of filter sterilized LiOAc/TE (10 mM Tris 
+HCl pH7.5, 1 mM EDTA, 100 mM LiOAc; make from a filter sterile 
+stock of 1 M LiOAc, pH 7.5).  Pellet again and pour off supernate.
+
+4. Resuspend yeast in 2.0 ml LiOAc/TE.   50 ml of this suspension 
+provides enough competent cells to be transformed with 1 mg of 
+DNA.  Note: use of more than 1 mg DNA per 50 ml of cells can result 
+in introduction of multiple library plasmids in each yeast cell.  This 
+should be avoided because of the large amount of additional work 
+that will be required to determine which of the library plasmids in a 
+cell expresses the cDNA-encoded protein that interacts with the bait 
+(see below).
+
+5. Aliquot 100 ml of competent yeast into sterile eppendorf tubes.  
+To each tube add 2 mg of library DNA and 60 mg of carrier (single 
+stranded salmon sperm; (47)) in a total volume of 20 ml.  The 
+number of tubes to be used depends on the desired number of 
+transformants and the expected transformation efficiency.  If pilot 
+transformations resulted in efficiencies of 10e5 transformants per 
+mg, each tube should yield 200,000 transformants, all of which can 
+be plated on onto a single 24cm X 24cm plate (see below).
+
+6.  Add DMSO to 10% vol/vol.  This improves transformation 
+efficiency by 3 to 5-fold (48) (R.L.F. and B. Cohen, unpublished data).
+
+7. Add 600 ml of filter sterilized 40% PEG 4000 in LiOAc/TE (made 
+from stocks of 1 M LiOAc pH 7.5, filter sterile 50% PEG 4000 in water, 
+1 M Tris HCl pH 7.5, and 0.5 M EDTA).  Gently invert tube several 
+times to mix.
+
+8. Incubate at 30oC for 30 min.  Agitation is not necessary. 
+
+9. Heat shock at 42oC for 15 min and return to room temperature.
+
+10. Determine the total number of transformants by removing 10 ml 
+from each tube and making three dilutions (10-, 10e2-, and 10e3-
+fold) in sterile water.  Plate 100 ml of each dilution onto 100 mm Glu 
+ura-his-trp- plates and incubate at 30oC.  You will be able to 
+calculate the total number of transformants from the number of 
+colonies on these dilution plates.
+
+At this point the transformation mixes can be plated to first select 
+for all library transformants (as discussed in 4.1.1). This method is 
+described below starting with step 11.  Alternatively, the 
+transformation mix can be used in a one step selection for interactors 
+(as discussed in 4.1.2);  to perform this, proceed to Protocol 4.
+
+Selecting library transformants.
+
+11. Plate each transformation mix (less then 1 ml) onto a single 24cm 
+X 24cm Glu ura-his-trp- plate.  There is no need to spin the cells or 
+remove the PEG.  The media in these plates should be at least 0.6 cm 
+thick, level, and free of bubbles.  To achieve an even distribution of 
+cells pour about 100 sterile glass beads (4 mm diameter, Fisher 
+Scientific; sterilized by autoclaving) on the plate with the cells.  
+Gently roll the beads around the plate to distribute the 
+transformation mix, then pour the beads off, or onto the next plate.  
+Alternatively, distribute the transformation mix with a sterile bent 
+glass rod.  Both techniques work best when the surface of the plates 
+are not too wet so that the media absorbs the transformation mix.  To 
+achieve this moisture content put newly solidified plates into a 
+laminar flow hood with the lids ajar for about two hours before 
+plating.
+
+12. Incubate the plates at 30oC.  Colonies should appear after about 
+24 hours.  Continue incubation until colonies are 1 to 2 mm in 
+diameter, which should take a total of approximately 2 days.
+
+Harvest the transformants.
+
+13. Place the plates at 4oC for 2  to 4 hours to harden the agar.
+
+14.  Using the long edge of a sterile glass microscope slide (and 
+sterile technique) scrape the yeast from the plate.  Try not to scrape 
+any agar as it will interfere with pipeting.  Collect the yeast from the 
+glass slide by wiping it on the lip of a sterile 50 ml Falcon tube.
+
+16. Wash the cells two times with 2 or 3 volumes of sterile TE.  It is 
+best to pellet the cells each time in a sterile round bottom 
+polypropylene tube at 2000 X g for 4 min so they may be easily 
+resuspended.  The pellet volume for 500,000 transformants will be 
+about 8 ml.
+
+17.  Resuspend the cells thoroughly by swirling in 1 pellet volume of 
+glycerol solution (65% glycerol (vol/vol), 0.1 M MgSO4, 25 mM Tris 
+pH 7.4).  Mix well by vortexing on low speed.  Freeze 1 ml aliquots at 
+-70oC.
+
+18. Determine the plating efficiency by thawing an aliquot of library 
+transformants and making serial dilutions in sterile water.  Plate 100 
+ml of each dilution onto 100 mm Gal/Raf ura-his-trp- plates.  Count 
+the colonies that grow after 2 to 3 days at 30oC and represent the 
+plating efficiency in colony forming units (CFU) per unit volume of 
+frozen cells.  The plating efficiency will be on the order of 10e8 
+CFU/100 ml.
+______________________________________________________
+
+4.2 Isolating yeast with galactose dependent Leu+ and lacZ+ 
+phenotypes
+
+        Library transformants containing cDNAs that encode proteins 
+that interact with the bait will exhibit galactose-dependent growth 
+on media lacking leucine (Leu+), and galactose-dependent beta-
+galactosidase activity (lacZ+).  Isolation of these galactose-dependent 
+Leu+ and lacZ+ yeast is accomplished in two steps.  First, library 
+transformants are plated on galactose medium lacking leucine (leu-) 
+to select yeast that are Leu+.   Second, the Leu+ yeast are isolated, 
+placed on a glucose master plate, and then replica plated to four new 
+plates to test for lacZ expression and galactose dependence.  These 
+four plates include two leu- plates and two X-Gal plates: one leu- 
+plate and one X-Gal plate contain galactose to induce cDNA 
+expression (plus raffinose to enhance growth), while the other leu- 
+plate and the other X-Gal plate contain glucose to repress cDNA 
+expression.  Yeast that grow on leu- galactose medium but not on 
+leu- glucose medium, and that turn blue on galactose X-Gal plates but 
+remain white on glucose X-Gal plates (i.e. those that are galactose-
+dependent Leu+ and lacZ+) are picked for further characterization.
+
+        In this procedure the yeast are grown on the glucose master 
+plates to shut off cDNA expression before replica plating so that the 
+galactose dependence of the Leu+ and lacZ+ phenotypes can be 
+assessed.  This avoids a problem that can arise when the Leu+ yeast 
+are replica plated from galactose to glucose plates:  There may be 
+sufficient message and protein product from the activation-tagged 
+cDNA protein to allow the yeast to grow on leu- glucose for several 
+generations and turn blue on glucose X-Gal without further cDNA 
+expression.  This would mask the galactose-dependence of the Leu+ 
+and lacZ+ phenotypes.
+
+______________________________________________________
+Protocol 4.   Selecting interactors.
+
+Note: If TRP+ library transformants were selected and stored frozen 
+follow "a" in the steps below.  If library transformants were not 
+selected and stored, follow "b" in the steps below.
+
+1.  Induce synthesis of activation-tagged cDNA-encoded proteins. 
+        a) If library transformants were selected and frozen, thaw an 
+aliquot of the cells and dilute 10-fold into Gal ura-his-trp- liquid 
+media.
+        b) If performing the one step method to select for interactors, 
+dilute the transformation mix from Protocol 3 step 9, 10-fold into Gal 
+ura-his-trp- media.  
+
+Incubate at 30oC with shaking for 4 hours to induce the GAL1 
+promoter.  There is almost no increase in cell number during this 
+time, and any increase can be neglected when calculating the number 
+of colony forming units or transformants to plate onto leu- selection 
+plates.
+
+3. Pellet cells at 2000 X g for 4 min at 20 - 25oC and resuspend in 
+sterile water.
+
+4. Plate onto Gal/Raf ura-his-trp-leu- plates.
+        a) If library transformants were pre-selected and frozen, plate 
+10e6 CFU (determined from the plating efficiency test in Protocol 3 
+step 17) onto each 100 mm plate.
+        b)If performing the one step selection, plate an amount of the 
+transformation mix that should contain 10e6 transformants, based on 
+estimates from transformation efficiencies obtained in pilot 
+transformation experiments, onto each 100 mm plate.  Determine the 
+actual number of library transformants plated by counting the 
+colonies that grow when dilutions of the transformation mix are 
+plated onto Gal/Raf ura-his-trp- as described in Protocol 3 step 10. 
+
+5. Incubate selection plates at 30oC.  Colonies should appear in 2 to 5 
+days.  To keep the plates from drying out after two days, it may be 
+helpful to put them in plastic bags or containers, or put parafilm 
+around each plate.  Generally, there will be more galactose-
+dependent Leu+ and lacZ+ yeast among the colonies that appear 
+sooner, and fewer among the colonies that appear later.
+
+6. Pick colonies with sterile toothpicks or applicator sticks and patch, 
+or streak for single colonies, onto another Gal/Raf ura-his-trp-leu- 
+plate.  Ideally the Leu+ yeast should be streaked for single colonies 
+to isolate them from contaminating Leu- yeast that were present 
+when the Leu+ colony was forming.  However, when there are large 
+numbers of Leu+ colonies, it may be inconvenient to streak purify 
+every one; in this case growth of patches on a second selection plate 
+will at least enrich for the Leu+ cells. 
+
+7. To show that the Leu+ phenotype is galactose-dependent, patch 
+the Leu+ yeast onto Glu ura-his-trp- master plates to turn off the 
+GAL1 promoter and stop expression of the activation-tagged cDNA 
+protein.  Grow at 30oC for about 24 hours.
+
+8.  Replica the master plates to the following five plates: 1. Glu ura-
+his-trp- X-Gal; 2. Gal/Raf ura-his-trp-  X-Gal; 3. Glu ura-his-trp-leu-; 
+4. Gal/Raf ura-his-trp-leu-.   Incubate at 30oC and examine results 
+after 1, 2, and 3 days.
+
+Pick yeast that are Leu+ and lacZ+ only on galactose (for example, see 
+Figure 3).  Further characterize these by isolating the library plasmid 
+and determining the interaction specificity. 
+______________________________________________________ 
+
+        Three alternative procedures to the method described in 
+Protocol 4 have been used successfully.  First, if a large number of 
+Leu+ yeast colonies appear on the initial leu- selection plates, those 
+that are lacZ+ can be quickly identified using a filter beta-galactosidase 
+assay.  The filter assay, described in detail elsewhere (49), involves 
+lifting a replica of the yeast from the colonies on the leu- selection 
+plate with a nitrocellulose filter, lysing the yeast on the filter, and 
+exposing the filter to buffer and X-Gal.  The filter is then examined 
+for blue spots corresponding to lacZ+ yeast.  Leu+ yeast that 
+correspond to those that are also lacZ+ are then picked from the 
+original leu- selection plate, put onto glucose master plates, and 
+replica plated as described in Protocol 4, steps 7 and 8.  The second 
+alternative is to include X-Gal in the initial leu- selection plates and 
+pick those that grow and turn blue.  Again, the Leu+ lacZ+ yeast are 
+picked, patched onto glucose master plates, and replica plated to the 
+two sets of indicator plates.  The disadvantage to this approach is 
+that yeast grow less well on X-Gal plates because these plates contain 
+a buffer to give them neutral pH; the reduced growth rate at this 
+higher pH reduces the plating efficiency during the selection.  Finally, 
+the yeast colonies on the original leu- selection plate can be replica 
+plated directly to X-Gal plates to determine which are lacZ+ (A. 
+Mendelsohn, personal communication).  Only those that are Leu+ and 
+lacZ+ are isolated and tested for galactose dependence.
+
+        Most activation-tagged proteins that interact strongly with the 
+bait will render the yeast containing them galactose-dependent Leu+ 
+and lacZ+.  However, yeast containing activation-tagged cDNA 
+proteins that interact only weakly with the bait may be galactose-
+dependent Leu+, yet may appear light blue or even white on X-Gal 
+plates.  This is due to the different sensitivities of the Leu and lacZ 
+phenotypes (see 2.2).  Results from several interactor hunts have 
+shown that there are usually more biologically relevant interactors in 
+the class of yeast that are galactose-dependent Leu+ and lacZ+ than in 
+yeast that are lacZ- (R.L.F., unpublished data).  However, the class of 
+yeast that are galactose-dependent Leu+ but lacZ- may also contain 
+biologically relevant interactors (Finley and Brent, in preparation).  
+For this reason the decision whether or not to further characterize 
+the latter class must be somewhat arbitrary. 
+
+5. Verifying specificity
+
+        A finding of galactose-dependent Leu+ and lacZ+ in a yeast 
+isolate can be considered a demonstration that the reporter genes are 
+activated due to expression of the activation-tagged cDNA-encoded 
+protein.  However, it is important to determine that activation of the 
+reporters is due to specific interaction of this protein with the bait, 
+rather than to its nonspecific interaction with LexA, with the 
+promoters, or with some part of the transcription machinery.  To 
+verify that the cDNA-encoded protein interacts specifically with the 
+bait, library plasmids are rescued from the galactose-dependent Leu+ 
+lacZ+ yeast and re-introduced into the original selection strain and 
+into other strains containing different baits.  Specific interactors 
+confer the galactose-dependent Leu+ and lacZ+ phenotype to yeast 
+containing the original bait, but not to yeast containing unrelated 
+baits.  To test this, master plates are made from the new 
+transformants and replica plated onto four indicator plates as 
+described in Protocol 4 steps 7 and 8 (see Figure 3).  Alternatively, 
+the specificity can be determined using a mating assay (Protocol 6). 
+
+        Library plasmids are rescued from yeast by performing a quick 
+yeast plasmid miniprep and using the miniprep DNA to transform 
+E.coli  (most yeast miniprep protocols do not provide enough clean 
+plasmid DNA for restriction analysis).  If a large number of galactose-
+dependent Leu+ lacZ+ yeast are obtained, it is useful to reduce the 
+number of library plasmids that need to be rescued by determining 
+which ones contain identical cDNAs.  This can be done by comparing 
+restriction digests of PCR products containing the cDNA insert.  In 
+this procedure, yeast miniprep DNA is used as template in PCR 
+reactions with primers derived from sequences in the library 
+plasmid flanking the cDNA insertion site.  PCR products are then 
+digested with one or two restriction enzymes that cut frequently.  
+This procedure is described in Protocol 5.
+
+        Since the yeast contain three different plasmids, rescuing the 
+library plasmid depends on distinguishing it from the bait and lacZ 
+reporter plasmids.  There are at least three ways to do this.  In the 
+most efficient one, yeast minipreps are used to transform a strain of 
+E.coli that contains a mutation in the trpC gene.  The inability of the 
+trpC- E.coli to grow in the absence of tryptophan is complemented by 
+the yeast TRP1 gene on the library plasmid (50). trpC  E.coli 
+transformed with the TRP1 library plasmid are selected on minimal 
+plates lacking tryptophan and containing ampicillin.  In another 
+method, yeast minipreps are used to transform E.coli, and E.coli 
+minipreps from several individual transformants are analyzed by 
+restriction digestion to determine which minipreps contain the 
+library plasmid.  Alternatively, the E.coli transformations are plated 
+onto LB amp plates containing X-Gal; transformants that contain the 
+lacZ reporter plasmid form light blue colonies and are not picked.   
+Restriction analysis on minipreps from the white colonies is used to 
+distinguish between the library and bait plasmids. 
+
+______________________________________________________
+Protocol 5. Isolating and classifying library plasmids.
+
+Several effective methods are available for isolating plasmids from 
+yeast in amounts sufficient for E.coli transformation (e.g. the "smash 
+and grab" method of Hoffman and Winston (51)).  The method 
+described below is quick, and yields plasmid DNA clean enough to 
+transform E.coli efficiently and to work as a template for PCR.
+
+1.  Scrape a large mass of yeast from a plate and resuspend in 1 ml 
+of TE in an eppendorf tube (the OD600 of this suspension should be 
+between 2 and 5).  Yeast from a fresh, 2 to 3 day old plate work best.  
+The yeast can also be obtained from a 1 ml overnight liquid culture.
+
+2. Spin briefly to pellet cells.  Resuspend yeast in 0.5 ml S buffer (10 
+mM KPO4 pH 7.2, 10 mM EDTA, 50 mM 2-mercaptoethanol, 50 
+mg/ml zymolase).
+
+3. Incubate at 37oC for 30 min.
+
+4. Add 0.1 ml lysing solution (0.25 M Tris Cl pH7.5, 25 mM EDTA, 
+2.5% SDS). Vortex to mix.
+
+5. Incubate at 65oC 30 min. 
+
+6. Add 166 ml 3 M KOAc.  Chill on ice for 10 min.
+
+7. Spin in an eppendorf centrifuge for 10 min.  Pour supernate into a 
+new tube.
+
+8. Precipitate DNA by adding 0.8 ml cold ethanol. Incubate on ice for 
+10 min, spin for 10 min, and pour off supernate.
+
+9. Wash pellet with 0.5 ml 70% ethanol and dry pellet.
+
+10. Disolve the pellet in 40 ml sterile water.  Use 1 or 2 ml of this 
+crude yeast miniprep to transform E.coli by electroporation.
+
+Before transforming E.coli with the crude yeast minipreps it is often 
+useful to determine which yeast minipreps contain the same library 
+plasmid so that fewer need to be characterized.  This can be done by 
+restriction analysis of PCR products.
+
+11. Set up a 0.5 ml tube for each yeast miniprep containing:
+** 13 ml sterile water
+**  2  ml 10X Taq polymerase buffer
+**  2  ml dNTP mix (all 4 dNTPs at 2.5 mM each)
+**  1 ml 5' primer (0.1 mg/ml) derived from the library vector fusion 
+moiety sequence (see appendix). 
+**  1 ml 3' primer (0.1 mg/ml) derived from the ADH1 terminator 
+sequence in the library vector (see appendix).
+**  0.2 ml Taq polymerase (5 units/ml)
+
+12. Add 1 ml of yeast miniprep DNA to each tube.
+
+13. Incubate for 25 cycles of 92oC for 30 sec., 65oC for 2 min, 75oC 
+for 30 sec.
+
+14.  Set up two tubes for each PCR reaction, one for AluI digestion 
+and one for HaeIII digestion (these enzymes are recommended 
+because they work well in the presence of the PCR reactants).  Add 8 
+ml of the PCR reaction to each tube.  Save the remainder of the PCR 
+reaction for gel analysis of the full-length PCR product.
+
+15. Add 1 ml of the appropriate 10X restriction enzyme buffer to the 
+8 ml.  Add 1 ml of AluI to one tube and 1 ml of HaeIII to the other 
+tube.  Incubate at 37oC for 2 hours.
+
+16. Analyze AluI digests, HaeIII digests, and the uncut PCR products 
+on 1.5% agarose gels.  
+
+It should be readily apparent from this analysis which cDNAs are 
+identical.  In some cases, only some of the restriction fragments will 
+appear identical between two plasmids, suggesting that these 
+plasmids contain different length cDNAs made from the same gene.  
+Rescue library plasmids from yeast minipreps that give different 
+restriction patterns.
+______________________________________________________
+
+______________________________________________________
+Protocol 6. Determining specificity of interactors.
+
+1.  Use the rescued library plasmid DNA (from a miniprep of 
+transformed E. coli) to transform the original yeast strain containing 
+the bait plasmid and the lacZ reporter plasmid.  Additionally, use 
+each library plasmid to transform one or more other strains 
+containing different baits.  Select transformants on Glu ura-his-trp- 
+plates.  As a control transform each different bait strain with the 
+library vector without a cDNA insert.
+
+2. Use sterile toothpicks or applicator sticks to pick three to four 
+individual colonies from each transformation plate, and patch these 
+to Glu ura-his-trp- master plates.  Patch control transformants 
+(library plasmid with no cDNA) onto each plate for side by side 
+comparison.  Grow for one or two days at 30oC.
+
+3. Replica plate from the master plates to four plates: 1. Glu ura-his-
+trp- X-Gal, 2. Gal/Raf ura-his-trp- X-Gal, 3. Glu ura-his-trp-leu-, 4. 
+Gal/Raf ura-his-trp-leu-.
+
+4.  Incubate plates at 30oC and examine after 1, 2, and 3 days.
+
+Figure 3 shows an example of the result obtained for three specific 
+interactors.   
+_____________________________________________________________
+ 
+(Figure 3. Four plates showing specific interactors.) 
+
+6. Using a mating assay to verify specificity.
+
+        We have recently developed a mating assay as an alternative 
+way to test for interaction between a given activation-tagged protein 
+and a panel of LexA fusion proteins (baits).  This scheme takes 
+advantage of the fact that haploid cells of the opposite mating type 
+will fuse to form diploids when brought into contact with each other 
+(52).  In this mating assay, the activation-tagged protein is expressed 
+in one yeast strain and the bait is expressed in a second strain of the 
+opposite mating type.  When the two strains are mixed on the same 
+plate, they form diploids in which the bait and activation-tagged 
+proteins have the opportunity to interact and activate the reporter 
+genes.  As before, interaction is measured as activation of the 
+LexAop-LEU2 and LexAop-lacZ reporters.  This technique can be 
+used to check the specificity of the cDNA-encoded proteins isolated in 
+the interaction trap to ensure that they interact with only the 
+original bait and not with unrelated LexA fusions.  It can also be 
+used to examine interactions between a given set of activation-
+tagged proteins, such as those isolated in an interactor hunt, and a 
+large panel of bait proteins without performing an unwieldy number 
+of yeast transformations.  Finally, it could be used to conduct 
+interactor hunts; the library plasmids can be introduced in bulk into 
+EGY48, transformants can be stored frozen, and then thawed and 
+mated with a second strain that contains a bait plasmid.  This would 
+enable several separate interactor hunts with different baits to be 
+done by performing a single large scale library transformation.   The 
+disadvantage of the mating assay is that the sensitivity of the 
+reporters to activation by baits and activation-tagged proteins that 
+interact with them is generally less in diploid cells relative to haploid 
+cells.  To minimize the effect of this difference, the most sensitive 
+LEU2 reporter is used.
+
+        As described in Protocol 7 and illustrated in Figure 4, the 
+activation-tagged protein is expressed in EGY48 (mating type a) and 
+the bait protein is expressed in a second strain, RFY206 (mating type 
+a) which may also contains the lacZ reporter plasmid.  The EGY48 
+derivatives are streaked onto plates lacking tryptophan to maintain 
+selection for the library plasmid, and the RFY206 derivatives are 
+streaked onto plates lacking uracil and histidine to maintain selection 
+for the URA3 lacZ plasmid and the HIS3 bait plasmid.  The two 
+strains are mated by applying them to the same replica velvet or 
+filter and lifting their "print" with a YPD plate.  The YPD plate is 
+incubated overnight at 30oC to promote mating and then replica 
+plated to the same indicator plates used in Protocol 4 steps 7 and 8.  
+In the example shown in Figure 4 the lacZ reporter is not used.  The 
+his-trp-plates will contain only diploids:  TRP1 is provided by the 
+strain that contains the library plasmid while HIS3 is provided by 
+the strain that contains the bait plasmid.  Only the diploids that 
+contain interacting pairs of activation-tagged protein and bait will 
+grow on the plates lacking leucine but containing galactose.     
+
+(Figure 4a. Mating assay cartoon.)
+(Figure 4b. Mating assay result.)
+
+______________________________________________________
+Protocol 7. Mating assay.
+
+1. Introduce TRP1 library plasmids into yeast strain EGY48 and select 
+transformants on Glu trp- plates.  As a control, transform EGY48 with 
+a library plasmid that has no cDNA insert.
+
+2.  Introduce HIS3 bait plasmids into yeast strain RFY206 (or other 
+ura3 his3 trp1 leu2 MATa strain) along with a URA3 lacZ reporter  
+and select transformants on Glu ura-his- plates.  Note: in the example 
+shown in Figure 4 the URA3 lacZ reporter is not used.
+
+3.  Use sterile toothpicks or applicator sticks to streak individual 
+EGY48 transformants onto standard 100 mm Glu trp- plates in 
+parallel lines, 6 or 7 to a plate (Figure 4).  Include at least one streak 
+of the transformants with the control plasmid (no cDNA).  Likewise, 
+streak individual RFY206 transformants onto Glu ura-his- plates in 
+parallel lines, 6 or 7 to a plate.  Incubate at 30oC until heavy growth.  
+The lines of yeast should be at least 2 mm wide.
+
+4. Onto the same replica filter or velvet, print the EGY48 derivatives 
+and the RFY206 derivatives so that the streaks from the two plates 
+are perpendicular to each other.
+
+5.   Lift the print of the two strains from the filter or velvet with a 
+YPD plate.  Incubate the YPD plate at 30oC overnight.  Diploids will 
+form where the two strains intersect.  One strain may grow more 
+rapidly than the other during this time but this does not hinder 
+formation of diploids in the intersections.
+
+6. Replica from the YPD plate to the following plates:  1. Glu ura-his-
+trp- X-Gal, 2. Gal/Raf ura-his-trp- X-Gal, 3. Glu ura-his-trp-leu-, 4. 
+Gal/Raf ura-his-trp-leu-.   Incubate at 30oC and examine after 1, 2, 
+and 3 days. 
+
+Only diploids will grow on the X-Gal plates and only interactors will 
+grow on galactose plates lacking leucine (for example, see Figure 4).
+______________________________________________________
+
+
+7. Expected results.   
+
+        The two most critical parameters that determine whether an 
+interactor hunt will succeed are the quality of the library and the 
+nature of the bait.  If the library contains cDNAs that encode proteins 
+that interact with the bait in the interaction trap, the bait becomes 
+the most critical parameter.  The bait can affect the outcome of an 
+interactor hunt in two ways.  First, the number of nonspecific cDNA-
+encoded interactors obtained appears to depend on the bait.  For 
+example, use of some baits can result in isolation of activation-tagged 
+cDNA proteins that seem to interact with many other LexA fusions 
+when the specificity determination is performed.  It is unlikely that 
+these cDNA-encoded proteins interact with the LexA moiety or with 
+the reporters or transcription machinery directly because if they did, 
+they would be expected to arise in all interactor hunts.  Rather, these 
+cDNA-encoded proteins may simply be "sticky", for example, because 
+they contain patches of hydrophobic or charged residues that 
+interact with corresponding regions on many baits.  Second,  the 
+number of spurious Leu+ yeast that arise independently of the 
+library plasmid differs from one bait to another.   For example, when 
+some selection strains are transformed with library DNA and plated 
+onto media lacking leucine, hundreds of galactose-independent Leu+ 
+colonies grow.  This phenomenon is observed more frequently with 
+baits that activate a low level of transcription than with 
+transcriptionally inert baits, perhaps because a low level of 
+activation is readily enhanced in a fraction of cells in a population.  
+For example, a bait may gain the ability to activate the reporters in 
+some cells if there is an increase in the copy number of the bait 
+plasmid, which could result from natural variation in plasmid copy 
+number or from a mutation in the plasmid or a yeast gene that 
+affects plasmid copy number.  This problem can be best addressed 
+by reducing the activation potential of a bait as described in section 
+4.2.  It is worth noting that, in our experience, these problems with 
+baits are usually surmountable, and that most proteins can 
+eventually be used successfully in interactor hunts.
+
+Conclusion
+        We have described detailed procedures for isolating proteins 
+using the interaction trap.  These procedures provide a relatively 
+rapid, simple, and robust method for isolating proteins that interact 
+with known proteins, and for measuring protein-protein interactions 
+inside living cells.
+
+
+
+
+Acknowledgment
+
+We are very grateful to the numerous current and past lab members, 
+and to the many lab visitors whose efforts contributed to the 
+development of this interaction technology.  We thank Tod Gulick, 
+Pierre Colas, and Andrew Mendelsohn for critcal readings of the 
+manuscript.  RLF was supported by a postdoctoral fellowship from 
+the NIH.  RB was supported by the Pew Scholar's program.  Work was 
+supported by the HFSP.
+
+
+
+
+ 
+
+
+Appendix
+
+Figure of plasmids.
+        pEG202
+        pLR1d1 (pSH18-34, pJK103, pJK101)
+        pJG4-5
+
+Sequencing and PCR primers for pEG202 and pJG4-5.
+        For sequencing inserts in the polylinker of pEG202 primers can 
+be derived from LexA coding sequences.  The primer shown below, 
+LEX1, is derived from LexA coding sequences 40 bp upstream of the 
+EcoRI site in the polylinker (note: all eukaryotic LexA expression 
+plasmids lack the EcoRI site found in the wild-type LexA coding 
+region (18)).  For sequencing from the 5' end of cDNA inserts in pJG4-
+5, BCO1 can be used.  It is derived from the coding sequence for the 
+B42 activation domain 70 bp upstream of the EcoRI site.  For 
+sequencing from the 3' end of the cDNA insert in pJG4-5, BCO2 can be 
+used.  It is derived from the sequence of the ADH1 terminator 
+approximately 40 bp downstream of the XhoI site.  BCO1 and BCO2 
+can be used for PCR amplification of the cDNA insert as described in 
+Protocol 5.
+
+LEX1            5' CGT CAG CAG AGC TTC ACC ATT G 3'
+BCO1            5' CCA GCC TCT TGC TGA GTG GAG ATG 3'
+BCO2            5' GAC AAG CCG ACA ACC TTG ATT GGA G 3'
+
+
+
+Media recipes.
+Dropout media.
+        Dropout media, also known as complete minimal (CM) dropout 
+media, contains a nitrogen base, a mixture of nutrients shown in 
+Table 1 with one or a few left out (dropped out), and a carbon source 
+(usually a sugar).  It is convenient to make a dropout powder 
+corresponding to each of the dropout media that will be used, e.g. for 
+media lacking tryptophan (trp-), the dropout powder used would 
+contain all of the nutrients listed in Table 1 except for tryptophan.  
+Three separate stocks of the carbon sources (20% galactose, 20% 
+glucose, 20% raffinose) should be made and filter sterilized.  As 
+needed, galactose (Gal) and glucose (Glu) are each added to 2 % final 
+concentration, raffinose (Raf) is added to 1 % final concentration.
+
+Dropout plates
+        For 1 liter
+        Mix in 850 ml deionized H2O
+        **  6.7 g yeast nitrogen base (YNB) without amino acids (Difco)
+        **  2 g  Dropout powder lacking the appropriate nutrient(s) 
+        (Table 1)
+        **  one pellet of NaOH (~ 0.1 g)
+        **  20 g agar (Difco Bacto-agar)
+        Autoclave
+Add the appropriate carbon source from sterile stocks.  For Gal/Raf 
+plates add galactose to 2% and raffinose to 1% final concentrations;  
+for Glu plates add glucose to 2 % final concentration.
+
+Make liquid dropout media the same way as dropout plates, leaving 
+out the agar and NaOH pellet.
+
+Table 1. Dropout powder. 
+
+
+Nutrient        Amt in dropout powder (g)a      Final conc. in media (ug/ml)
+adenine                               2.5        40
+L-arginine (HCl)                      1.2        20
+L-aspartic acid                       6.0       100
+L-glutamic acid (monosodium)          6.0       100
+L-histidine (his)                     1.2        20
+L-isoleucine                          1.8        30
+L-leucine (leu)                       3.6        60
+L-lysine                              1.8        30
+L-methionine                          1.2        20
+L-phenylalanine                       3.0        50
+L-serine                             22.5       375
+L-threonine                          12.0       200
+L-tryptophan (trp)                    2.4        40
+L-tyrosine                            1.8        30
+L-valine                              9.0       150
+uracil (ura)                          1.2        20
+a Combine all but the appropriate nutrients, e.g. if making media 
+lacking tryptophan (trp-) leave out tryptophan.  Grind in a clean dry 
+mortar and pestle until homogeneous. Store at room temperature.   
+
+YPD (also known as YEPD) plates.
+        For 1 litre
+        Mix in 900 ml deionized H2O
+        **  10 g yeast extract (Difco Bacto-yeast extract)
+        **  20 g peptone (Difco Bacto-peptone
+        **  one pellet NaOH (~0.1 g)
+        **  20 g agar (Difco Bacto-agar)
+        Autoclave
+        Add 100 ml sterile 20% glucose
+
+X-Gal plates.
+
+        For 1 litre
+        Mix in 800 ml deionized H2O
+        **  6.7 g YNB without amino acids
+        **  1.5 g dropout powder
+        **  20 g agar (Difco Bacto-agar)
+        Autoclave
+        Immediately add the appropriate sterile 20% carbon 
+        source(s)
+        Allow to cool to 65oC 
+        **  add 100 ml of 10X BU Salts (see below)
+        **  add 4 ml of 20 mg/ml X-Gal dissolved in DMF dimethyl 
+        formamide (stored at -20oC).
+        
+Note: adding salts while media is too hot causes the salts to 
+precipitate.  Also, X-Gal is thermolabile and will be destroyed if 
+added to hot media.
+
+
+10X BU Salts
+        For 1 liter
+        **  70 g Na2HPO4   7H2O
+        **  30 g NaH2PO4
+        Adjust pH to 7.0
+        Autoclave,  store at room temp.
+
+Figure Legends
+
+Figure 1. The interaction trap.
+
+a.  Glucose.  The LexA fusion protein (bait) is made and binds to LexA 
+operators (black box) upstream of the two reporter genes, LEU2 and 
+lacZ.  The bait does not activate transcription of the reporters.  The 
+activation-tagged cDNA-encoded protein is not expressed because the 
+GAL1 promoter on the library plasmid is repressed in the presence 
+of glucose.  The cell does not form a colony on a medium lacking 
+leucine and forms a white colony on an X-Gal plate.
+
+b. Galactose.  Here, galactose induces expression of an activation-
+tagged cDNA-encoded protein that does not interact with the bait.  
+The cell does not grow on a medium lacking leucine and forms a 
+white colony on X-Gal plates.
+
+c. Galactose.  Here, galactose induces expression of an activation-
+tagged cDNA-encoded protein that interacts with the bait.  The 
+activation domain activates transcription of LEU2 and lacZ.  The cell 
+forms a colony on a medium lacking leucine and forms a colony that 
+turns blue on an X-Gal plate.
+
+
+
+Figure 3.  Specificity test.
+
+Specificity of Drosophila Cdc2 kinase interactors (Cdis; Finley and 
+Brent, in preparation).  Four replica plates made from a glucose 
+master plate (not shown) that contained EGY48 derivatives with 
+different bait plasmids and library plasmids.  All strains contained 
+the lacZ reporter plasmid pJK103, and one of four bait plasmids 
+directing the synthesis of LexA fused to Drosophila proteins: Cdc2 
+kinase (Cdc2), a Cdc2 kinase analog (Cdc2c), a derivative of the 
+homeodomain protein Bicoid (BcdDC), or the helix-loop-helix protein 
+Hairy (Hairy).  Each bait strain was transformed with the library 
+vector pJG4-5 (v), or with pJG4-5 that contained cDNAs that encode 
+Cdc2 kinase interactors: Cdi3 (3), Cdi2 (2), and Cdi7 (7).  Four 
+individual colonies from each transformation were patched onto a  
+glucose master plate which was then replica plated to two ura-his-
+trp-leu- plates (leu-), and two ura-his-trp- X-Gal plates (XGal).  The 
+plates on the left have glucose and the plates on the right have 
+galactose and raffinose.  Interaction is detected by growth of strains 
+on the galactose leu- plate; e.g., Cdc2 interacts with Cdi3, Cdi2 and 
+Cdi7; Cdc2c interacts with Cdi3 and Cdi2.  The strength of the 
+interactions is suggested by the level of activation of lacZ as indicated 
+on the X-Gal plate; e.g., the interaction between Cdc2 and Cdi2 
+activates lacZ strongly, the interaction between Cdc2 and Cdi7 
+activates lacZ very weakly, and the other interactions activate lacZ 
+moderately.  
+
+
+Figure 4.  The mating assay for specificity.
+
+a. A typical mating assay (Finley and Brent, in preparation).  The his- 
+glucose plate (top left) contains four RFY206 derivatives streaked 
+vertically.  Each derivative contains a different HIS3+ bait plasmid.  
+The trp- glucose plate (top right) contains seven EGY48 derivatives 
+streaked horizontally. Each derivative contains a different TRP1 
+library plasmid.  The RFY206 derivatives are MAT a, HIS3, trp1-, and 
+Leu-.  The EGY48 derivatives are MAT a   TRP1, his3-, and Leu-.  The 
+two plates are pressed to the same replica velvet or filter and the 
+replica is lifted with a YPD plate (center).  During overnight 
+incubation at 30oC the two strains grow.  At the intersections on the 
+YPD plate the two strains mate and form His+ Trp+ diploids.  The YPD 
+plate is then replica plated to three plates: 1. a his-trp- galactose 
+plate (with raffinose), on which diploids grow, but neither haploid 
+parent grows; 2. a his-trp-leu- glucose plate, on which the activation-
+tagged cDNA encoded proteins are not expressed, LEU2 is not 
+transcribed, and no strains grow; 3. a his-trp-leu- galactose plate 
+(with raffinose), on which activation-tagged cDNA encoded proteins 
+are expressed, interact with the baits, activate the LEU2 gene, and 
+allow growth.
+
+b. Results of a mating assay.  The horizontally streaked strains are 
+RFY206 derivatives expressing LexA fusions to Drosophila Cdc2 
+kinase (Cdc2); the Cdc2 kinase analog, Cdc2c (Cdc2c); a Bicoid 
+derivative (BcdDC); Hairy (Hairy); the budding yeast Cdc2 kinase 
+homolog, Cdc28 (Cdc28), and two proteins isolated from a hunt for 
+Cdc2c interactors (Cdi5 and Cdi11) (Finley and Brent, in preparation).  
+The vertically streaked strains are EGY48 derivatives that contain 
+the pJG4-5 library vector without a cDNA insert (v) or with Cdc2 
+kinase interactor cDNAs, CDI2 (2), CDI3, (3), and CDI7 (7).         
+
+  
+
+Appendix Figure legends.
+
+pEG202.
+
+pEG202 (11) is a yeast - E.coli shuttle vector that contains a yeast 
+expression cassette that includes the promoter from the yeast ADH1 
+gene (PADH1), sequences that encode amino acids 1 to 202 of the 
+bacterial repressor protein LexA, a polylinker, and the transcription 
+terminator sequences from the yeast ADH1 gene (TADH1).  It also 
+contains a E.coli origin of replication (pBR ori), the ampicillin 
+resistance gene (AmpR), a yeast selectable marker gene (HIS3), and a 
+yeast origin of replication (2 mm ori).  pEG202 confers upon a his3- 
+yeast strain the ability to grow in the absence of histidine and directs 
+the constitutive expression of LexA (fused to approximately 17 
+amino acids encoded by the polylinker).  Protein coding sequences 
+can be inserted in-frame with LexA into the unique restriction sites 
+shown.    
+
+
+PJG4-5.
+
+pJG4-5 (11) is a yeast - E.coli shuttle vector that contains a yeast 
+expression cassette that includes the promoter from the yeast GAL1 
+gene (PGAL1), followed by sequences that encode the 106 amino acid 
+fusion moiety or activation tag, and the transcription terminator 
+sequences from the yeast ADH1 gene (TADH1).  cDNAs or other 
+protein coding sequences can be inserted into the unique EcoRI and 
+XhoI sites so that encoded proteins are expressed with the fusion 
+moiety at their amino terminus.  The fusion moiety includes the 
+nuclear localization signal from the SV40 virus large T antigen 
+(PPKKKRKVA; (53)), the B42 transcription activation domain (4), and 
+the hemagglutinin (HA) epitope tag (YPYDVPDYA; (54)).  The plasmid 
+also contains an E.coli origin of replication (pUC ori), the ampicillin 
+resistance gene (AmpR), a yeast selectable marker gene (TRP1), and 
+a yeast origin of replication (2 mm ori).
+
+
+
+lacZ reporters.
+
+The lacZ reporters are derived from a plasmid that contains the wild-
+type GAL1 promoter fused to lacZ (19).  Reporters for measuring 
+activation are derived from pLR1D1, in which the GAL1 upstream 
+activation sequences (UASg) have been deleted (33).  Various 
+numbers and types of LexA operators have been inserted in place of 
+UASg to create lacZ reporters with different sensitivities.  Two 
+examples are shown: pJK103 contains a single high affinity 
+overlapping type colE1 LexA operator which binds two LexA dimers; 
+pSH18-34 contains four of these colE1 operators and so is much more 
+sensitive than pJK103 to activation by LexA fusions and activation-
+tagged proteins that interact with them.  Derivatives with two, three, 
+or more than four colE1 operators have also been made (S. Hanes, 
+personal communication; (28)).  A reporter less sensitive than 
+pJK103, pRB1840, contains one lower affinity LexA operator (3).  
+pJK101 is used to measure repression by LexA fusions (18; 55)  It 
+contains most of UASg and one colE1 operator between UASg and the 
+GAL1 TATA .  All of the lacZ reporters also contain a E.coli origin of 
+replication (pBR ori), the ampicillin resistance gene (AmpR), a yeast 
+selectable marker gene (URA3), and a yeast origin of replication (2 
+mm ori).     
+
+
+References 
+
+1.  Keegan, L., Gill, G. and Ptashne, M. (1986). Science, 231, 699-704.
+2.  Hope, I. A. and Struhl, K. (1986). Cell, 46, 885-894.
+3.  Brent, R. and Ptashne, M. (1985). Cell, 43, 729-736.
+4.  Ma, J. and Ptashne, M. (1987). Cell, 51, 113-119.
+5.  Sadowski, I., Ma, J., Triezenberg, S. and Ptashne, M. (1988). Nature, 
+335, 563-564.
+6.  Chasman, D. I., Leatherwood, J., Carey, M., Ptashne, M. and 
+Kornberg, R. D. (1989). Mol. Cell. Biol., 9, 4746-4749.
+7.  Ma, J. and Ptashne, M. (1988). Cell, 55, 443-446.
+8.  Fields, S. and Song, O. (1989). Nature, 340, 245-246.
+9.  Chien, C.-T., Bartel, P. L., Sternglanz, R. and Fields, S. (1991). Proc. 
+Natl. Acad. Sci. USA, 88, 9578-9582.
+10.  Durfee, T., Becherer, K., Chen, P.-L., Yeh, S.-H., Yang, Y., Kilburn, A. 
+E., Lee, W.-H. and Elledge, S. J. (1993). Genes and Dev., 7, 555-569.
+11.  Gyuris, J., Golemis, E., Chertkov, H. and Brent, R. (1993). Cell, 75, 
+791-803.
+12.  Vojtek, A. B., Hollenberg, S. M. and Cooper, J. A. (1993). Cell, 74, 
+205-214.
+13.  Dalton, S. and Treisman, R. (1992). Cell, 68, 597-612.
+14.  Silver, P. A., Keegan, L. and Ptashne, M. (1984). Proc. Natl. Acad. 
+Sci. U.S.A., 81, 5951-5955.
+15.  Bram, R. J. and Kornberg, R. D. (1985). Proc. Natl. Acad. Sci. U.S.A., 
+82, 43-47.
+16.  Giniger, E., Varnum, S. M. and Ptashne, M. (1985). Cell, 40, 767-
+774.
+17.  Silver, P. A., Brent, R. and Ptashne, M. (1986). Mol. Cell. Biol., 6, 
+4763-4766.
+18.  Brent, R. and Ptashne, M. (1984). Nature, 312, 612-615.
+19.  Yocum, R. R., Hanley, S., West, R. J. and Ptashne, M. (1984). Mol. 
+Cell. Biol., 4, 1985-1988.
+20.  Guarente, L. and Ptashne, M. (1981). Proc. Natl. Acad. Sci. USA, 
+78, 2199-2203.
+21.  Guthrie, C. and Fink, G. R. (1991). Guide to yeast genetics and 
+molecular biology, 194, Academic Press, Inc., Boston .
+22.  Ausubel, F. M., Brent, R., Kingston, R. E., Morre, D., Seidman, J. G. 
+and Struhl, K. (1992). Current protocols in molecular biology, Greene 
+and Wiley-interscience, New York .
+23.  Rothstein, R. (1985). DNA cloning: A practical approach. (D. M. 
+Glover), II, 45-66. IRL Press, Ltd, Oxford.
+24.  Golemis, E. and Brent, R. (1992). Mol. Cell. Biol., 12, 3006-3014.
+25.  Zervos, A. S., Gyuris, J. and Brent, R. (1993). Cell, 72, 223-232.
+26.  Lech, K., Anderson, K. and Brent, R. (1988). Cell, 52, 179-184.
+27.  Samson, M.-L., Jakson-Grusby, L. and Brent, R. (1989). Cell, 57, 
+1045-1052.
+28.  Hanes, S. and Brent, R. (1989). Cell, 57, 1275-1283.
+29.  Kamens, J., Richardson, P., Mosialos, G., Brent, R. and Gilmore, T. 
+(1990). Mol. Cell. Biol., 10, 2840-2847.
+30.  Ebina, B. A., Takahara, Y., Kishi, F., Nakazawa, A. and Brent, R. 
+(1983). J. Biol. Chem., 258, 13258-13261.
+31.  Gill, G. and Ptashne, G. (1987). Cell, 51, 121-126.
+32.  Broach, J. R. (1981). The molecular biology of the yeast 
+Saccharomyces: Life cycle and inheritance (J. N. Strathern, E. W. Jones 
+and J. R. Broach), 445-470. Cold Sping Harbor Laboratory, Cold Spring 
+Harbor.
+33.  West Jr., R. W., Yocum, R. R. and Ptashne, M. (1984). Mol. Cell. 
+Biol., 4, 2467-2478.
+34.  Manivasakam, P. and Schiestl, R. H. (1993). Nuc. Acids Res., 21, 
+4414-4415.
+35.  Becker, D. M. and Guarente, L. (1991). Methods in Enzymology, 
+194, 182-187.
+36.  Gietz, D., St. Jean, A., Woods, R. A. and Schiestl, R. H. (1992). Nuc. 
+Acids Res., 20, 1425.
+37.  Brent, R. (1985). Cell, 42, 3-4.
+38.  Finley Jr., R. L., Chen, S., Ma, J., Byrne, P. and West Jr., R. W. 
+(1990). Mol. Cell. Biol., 10, 5663-5670.
+39.  Miller, J. (1972). Experiments in molecular genetics, Cold Spring 
+Harbor Laboratory, Cold Spring Harbor, N.Y.
+40.  Finley Jr., R. L. and R.W., W. J. (1989). Mol. Cell. Biol., 9, 4282-
+4290.
+41.  Laemmli, U. K. (1970). Nature, 227, 680-685.
+42.  Harlow, E. and Lane, D. (1988). Antibodies: A laboratory manual 
+471-510. Cold Spring Harbor Laboratory, Cold Spring Harbor, N.Y.
+43.  Gill, G. and Ptashne, M. (1988). Nature, 334, 721-724.
+44.  Berger, S. L., Pina, B., Silverman, N., Marcus, G. A., Agapite, J., 
+Regier, J. L., Triezenberg, S. J. and Guarente, L. (1992). Cell, 70, 251-
+265.
+45.  Gubler, U. and Hoffman, B. J. (1983). Gene, 25, 263-269.
+46.  Huse, W. D. and Hansen, C. (1988). Stratagene stratagies, 1, 1-3.
+47.  Schiestl, R. H. and Gietz, R. D. (1989). Curr. Gen., 16, 339-346.
+48.  Hill, J., Ian, K. A. and Griffiths, D. E. (1992). Nuc. Acids Res., 19, 
+5791.
+49.  Breeden, L. and Nasmyth, K. (1985). 50, 643. Cold Spring Harbor, 
+NY.
+50.  Struhl, K., Stinchomb, D. T., Scherer, S. and Davis, R. W. (1979). 
+Proc. Natl. Acad. Sci., 76, 1035-1039.
+51.  Hoffman, C. S. and Winston, F. (1987). Gene, 57, 267-272.
+52.  Herskowitz, I. (1988). Microbiol. Rev., 52, 536-553.
+53.  Kalderon, D., Roberts, B. L., Richardson, W. D. and Smith, A. E. 
+(1984). Cell, 39, 499-509.
+54.  Green, N., Alexander, H., Olson, A., Alexander, S., Shinick, T. M., 
+Sutcliffe, J. G. and Lerner, R. A. (1982). Cell, 28, 477-487.
+55.  Kamens, J. and Brent, R. (1991). The New Biologist, 3, 1005-1013.

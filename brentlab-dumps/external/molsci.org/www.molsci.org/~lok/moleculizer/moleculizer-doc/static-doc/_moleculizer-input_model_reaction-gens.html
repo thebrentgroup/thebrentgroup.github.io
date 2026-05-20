@@ -1,0 +1,71 @@
+<html xmlns:rng="http://relaxng.org/ns/structure/1.0">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>reaction-gens</title>
+</head>
+<body>
+<H1>reaction-gens</H1>
+<p>(/<a href="_moleculizer-input.html">moleculizer-input</a>/<a href="_moleculizer-input_model.html">model</a>/<a href="_moleculizer-input_model_reaction-gens.html">reaction-gens</a>)</p>
+<hr>
+<p>Reaction generators are defined in this section.  A reaction generator "listens" for the creation of new species that have features that the reaction generator is interested in; that is, features that make the new species a possible substrate for a reaction that the generator might make.  For example, a decomposition generator "listens" for new species containing a specific binding.  The decomposition generator knows about the rate of decomposition of this binding, which it usually assumes to be independent of the rest of the complex.  When it hears of such a new species, it creates a new decomposition reaction that breaks down the binding, potentially producing one or two new species. If a product species is new, then this whole "listening" thing happens when the reaction happens for the first time.</p>
+<hr>
+<table border="">
+<tr>
+<th>Attributes</th><th>Children</th>
+</tr>
+<tr>
+<td>
+<ul></ul>
+</td><td>
+<ul>
+<li>
+<a href="_moleculizer-input_model_reaction-gens_dimerization-gen.html">dimerization-gen</a>
+</li>
+<li>
+<a href="_moleculizer-input_model_reaction-gens_gpa-exchange-gen.html">gpa-exchange-gen</a>
+</li>
+<li>
+<a href="_moleculizer-input_model_reaction-gens_gpa-revert-gen.html">gpa-revert-gen</a>
+</li>
+<li>
+<a href="_moleculizer-input_model_reaction-gens_nucleotide-exchange-gen.html">nucleotide-exchange-gen</a>
+</li>
+<li>
+<a href="_moleculizer-input_model_reaction-gens_auto-hydrolysis-gen.html">auto-hydrolysis-gen</a>
+</li>
+<li>
+<a href="_moleculizer-input_model_reaction-gens_hetero-hydrolysis-gen.html">hetero-hydrolysis-gen</a>
+</li>
+<li>
+<a href="_moleculizer-input_model_reaction-gens_nucleotide-bind-gen.html">nucleotide-bind-gen</a>
+</li>
+<li>
+<a href="_moleculizer-input_model_reaction-gens_kinase-gen.html">kinase-gen</a>
+</li>
+<li>
+<a href="_moleculizer-input_model_reaction-gens_ptase-gen.html">ptase-gen</a>
+</li>
+<li>
+<a href="_moleculizer-input_model_reaction-gens_twenty-eleven-gen.html">twenty-eleven-gen</a>
+</li>
+<li>
+<a href="_moleculizer-input_model_reaction-gens_eleven-seven-gen.html">eleven-seven-gen</a>
+</li>
+<li>
+<a href="_moleculizer-input_model_reaction-gens_seven-three-gen.html">seven-three-gen</a>
+</li>
+<li>
+<a href="_moleculizer-input_model_reaction-gens_three-seven-gen.html">three-seven-gen</a>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+<p>
+<a href="moleculizer-toc.html">Table of contents</a>
+</p>
+<p>
+<a href="moleculizer-index.html">Index</a>
+</p>
+</body>
+</html>

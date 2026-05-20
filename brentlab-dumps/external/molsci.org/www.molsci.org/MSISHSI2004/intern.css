@@ -1,0 +1,9 @@
+body { margin: 0px; padding: 0px; background-color: #FFFFFF; background-image: url(images/bar_center.gif); background-repeat: repeat-x; background-position: 0px 34px; }
+img { border: 0px none; }
+.title { font-family: Verdana; font-size: 16pt;	font-weight: bold; color: #FF6000; line-height: 3px; }
+.tables { position: absolute; left: 14px; top: 108px; width: 716px; font-family: Verdana; font-size: 10pt; font-color: #000000; border: 0px; } 
+.blank { position: absolute; left: 0px; top: 34px; width: 107px; height: 27px; }
+.back {	position: absolute;	left: 107px; top: 19px; }
+.leftimage { position: absolute; right: 4px; bottom: 30px;}
+.intern04 {	position: absolute;	left: 595px; top: 38px; }
+.msi { position: absolute; left: 752px;	top: 16px; }

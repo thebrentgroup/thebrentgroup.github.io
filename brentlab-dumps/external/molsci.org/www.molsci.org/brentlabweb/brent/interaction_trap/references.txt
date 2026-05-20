@@ -1,0 +1,15 @@
+REFERENCES
+
+Yeast techniques
+
+1.  Guthrie, C., and G.R. Fink 1991 Guide to yeast genetics and
+molecular biology. Methods in Enzymology vol 194. Acedemic Press Inc.
+
+2.  Ausubel, F.M., R. Brent, R.E. Kingston, D.D. Moore, J.G. Seidmen,
+J.A.  Smith, and K. Struhl. 1987-1993 Current Protocols in Molecular
+Biology, Greene Publishing Associates.
+
+Yeast transformation
+
+1.  Gietz, D., A. St. Jean, R.A. Woods, and R.H. Schiestl 1992 Nucleic
+Acids Research 20:1425

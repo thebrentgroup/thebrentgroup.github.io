@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+<moleculizer-state>
+  <model>
+    <units-states>
+      <modifications/>
+      <mols/>
+    </units-states>
+    <explicit-species-tags>
+      <explicit-species-tag name="active-kin1" tag="0x805812c"/>
+      <explicit-species-tag name="active-kin2" tag="0x80583bc"/>
+      <explicit-species-tag name="active-kin3" tag="0x80581dc"/>
+      <explicit-species-tag name="active-receptor" tag="0x80580dc"/>
+      <explicit-species-tag name="inactive-kin1" tag="0x8058394"/>
+      <explicit-species-tag name="inactive-kin2" tag="0x80581b4"/>
+      <explicit-species-tag name="inactive-kin3" tag="0x8058204"/>
+      <explicit-species-tag name="inactive-receptor" tag="0x8058104"/>
+      <explicit-species-tag name="ptase-x" tag="0x805822c"/>
+    </explicit-species-tags>
+    <tagged-species>
+      <tagged-stoch-species tag="0x805812c">
+        <weight daltons="50000"/>
+        <population count="0"/>
+        <concentration value="0"/>
+      </tagged-stoch-species>
+      <tagged-stoch-species tag="0x80583bc">
+        <weight daltons="50000"/>
+        <population count="0"/>
+        <concentration value="0"/>
+      </tagged-stoch-species>
+      <tagged-stoch-species tag="0x80581dc">
+        <weight daltons="50000"/>
+        <population count="1"/>
+        <concentration value="1.66113e-12"/>
+      </tagged-stoch-species>
+      <tagged-stoch-species tag="0x80580dc">
+        <weight daltons="50000"/>
+        <population count="0"/>
+        <concentration value="0"/>
+      </tagged-stoch-species>
+      <tagged-stoch-species tag="0x8058394">
+        <weight daltons="50000"/>
+        <population count="1000"/>
+        <concentration value="1.66113e-09"/>
+      </tagged-stoch-species>
+      <tagged-stoch-species tag="0x80581b4">
+        <weight daltons="50000"/>
+        <population count="1000"/>
+        <concentration value="1.66113e-09"/>
+      </tagged-stoch-species>
+      <tagged-stoch-species tag="0x8058204">
+        <weight daltons="50000"/>
+        <population count="999"/>
+        <concentration value="1.65947e-09"/>
+      </tagged-stoch-species>
+      <tagged-stoch-species tag="0x8058104">
+        <weight daltons="50000"/>
+        <population count="1000"/>
+        <concentration value="1.66113e-09"/>
+      </tagged-stoch-species>
+      <tagged-stoch-species tag="0x805822c">
+        <weight daltons="50000"/>
+        <population count="1000"/>
+        <concentration value="1.66113e-09"/>
+      </tagged-stoch-species>
+    </tagged-species>
+    <tag-reactions>
+      <tag-reaction>
+        <tagged-substrate tag="0x80580dc" multiplicity="1"/>
+        <tagged-product tag="0x8058104" multiplicity="1"/>
+        <rate value="8"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x80580dc" multiplicity="1"/>
+        <tagged-substrate tag="0x8058394" multiplicity="1"/>
+        <tagged-product tag="0x80580dc" multiplicity="1"/>
+        <tagged-product tag="0x805812c" multiplicity="1"/>
+        <rate value="1e+10"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x805812c" multiplicity="1"/>
+        <tagged-substrate tag="0x805822c" multiplicity="1"/>
+        <tagged-product tag="0x805822c" multiplicity="1"/>
+        <tagged-product tag="0x8058394" multiplicity="1"/>
+        <rate value="1e+10"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x805812c" multiplicity="1"/>
+        <tagged-substrate tag="0x80581b4" multiplicity="1"/>
+        <tagged-product tag="0x805812c" multiplicity="1"/>
+        <tagged-product tag="0x80583bc" multiplicity="1"/>
+        <rate value="1e+10"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x805822c" multiplicity="1"/>
+        <tagged-substrate tag="0x80583bc" multiplicity="1"/>
+        <tagged-product tag="0x80581b4" multiplicity="1"/>
+        <tagged-product tag="0x805822c" multiplicity="1"/>
+        <rate value="1e+10"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x8058204" multiplicity="1"/>
+        <tagged-substrate tag="0x80583bc" multiplicity="1"/>
+        <tagged-product tag="0x80581dc" multiplicity="1"/>
+        <tagged-product tag="0x80583bc" multiplicity="1"/>
+        <rate value="1e+10"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x80581dc" multiplicity="1"/>
+        <tagged-substrate tag="0x805822c" multiplicity="1"/>
+        <tagged-product tag="0x8058204" multiplicity="1"/>
+        <tagged-product tag="0x805822c" multiplicity="1"/>
+        <rate value="1e+10"/>
+      </tag-reaction>
+    </tag-reactions>
+    <volume liters="1e-12"/>
+    <time seconds="0.99"/>
+  </model>
+  <streams>
+    <tagged-species-streams>
+      <tagged-species-stream name="active-kin1">
+        <tagged-species-ref tag="0x805812c"/>
+      </tagged-species-stream>
+      <tagged-species-stream name="active-kin2">
+        <tagged-species-ref tag="0x80583bc"/>
+      </tagged-species-stream>
+      <tagged-species-stream name="active-kin3">
+        <tagged-species-ref tag="0x80581dc"/>
+      </tagged-species-stream>
+      <tagged-species-stream name="active-receptor">
+        <tagged-species-ref tag="0x80580dc"/>
+      </tagged-species-stream>
+      <tagged-species-stream name="inactive-kin1">
+        <tagged-species-ref tag="0x8058394"/>
+      </tagged-species-stream>
+      <tagged-species-stream name="inactive-kin2">
+        <tagged-species-ref tag="0x80581b4"/>
+      </tagged-species-stream>
+      <tagged-species-stream name="inactive-kin3">
+        <tagged-species-ref tag="0x8058204"/>
+      </tagged-species-stream>
+      <tagged-species-stream name="inactive-receptor">
+        <tagged-species-ref tag="0x8058104"/>
+      </tagged-species-stream>
+      <tagged-species-stream name="ptase-x">
+        <tagged-species-ref tag="0x805822c"/>
+      </tagged-species-stream>
+    </tagged-species-streams>
+    <tagged-dump-streams>
+      <tagged-dump-stream file-name="active-kinases.dmp" dump-period="0.01">
+        <tagged-species-stream-ref name="active-kin1"/>
+        <tagged-species-stream-ref name="active-kin2"/>
+        <tagged-species-stream-ref name="active-kin3"/>
+      </tagged-dump-stream>
+      <tagged-dump-stream file-name="others.dmp" dump-period="0.01">
+        <tagged-species-stream-ref name="active-receptor"/>
+        <tagged-species-stream-ref name="ptase-x"/>
+      </tagged-dump-stream>
+      <tagged-dump-stream file-name="stats" dump-period="0.01"/>
+    </tagged-dump-streams>
+  </streams>
+</moleculizer-state>

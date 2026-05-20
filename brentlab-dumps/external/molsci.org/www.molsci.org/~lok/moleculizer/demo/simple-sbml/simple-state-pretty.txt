@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<moleculizer-state>
+  <model>
+    <units-states>
+      <modifications/>
+      <mols>
+        <mod-mol name="A">
+          <weight daltons="100"/>
+          <binding-site name="to-B">
+            <default-shape-ref name="default"/>
+            <site-shape name="default"/>
+          </binding-site>
+        </mod-mol>
+        <mod-mol name="B">
+          <weight daltons="100"/>
+          <binding-site name="to-A">
+            <default-shape-ref name="default"/>
+            <site-shape name="default"/>
+          </binding-site>
+        </mod-mol>
+      </mols>
+    </units-states>
+    <explicit-species-tags>
+      <explicit-species-tag name="A-singleton" tag="0x8056838"/>
+      <explicit-species-tag name="AB" tag="0x8056740"/>
+      <explicit-species-tag name="B-singleton" tag="0x8051830"/>
+    </explicit-species-tags>
+    <tagged-species>
+      <tagged-plex-species tag="0x8056838">
+        <plex>
+          <mol-instance name="mod-mol_0">
+            <mol-ref name="A"/>
+          </mol-instance>
+        </plex>
+        <instance-states>
+          <mod-mol-instance-ref name="mod-mol_0">
+            <mod-map/>
+          </mod-mol-instance-ref>
+        </instance-states>
+        <population count="408"/>
+        <concentration value="6.77741e-11"/>
+        <updated/>
+      </tagged-plex-species>
+      <tagged-plex-species tag="0x8056740">
+        <plex>
+          <mol-instance name="mod-mol_0">
+            <mol-ref name="A"/>
+          </mol-instance>
+          <mol-instance name="mod-mol_1">
+            <mol-ref name="B"/>
+          </mol-instance>
+          <binding>
+            <mol-instance-ref name="mod-mol_0">
+              <binding-site-ref name="to-B"/>
+            </mol-instance-ref>
+            <mol-instance-ref name="mod-mol_1">
+              <binding-site-ref name="to-A"/>
+            </mol-instance-ref>
+          </binding>
+        </plex>
+        <instance-states>
+          <mod-mol-instance-ref name="mod-mol_0">
+            <mod-map/>
+          </mod-mol-instance-ref>
+          <mod-mol-instance-ref name="mod-mol_1">
+            <mod-map/>
+          </mod-mol-instance-ref>
+        </instance-states>
+        <population count="892"/>
+        <concentration value="1.48173e-10"/>
+        <updated/>
+      </tagged-plex-species>
+      <tagged-plex-species tag="0x8051830">
+        <plex>
+          <mol-instance name="mod-mol_0">
+            <mol-ref name="B"/>
+          </mol-instance>
+        </plex>
+        <instance-states>
+          <mod-mol-instance-ref name="mod-mol_0">
+            <mod-map/>
+          </mod-mol-instance-ref>
+        </instance-states>
+        <population count="108"/>
+        <concentration value="1.79402e-11"/>
+        <updated/>
+      </tagged-plex-species>
+    </tagged-species>
+    <tag-reactions>
+      <tag-reaction>
+        <tagged-substrate tag="0x8056740" multiplicity="1"/>
+        <tagged-product tag="0x8051830" multiplicity="1"/>
+        <tagged-product tag="0x8056838" multiplicity="1"/>
+        <rate value="1"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x8051830" multiplicity="1"/>
+        <tagged-substrate tag="0x8056838" multiplicity="1"/>
+        <tagged-product tag="0x8056740" multiplicity="1"/>
+        <rate value="1e+11"/>
+      </tag-reaction>
+    </tag-reactions>
+    <volume liters="1e-11"/>
+    <time seconds="1.9"/>
+  </model>
+  <streams>
+    <tagged-species-streams>
+      <tagged-species-stream name="A-singleton">
+        <tagged-species-ref tag="0x8056838"/>
+      </tagged-species-stream>
+      <tagged-species-stream name="AB">
+        <tagged-species-ref tag="0x8056740"/>
+      </tagged-species-stream>
+      <tagged-species-stream name="B-singleton">
+        <tagged-species-ref tag="0x8051830"/>
+      </tagged-species-stream>
+    </tagged-species-streams>
+    <tagged-dump-streams>
+      <tagged-dump-stream file-name="species.dmp" dump-period="0.01">
+        <tagged-species-stream-ref name="AB"/>
+        <tagged-species-stream-ref name="A-singleton"/>
+        <tagged-species-stream-ref name="B-singleton"/>
+      </tagged-dump-stream>
+    </tagged-dump-streams>
+  </streams>
+</moleculizer-state>

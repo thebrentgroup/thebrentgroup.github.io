@@ -1,0 +1,620 @@
+<?xml version="1.0"?>
+<moleculizer-state>
+  <model>
+    <units-states>
+      <modifications>
+        <modification name="adp-bound">
+          <weight-delta daltons="90"/>
+        </modification>
+        <modification name="atp-bound">
+          <weight-delta daltons="100"/>
+        </modification>
+        <modification name="none">
+          <weight-delta daltons="0"/>
+        </modification>
+        <modification name="phosphorylated">
+          <weight-delta daltons="10"/>
+        </modification>
+      </modifications>
+      <mols>
+        <mod-mol name="foo">
+          <weight daltons="1000"/>
+          <binding-site name="to-substrate">
+            <default-shape-ref name="default"/>
+            <site-shape name="default"/>
+          </binding-site>
+        </mod-mol>
+        <mod-mol name="test-kinase">
+          <weight daltons="2000"/>
+          <mod-site name="atp-site">
+            <default-mod-ref name="none"/>
+          </mod-site>
+        </mod-mol>
+        <mod-mol name="test-substrate">
+          <weight daltons="2000"/>
+          <binding-site name="to-foo">
+            <default-shape-ref name="default"/>
+            <site-shape name="default"/>
+          </binding-site>
+          <mod-site name="phos-site-1">
+            <default-mod-ref name="none"/>
+          </mod-site>
+          <mod-site name="phos-site-2">
+            <default-mod-ref name="none"/>
+          </mod-site>
+          <mod-site name="phos-site-3">
+            <default-mod-ref name="none"/>
+          </mod-site>
+        </mod-mol>
+      </mols>
+    </units-states>
+    <explicit-species-tags>
+      <explicit-species-tag name="ADP" tag="0x8059a9c"/>
+      <explicit-species-tag name="ATP" tag="0x8059a64"/>
+      <explicit-species-tag name="kinase-singleton" tag="0x8059a18"/>
+      <explicit-species-tag name="phosphate" tag="0x8059ad4"/>
+      <explicit-species-tag name="test-ptase" tag="0x8059b0c"/>
+      <explicit-species-tag name="the-complex" tag="0x80599d0"/>
+    </explicit-species-tags>
+    <tagged-species>
+      <tagged-plex-species tag="0x8059f50">
+        <plex>
+          <mol-instance name="mod-mol_0">
+            <mol-ref name="foo"/>
+          </mol-instance>
+        </plex>
+        <instance-states>
+          <mod-mol-instance-ref name="mod-mol_0">
+            <mod-map/>
+          </mod-mol-instance-ref>
+        </instance-states>
+        <population count="80"/>
+        <concentration value="1.3289e-11"/>
+        <updated/>
+      </tagged-plex-species>
+      <tagged-plex-species tag="0x80599d0">
+        <plex>
+          <mol-instance name="mod-mol_0">
+            <mol-ref name="test-substrate"/>
+          </mol-instance>
+          <mol-instance name="mod-mol_1">
+            <mol-ref name="foo"/>
+          </mol-instance>
+          <binding>
+            <mol-instance-ref name="mod-mol_0">
+              <binding-site-ref name="to-foo"/>
+            </mol-instance-ref>
+            <mol-instance-ref name="mod-mol_1">
+              <binding-site-ref name="to-substrate"/>
+            </mol-instance-ref>
+          </binding>
+        </plex>
+        <instance-states>
+          <mod-mol-instance-ref name="mod-mol_0">
+            <mod-map/>
+          </mod-mol-instance-ref>
+          <mod-mol-instance-ref name="mod-mol_1">
+            <mod-map/>
+          </mod-mol-instance-ref>
+        </instance-states>
+        <population count="166"/>
+        <concentration value="2.75748e-11"/>
+        <updated/>
+      </tagged-plex-species>
+      <tagged-plex-species tag="0x805d188">
+        <plex>
+          <mol-instance name="mod-mol_0">
+            <mol-ref name="test-substrate"/>
+          </mol-instance>
+          <mol-instance name="mod-mol_1">
+            <mol-ref name="foo"/>
+          </mol-instance>
+          <binding>
+            <mol-instance-ref name="mod-mol_0">
+              <binding-site-ref name="to-foo"/>
+            </mol-instance-ref>
+            <mol-instance-ref name="mod-mol_1">
+              <binding-site-ref name="to-substrate"/>
+            </mol-instance-ref>
+          </binding>
+        </plex>
+        <instance-states>
+          <mod-mol-instance-ref name="mod-mol_0">
+            <mod-map>
+              <mod-site-ref name="phos-site-1">
+                <mod-ref name="phosphorylated"/>
+              </mod-site-ref>
+            </mod-map>
+          </mod-mol-instance-ref>
+          <mod-mol-instance-ref name="mod-mol_1">
+            <mod-map/>
+          </mod-mol-instance-ref>
+        </instance-states>
+        <population count="85"/>
+        <concentration value="1.41196e-11"/>
+        <updated/>
+      </tagged-plex-species>
+      <tagged-plex-species tag="0x805d218">
+        <plex>
+          <mol-instance name="mod-mol_0">
+            <mol-ref name="test-substrate"/>
+          </mol-instance>
+          <mol-instance name="mod-mol_1">
+            <mol-ref name="foo"/>
+          </mol-instance>
+          <binding>
+            <mol-instance-ref name="mod-mol_0">
+              <binding-site-ref name="to-foo"/>
+            </mol-instance-ref>
+            <mol-instance-ref name="mod-mol_1">
+              <binding-site-ref name="to-substrate"/>
+            </mol-instance-ref>
+          </binding>
+        </plex>
+        <instance-states>
+          <mod-mol-instance-ref name="mod-mol_0">
+            <mod-map>
+              <mod-site-ref name="phos-site-2">
+                <mod-ref name="phosphorylated"/>
+              </mod-site-ref>
+            </mod-map>
+          </mod-mol-instance-ref>
+          <mod-mol-instance-ref name="mod-mol_1">
+            <mod-map/>
+          </mod-mol-instance-ref>
+        </instance-states>
+        <population count="421"/>
+        <concentration value="6.99336e-11"/>
+        <updated/>
+      </tagged-plex-species>
+      <tagged-plex-species tag="0x805e128">
+        <plex>
+          <mol-instance name="mod-mol_0">
+            <mol-ref name="test-substrate"/>
+          </mol-instance>
+          <mol-instance name="mod-mol_1">
+            <mol-ref name="foo"/>
+          </mol-instance>
+          <binding>
+            <mol-instance-ref name="mod-mol_0">
+              <binding-site-ref name="to-foo"/>
+            </mol-instance-ref>
+            <mol-instance-ref name="mod-mol_1">
+              <binding-site-ref name="to-substrate"/>
+            </mol-instance-ref>
+          </binding>
+        </plex>
+        <instance-states>
+          <mod-mol-instance-ref name="mod-mol_0">
+            <mod-map>
+              <mod-site-ref name="phos-site-1">
+                <mod-ref name="phosphorylated"/>
+              </mod-site-ref>
+              <mod-site-ref name="phos-site-2">
+                <mod-ref name="phosphorylated"/>
+              </mod-site-ref>
+            </mod-map>
+          </mod-mol-instance-ref>
+          <mod-mol-instance-ref name="mod-mol_1">
+            <mod-map/>
+          </mod-mol-instance-ref>
+        </instance-states>
+        <population count="248"/>
+        <concentration value="4.1196e-11"/>
+        <updated/>
+      </tagged-plex-species>
+      <tagged-plex-species tag="0x8059e68">
+        <plex>
+          <mol-instance name="mod-mol_0">
+            <mol-ref name="test-substrate"/>
+          </mol-instance>
+        </plex>
+        <instance-states>
+          <mod-mol-instance-ref name="mod-mol_0">
+            <mod-map/>
+          </mod-mol-instance-ref>
+        </instance-states>
+        <population count="14"/>
+        <concentration value="2.32558e-12"/>
+        <updated/>
+      </tagged-plex-species>
+      <tagged-plex-species tag="0x805df30">
+        <plex>
+          <mol-instance name="mod-mol_0">
+            <mol-ref name="test-substrate"/>
+          </mol-instance>
+        </plex>
+        <instance-states>
+          <mod-mol-instance-ref name="mod-mol_0">
+            <mod-map>
+              <mod-site-ref name="phos-site-1">
+                <mod-ref name="phosphorylated"/>
+              </mod-site-ref>
+            </mod-map>
+          </mod-mol-instance-ref>
+        </instance-states>
+        <population count="11"/>
+        <concentration value="1.82724e-12"/>
+        <updated/>
+      </tagged-plex-species>
+      <tagged-plex-species tag="0x805dfc0">
+        <plex>
+          <mol-instance name="mod-mol_0">
+            <mol-ref name="test-substrate"/>
+          </mol-instance>
+        </plex>
+        <instance-states>
+          <mod-mol-instance-ref name="mod-mol_0">
+            <mod-map>
+              <mod-site-ref name="phos-site-2">
+                <mod-ref name="phosphorylated"/>
+              </mod-site-ref>
+            </mod-map>
+          </mod-mol-instance-ref>
+        </instance-states>
+        <population count="33"/>
+        <concentration value="5.48173e-12"/>
+        <updated/>
+      </tagged-plex-species>
+      <tagged-plex-species tag="0x805e290">
+        <plex>
+          <mol-instance name="mod-mol_0">
+            <mol-ref name="test-substrate"/>
+          </mol-instance>
+        </plex>
+        <instance-states>
+          <mod-mol-instance-ref name="mod-mol_0">
+            <mod-map>
+              <mod-site-ref name="phos-site-1">
+                <mod-ref name="phosphorylated"/>
+              </mod-site-ref>
+              <mod-site-ref name="phos-site-2">
+                <mod-ref name="phosphorylated"/>
+              </mod-site-ref>
+            </mod-map>
+          </mod-mol-instance-ref>
+        </instance-states>
+        <population count="22"/>
+        <concentration value="3.65449e-12"/>
+        <updated/>
+      </tagged-plex-species>
+      <tagged-plex-species tag="0x8059a18">
+        <plex>
+          <mol-instance name="mod-mol_0">
+            <mol-ref name="test-kinase"/>
+          </mol-instance>
+        </plex>
+        <instance-states>
+          <mod-mol-instance-ref name="mod-mol_0">
+            <mod-map/>
+          </mod-mol-instance-ref>
+        </instance-states>
+        <population count="0"/>
+        <concentration value="0"/>
+        <updated/>
+      </tagged-plex-species>
+      <tagged-plex-species tag="0x8057bb0">
+        <plex>
+          <mol-instance name="mod-mol_0">
+            <mol-ref name="test-kinase"/>
+          </mol-instance>
+        </plex>
+        <instance-states>
+          <mod-mol-instance-ref name="mod-mol_0">
+            <mod-map>
+              <mod-site-ref name="atp-site">
+                <mod-ref name="atp-bound"/>
+              </mod-site-ref>
+            </mod-map>
+          </mod-mol-instance-ref>
+        </instance-states>
+        <population count="386"/>
+        <concentration value="6.41196e-11"/>
+        <updated/>
+      </tagged-plex-species>
+      <tagged-plex-species tag="0x8057c40">
+        <plex>
+          <mol-instance name="mod-mol_0">
+            <mol-ref name="test-kinase"/>
+          </mol-instance>
+        </plex>
+        <instance-states>
+          <mod-mol-instance-ref name="mod-mol_0">
+            <mod-map>
+              <mod-site-ref name="atp-site">
+                <mod-ref name="adp-bound"/>
+              </mod-site-ref>
+            </mod-map>
+          </mod-mol-instance-ref>
+        </instance-states>
+        <population count="614"/>
+        <concentration value="1.01993e-10"/>
+        <updated/>
+      </tagged-plex-species>
+      <tagged-stoch-species tag="0x8059a9c">
+        <weight daltons="90"/>
+        <population count="972"/>
+        <concentration value="1.61462e-10"/>
+      </tagged-stoch-species>
+      <tagged-stoch-species tag="0x8059a64">
+        <weight daltons="100"/>
+        <population count="8028"/>
+        <concentration value="1.33355e-09"/>
+      </tagged-stoch-species>
+      <tagged-stoch-species tag="0x8059ad4">
+        <weight daltons="10"/>
+        <population count="496"/>
+        <concentration value="8.2392e-11"/>
+      </tagged-stoch-species>
+      <tagged-stoch-species tag="0x8059b0c">
+        <weight daltons="1000"/>
+        <population count="504"/>
+        <concentration value="8.37209e-11"/>
+      </tagged-stoch-species>
+    </tagged-species>
+    <tag-reactions>
+      <tag-reaction>
+        <tagged-substrate tag="0x80599d0" multiplicity="1"/>
+        <tagged-product tag="0x8059e68" multiplicity="1"/>
+        <tagged-product tag="0x8059f50" multiplicity="1"/>
+        <rate value="1"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x805d188" multiplicity="1"/>
+        <tagged-product tag="0x8059f50" multiplicity="1"/>
+        <tagged-product tag="0x805df30" multiplicity="1"/>
+        <rate value="1"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x805d218" multiplicity="1"/>
+        <tagged-product tag="0x8059f50" multiplicity="1"/>
+        <tagged-product tag="0x805dfc0" multiplicity="1"/>
+        <rate value="1"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x805e128" multiplicity="1"/>
+        <tagged-product tag="0x8059f50" multiplicity="1"/>
+        <tagged-product tag="0x805e290" multiplicity="1"/>
+        <rate value="1"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x8059e68" multiplicity="1"/>
+        <tagged-substrate tag="0x8059f50" multiplicity="1"/>
+        <tagged-product tag="0x80599d0" multiplicity="1"/>
+        <rate value="1e+12"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x8059f50" multiplicity="1"/>
+        <tagged-substrate tag="0x805df30" multiplicity="1"/>
+        <tagged-product tag="0x805d188" multiplicity="1"/>
+        <rate value="9.9917e+11"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x8059f50" multiplicity="1"/>
+        <tagged-substrate tag="0x805dfc0" multiplicity="1"/>
+        <tagged-product tag="0x805d218" multiplicity="1"/>
+        <rate value="9.9917e+11"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x8059f50" multiplicity="1"/>
+        <tagged-substrate tag="0x805e290" multiplicity="1"/>
+        <tagged-product tag="0x805e128" multiplicity="1"/>
+        <rate value="9.98348e+11"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x8059a18" multiplicity="1"/>
+        <tagged-substrate tag="0x8059a64" multiplicity="1"/>
+        <tagged-product tag="0x8057bb0" multiplicity="1"/>
+        <rate value="1e+12"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x8057bb0" multiplicity="1"/>
+        <tagged-product tag="0x8059a18" multiplicity="1"/>
+        <tagged-product tag="0x8059a64" multiplicity="1"/>
+        <rate value="1"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x8059a18" multiplicity="1"/>
+        <tagged-substrate tag="0x8059a9c" multiplicity="1"/>
+        <tagged-product tag="0x8057c40" multiplicity="1"/>
+        <rate value="1e+12"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x8057c40" multiplicity="1"/>
+        <tagged-product tag="0x8059a18" multiplicity="1"/>
+        <tagged-product tag="0x8059a9c" multiplicity="1"/>
+        <rate value="1"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x8057bb0" multiplicity="1"/>
+        <tagged-substrate tag="0x80599d0" multiplicity="1"/>
+        <tagged-product tag="0x8057c40" multiplicity="1"/>
+        <tagged-product tag="0x805d188" multiplicity="1"/>
+        <rate value="8.99735e+09"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x8057bb0" multiplicity="1"/>
+        <tagged-substrate tag="0x80599d0" multiplicity="1"/>
+        <tagged-product tag="0x8057c40" multiplicity="1"/>
+        <tagged-product tag="0x805d218" multiplicity="1"/>
+        <rate value="8.99735e+09"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x8057bb0" multiplicity="1"/>
+        <tagged-substrate tag="0x8059e68" multiplicity="1"/>
+        <tagged-product tag="0x8057c40" multiplicity="1"/>
+        <tagged-product tag="0x805df30" multiplicity="1"/>
+        <rate value="9.88024e+09"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x8057bb0" multiplicity="1"/>
+        <tagged-substrate tag="0x8059e68" multiplicity="1"/>
+        <tagged-product tag="0x8057c40" multiplicity="1"/>
+        <tagged-product tag="0x805dfc0" multiplicity="1"/>
+        <rate value="9.88024e+09"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x8057bb0" multiplicity="1"/>
+        <tagged-substrate tag="0x805d188" multiplicity="1"/>
+        <tagged-product tag="0x8057c40" multiplicity="1"/>
+        <tagged-product tag="0x805e128" multiplicity="1"/>
+        <rate value="8.9912e+09"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x8057bb0" multiplicity="1"/>
+        <tagged-substrate tag="0x805d218" multiplicity="1"/>
+        <tagged-product tag="0x8057c40" multiplicity="1"/>
+        <tagged-product tag="0x805e128" multiplicity="1"/>
+        <rate value="8.9912e+09"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x8057bb0" multiplicity="1"/>
+        <tagged-substrate tag="0x805df30" multiplicity="1"/>
+        <tagged-product tag="0x8057c40" multiplicity="1"/>
+        <tagged-product tag="0x805e290" multiplicity="1"/>
+        <rate value="9.86764e+09"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x8057bb0" multiplicity="1"/>
+        <tagged-substrate tag="0x805dfc0" multiplicity="1"/>
+        <tagged-product tag="0x8057c40" multiplicity="1"/>
+        <tagged-product tag="0x805e290" multiplicity="1"/>
+        <rate value="9.86764e+09"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x8059b0c" multiplicity="1"/>
+        <tagged-substrate tag="0x805d188" multiplicity="1"/>
+        <tagged-product tag="0x80599d0" multiplicity="1"/>
+        <tagged-product tag="0x8059ad4" multiplicity="1"/>
+        <rate value="9.42417e+09"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x8059b0c" multiplicity="1"/>
+        <tagged-substrate tag="0x805e128" multiplicity="1"/>
+        <tagged-product tag="0x8059ad4" multiplicity="1"/>
+        <tagged-product tag="0x805d218" multiplicity="1"/>
+        <rate value="9.42028e+09"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x8059b0c" multiplicity="1"/>
+        <tagged-substrate tag="0x805df30" multiplicity="1"/>
+        <tagged-product tag="0x8059ad4" multiplicity="1"/>
+        <tagged-product tag="0x8059e68" multiplicity="1"/>
+        <rate value="9.9917e+09"/>
+      </tag-reaction>
+      <tag-reaction>
+        <tagged-substrate tag="0x8059b0c" multiplicity="1"/>
+        <tagged-substrate tag="0x805e290" multiplicity="1"/>
+        <tagged-product tag="0x8059ad4" multiplicity="1"/>
+        <tagged-product tag="0x805dfc0" multiplicity="1"/>
+        <rate value="9.98348e+09"/>
+      </tag-reaction>
+    </tag-reactions>
+    <volume liters="1e-11"/>
+    <time seconds="1.98"/>
+  </model>
+  <streams>
+    <tagged-species-streams>
+      <tagged-species-stream name="ADP">
+        <tagged-species-ref tag="0x8059a9c"/>
+      </tagged-species-stream>
+      <tagged-species-stream name="ATP">
+        <tagged-species-ref tag="0x8059a64"/>
+      </tagged-species-stream>
+      <tagged-species-stream name="complex-1-2-phos">
+        <tagged-species-ref tag="0x805e128"/>
+      </tagged-species-stream>
+      <tagged-species-stream name="complex-1-only-phos">
+        <tagged-species-ref tag="0x805d188"/>
+      </tagged-species-stream>
+      <tagged-species-stream name="complex-2-only-phos">
+        <tagged-species-ref tag="0x805d218"/>
+      </tagged-species-stream>
+      <tagged-species-stream name="complex-3-phos"/>
+      <tagged-species-stream name="complex-no-phos">
+        <tagged-species-ref tag="0x80599d0"/>
+      </tagged-species-stream>
+      <tagged-species-stream name="complex-total">
+        <tagged-species-ref tag="0x80599d0"/>
+        <tagged-species-ref tag="0x805d188"/>
+        <tagged-species-ref tag="0x805d218"/>
+        <tagged-species-ref tag="0x805e128"/>
+      </tagged-species-stream>
+      <tagged-species-stream name="kinase-adp-bound">
+        <tagged-species-ref tag="0x8057c40"/>
+      </tagged-species-stream>
+      <tagged-species-stream name="kinase-atp-bound">
+        <tagged-species-ref tag="0x8057bb0"/>
+      </tagged-species-stream>
+      <tagged-species-stream name="kinase-axp-free">
+        <tagged-species-ref tag="0x8059a18"/>
+      </tagged-species-stream>
+      <tagged-species-stream name="kinase-singleton">
+        <tagged-species-ref tag="0x8059a18"/>
+      </tagged-species-stream>
+      <tagged-species-stream name="kinase-total">
+        <tagged-species-ref tag="0x8059a18"/>
+        <tagged-species-ref tag="0x8057bb0"/>
+        <tagged-species-ref tag="0x8057c40"/>
+      </tagged-species-stream>
+      <tagged-species-stream name="phosphate">
+        <tagged-species-ref tag="0x8059ad4"/>
+      </tagged-species-stream>
+      <tagged-species-stream name="singleton-1-2-phos">
+        <tagged-species-ref tag="0x805e290"/>
+      </tagged-species-stream>
+      <tagged-species-stream name="singleton-1-only-phos">
+        <tagged-species-ref tag="0x805df30"/>
+      </tagged-species-stream>
+      <tagged-species-stream name="singleton-2-only-phos">
+        <tagged-species-ref tag="0x805dfc0"/>
+      </tagged-species-stream>
+      <tagged-species-stream name="singleton-3-phos"/>
+      <tagged-species-stream name="singleton-no-phos">
+        <tagged-species-ref tag="0x8059e68"/>
+      </tagged-species-stream>
+      <tagged-species-stream name="singleton-total">
+        <tagged-species-ref tag="0x8059e68"/>
+        <tagged-species-ref tag="0x805df30"/>
+        <tagged-species-ref tag="0x805dfc0"/>
+        <tagged-species-ref tag="0x805e290"/>
+      </tagged-species-stream>
+      <tagged-species-stream name="test-ptase">
+        <tagged-species-ref tag="0x8059b0c"/>
+      </tagged-species-stream>
+      <tagged-species-stream name="the-complex">
+        <tagged-species-ref tag="0x80599d0"/>
+      </tagged-species-stream>
+    </tagged-species-streams>
+    <tagged-dump-streams>
+      <tagged-dump-stream file-name="singletons.dmp" dump-period="0.01">
+        <tagged-species-stream-ref name="singleton-total"/>
+        <tagged-species-stream-ref name="singleton-no-phos"/>
+        <tagged-species-stream-ref name="singleton-1-only-phos"/>
+        <tagged-species-stream-ref name="singleton-2-only-phos"/>
+        <tagged-species-stream-ref name="singleton-1-2-phos"/>
+        <tagged-species-stream-ref name="singleton-3-phos"/>
+      </tagged-dump-stream>
+      <tagged-dump-stream file-name="complexes.dmp" dump-period="0.01">
+        <tagged-species-stream-ref name="complex-total"/>
+        <tagged-species-stream-ref name="complex-no-phos"/>
+        <tagged-species-stream-ref name="complex-1-only-phos"/>
+        <tagged-species-stream-ref name="complex-2-only-phos"/>
+        <tagged-species-stream-ref name="complex-1-2-phos"/>
+        <tagged-species-stream-ref name="complex-3-phos"/>
+      </tagged-dump-stream>
+      <tagged-dump-stream file-name="phos.dmp" dump-period="0.01">
+        <tagged-species-stream-ref name="ATP"/>
+        <tagged-species-stream-ref name="ADP"/>
+        <tagged-species-stream-ref name="phosphate"/>
+      </tagged-dump-stream>
+      <tagged-dump-stream file-name="stats" dump-period="0.01"/>
+      <tagged-dump-stream file-name="kinase.dmp" dump-period="0.01">
+        <tagged-species-stream-ref name="kinase-total"/>
+        <tagged-species-stream-ref name="kinase-atp-bound"/>
+        <tagged-species-stream-ref name="kinase-adp-bound"/>
+        <tagged-species-stream-ref name="kinase-axp-free"/>
+      </tagged-dump-stream>
+    </tagged-dump-streams>
+  </streams>
+</moleculizer-state>

@@ -1,0 +1,105 @@
+REPORTERS
+
+Selection for LEU+ colonies in an interactor hunt results in a certain
+number of false positives due to cis or trans-acting yeast mutations
+that activate the LEU2 promoter (see EXPECTED RESULTS).  Most of these
+can be identified because they grow on glucose plates lacking leucine
+and therefore do not depend on expression of the activator containing
+protein from the library plasmid which is driven by the GAL1 promoter
+(see LIBRARIES).  However, the selection strains for the trap also
+incorparate a second reporter, which has LexA operators upstream of a
+lacZ gene (see below), to further diminish the frequency of these
+apparent positives.  Most yeast that contain library encoded proteins
+that interact with the bait will be both galactose-dependent LEU+ and
+galactose-dependent blue on Xgal indicator plates.
+
+The LexAop-lacZ reporters are not as sensitive as the Lexop-LEU2
+reporter, so it is possible for a weak interactor not to result in
+blue yeast on Xgal plates.  To minimize this possibility, for most
+hunts we now recommend the use of the most sensitive lacZ reporter
+plasmid available, usually (pSH18-34) rather than the less sensitive
+ones used previously (pJK103, and pRB1840) (Gyuris et al., submitted;
+Zervos et al., January 1993 Cell 72:223-232 ).  Note that these less
+sensitive lacZ reporters can be quite useful: activation of their
+transcription by a particular interacting bait/prey pair is a function
+of the the dissociation constant for that interaction (Golemis and
+Brent, in preparation) and demanding activation of weak reporters is a
+good way to detect only those interactions that are strong.
+
+pSH18 series -  LexAop-lacZ reporter genes
+Steve Hanes
+
+These are reporter plasmids for LexA fusion proteins. They contain
+multiple LexA operators upstream of an easily assayable reporter gene,
+GAL1-LacZ (the GAL1 regulatory elements have been removed so that
+these reporters are not controled by galactose and glucose).  They are
+all URA3+ and have 2u replicators.  In E. coli, they all confer amp
+resistance.
+
+I made these by inserting a 78-bp oligonucleotide* into the XhoI site
+of plasmid pLR1(delta)1 (West et al., MCB 4, 2467 (1984)).  The XhoI
+sites are not reconstituted. Insertion site is at -167 from the
+transcription start site of GAL1-LacZ.  Inserts are in the 5'-> 3'
+orientation.  Operators are the high-affinity "overlapping" sequence
+found upstream of colE1 (Ebina et al., JBC 258, 13258). Each
+oligonucleotide contains two of these sequences (ie, 4 binding sites
+for LexA dimers, or 8 operator half sites).
+
+pSH18-8: One intact insert. 2 LexA operators.
+
+pSH18-3: One and a 'half' inserts (rearranged in vivo). 3 LexA operators.
+
+pSH18-34: Two inserts.  4 LexA operators.
+
+pSH18-34(delta)spe: Integrating derivative of pSH18-34 
+
+Comments: Because of their large numbers of high affinity operators,
+these plasmids are currently the most sensitive Lexop-lacZ reporters.
+Yeast bearing them have undetectable levels of beta-galactosidase
+activity in the absense of activator proteins.  pSH18-34(delta)spe is
+a gift of Pam Silver who is now at the Dana Farber Cancer Institute.
+It lacks the 2 um replicator and can be directed to the URA3 locus for
+chromosomal integration by cutting with ApaI.
+
+    Also available is JK103 (made by Joanne Kamens, Brent lab), which
+has a single overlapping colE1 type operator, and the old faithful,
+p1840 which has a symmetrically altered version of the lower affinity
+recA operator (1 LexA op; Brent and Ptashne, Cell 40, 729.(1985)).
+For all of these LexAop reporter plasmids, an appropriate negative
+control is pLR1(delta)1, which gives no background in yeast.
+
+*Sequence of the oligonucleotide.  Each oligonucleotide contains 2
+colE1 operators or 4 binding sites for LexA dimers.
+
+top strand
+ 5'TCGACTGCTGTATATAAAACCAGTGGTTATATGTACAGTACTGCTGTATATAAAACCAGTGGTTATATGTACA
+GTACG3'
+
+bottom strand
+     
+3'GACGACATATATTTTGGTCACCAATATACATGTCATGACGACATATATTTTGGTCACCAATATACATGTCATGC
+AGCT5'
+
+These anneal to give double stranded DNA with 4bp XhoI 5' sticky ends (TCGA)
+
+Steve Hanes
+Department of Molecular Biology
+Massachusetts General Hospital
+Boston, MA 02114
+
+after September 1, 1993
+
+Axelrod Institute
+Wadsworth Laboratories
+New York State Department of Health
+Empire State Plaza
+Albany, New York 12201
+
+518-474-2821
+hanes@wadsworth.ph.albany.edu
+
+
+Information revised September 1993
+
+Roger Brent
+brent@opal.mgh.harvard.edu

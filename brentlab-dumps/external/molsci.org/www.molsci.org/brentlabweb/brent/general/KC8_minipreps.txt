@@ -1,0 +1,65 @@
+E. coli KC8 Minipreps
+
+This procedure describes our method for making DNA from KC8.  Because it
+contatains genetic lesions that are complemented by a number of
+different markers used for yeast cloning vectors, this strain is highly
+useful for plasmid rescue.  However, in our hands, DNA made from this
+strain by conventional miniprep methods is not suitable for sequencing.
+The procedure below gives high quality DNA that can be used in all
+applications we have so far tested.
+ 
+
+1. Grow a KC8 transformant in 5 ml LB Amp (100ug/ml) or 1 X A or M9
+minimal medium (Amp 100ul/ml) to an OD600 of ³ 1.
+
+The reason for growing cells in minimal is to allow use of medium that
+lacks the amino acid whose synthesis is directed by the plasmid you
+desire to prepare, whose marker complements the auxotrophic defect in
+KC8.  Use of such medium may slightly increase copy number and DNA
+yield.
+
+2. Spin down cells in a 15 ml Falcon tube (Beckmann J-6M centrifuge, 4.2
+rotor, 4000 rpm/min, 10min, 4oC).
+
+3. Discard supernatant, resuspend cells in 300ul SET buffer, and
+transfer to an eppendorf tube.
+
+4. Add 55 ul lysozyme solution (hen egg white lysozyme, 5 mg/ml in SET
+buffer), 40 ml RNase solution (1 mg/ml in water or TE), and incubate on
+ice for 15 min.
+
+5. Boil 1 min.
+
+6. Add 125 ml Triton Mix and invert the tube several times to get an
+even distribution; incubate on ice for 10 min.
+
+7. Spin in microfuge for 10 min at RT.
+
+8. Take off supernatant (about 500 ml) and extract twice with an equal
+volume of 1:1 (vol/vol) phenol/chloroform.  Discard phenol chloroform
+layer.
+
+9. Chloroform extract once.  Discard chloroform layer
+
+10. Add an equal volume of isopropanol to the remaining liquid, vortex,
+and incubate at -70oC for 20 min.  Spin for 10 min at 4 oC. Pour off
+supernatant carefully and wash DNA pellet with 1 ml 70%
+ethanol. Microfuge again for 1 min, pour off the ethanol and vacuum dry
+the DNA briefly. Resuspend the DNA in 50 ml TE, pH 8.0.
+
+
+SET buffer: 20 % (w/v) Sucrose, 50 mM Tris-HCl pH 8.0, 1 mM EDTA.
+
+Triton Mix: Mix 44.5 ml water with 37.5ml 0.5M EDTA pH 8.0, 15ml 1M
+Tris-HCl pH 8.0 and 3ml 10% (v/v) Triton X-100.
+
+Timm Jessen
+Russ Finley
+
+4 December 1993
+modified 31 January 1994
+
+617 726 5956
+617 726 6893 (fax)
+jessen@opal.mgh.harvard.edu
+finley@opal.mgh.harvard.edu

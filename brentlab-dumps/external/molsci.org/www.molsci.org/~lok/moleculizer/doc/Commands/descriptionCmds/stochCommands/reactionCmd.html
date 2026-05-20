@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="StarOffice/5.2 (Linux)">
+	<META NAME="AUTHOR" CONTENT="Walter Lok">
+	<META NAME="CREATED" CONTENT="20010924;14481500">
+	<META NAME="CHANGEDBY" CONTENT="Walter Lok">
+	<META NAME="CHANGED" CONTENT="20011106;11390800">
+</HEAD>
+<BODY>
+<P STYLE="margin-top: 0.17in; page-break-after: avoid"><FONT FACE="Times New Roman, serif"><FONT SIZE=4>reaction</FONT></FONT></P>
+<PRE STYLE="margin-bottom: 0.2in">reaction reaction-tag : n1 r1 + n2 r2 + ... + nk rk  -&gt;  m1 p1 + m2 p2 + ... + mj rj @ rate</PRE><P>
+This is easier to understand by example:</P>
+<PRE>small-molecule Na 22.99
+small-molecule H2O 18.0
+small-molecule NaOH 39.98
+small-molecule H2 2.01
+reaction make-lye : 2 Na + 2 H20 -&gt; 2 NaOH + 1 H2 @ 100.0</PRE><P>
+Note that 1 is NOT assumed as a coeffiecient if none is given; for
+simplicity in parsing, the coefficient must always be given. Note
+also that coefficients are separated from their molecules by
+whitespace, as usual for the primitive command parser. The rate given
+after the @-sign is the usual molar reaction rate.</P>
+<P>An arrow reaction need not have any substrates (left-hand members)
+in which case the molar reaction rate tells how fast to produce the
+products out of nothing. (To create molecules out of nothing
+<I>instantly</I>, use the <A HREF="../../runCmds/createCmd.html">create</A>
+command at simulation run time.) Likewise, an arrow reaction need not
+have any products, in which case the molar reaction rate tells how
+fast to destroy the substrates. This makes arrow reactions a useful
+way to introduce or remove substances gradually.</P>
+<P>Note that, as implied by the above discussion, the equation is NOT
+checked for mass-balance. In fact, the molecular weights of molecules
+are not used at all in this kind of reaction: the reaction formula
+generally defines just one reaction, and the molecular weights are
+already at work in its specified reaction rate. (By contrast, the
+<A HREF="../plexCommands/dimerCmd.html">dimer</A> command defines two
+<I>families</I> of reactions, a family of dimerization reactions and
+a family of decomposition reactions. The dimerizations are between
+the pairs of species of complexes that display the sites as free
+binding sites. The molecular weight given in the <A HREF="../plexCommands/molCmd.html">mol</A>
+command serves as the basis for extrapolation of the given
+dimerization rate to all these different dimerization reactions.)</P>
+<P>Note that complexes can participate in reactions defined in this
+way. Each complex has a default state; when a complex must be
+produced as the product of an &quot;arrow&quot; reaction, it is
+produced in this default state. Complexes made with the <A HREF="../../runCmds/createCmd.html">create</A>
+command are also produced in this default state. When a complex must
+be destroyed as the result of an &quot;arrow&quot; reaction, a random
+&quot;victim&quot; is chosen from the population of all complexes
+with the given structure. In the following example, the complex is
+introduced at a constant rate:</P>
+<P>The <I>reaction-tag</I> can be used in a <A HREF="../../runCmds/traceCmd.html">trace</A>
+command to trace the reaction.</P>
+<PRE>mol foo 100.0 to-bar to-fiz
+mol bar 100.0 to-foo
+
+plex foobar
+mols foo1:foo bar1:bar
+bind foo1:to-bar bar1:to-foo
+
+reaction make-foobar :  -&gt; 1 foobar @ 1000.0</PRE><P ALIGN=CENTER STYLE="margin-left: 0.79in">
+<A HREF="smallMolCmd.html">previous</A> | <A HREF="index.html">up</A>
+| <A HREF="../../../index.html">top</A> | next</P>
+</BODY>
+</HTML>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml:sbml xmlns:sbml="http://www.sbml.org/sbml/level2" xmlns:mathml="http://www.w3.org/1998/Math/MathML" level="2" version="1">
+  <sbml:model>
+    <sbml:listOfCompartments>
+      <sbml:compartment id="theOnlyCompartment" spatialDimensions="3" size="1e-11" units="liters"/>
+    </sbml:listOfCompartments>
+    <sbml:listOfSpecies>
+      <sbml:species id="species0x8056838" compartment="theOnlyCompartment" initialAmount="408" substanceUnits="item" hasOnlySubstanceUnits="true"/>
+      <sbml:species id="species0x8056740" compartment="theOnlyCompartment" initialAmount="892" substanceUnits="item" hasOnlySubstanceUnits="true"/>
+      <sbml:species id="species0x8051830" compartment="theOnlyCompartment" initialAmount="108" substanceUnits="item" hasOnlySubstanceUnits="true"/>
+    </sbml:listOfSpecies>
+    <sbml:listOfReactions>
+      <sbml:reaction id="N10067">
+        <sbml:listOfReactants>
+          <sbml:speciesReference species="species0x8056740" stoichiometry="1"/>
+        </sbml:listOfReactants>
+        <sbml:listOfProducts>
+          <sbml:speciesReference species="species0x8051830" stoichiometry="1"/>
+          <sbml:speciesReference species="species0x8056838" stoichiometry="1"/>
+        </sbml:listOfProducts>
+        <sbml:kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mathml:apply>
+              <mathml:times/>
+              <mathml:cn>1</mathml:cn>
+              <mathml:cn>1e-11</mathml:cn>
+              <mathml:ci>species0x8056740</mathml:ci>
+            </mathml:apply>
+          </math>
+        </sbml:kineticLaw>
+      </sbml:reaction>
+      <sbml:reaction id="N10073">
+        <sbml:listOfReactants>
+          <sbml:speciesReference species="species0x8051830" stoichiometry="1"/>
+          <sbml:speciesReference species="species0x8056838" stoichiometry="1"/>
+        </sbml:listOfReactants>
+        <sbml:listOfProducts>
+          <sbml:speciesReference species="species0x8056740" stoichiometry="1"/>
+        </sbml:listOfProducts>
+        <sbml:kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mathml:apply>
+              <mathml:times/>
+              <mathml:cn>1e+11</mathml:cn>
+              <mathml:cn>1e-11</mathml:cn>
+              <mathml:ci>species0x8051830</mathml:ci>
+              <mathml:ci>species0x8056838</mathml:ci>
+            </mathml:apply>
+          </math>
+        </sbml:kineticLaw>
+      </sbml:reaction>
+    </sbml:listOfReactions>
+  </sbml:model>
+</sbml:sbml>

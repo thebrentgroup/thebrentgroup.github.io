@@ -1,0 +1,121 @@
+****** Richard Yu's Curriculum Vitae. ******
+
+===============================================================================
+
+***** Contact Information *****
+The Molecular Sciences Institute, 2168 Shattuck Ave., Berkeley, CA 94704
+Phone (510) 981-8750, Fax (510) 647-0699
+Email ryu@molsci.org, Web http://www.molsci.org/~ryu
+
+***** Current Scientific Interests *****
+To study complex molecular biological systems by developing computational and
+experimental technologies to 1) accurately map molecular networks, 2) monitor
+the flow of information through them, and 3) interpret and model these data.
+
+***** Education and Research Experience *****
+  9/2000 - present
+      Research Fellow, The Molecular Sciences Institute, Berkeley, CA.
+      Developing sensor technologies for measuring information flow in cellular
+      signaling pathways at single-cell resolution.
+  1/1995 - 5/2000
+      Graduate Student, Laboratory of Dr. Axel T. Brunger, Department of
+      Molecular Biophysics and Biochemistry, Yale University, New Haven, CT
+      Solved and analyzed the high-resolution crystal structures of two domains
+      of NSF, a hexameric ATPase involved in eukaryotic membrane fusion.
+      Formulated plausible mechanisms for ATP-dependent hexamerization and ATP
+      hydrolysis-dependent conformational changes. Ph.D. in Molecular
+      Biophysics and Biochemistry, May 2000.
+  5/1993 - 6/1995
+      Research Associate, Laboratory of Dr. Teresa Head-Gordon, Life Sciences
+      Division, Lawrence Berkeley Laboratories, Berkeley, CA
+      Designed and implemented an improved feed-forward back-propagation
+      artificial neural network (in C) for protein secondary structure
+      prediction. By hard-coding physiochemical information about sequence-
+      structure relationships, modest gains in prediction accuracy were
+      achieved.
+  8/1989 - 5/1993
+      Undergraduate Student, Laboratory of Dr. Robert M. Glaeser, Department of
+      Molecular Cell Biology, University of California, Berkeley, CA
+      Attempted 2D crystallization of the bacterial histidine transport
+      membrane protein complex. B.A. (Honors) in Molecular Cell Biology,
+      emphasis in Biophysics, May 1993. Minor in Computer Science, emphases in
+      Graphics and Artificial Intelligence
+
+***** Skills and related experience *****
+  Molecular Biology and Biochemistry
+          * Standard DNA/RNA techniques: cloning, PCR, blots.
+          * Standard bacteria and yeast lab techniques.
+          * Protein expression: native sources, bacterial.
+          * Protein purification: HPLC/FPLC.
+          * Protein engineering: mutation, domain rearrangement/swapping,
+            molecular evolution.
+          * Protein analysis: gel-based techniques (SDS, Western, IEF),
+            analytical equilibrium ultracentrifugation, multi-angle laser light
+            scattering, intrinsic fluorescence spectroscopy, circular dichroism
+            spectroscopy.
+          * DNA and protein bioinformatics: standard Web-based services
+            (alignments, property predictions) and databases, Staden, Phred/
+            Phrap/Consed.
+  Protein Crystallography
+          * Crystal preparation: vapor diffusion and batch crystallization,
+            dialysis.
+          * Data collection: capillary mounting, cryoprotection and cryo-
+            mounting, rotating-anode and synchotron radiation sources with
+            various detectors (R-AXIS IV, MacScience, and MAR; ADSC CCD.
+            Synchotron data collection at ALS line 5.0.2, SSRL line 1-5, BNL
+            lines X4A and X12.
+          * Data processing: HKL Suite (Denzo, Scalepack), DREAR.
+          * Model building: O and Uppsala Software Factory programs.
+          * Refinement: X-PLOR and CNS
+          * Structure analyses: GRASP, Surfnet, DALI, SC
+          * Molecular graphics software: PyMol, GL_render, Molscript/Bobscript,
+            Raster3D, POV-Ray.
+  Computer Skills
+          * Programming languages [1 (marginal) to 3 (proficient)]: C(3), C++
+            (1), Lisp (3), Perl (2), awk/sed (3), Python (1), Java (1), HTML
+            (3), OpenGL (3), Tcl/Tk (1), basic relational database usage (1).
+            Have been programming since well before my college years, though
+            for last few years have only been primarily scripting languages
+            (Perl/Awk). Can quickly learn languages and systems.
+          * Operating systems/system administration: *nix (mosty Linux and
+            AIX), Windows 95/98/NT, DOS, MacOS
+  Other
+          * Basic plastic and metal fabrication techniques: MIG/oxy-acetylene
+            welding, precision machining.
+          * Introductory knowledge of topics in neurobiology and electrical
+            engineering. Strong math and physics background.
+
+***** Teaching experience *****
+  8/1999 - 12/1999 and 1/1997 - 5/1997
+      Teaching assistant, Molecular Foundations of Medicine
+      Discussion sections, grading. Expanded and maintained course Web page.
+      Moderated online discussion/Q and A chatroom.
+  8/1995 - 12/1995
+      Teaching assistant, laboratory section, Introduction to Biochemistry
+      Grading. Introduced students to basic biochemical techniques and
+      associated equipment required for the generation of a protein point
+      mutant. Taught computer modelling of modified protein using WhatIf.
+      Delivered lecture on computer graphics and computer modeling of proteins.
+
+***** First Author Publications *****
+    * Yu, R.C., Jahn, R., and Brunger, A.T.  NSF N-terminal domain crystal
+      structure: models of NSF function.Mol. Cell 4, 97-107 (1999).
+    * Yu, R.C., Hanson, P.I., Jahn, R. and Brunger, A.T. Structure of the ATP-
+      dependent oligomerization domain of N-ethylmaleimide sensitive factor
+      complexed with ATP. Nat. Struct. Biol. 5, 803-11 (1998).
+    * Yu, R.C. and Head-Gordon, T. Neural-network design applied to protein
+      secondary structure predictions. Phys. Rev. E 51, 3619-3627 (1995).
+
+***** References *****
+    * Dr. Axel Brunger, Department of Molecular and Cellular Physiology,
+      Stanford University, 1201 Welch Rd. P210 MSLS, Stanford, CA 94305-5489.
+      (650) 736-1031, axel.brunger@stanford.edu
+    * Dr. Reinhard Jahn, Department of Neurobiology, Max-Planck-Institute for
+      Biophysical Chemistry, D-37077 Gottingen, Germany, Am Fassberg. x49-551-
+      201-1634, rjahn@gwdg.de
+    * Dr. William Summers, Department of Molecular Biophysics and Biochemistry
+      and Therapeutic Radiology, Yale University, 370 HRT, New Haven, CT 06511.
+      (203) 785-2980, william.summers@yale.edu
+
+===============================================================================
+1/2002

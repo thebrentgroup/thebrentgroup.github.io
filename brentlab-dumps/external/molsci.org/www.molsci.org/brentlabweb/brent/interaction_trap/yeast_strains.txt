@@ -1,0 +1,112 @@
+YEAST STRAINS
+
+The yeast strains we now use for the interaction trap were made by
+Erica Golemis.  The most important feature of these strains is that
+they contain a selectable gene, LEU2, which has upstream LexA binding
+sites (LexA operators; LexAop) in place of its normal upstream
+activating sequences (UAS).  The LexAop-LEU2 gene replaces the
+chromosomal LEU2 gene and therefore is stable (requires no selection
+to maintain it).  The LexAop-LEU2 gene is normally not transcribed and
+the yeast are auxotrophic for leucine.  LexA fusion proteins that
+activate transcription, bind the operators, activate LEU2
+transcription, and allow these strains to grow in the absence of
+leucine.  LexA fusion proteins that do not activate transcription can
+be used as baits for the trap.  Use of transcriptionally inert bait
+proteins allows one to express in the same strain cDNA-encoded
+proteins fused to a transcription activation domain, and select those
+cDNA-encoded proteins that interact with your bait by their ability to
+cause leucine prototrophy.  Because the cDNA fusion is expressed from
+a galactose-inducible promoter (a GAL1 derivative, see LIBRARIES), it
+is possible to quickly determine that the leucine prototrophy is
+dependent upon cDNA expression; cells containing true interactors will
+grow on media lacking leucine only if it contains galactose but not
+when it contains glucose.  During an interactor hunt we include a
+second reporter gene in the strain to provide an independent measure
+of interaction.  The second reporter (see REPORTERS) is a
+plasmid-borne lacZ gene with upstream LexA operators.  Yeast
+containing a cDNA that encodes a true interactor will show galactose
+dependence of both phenotypes, they will exhibit galactose-dependent
+growth in the absence of leucine and galactose-dependent blue color on
+Xgal indicator plates.
+
+The strains are auxotrophic for several other markers which
+respectively allow selection of the bait plasmid (HIS3), the lacZ
+reporter plasmid (URA3) and the library plasmid (TRP1).
+
+The prototype strain is EGY48 (MAT alpha, his3, trp1, ura3,
+6LexAop-LEU2).  EGY48 has 3 high affinity colE1 LexA operators
+upstream of the LEU2 gene.  Each operator consists of two overlapping
+LexA binding sites, each of which can bind a dimer of LexA.  This
+makes for a very sensitive reporter of transcription activation by
+LexA fusions or by proteins interacting with them.  However, baits
+that activate the LEU2 gene in EGY48 cannot be used for the
+interaction trap.  For this reason Erica has also made strains with
+fewer LexA operators; these allow use of LexA fusions that marginally
+activate the LEU2 gene in EGY48 as baits.
+
+Details
+
+Construction
+
+        A HindIII cassette encoding the URA3 gene was inserted into a
+derivative of the plasmid pHR33 (a gift of R. Rothstein) to create the
+yeast integrating plasmid pXLEU2. 1,2, or 3 copies of a BamHI-ended
+double stranded 42-mer that contained the "overlapping" double LexA
+operator found upstream of the colecin E1 gene (see below) were
+inserted into a unique BglII site ~130 bp upstream of the LEU2
+translation start site, to generate plasmids 1LexLEU2, 2LexLEU2, and
+3LexLEU2.
+        The strain U457 (R. Rothstein)(MATa SUP53-a ade2-1 can1-100
+ura3-1 trp1-1 [phi+]) was used as recipient for the LexAoperator-LEU2
+plasmids.  The trp1-1 mutation is an amber, which is suppressed by the
+SUP53-a gene, so in fact U457 is "TRP+" for growth.  The chromosomal
+array of genes in this strain is Ty1 element-SUP53-LEU2.  Integrating
+plasmids were cut with Cla I within LEU2 coding sequence, and used to
+transform U457 to URA3+.  ura3- revertants were selected by their
+ability to form colonies on medium that contained 5-Fluoroorotic acid.
+ura3-trp1-leu2- yeast derive from recombination events that resolve
+the integrated plasmid by crossover between Ty1 sequences present on
+XLEU2 variants and the chromosomal Ty1 element, resulting in loss of
+the SUP53-a gene and substitution of LexA operator sequences for the
+LEU2 UAS.  ura3- trp1- leu2- colonies containing 0,1,2, or 3 colEI
+operators upstream of the single chromosomal LEU2 gene were isolated.
+EGY12 has no LexA operators, EGY17 and EGY18 have one, EGY23 and EGY24
+have two, and EGY38 has three.
+
+Strains
+        EGY12, EGY17, EGY22 and EGY38 were made his3- by mating these
+strains to the strain GG100-14D (MATa his3 trp1 pho5); selecting for
+LEU+, HIS+ diploids: sporulating, and selecting for random spore
+products that were leu2-, ura3-, trp1-, his3, and GAL+.  EGY48,
+EGY194, and EGY188 are derivatives of EGY38, EGY22, and EGY17,
+respectively.  EGY48 is most commonly used for the interactive library
+screen described elsewhere.  EGY40 is an EGY12 derivative used as
+negative control.
+
+The colE1 operator
+        LexA operator-containing oligonucleotide.  Contains very high
+affinity colE1 sites, which appears to be bound by two LexA dimers.
+Lower case bases are important for protein contacts (Ebina et al, JBC,
+258, 13258-13261 (1983); Kamens et al., MCB, 10, 2840-2847(1990)).
+This oligonucleotide is double stranded with XhoI sticky 5' overhangs
+(5'GATC...) at each end; you may have to change the font to show this
+on your display.
+
+5'GATCCTGctgTATATAAAACcagtgGTTATATGTAcagTACG      3'
+3'    GACGACATATATTTTGGTCACCAATATACATGTCATGCCTAG  5'
+
+Erica Golemis March, 1990
+
+Department of Molecular Biology, MGH and
+Department of Genetics, Harvard Medical School
+50 Blossom Street
+Boston, Massachusetts 02114
+
+After August 1993
+
+Fox Chase Cancer Research Center
+Philadelphia, Pennsylvania
+
+ea_golemis@fccc.edu
+
+Information revised September 1993

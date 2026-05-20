@@ -1,0 +1,374 @@
+<html>
+<head><title>Interaction 1.0</title></head>
+<body bgcolor=FFFFFF>
+
+<TABLE width="90%" cellpadding=7>
+<TR><TD>
+
+<h1>
+<center>
+The structure of Interaction 1.0, The Molecular Sciences 
+Institute's protein interaction database
+</center>
+</h1>
+
+We have made a number of achievements in learning how to work with
+protein interaction data.  These include:
+<ol>
+<li>
+A database for housing protein interaction data
+</li>
+<li>
+Computational methods for analyzing the contents of this database, and
+simple 
+GUIs for these methods
+</li>
+<li>
+Data entry and output programs
+</li>
+</ol>
+<p>
+
+<i>
+A database of protein interactions
+</i>
+<p>
+
+Version 1.0 uses the Informix Universal Server (IUS), which we
+obtained for free via a grant from 
+<A HREF="http://www.informix.com/informix/">Informix</A>.  
+To
+develop our computational methods, we used a prototype data
+set based on proteins that regulate cell proliferation.  
+This is a relational database
+that does not take advantage of the object oriented features
+of IUS; in the future we may take advantage of these object-oriented
+features, or we may transfer the data to Oracle.  Part of its current
+schema is shown below.
+<p>
+<center>
+Major tables in the current protein interaction database
+<table border bgcolor=khaki cellpadding=5 cellspacing=5 cols=4>
+<tr>
+<th>
+Protein Table
+</th>
+<th>
+Interaction Table
+</th>
+<th>
+Experiment Table
+</th>
+<th>
+Colleague Table
+</th>
+</tr>
+
+<tr valign=top>
+<td>
+<ol>
+<li>
+Name of protein
+</li>
+<li>
+Other names
+</li>
+<li>
+Reference
+</li>
+<li>
+Source/ colleague
+</li>
+<li>
+Promiscuity
+</li>
+<li>
+Is it a bait?
+</li>
+<li>
+Is it a prey?
+</li>
+<li>
+Plasmid
+</li>
+<li>
+Basal activity
+</li>
+</ol>
+</td>
+
+<td>
+<ol>
+<li>
+Bait pointer to protein table
+</li>
+<li>
+Prey pointer to protein table
+</li>
+<li>
+Pointer to Experiment Table
+</li>
+<li>
+Outcome (number)
+</li>
+</ol>
+</td>
+
+<td>
+<ol>
+<li>
+Who did it
+</li>
+<li>
+When
+</li>
+<li>
+Tyrosine phos.?
+</li>
+<li>
+Reporter
+</li>
+<li>
+Day scored
+</li>
+<li>
+Comments
+</li>
+</ol>
+</td>
+
+<td>
+Essentially an address book
+</td>
+</tr>
+</table>
+</center>
+<p>
+
+The database consists of tables that contain different types of data
+and pointers to elements of the other tables.  The major tables
+describe the constructs that are used as baits and preys, the
+interaction data itself, details of the way particular experiments
+were performed, and the names of researchers who provided DNA
+constructs.  There are also several simple tables for references,
+location of plasmid DNAs in our freezer, reporter constructs, and so
+on.
+<p>
+
+<u>The protein table.</u>
+
+In its current form, the protein table contains
+proteins that are given a general name.  For example, 'cdk4'
+represents Cdk4 as a prey, two different wild- type Cdk4 bait
+constructs, and a mutant version of one of these.  There can be
+entries for other names of a protein so that a user need not know the
+precise name used by the computer for a given protein.  'Promiscuity'
+refers to the tendency of a bait or prey to interact with seemingly
+meaningless proteins and is given as a number.  'Basal activity' is
+the ability of a bait to activate transcription by itself, without a
+prey, also a number.
+<p>
+
+It is important to group constructs and protein variants under a
+single name.  For example, to identify the three-way interaction among
+gp130, OMI1782, and Cdk2, the search tool must recognize Cdk2 as both
+a bait and a prey.  In addition, there may be some interactions that
+are only revealed in mutant or truncated proteins.  For example, the
+three- dimensional structure of inactive Src shows how domains of this
+protein interact with each other to block interactions with other
+proteins.  It is therefore necessary to identify mutant and deleted
+protein constructs with their wild-type counterpart to identify all
+the potential networks of interactions.
+<p>
+
+Because of this grouping strategy, when "cdk4" is input as a bait and
+p16 is input as a prey using the search tool, three different
+interactions are registered.  These correspond to the three different
+forms of Cdk4 that have been used as baits.  In future versions, it
+will be possible to obtain the details on each Cdk4 construct from
+which these interaction data are derived.
+<p>
+
+
+<u>The interaction table.</u>
+
+This table is a list of pairs of pointers to baits and preys in the
+protein table, a pointer to experimental details in the experimental
+table, and the results of a test for interaction.  If two proteins
+have been tested and found not to interact, there is be an entry in
+this table, but if two proteins have not been tested, there isn't.
+Thus, the Protein Table contains n proteins, but the Interaction Table
+contains many fewer than n2 entries.  In its present form, the
+database contains only data from two-hybrid experiments, and the
+outcome of an interaction test is given as a number from 0 to 10
+indicating interaction strength.
+<p>
+
+<u>The experiment table.</u>
+
+This table describes who did the experiment, when it was done, and so
+on.  'Tyrosine phosphorylation' denotes whether the experiment was
+done in the presence of the Lck tyrosine kinase, to allow observation
+of phosphorylation-dependent interactions.  'Day scored' indicates how
+many days the plates were incubated before scoring for growth without
+leucine and levels of lacZ expression.  We have not used this feature
+at present, and information on the experiments is described on the
+front page <!-- link -->
+<p>
+	
+<i>Future changes to the organization of the database</i>
+<p>
+
+This database originally was developed from a laboratory management
+tool that we used to keep track of our own plasmid constructs and
+data.  We anticipate that it will grow into a repository that contains
+vast amounts of data, that contains data about interactions observed
+by immunoprecipitation and other methods as well as two-hybrid assays,
+that serves a wider community, and that will be compatible with other
+databases.
+<p>
+
+<i>Computational methods for analyzing interaction data</i>
+<p>
+
+When we first began cataloging protein interactions, we observed that
+patterns of protein interactions could reveal data about protein
+function.  For example, consider the patterns below.
+<p>
+<center>
+<img src="topologies.gif">
+<br>
+Topologies of protein-
+protein interaction.<br>
+(Colored lines indicate 
+weaker interactions, 
+often characteristic of 
+enzyme-substrate 
+complexes.)
+</center>
+<p>
+
+
+The pattern on the left corresponds to a signal transduction pathway.
+The central protein may be a regulated protein kinase, the weakly
+interacting proteins substrates, and the strongly interaction proteins
+could be modulating factors.  Such interaction networks are similar to
+a epistasis pathway except that no directionality (causality) can be
+inferred from the interaction network alone.
+<p>
+
+The pattern on the right is seen in proteins that are part of a
+metabolic pathway and that shuttle substrates from on protein to the
+next, without releasing intermediate substrates into the aqueous
+phase.  For example, a pattern of this type is seen with flavonoid-
+synthesizing enzymes of Arabidopsis.  These proteins form an
+apparently linear complex on the cytoplasmic surface of the
+endoplasmic reticulum.
+<p>
+
+<u>Pattern search tools:  "Connect the dots."</u>
+
+We have made programs that search through interaction data to find
+such patterns of protein inteactions.  These programs have progressed
+from a prototype phase through a first web-based version; we are now
+developing a second web-based version.  Both web-based versions
+exemplify a "3-tier" strategy: the user interacts with a Java applet,
+which communicates with a server program on a machine at the
+Institute, which in turn connects with the interaction database.
+Connection on demand to the database eliminates any need to extract
+information from the database before the search, and the 3-tier design
+keeps the user's machine from having to run the search algorithm
+itself.  The server programs are also written in Java.  We implemented
+the first of these in Kawa (Cygnus Solutions) a Scheme-to-Java
+compiler, allowing us to reuse some of the algorithms from first
+prototype (which was written in Scheme) for these servers; subsequent
+programming has been written de novo in Java.
+<p>
+<center>
+<img src="3tier.gif">
+</center>
+<p>
+
+Although searches for large patterns can consume large amounts of CPU
+time, our algorithm can usefully be applied to smaller queries.  We
+believe that, for interaction networks the size of the C. elegans
+genome (18,000 X 18,000), query graphs with 5 or fewer vertices will
+be both interesting and within the capabilites of the program.
+<p>
+
+We improved the search algorithm in two ways that increase the speed
+of a search.  First, the user can now restrict the set of proteins and
+protein interactions searched (for example, to include only those
+three-protein complexes that include a tyrosine kinase), resulting in
+faster searches with less noise.
+<p>
+<center>
+<table>
+<tr valign=top>
+<td>
+<img src="searchOrder.gif" align=left>
+</td>
+<td>
+Second, the method itself has been streamlined: instead of filtering
+all the embeddings of a maximal tree from the user's search graph for
+the desired pattern of interactions, the program now exploits cycles
+in the search pattern graph as soon as those occur to eliminate "bad"
+partial embeddings.
+</td>
+</tr>
+</table>
+</center>
+<p>
+
+The search algorithm exemplifies a number of choices made during its
+design.  For example, for an interaction pattern to constitute a
+positive response to a query, all the proteins must be different.  The
+advantage is that for a pattern query such as
+
+<center>
+<table>
+<tr>
+<td>
+<img src="pattern.gif">
+</td>
+<td>
+the response could be
+</td>
+<td>
+<img src="patMatch.gif">
+</td>
+</tr>
+</table>
+<p>
+</center>
+
+which would constitute all the pairwise interactions in the database.
+However, the disadvantage of requiring that all the proteins in a
+response be distinct is that one cannot, for example, search for
+proteins that interact with themselves.
+<p>
+
+<u>Data entry and output.</u>
+
+L. Lok and R. Cohen, our computer science fellows, have worked with
+the laboratory staff to devise ways for non-experts to enter data.
+Our current tools enable users to enter new data, to examine and
+modify existing data, and to search through existing data to see if a
+given datum has already been entered.  Data entry now is performed by
+cgi programs, written in Perl, that reside on a central server at the
+Institute.
+<p>
+
+The search programs that are part of the data entry suite are distinct
+from the pattern entry search tool described above, although there is
+some overlap in function.  The purpose of data entry-associated search
+programs is, for example, to find the proteins in the protein table
+that the experimenter wishes to enter data for.  The interaction data
+then becomes linked to proteins already in the protein table.
+
+</TABLE>
+</TR></TD>
+
+</body>
+</html>
+

@@ -1,0 +1,89 @@
+Direct transfer of plasmid DNA from yeast to E. coli by electroporation
+
+Summary.  This procedure describes transfer of plasmid DNA from yeast
+strain EGY48 to E. coli KC8. It was adapted from one provided by
+Karen Clemens in Peter Howley's lab at the NIH.  The idea was
+originally published by R. Marcil and D.R. Higgins, NAR 20, 917
+(1992).
+
+1.  Prepare electrocompetent KC8 cells.  Centrifuge cells, wash, and
+resuspend the final cell pellet in water resulting in an OD600 of
+100. A rule of thumb here is to resuspend cells processed from a 1
+liter culture (OD600 = 0.55) in 1 ml water. Dilute 5ul of the cell
+suspension to 1ml with water and measure the OD600. Add more water to
+the cell suspension (if necessary) to get to OD600 = 100.
+
+2. Distribute the electrocompetent KC8 cells in 65 ul aliquots into
+ice cold eppendorf tubes. Scrape off yeast from a streak colony
+(about 10 ml of cells) grown on an Xgal Gal/Raff plate (other plates
+probably work, but we haven't tried them yet). Resuspend the yeast
+cells by swirrling the stick used for scraping off the cells in the
+KC8 suspension, try to get an even distribution of the two kinds of
+cells (but don't vortex, which might break the fragile
+water-suspended E. coli).
+
+3.  Transfer the mixture to an ice cold 0.2 cm electroporation
+cuvette (Biorad) and use the electroporator to deliver two
+pulses. The first one is to release the plasmid from the yeast cells
+whereas the second gets it into the E.coli cells:
+
+4.  Shock the cells.
+
+1st pulse setting: 1500 Volts, 25 mF, 100W. Expected time constant:
+2.2 - 2.4 msec.
+
+After this pulse, take the cuvette out, and place it on ice for at
+least 30 seconds. Meanwhile change the settings for the second pulse.
+
+5.  Shock the cells again.
+
+2nd pulse setting: 2500 Volts, 25 mF, 200W. Expected time constant:
+4.2 - 4.8 msec.
+ 
+6. 	Take the cuvette out, add 1 ml LB medium and transfer the suspension back to the original eppendorf tube. Incubate for 45 min at 37oC with light agitation.
+
+7. Spread 150ul of the suspension onto E. coli plates.  These should
+be 1XA or M9 minimal medium.  To rescue standard interaction library
+plasmids, which carry a TRP1 selectable marker that complements the
+trp- phenotype of the E. coli strain, the plates should lack
+tryptophan but contain ampicillin (100 ug/ml), leucine, histdine, and
+uracil at standard concentrations (Current Protocols in Molecular
+Biology, Greene Publishing and John Wiley and Sons, New York,
+1987-1994).  Keep the rest of the transformation mixture at 4oC in
+case you need it for a repeat.
+
+During an interactor hunt EGY48 contains three different plasmids,
+all of which confer amp resistance if transferred into E. coli. In
+order to select for the interaction library plasmid ("prey plasmid")
+Minimal Medium lacking tryptophan is used.
+
+To rescue plasmids that carry other selectable markers, use minimal
+plates that contain amp but lack the appropriate nutritional
+supplement
+
+6. Incubate the plates at 37 oC until single colonies are easy to
+pick (about 30 h). You should get between 50 and 200 colonies. Don't
+worry about a slight yeast background on the plates.  Pick a single
+KC8 colony and inoculate it into 1.5 - 5 ml LB Amp (100 mg/ml) or
+Minimal (trp-, leu+, his+ ura+ Amp), grow at 37 oC, and harvest at an
+appropiate OD to prepare miniprep DNA.
+
+Save the plate in the refrigerator.  Strains sometimes contain
+multiple library plasmids.  Should you think this may be occuring,
+either because your transformation was done at higher DNA
+concentrations than recommended, or because subsequent introduction
+of the library plasmid into the original selection strain does not
+reproduce the interaction phenotype, perform minipreps from ~6
+transformants, analyse cDNAs in the libary plasmids by restriction
+digestion or by PCR, and save representatives of each cDNA class for
+further analysis.
+
+6 December 1993
+modified 31 January 1994
+  
+
+Timm Jessen, and Roger Brent
+617 726 5956
+617 726 6893 (fax)
+jessen@opal.mgh.harvard.edu
+brent@opal.mgh.harvard.edu

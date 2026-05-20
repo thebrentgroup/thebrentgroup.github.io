@@ -1,0 +1,52 @@
+TESTING BAITS
+
+        The bait plasmid should be tested in yeast to show that it
+directs the synthesis of the fusion protein, and that the bait enters
+the nucleus, and binds LexA operators.
+
+        To be useful in an interactor hunt, your bait must not
+activate transcription by itself.  pSH18-34 (see REPORTERS) and yeast
+strain EGY48 (see STRAINS) can be used to test whether your bait
+activates transcription.  Introduce pSH18-34 and a bait plasmid into
+EGY48 by transformation, and patch transformed colonies onto Xgal
+indicator plates and leucine minus plates.  As described in the
+accompanying handout from Steve Hanes (see REPORTERS), pSH18-34 is a
+URA3, 2um plasmid containing the GAL1 promoter fused to lacZ, in which
+the GAL1 enhancer-like Upstream Activating Sequence (UASG) has been
+replaced with binding sites for 8 LexA dimers (4 colE1 operators, see
+Golemis handout).  Baits that activate transcription cause expression
+of beta-galactosidase from this reporter.  You should also ensure that
+your bait does not activate the LexAop-LEU2 gene in EGY48 (see YEAST
+STRAINS).  To do this, test whether your bait plasmid allow growth of
+EGY48 in the absence of leucine.
+
+        Baits that do not activate transcription should be tested to
+see whether they enter the nucleus and bind LexA operators.  This can
+be tested by using the bait plasmid with another reporter, pJK101, in
+a repression or "blocking" assay (Brent and Ptashne, 1984, Nature,
+312:612-615), which detects DNA binding by transcriptionally inert
+LexA fusion proteins.  For this assay, EGY48 is cotransformed with the
+bait plasmid and pJK101.  pJK101 is a URA3, 2um plasmid similar to
+SH18-34, except that it contains most of the GAL1 upstream activating
+sequence (UASG).  It also contains, in between UASG and the GAL1
+transcription start, a colE1 derived LexA operator, which provides
+high affinity binding sites for two LexA-bait protein dimers.  Yeast
+harboring pJK101 will have significant beta-galactosidase activity
+when grown on galactose medium.  Most lexA fusions that enter the
+nucleus and bind the operators but do not activate transcription,
+repress this beta-galactosidase activity from 2 to 20 fold.  We take
+even 2 fold repression to indicate >50% operator occupancy by the
+bait.
+
+        Two HIS3+ control plasmids are commonly used for the
+activation assay and repression assay.  One, pSH17-4 expresses a
+LexA-GAL4 fusion that activates transcription.  The other, pRFHM1,
+expresses LexA fused to a transcriptionally inert fragment of the
+Drosophila Bicoid product (pEG202 does not serve as a good negative
+control because the part encoded by the polylinker through to the
+first stop codon activates transcription a bit).  pRFHM1 can also be
+used as a control for the repression assay; the LexA-bicoid fusion
+represses the activity of pJK101 by 2 to 5-fold.
+
+Russ Finley
+revised September 1993
