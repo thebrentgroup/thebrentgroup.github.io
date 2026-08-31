@@ -4,13 +4,17 @@ Vite + React + TypeScript + Tailwind, built to visual parity with the Figma
 redesign (see `spec.md` and `PARITY.md`). Four static pages, no router:
 
 - `index.html` — About
-- `technology.html` — Technology: LLM Repellents (also embeds the
+- `research.html` — Research: LLM Repellents (also embeds the
   `<RepellentsDemo>` component — interactive demo, no Figma frame)
-- `credibility.html` — Credibility (formerly "Research", then "Team";
-  renamed post-grant, see spec.md v3/v6)
-- `messages-to-the-future.html` — Technology: Messages to the Future (no
+- `relevant-past-work.html` — Relevant past work (formerly "Credibility",
+  before that "Research", then "Team"; renamed post-grant, see spec.md v3/v6/v7)
+- `messages-to-the-future.html` — Research: Messages to the Future (no
   Figma frame; linked from About's pillars sentence and from a hover
-  dropdown on the nav's TECHNOLOGY item, not itself a top-level nav item)
+  dropdown on the nav's RESEARCH item, not itself a top-level nav item)
+
+`public/technology.html` and `public/credibility.html` are permanent
+redirect stubs for the pre-v7 URLs (see spec.md v7) — keep them.
+
 
 ## Editing content
 
@@ -40,7 +44,7 @@ normal markdown: `[link text](url)` for links, blank lines for separate
 paragraphs. `scripts/build-content.mjs` converts all of this into
 `src/content.generated.ts` (gitignored, rebuilt from the `.md` files every
 time — never edit it directly). External links (`https://…`) automatically
-get `target="_blank"`; internal links (like `/thebrentgroup/technology.html`)
+get `target="_blank"`; internal links (like `/research.html`)
 don't.
 
 ## Develop

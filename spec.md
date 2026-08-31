@@ -38,8 +38,10 @@ See "Page: Credibility" and "Page: Demo" below for what changed and why.
 
 - Vite + React + TypeScript + Tailwind CSS.
 - Multi-page Vite build: separate HTML entry points (`index.html`,
-  `technology.html`, `credibility.html` — v3 renamed from `research.html` to
-  `team.html`, v6 renamed again to `credibility.html`,
+  `research.html`, `relevant-past-work.html` — v3 renamed `research.html` to
+  `team.html`, v6 renamed again to `credibility.html`, v7 renamed
+  `technology.html` → `research.html` and `credibility.html` →
+  `relevant-past-work.html`,
   `messages-to-the-future.html` — v5), plain `<a href>` navigation — no
   router library, no client-side routing. The LLM Repellents demo is a
   component, not its own entry point.
@@ -52,8 +54,8 @@ See "Page: Credibility" and "Page: Demo" below for what changed and why.
 | Figma frame | Page | Route |
 |---|---|---|
 | Desktop - 3 | About (home) | `/` (`index.html`) |
-| Desktop - 4 | Technology: LLM Repellents | `/technology.html` |
-| Desktop - 5 | Credibility (formerly "Research: Expertise and relevant prior work", then "Team") | `/credibility.html` |
+| Desktop - 4 | Research: LLM Repellents | `/research.html` |
+| Desktop - 5 | Relevant past work (formerly "Research: Expertise and relevant prior work", then "Team", then "Credibility") | `/relevant-past-work.html` |
 
 The LLM Repellents demo (v3) is not its own page/route — it's a component
 embedded on the Technology page. See "Demo" below.
@@ -63,15 +65,16 @@ embedded on the Technology page. See "Demo" below.
 - **Nav bar** — "the brent group" wordmark (links home, except on the home page
   where it's plain text) + `ABOUT / TECHNOLOGY / CREDIBILITY` links, uppercase,
   Space Grotesk (v3: third label renamed `RESEARCH` → `TEAM`; v6: renamed again
-  `TEAM` → `CREDIBILITY`, pointing at `/credibility.html`). The current page's
+  `TEAM` → `CREDIBILITY` → `RELEVANT PAST WORK`, pointing at
+  `/relevant-past-work.html`). The current page's
   own nav item renders as plain (non-link) text; the others are `<a>` links.
   This pattern is already explicit in the Figma export (`about` is a `<p>` on
   the About page, an `<a>` elsewhere; same for the other labels) — implement
   generically as "if current route, no link."
 - **v6: TECHNOLOGY is a hover dropdown**, not a plain link. It still links
-  directly to `/technology.html` when clicked (or renders as plain text when
+  directly to `/roadmap.html` when clicked (or renders as plain text when
   already on a page in this group), but hovering reveals two options:
-  "LLM Repellents" (`/technology.html`) and "Messages to the Future"
+  "LLM Repellents" (`/research.html`) and "Messages to the Future"
   (`/messages-to-the-future.html`). Both the Technology page and the Messages
   to the Future page count as "active" for this nav item (`Nav`'s `current`
   prop gained a `"messages-to-future"` value alongside `"technology"`, both
@@ -141,7 +144,7 @@ embedded on the Technology page. See "Demo" below.
     none of them wrapped body content in an `uppercase` section.
 - **Contact** footer.
 
-## Page: Technology (/technology.html)
+## Page: Research (/research.html) — renamed from Technology in v7
 
 - Hero: "Technology: LLM Repellents".
 - "What are LLM Repellents?" heading + body paragraph (verbatim from Figma,
@@ -158,10 +161,17 @@ embedded on the Technology page. See "Demo" below.
   needs more room than a text column to stay legible.
 - Contact footer.
 
-## Page: Credibility (/credibility.html) — v6, renamed again from "Team"
+## Page: Relevant past work (/relevant-past-work.html) — v7, renamed again
 
-Renamed "Research" → "Team" in v3, then "Team" → "Credibility" in v6 (file
-`team.html` → `credibility.html`; nav label, hero, and page title all follow).
+Renamed "Research" → "Team" in v3, "Team" → "Credibility" in v6, then
+"Credibility" → "Relevant past work" in v7 (file `team.html` →
+`credibility.html` → `relevant-past-work.html`; nav label, hero, and page
+title all follow). v7 likewise renamed the Technology page to "Research"
+(`technology.html` → `research.html`). Both pre-v7 filenames survive as
+redirect stubs in `public/` — `public/404.html` bounces every unrecognized
+path to the old Jekyll site, so a stale `/technology.html` or
+`/credibility.html` link would otherwise leave this site entirely instead of
+reaching the renamed page.
 No new Figma frame backs any of these renames or the added section — it
 reuses the existing page's layout/typography verbatim (heading +
 body-paragraph pattern already established on this page and on Technology).
@@ -297,8 +307,9 @@ match pixel-for-pixel.
 ## Done Criteria
 
 - [ ] `npm run build` produces static output for 4 pages under `dist/`
-      (`index.html`, `technology.html`, `credibility.html`,
-      `messages-to-the-future.html`).
+      (`index.html`, `research.html`, `relevant-past-work.html`,
+      `messages-to-the-future.html`), plus `technology.html` /
+      `credibility.html` redirect stubs.
 - [ ] The About page's "Messages to the Future" link resolves and the page
       renders with no nav item falsely highlighted as active.
 - [ ] Visual diff against the 3 Figma screenshots at 1440px: nav, hero,
@@ -306,10 +317,10 @@ match pixel-for-pixel.
       typography) within a reasonable tolerance. (Credibility's Roger
       section and the embedded Demo have no Figma frame to diff against —
       judged by consistency with the rest of the site instead.)
-- [ ] All nav links work in both directions (About↔Technology↔Credibility);
-      the current page's own nav item is not a link. The TECHNOLOGY nav item
-      reveals a hover dropdown (LLM Repellents / Messages to the Future) and
-      still functions as a direct link to `/technology.html` when clicked.
+- [ ] All nav links work in both directions (About↔Research↔Relevant past
+      work); the current page's own nav item is not a link. The RESEARCH nav
+      item reveals a hover dropdown (LLM Repellents / Messages to the Future /
+      Roadmap) and still functions as a direct link when clicked.
 - [ ] Neither page has a TODO placeholder left (v4: Technology's dropped;
       Credibility's was replaced by Roger's restored content back in v3). No
       leftover references to `TodoPlaceholder` or `*-todo.md` files.

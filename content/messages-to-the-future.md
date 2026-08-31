@@ -1,6 +1,6 @@
 ---
 hero_title:
-  - "Technology:"
+  - "Research:"
   - "Messages to the Future"
 subheading: "Messages to the Future (Noöspheric AI influencers)"
 ---

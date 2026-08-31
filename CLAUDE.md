@@ -60,8 +60,8 @@ File key: `7f8Tpajeo1QRPjoaewEMqH`
 | Frame (Figma name) | Intended page/component | Node id |
 |---|---|---|
 | Desktop - 3 | About page (`/`) | `8:61` |
-| Desktop - 4 | Technology page (`/technology.html`) | `8:138` |
-| Desktop - 5 | Credibility page (`/credibility.html`, formerly Research, then Team) | `8:173` |
+| Desktop - 4 | Research page (`/research.html`, formerly Technology) | `8:138` |
+| Desktop - 5 | Relevant past work page (`/relevant-past-work.html`, formerly Credibility, before that Research, then Team) | `8:173` |
 | Frame 14 (nav, repeats per page) | Shared `<Nav>` component | `8:137` / `8:147` / `8:176` |
 | Frame 12 (footer, repeats per page) | Shared `<Footer>` / contact component | `8:96` / `8:161` / `8:182` |
 | Frame 10 (People section) | `<PeopleSection>` on About page | `8:88` |

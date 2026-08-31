@@ -3,7 +3,7 @@ import { SITE } from "../content.generated";
 export type Page = "about" | "technology" | "messages-to-future" | "credibility" | "roadmap";
 
 const TECHNOLOGY_LINKS: { page: Page; label: string; href: string }[] = [
-  { page: "technology", label: "LLM Repellents", href: "/technology.html" },
+  { page: "technology", label: "LLM Repellents", href: "/research.html" },
   {
     page: "messages-to-future",
     label: "Messages to the Future",
@@ -45,10 +45,10 @@ export default function Nav({ current }: { current?: Page }) {
 
         <div className="relative group">
           {technologyActive ? (
-            <p className="cursor-default">TECHNOLOGY</p>
+            <p className="cursor-default">Research</p>
           ) : (
             <a href="/roadmap.html" className="cursor-pointer">
-              TECHNOLOGY
+              Research
             </a>
           )}
           {/* Mobile: centered under the word as one real (non-absolutely-
@@ -71,10 +71,10 @@ export default function Nav({ current }: { current?: Page }) {
         </div>
 
         {current === "credibility" ? (
-          <p>Credibility</p>
+          <p className="whitespace-nowrap">Relevant past work</p>
         ) : (
-          <a href="/credibility.html" className="cursor-pointer">
-            Credibility
+          <a href="/relevant-past-work.html" className="cursor-pointer whitespace-nowrap">
+            Relevant past work
           </a>
         )}
       </div>

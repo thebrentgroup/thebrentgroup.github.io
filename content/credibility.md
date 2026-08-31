@@ -1,6 +1,6 @@
 ---
 hero_title:
-  - "Credibility"
+  - "Relevant past work"
 roger_heading: "Roger Brent — credibility for biosecurity risk"
 subheading: "Volkov, Serikov, and coworkers — credibility for technical execution"
 ---

@@ -20,7 +20,7 @@ overflow and sane stacking).
   slightly asymmetric 80px/103px nav margins — visually indistinguishable at
   a glance and treated as design tolerance, not a real token.
 
-## Technology (`/technology.html`) — Figma node `8:138`
+## Research (`/research.html`, formerly Technology) — Figma node `8:138`
 
 - Reference: `.parity/ref-technology.png`
 - App: `.parity/app-technology.png`
@@ -69,8 +69,8 @@ overflow and sane stacking).
 
 ## Build
 
-- `npm run build` succeeds, emits `dist/index.html`, `dist/technology.html`,
-  `dist/research.html` plus hashed assets.
+- `npm run build` succeeds, emits `dist/index.html`, `dist/research.html`,
+  `dist/relevant-past-work.html` plus hashed assets.
 - `vite preview` serves the built output correctly at `base: '/thebrentgroup/'`.
 
 ## Round 2 fixes (post user review)

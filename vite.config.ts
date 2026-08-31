@@ -10,8 +10,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
-        technology: resolve(__dirname, "technology.html"),
-        credibility: resolve(__dirname, "credibility.html"),
+        research: resolve(__dirname, "research.html"),
+        relevantPastWork: resolve(__dirname, "relevant-past-work.html"),
         messagesToFuture: resolve(__dirname, "messages-to-the-future.html"),
         roadmap: resolve(__dirname, "roadmap.html"),
       },

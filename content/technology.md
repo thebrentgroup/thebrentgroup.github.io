@@ -1,6 +1,6 @@
 ---
 hero_title:
-  - "Technology:"
+  - "Research:"
   - "LLM Repellents"
 subheading: "What are LLM Repellents?"
 ---
