@@ -33,6 +33,7 @@ function readMd(name) {
 const site = readMd("site").data;
 
 const about = readMd("about");
+const aboutStrategy = readMd("about-strategy");
 const publications = readMd("about-publications");
 const documentHub = readMd("about-document-hub");
 const people = [
@@ -72,6 +73,8 @@ export const ABOUT = {
   publicationsHeading: ${JSON.stringify(about.data.publications_heading)},
   documentHubLabel: ${JSON.stringify(about.data.document_hub_label)},
   missionHtml: ${JSON.stringify(about.html)},
+  strategyHeading: ${JSON.stringify(aboutStrategy.data.heading)},
+  strategyHtml: ${JSON.stringify(aboutStrategy.html)},
   publicationsHtml: ${JSON.stringify(publications.html)},
   documentHubHtml: ${JSON.stringify(documentHub.html)},
 } as const;

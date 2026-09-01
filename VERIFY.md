@@ -1,4 +1,4 @@
 - [x] `npm run lint` passes
 - [x] `npm run build` passes
-- [x] Smoke test: Oleg Serikov's card renders the new bio in full at 1440px and 430px,
-      with no horizontal overflow at either width
+- [x] Smoke test: Strategy is right-aligned on desktop and left-aligned on mobile;
+      row geometry, mobile reading order, and viewport overflow checks pass

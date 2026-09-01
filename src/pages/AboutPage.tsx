@@ -17,19 +17,31 @@ export default function AboutPage() {
         <Nav current="about" />
 
         <div className="max-w-[1440px] w-full mx-auto px-6 lg:px-20">
-          <div className="pt-8 lg:pt-[127px] pb-[54px] text-center">
-            <h1 className="font-charon text-[40px] lg:text-[72px] leading-[1.1] lg:leading-[80px] uppercase bg-gradient-to-r from-[#195b36] to-[#152d70] bg-clip-text text-transparent">
+          <div className="grid gap-[54px] lg:grid-cols-2 lg:gap-x-20 lg:gap-y-[54px] pt-8 lg:pt-[127px] pb-20 lg:pb-24">
+            <h1 className="font-charon text-[40px] lg:text-[48px] xl:text-[64px] min-[1400px]:text-[72px] leading-[1.1] lg:leading-[56px] xl:leading-[72px] min-[1400px]:leading-[80px] uppercase bg-gradient-to-r from-[#195b36] to-[#152d70] bg-clip-text text-transparent lg:col-start-1 lg:row-start-1 lg:self-end">
               {line1}
               <br />
               {line2}
             </h1>
-          </div>
 
-          <div
-            ref={missionRef}
-            className="md-content font-space font-light text-[20px] text-black text-center max-w-[619px] mx-auto pb-16 lg:pb-24"
-            dangerouslySetInnerHTML={{ __html: ABOUT.missionHtml }}
-          />
+            <div
+              ref={missionRef}
+              className="md-content font-space font-light text-[20px] text-black max-w-[619px] lg:col-start-1 lg:row-start-2 lg:self-start"
+              dangerouslySetInnerHTML={{ __html: ABOUT.missionHtml }}
+            />
+
+            <h2
+              id="strategy-heading"
+              className="font-charon text-[40px] lg:text-[48px] xl:text-[64px] min-[1400px]:text-[72px] leading-[1.1] lg:leading-[56px] xl:leading-[72px] min-[1400px]:leading-[80px] uppercase bg-gradient-to-r from-[#195b36] to-[#152d70] bg-clip-text text-transparent lg:col-start-2 lg:row-start-1 lg:self-end lg:text-right"
+            >
+              {ABOUT.strategyHeading}
+            </h2>
+
+            <div
+              className="md-content font-space font-light text-[20px] text-black max-w-[619px] lg:col-start-2 lg:row-start-2 lg:self-start lg:text-right"
+              dangerouslySetInnerHTML={{ __html: ABOUT.strategyHtml }}
+            />
+          </div>
         </div>
 
         {/* Overlaid on the seam between the mission text above and the pull-
