@@ -8,6 +8,7 @@ import { ABOUT, PEOPLE } from "../content.generated";
 export default function AboutPage() {
   const [line1, line2] = ABOUT.heroTitle;
   const [activeTab, setActiveTab] = useState<"publications" | "document-hub">("publications");
+  const [expandedPerson, setExpandedPerson] = useState<string | null>(null);
   const missionRef = useRef<HTMLDivElement>(null);
   const pullQuoteRef = useRef<HTMLParagraphElement>(null);
 
@@ -71,9 +72,18 @@ export default function AboutPage() {
           <h2 className="font-charon text-[36px] uppercase text-black">
             {ABOUT.peopleHeading}
           </h2>
-          <div className="flex flex-col lg:flex-row gap-7 items-stretch lg:items-start flex-wrap">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-7 items-start">
             {PEOPLE.map((person) => (
-              <PersonCard key={person.name} {...person} />
+              <PersonCard
+                key={person.name}
+                {...person}
+                expanded={expandedPerson === person.name}
+                onToggle={() =>
+                  setExpandedPerson((current) =>
+                    current === person.name ? null : person.name,
+                  )
+                }
+              />
             ))}
           </div>
         </section>

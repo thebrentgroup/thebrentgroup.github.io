@@ -40,6 +40,9 @@ const people = [
   "about-people-roger-brent",
   "about-people-oleg-serikov",
   "about-people-dmitrii-volkov",
+  "about-people-reworr",
+  "about-people-michael-marletta",
+  "about-people-alejandro-colman-lerner",
 ].map((name) => {
   const { data, html } = readMd(name);
   return { name: data.name, role: data.role, bioHtml: html };
