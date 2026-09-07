@@ -5,8 +5,27 @@ import PersonCard from "../components/PersonCard";
 import FundingStamp from "../components/FundingStamp";
 import { ABOUT, PEOPLE } from "../content.generated";
 
+function renderHeroLine(line: string) {
+  const aiTerms = "AI × Chem and AI × Bio";
+
+  if (line.includes(aiTerms)) {
+    const [prefix, suffix] = line.split(aiTerms);
+    return (
+      <>
+        {prefix}
+        <span className="whitespace-nowrap">
+          <span className="text-black">AI × Chem</span> and{" "}
+          <span className="text-black">AI × Bio</span>
+        </span>
+        {suffix}
+      </>
+    );
+  }
+
+  return line;
+}
+
 export default function AboutPage() {
-  const [line1, line2] = ABOUT.heroTitle;
   const [activeTab, setActiveTab] = useState<"publications" | "document-hub">("publications");
   const [expandedPerson, setExpandedPerson] = useState<string | null>(null);
   const missionRef = useRef<HTMLDivElement>(null);
@@ -18,30 +37,44 @@ export default function AboutPage() {
         <Nav current="about" />
 
         <div className="max-w-[1440px] w-full mx-auto px-6 lg:px-20">
-          <div className="grid gap-[54px] lg:grid-cols-2 lg:gap-x-20 lg:gap-y-[54px] pt-8 lg:pt-[127px] pb-20 lg:pb-24">
-            <h1 className="font-charon text-[40px] lg:text-[48px] xl:text-[64px] min-[1400px]:text-[72px] leading-[1.1] lg:leading-[56px] xl:leading-[72px] min-[1400px]:leading-[80px] uppercase bg-gradient-to-r from-[#195b36] to-[#152d70] bg-clip-text text-transparent lg:col-start-1 lg:row-start-1 lg:self-end">
-              {line1}
-              <br />
-              {line2}
+          <div className="pt-8 lg:pt-[127px] pb-20 lg:pb-24">
+            <h1
+              id="lead-heading"
+              className="font-charon text-[24px] min-[380px]:text-[30px] lg:text-[36px] xl:text-[48px] min-[1400px]:text-[54px] leading-[1.1] lg:leading-[44px] xl:leading-[56px] min-[1400px]:leading-[64px] text-center uppercase bg-gradient-to-r from-[#195b36] to-[#152d70] bg-clip-text text-transparent"
+            >
+              {ABOUT.heroTitle.map((line) => (
+                <span key={line} className="block">
+                  {renderHeroLine(line)}
+                </span>
+              ))}
             </h1>
 
-            <div
-              ref={missionRef}
-              className="md-content font-space font-light text-[20px] text-black max-w-[619px] lg:col-start-1 lg:row-start-2 lg:self-start"
-              dangerouslySetInnerHTML={{ __html: ABOUT.missionHtml }}
-            />
+            <div className="grid gap-[54px] lg:grid-cols-2 lg:gap-x-20 lg:gap-y-[54px] mt-16 lg:mt-20">
+              <h2
+                id="countermeasures-heading"
+                className="font-charon text-[40px] lg:text-[48px] xl:text-[64px] min-[1400px]:text-[72px] leading-[1.1] lg:leading-[56px] xl:leading-[72px] min-[1400px]:leading-[80px] uppercase text-black lg:col-start-1 lg:row-start-1 lg:self-end"
+              >
+                {ABOUT.countermeasuresHeading}
+              </h2>
 
-            <h2
-              id="strategy-heading"
-              className="font-charon text-[40px] lg:text-[48px] xl:text-[64px] min-[1400px]:text-[72px] leading-[1.1] lg:leading-[56px] xl:leading-[72px] min-[1400px]:leading-[80px] uppercase bg-gradient-to-r from-[#195b36] to-[#152d70] bg-clip-text text-transparent lg:col-start-2 lg:row-start-1 lg:self-end lg:text-right"
-            >
-              {ABOUT.strategyHeading}
-            </h2>
+              <div
+                ref={missionRef}
+                className="md-content font-space font-light text-[20px] text-black max-w-[619px] lg:col-start-1 lg:row-start-2 lg:self-start"
+                dangerouslySetInnerHTML={{ __html: ABOUT.missionHtml }}
+              />
 
-            <div
-              className="md-content font-space font-light text-[20px] text-black max-w-[619px] lg:col-start-2 lg:row-start-2 lg:self-start lg:text-right"
-              dangerouslySetInnerHTML={{ __html: ABOUT.strategyHtml }}
-            />
+              <h2
+                id="strategy-heading"
+                className="font-charon text-[40px] lg:text-[48px] xl:text-[64px] min-[1400px]:text-[72px] leading-[1.1] lg:leading-[56px] xl:leading-[72px] min-[1400px]:leading-[80px] uppercase text-black lg:col-start-2 lg:row-start-1 lg:self-end lg:text-right"
+              >
+                {ABOUT.strategyHeading}
+              </h2>
+
+              <div
+                className="md-content font-space font-light text-[20px] text-black max-w-[619px] lg:col-start-2 lg:row-start-2 lg:self-start lg:text-right"
+                dangerouslySetInnerHTML={{ __html: ABOUT.strategyHtml }}
+              />
+            </div>
           </div>
         </div>
 

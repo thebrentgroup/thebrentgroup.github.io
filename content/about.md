@@ -1,7 +1,9 @@
 ---
 hero_title:
-  - "Unconventional"
-  - "AI × Bio Countermeasures"
+  - "Building countermeasures and plans"
+  - "against foreseeable AI × Chem and AI × Bio"
+  - "contingencies"
+countermeasures_heading: "Countermeasures"
 pull_quote: >
     Led by Roger Brent.
 

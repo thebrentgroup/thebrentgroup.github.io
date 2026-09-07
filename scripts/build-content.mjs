@@ -70,7 +70,8 @@ export interface Person {
 export const SITE = ${JSON.stringify(site, null, 2)} as const;
 
 export const ABOUT = {
-  heroTitle: ${JSON.stringify(about.data.hero_title)} as [string, string],
+  heroTitle: ${JSON.stringify(about.data.hero_title)} as [string, string, string],
+  countermeasuresHeading: ${JSON.stringify(about.data.countermeasures_heading)},
   pullQuote: ${JSON.stringify(about.data.pull_quote)},
   peopleHeading: ${JSON.stringify(about.data.people_heading)},
   publicationsHeading: ${JSON.stringify(about.data.publications_heading)},

@@ -1,4 +1,7 @@
 - [x] `npm run lint` passes
 - [x] `npm run build` passes
-- [x] Smoke test: each chevron control has an 8px top margin and a 44×44px click target
-- [x] Regression: a bio still expands and collapses from its chevron
+- [x] Smoke test: centered Charon headline spans above both columns and forms the exact three desktop lines
+- [x] Style check: `AI × CHEM`, `AI × BIO`, `Countermeasures`, and `Strategy` render black
+- [x] Typography check: both AI terms use `×`, stay together on the middle desktop line, and never cause overflow
+- [x] Content check: the left column title contains no `Unconventional` or `AI × Bio`
+- [x] Responsive integration: desktop columns and mobile stack render in order without horizontal overflow
