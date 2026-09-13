@@ -2,27 +2,28 @@
 
 ## Success observation
 
-The About lead has a centered, three-line, full-width headline above two black column headings: `Countermeasures` and `Strategy`. The headline uses multiplication signs, keeps `AI × CHEM` and `AI × BIO` together on its middle desktop line, and renders both terms in black while the remaining words retain the existing gradient.
+Every About-page biography ends with the requested residence sentence. London and San Francisco appear without a state or country; every other current city includes its state or country.
 
 ## Verification method
 
-Run lint/build, then inspect computed text, position, font, and color in the real page at desktop and mobile widths.
+Run lint/build, then open the real About page on localhost, expand all six cards, and inspect their rendered text.
 
 ## Pass criteria
 
-- The full-width headline appears before both columns and uses the Charon typeface.
-- At desktop width, the centered headline is explicitly split into `Building countermeasures and plans`, `against foreseeable AI × CHEM and AI × BIO`, and `contingencies`.
-- `AI × CHEM` and `AI × BIO` share the middle line, use multiplication signs, and compute to black; the rest of the headline retains the green-to-blue gradient treatment.
-- The left heading reads only `Countermeasures`; the right reads `Strategy`; both compute to black.
-- The existing two-column desktop layout, stacked mobile order, and page overflow behavior remain intact.
-- `npm run lint` and `npm run build` pass.
+- Reworr’s biography ends with `He lives in London.`
+- Dmitrii Volkov’s biography ends with `He lives in San Francisco.` exactly once.
+- Roger Brent’s biography ends with `He lives in Seattle, Washington.`
+- Oleg Serikov’s biography ends with `He lives in Tbilisi, Georgia, and plans to live in London.`
+- Michael Marletta’s biography ends with `He lives in Berkeley, California.`
+- Alejandro Colman-Lerner’s biography ends with `He lives in Buenos Aires, Argentina.`
+- The sentences render in the matching About cards on localhost, and `npm run lint` and `npm run build` pass.
 - Verification completes in under one minute.
 
 ## Steps
 
-1. [x] Update the About content model with the new overarching headline and `Countermeasures` column heading.
-   > **Agent:** None — foreground in the main session, with no worktree or model override; the copy and generated-content contract are a small coupled content change.
-2. [x] Restructure and restyle the lead so the headline spans both columns, its AI terms are black, and both column headings are black.
-   > **Agent:** None — foreground in the main session, with no worktree or model override; one component owns the complete lead hierarchy and responsive layout.
-3. [x] Apply the centered three-line refinement, then run repository checks and verify typography, colors, hierarchy, responsive order, and overflow in the browser.
-   > **Agent:** None — foreground in the main session, with no worktree or model override; a single browser flow can measure the rendered result at both target widths.
+1. [x] Add the six residence sentences to the canonical biography Markdown files.
+   > **Agent:** None — foreground in the main session, with no worktree or model override; six one-line content edits are tightly scoped and faster to verify together.
+2. [x] Regenerate site content and run lint/build.
+   > **Agent:** None — foreground in the main session, with no worktree or model override; the existing content generator owns the Markdown-to-app boundary.
+3. [x] Start localhost and inspect every expanded biography in the rendered About page.
+   > **Agent:** None — foreground in the main session, with no worktree or model override; one browser pass can verify all six cards and the exact punctuation.

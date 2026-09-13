@@ -1,8 +1,7 @@
 ---
 hero_title:
   - "Building countermeasures and plans"
-  - "against foreseeable AI × Chem and AI × Bio"
-  - "contingencies"
+  - "against foreseeable AI × Chem and AI × Bio contingencies"
 countermeasures_heading: "Countermeasures"
 pull_quote: >
     Led by Roger Brent.

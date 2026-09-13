@@ -43,7 +43,7 @@ export default function AboutPage() {
               className="font-charon text-[24px] min-[380px]:text-[30px] lg:text-[36px] xl:text-[48px] min-[1400px]:text-[54px] leading-[1.1] lg:leading-[44px] xl:leading-[56px] min-[1400px]:leading-[64px] text-center uppercase bg-gradient-to-r from-[#195b36] to-[#152d70] bg-clip-text text-transparent"
             >
               {ABOUT.heroTitle.map((line) => (
-                <span key={line} className="block">
+                <span key={line} className="block lg:whitespace-nowrap">
                   {renderHeroLine(line)}
                 </span>
               ))}
