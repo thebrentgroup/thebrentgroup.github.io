@@ -45,7 +45,12 @@ const people = [
   "about-people-alejandro-colman-lerner",
 ].map((name) => {
   const { data, html } = readMd(name);
-  return { name: data.name, role: data.role, bioHtml: html };
+  return {
+    name: data.name,
+    role: data.role,
+    bioHtml: html,
+    ...(data.cv_url ? { cvUrl: data.cv_url } : {}),
+  };
 });
 
 const technology = readMd("technology");
@@ -65,6 +70,7 @@ export interface Person {
   name: string;
   role: string;
   bioHtml: string;
+  cvUrl?: string;
 }
 
 export const SITE = ${JSON.stringify(site, null, 2)} as const;

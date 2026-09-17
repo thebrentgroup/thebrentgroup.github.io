@@ -2,6 +2,7 @@ import { useId } from "react";
 import type { Person } from "../content.generated";
 
 interface PersonCardProps extends Person {
+  compactCv: boolean;
   expanded: boolean;
   onToggle: () => void;
 }
@@ -10,6 +11,8 @@ export default function PersonCard({
   name,
   role,
   bioHtml,
+  cvUrl,
+  compactCv,
   expanded,
   onToggle,
 }: PersonCardProps) {
@@ -18,10 +21,56 @@ export default function PersonCard({
   return (
     <div className="group relative border border-black flex flex-col items-center justify-center gap-8 px-[46px] py-[43px] flex-1 min-w-0">
       <div className="person-card-ring pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-150" />
-      <p className="font-charon text-[20px] leading-[24px] uppercase text-black w-full max-w-[380px]">
-        <span className="block">{name} —</span>
-        <span className="block">{role}</span>
-      </p>
+      <div className="relative w-full max-w-[380px]">
+        {cvUrl && (
+          <a
+            href={cvUrl}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`${name}'s CV (PDF)`}
+            className="absolute right-0 top-0 z-10 flex h-12 w-11 justify-end font-charon leading-none text-black transition-opacity hover:opacity-60"
+          >
+            <span
+              className={`flex flex-col items-end justify-between ${
+                compactCv ? "mt-1 h-4" : "mt-[3px] h-[42px]"
+              }`}
+            >
+              <svg
+                viewBox="0 0 24 28"
+                aria-hidden="true"
+                className={
+                  compactCv
+                    ? "h-[9px] w-[8px] translate-x-[1.5px]"
+                    : "h-7 w-6 translate-x-[4.5px]"
+                }
+              >
+                <path
+                  d="M4.5 1.5h10l5 5v20h-15z"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeLinejoin="round"
+                  strokeWidth="1.5"
+                />
+                <path
+                  d="M14.5 1.5v5h5M8 12h8M8 16h8M8 20h5"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="1.5"
+                />
+              </svg>
+              <span className={compactCv ? "text-[7px]" : "text-[12px]"}>
+                CV
+              </span>
+            </span>
+          </a>
+        )}
+        <p className="font-charon text-[20px] leading-[24px] uppercase text-black">
+          <span className="block">{name} —</span>
+          <span className="block">{role}</span>
+        </p>
+      </div>
       <div className="w-full max-w-[380px]">
         <div
           id={bioId}

@@ -1,5 +1,7 @@
 - [x] `npm run lint` passes
 - [x] `npm run build` passes
-- [x] Smoke test: localhost About page loads and all six cards expand
-- [x] Content check: all six requested residence sentences render in the matching cards
-- [x] Punctuation check: London and San Francisco have no trailing region or country, while all other current cities do
+- [x] Normal zoom: two-line lockup retains ≤1px visible-edge differences
+- [x] 150% zoom: compact vertical lockup matches one header line within 1px
+- [x] Narrow viewport without high zoom retains normal two-line lockup
+- [x] Geometry: the CV lockup's visible right edge matches the person text block's right edge
+- [x] Smoke test: both PDF links work and no horizontal overflow appears
