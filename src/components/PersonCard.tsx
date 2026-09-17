@@ -2,7 +2,6 @@ import { useId } from "react";
 import type { Person } from "../content.generated";
 
 interface PersonCardProps extends Person {
-  compactCv: boolean;
   expanded: boolean;
   onToggle: () => void;
 }
@@ -12,7 +11,6 @@ export default function PersonCard({
   role,
   bioHtml,
   cvUrl,
-  compactCv,
   expanded,
   onToggle,
 }: PersonCardProps) {
@@ -30,19 +28,11 @@ export default function PersonCard({
             aria-label={`${name}'s CV (PDF)`}
             className="absolute right-0 top-0 z-10 flex h-12 w-11 justify-end font-charon leading-none text-black transition-opacity hover:opacity-60"
           >
-            <span
-              className={`flex flex-col items-end justify-between ${
-                compactCv ? "mt-1 h-4" : "mt-[3px] h-[42px]"
-              }`}
-            >
+            <span className="mt-[3px] flex h-[42px] flex-col items-end justify-between">
               <svg
                 viewBox="0 0 24 28"
                 aria-hidden="true"
-                className={
-                  compactCv
-                    ? "h-[9px] w-[8px] translate-x-[1.5px]"
-                    : "h-7 w-6 translate-x-[4.5px]"
-                }
+                className="h-7 w-6 translate-x-[4.5px]"
               >
                 <path
                   d="M4.5 1.5h10l5 5v20h-15z"
@@ -60,9 +50,7 @@ export default function PersonCard({
                   strokeWidth="1.5"
                 />
               </svg>
-              <span className={compactCv ? "text-[7px]" : "text-[12px]"}>
-                CV
-              </span>
+              <span className="text-[12px]">CV</span>
             </span>
           </a>
         )}

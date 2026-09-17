@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import PersonCard from "../components/PersonCard";
@@ -28,19 +28,8 @@ function renderHeroLine(line: string) {
 export default function AboutPage() {
   const [activeTab, setActiveTab] = useState<"publications" | "document-hub">("publications");
   const [expandedPerson, setExpandedPerson] = useState<string | null>(null);
-  const [compactCv, setCompactCv] = useState(false);
   const missionRef = useRef<HTMLDivElement>(null);
   const pullQuoteRef = useRef<HTMLParagraphElement>(null);
-
-  useEffect(() => {
-    const updateCvScale = () => {
-      setCompactCv(window.outerWidth / window.innerWidth >= 1.65);
-    };
-
-    updateCvScale();
-    window.addEventListener("resize", updateCvScale);
-    return () => window.removeEventListener("resize", updateCvScale);
-  }, []);
 
   return (
     <div className="bg-white min-h-screen flex flex-col">
@@ -121,7 +110,6 @@ export default function AboutPage() {
               <PersonCard
                 key={person.name}
                 {...person}
-                compactCv={compactCv}
                 expanded={expandedPerson === person.name}
                 onToggle={() =>
                   setExpandedPerson((current) =>

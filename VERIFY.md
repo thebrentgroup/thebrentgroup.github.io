@@ -1,7 +1,6 @@
 - [x] `npm run lint` passes
 - [x] `npm run build` passes
-- [x] Normal zoom: two-line lockup retains ≤1px visible-edge differences
-- [x] 150% zoom: compact vertical lockup matches one header line within 1px
-- [x] Narrow viewport without high zoom retains normal two-line lockup
-- [x] Geometry: the CV lockup's visible right edge matches the person text block's right edge
-- [x] Smoke test: both PDF links work and no horizontal overflow appears
+- [x] Normal and high zoom use the same 42px CV lockup
+- [x] Visible top/bottom alignment remains within 1px
+- [x] CV lockup right edge matches the person text block
+- [x] Both PDF links work and no horizontal overflow appears
