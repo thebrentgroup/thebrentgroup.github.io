@@ -1,6 +1,7 @@
+- [x] Reworr and Volkov DOCX-to-PDF conversions render cleanly on every page
+- [x] Marletta and Colman-Lerner source PDFs render cleanly on every page
 - [x] `npm run lint` passes
 - [x] `npm run build` passes
-- [x] Normal and high zoom use the same 42px CV lockup
-- [x] Visible top/bottom alignment remains within 1px
-- [x] CV lockup right edge matches the person text block
-- [x] Both PDF links work and no horizontal overflow appears
+- [x] Smoke test: localhost renders exactly six CV controls with the correct PDF URLs
+- [x] Visual check: no person name or role overlaps a CV control at desktop or mobile widths
+- [x] Responsive check: the People grid has no horizontal overflow at desktop or mobile widths
