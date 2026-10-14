@@ -1,7 +1,5 @@
-- [x] Reworr and Volkov DOCX-to-PDF conversions render cleanly on every page
-- [x] Marletta and Colman-Lerner source PDFs render cleanly on every page
-- [x] `npm run lint` passes
-- [x] `npm run build` passes
-- [x] Smoke test: localhost renders exactly six CV controls with the correct PDF URLs
-- [x] Visual check: no person name or role overlaps a CV control at desktop or mobile widths
-- [x] Responsive check: the People grid has no horizontal overflow at desktop or mobile widths
+- [x] Entry 3 has the 2026 Brent and Colman-Lerner preprint citation and correct URL, with no “in prep” text.
+- [x] Smoke test: the generated About publications HTML contains the preprint URL exactly once.
+- [x] `npm run lint` passes.
+- [x] `npm run build` passes.
+- [ ] Local `main` and `origin/main` point to the same new commit after push.
